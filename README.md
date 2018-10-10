@@ -1,0 +1,2 @@
+# ZPIS-rokovnik
+Mobilna aplikacija
