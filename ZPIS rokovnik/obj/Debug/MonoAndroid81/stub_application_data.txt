@@ -1,0 +1,2 @@
+android.app.Application
+ZPIS_rokovnik.ZPIS_rokovnik
