@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZPIS rokovnik", "ZPIS rokovnik\ZPIS rokovnik.csproj", "{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZPISrokovnik.Android", "ZPISrokovnik\ZPISrokovnik.Android\ZPISrokovnik.Android.csproj", "{60CCACB8-5350-416E-B6F9-143558E48CA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZPISrokovnik.iOS", "ZPISrokovnik\ZPISrokovnik.iOS\ZPISrokovnik.iOS.csproj", "{EFD79FC2-993F-4E89-ACED-0E5B464CA83F}"
@@ -27,42 +25,6 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|iPhone.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|iPhone.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|iPhone.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.AppStore|iPhoneSimulator.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|iPhone.Deploy.0 = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|iPhone.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|iPhone.Deploy.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{60CCACB8-5350-416E-B6F9-143558E48CA1}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{60CCACB8-5350-416E-B6F9-143558E48CA1}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{60CCACB8-5350-416E-B6F9-143558E48CA1}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
