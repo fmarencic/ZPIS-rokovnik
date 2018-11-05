@@ -344,6 +344,9 @@
       "ZPISrokovnik/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
         "compile": {
           "bin/placeholder/ZPISrokovnik.dll": {}
         },
