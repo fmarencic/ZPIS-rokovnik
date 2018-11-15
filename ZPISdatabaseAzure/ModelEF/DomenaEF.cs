@@ -28,7 +28,6 @@ namespace ZPISdatabaseAzure.Model
 
         public virtual ICollection<DomenaEF> SadrzaneDomene { get; set; }
         public virtual ICollection<SudionikEF> Sudionici { get; set; }
-        public virtual ICollection<UpisnikEF> Tijela { get; set; }
         public virtual ICollection<DokumentPismenoEF> DokumentiUPismenima { get; set; }
         public virtual ICollection<PismenoVrstaEF> Grupe { get; set; }
         public virtual ICollection<OsobaEF> VrsteOsoba { get; set; }

@@ -30,7 +30,7 @@ namespace ZPISdatabaseAzure.Model
         [ForeignKey("Tijelo")]
         public long TijeloId { get; set; }
 
-        public virtual DomenaEF Tijelo { get; set; }
+        public virtual OsobaEF Tijelo { get; set; }
 
         public virtual ICollection<PredmetEF> Predmeti { get; set; }
     }

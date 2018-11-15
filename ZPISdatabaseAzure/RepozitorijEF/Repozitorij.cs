@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Text;
 
 namespace ZPISdatabaseAzure.Repozitorij
 {
-    public abstract class Repozitorij<T> : IRepozitorij<T> where T : class
+    public abstract class Repozitorij<T, C> : IRepozitorij<T> where T : class, new() where C : DbContext
     {
-        public void Azuriraj(T entity)
+        private string databaseName = "ZPISRokovnikDatabaseContext";
+
+        public string DatabaseName
         {
-            throw new NotImplementedException();
+            get { return databaseName; }
+            set { databaseName = value; }
         }
+
+        public void SetDatabaseName(string DatabaseName) => this.DatabaseName = DatabaseName;
 
         public T DohvatiPoId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Izbrisi(T entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Unesi(T entity)
+        public List<T> DohvatiPoTijelu(int tijeloId)
         {
             throw new NotImplementedException();
         }

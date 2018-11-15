@@ -14,12 +14,17 @@ namespace ZPISdatabaseAzure.Model
         [ForeignKey("Pismeno")]
         public long PismenoId { get; set; }
 
+        [Column("DOKUMENTID")]
+        [ForeignKey("Dokument")]
+        public long DokumentId { get; set; }
+
         [Column("VRSTADOKUMENTAUPISMENUID")]
         [ForeignKey("VrstaDokumentaUPismenu")]
         public long VrstaDokumentaUPismenuId { get; set; }
 
 
         public virtual PismenoEF Pismeno { get; set; }
+        public virtual DokumentEF Dokument { get; set; }
         public virtual DomenaEF VrstaDokumentaUPismenu { get; set; }
     }
 }

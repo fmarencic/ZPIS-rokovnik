@@ -16,5 +16,11 @@ namespace ZPISdatabaseAzure.Model
         [Column("TIP")]
         [MaxLength(255)]
         public string Tip { get; set; }
+
+        [Column("OSOBAID")]
+        [ForeignKey("Osoba")]
+        public long OsobaId { get; set; }
+
+        public virtual OsobaEF Osoba { get; set; }
     }
 }

@@ -10,6 +10,9 @@ namespace ZPISdatabaseAzure.Model
         [Key]
         public long Id { get; set; }
 
+        [Column("REDNIBROJ")]
+        public long RedniBroj { get; set; }
+
         [Column("PREDMETID")]
         [ForeignKey("Predmet")]
         public long PredmetId { get; set; }

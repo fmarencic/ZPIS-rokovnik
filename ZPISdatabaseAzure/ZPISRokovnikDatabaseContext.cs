@@ -56,6 +56,8 @@ namespace ZPISdatabaseAzure
         public virtual DbSet<DokumentEF> Dokument { get; set; }
         public virtual DbSet<SudionikEF> Sudionik { get; set; }
         public virtual DbSet<KalendarEF> Kalendar { get; set; }
+        public virtual DbSet<VrstaUpisnikaEF> VrstaUpisnika { get; set; }
+
 
         #endregion
 

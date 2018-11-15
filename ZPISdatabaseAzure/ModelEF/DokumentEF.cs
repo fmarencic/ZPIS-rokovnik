@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ZPISdatabaseAzure.Model
@@ -28,6 +30,9 @@ namespace ZPISdatabaseAzure.Model
         [Column("IMADIGITALIZIRANIDOKUMENT")]
         public bool ImaDigitaliziraniDokument { get; set; }
 
+        [Column("DATUM")]
+        public DateTime Datum { get; set; }
+
         [Column("IMARADNIDOKUMENT")]
         public bool ImaRadniDokument { get; set; }
 
@@ -43,5 +48,7 @@ namespace ZPISdatabaseAzure.Model
         public long SchemaDokumentaId { get; set; }
 
         public virtual SchemaDokumentaEF SchemaDokumenta { get; set; }
+
+        public virtual ICollection<DokumentPismenoEF> DokumentiUPismenu { get; set; }
     }
 }
