@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZPISdatabaseAzure.Model
 {
@@ -18,6 +14,10 @@ namespace ZPISdatabaseAzure.Model
         [Column("IME")]
         [MaxLength(255)]
         public string Ime { get; set; }
+
+        [Column("PUNINAZIVOSOBE")]
+        [MaxLength(255)]
+        public string PuniNazivOsobe { get; set; }
 
         [Column("PREZIME")]
         [MaxLength(255)]

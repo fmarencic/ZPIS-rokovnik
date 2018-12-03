@@ -22,7 +22,7 @@ namespace ZPISdatabaseAzure.Model
 
         [Column("PARENTID")]
         [ForeignKey("Parent")]
-        public long ParentId { get; set; }
+        public long? ParentId { get; set; }
 
         public virtual DomenaEF Parent { get; set; }
 

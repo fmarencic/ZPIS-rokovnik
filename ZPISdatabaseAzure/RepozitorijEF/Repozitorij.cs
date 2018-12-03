@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Text;
 
 namespace ZPISdatabaseAzure.Repozitorij
 {
-    public abstract class Repozitorij<T, C> : IRepozitorij<T> where T : class, new() where C : DbContext
+    public abstract class Repozitorij<T> : IRepozitorij<T> where T : class
     {
+        protected readonly ZPISRokovnikDatabaseContext ZPISRokovnikDbContext;
+
+        public Repozitorij(ZPISRokovnikDatabaseContext ctx)
+        {
+            ZPISRokovnikDbContext = ctx;
+        }
+
         private string databaseName = "ZPISRokovnikDatabaseContext";
 
         public string DatabaseName

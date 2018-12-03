@@ -6,6 +6,8 @@ namespace ZPISdatabaseAzure.Model
     [Table("DOKUMENTPISMENO")]
     public class DokumentPismenoEF : BaseModel
     {
+        #region Stupci
+
         [Column("ID")]
         [Key]
         public long Id { get; set; }
@@ -22,9 +24,15 @@ namespace ZPISdatabaseAzure.Model
         [ForeignKey("VrstaDokumentaUPismenu")]
         public long VrstaDokumentaUPismenuId { get; set; }
 
+        #endregion
+
+        #region FK objekti i liste
 
         public virtual PismenoEF Pismeno { get; set; }
         public virtual DokumentEF Dokument { get; set; }
         public virtual DomenaEF VrstaDokumentaUPismenu { get; set; }
+
+        #endregion
+
     }
 }

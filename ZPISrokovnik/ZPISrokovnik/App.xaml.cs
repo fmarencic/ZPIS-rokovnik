@@ -1,17 +1,23 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZPISrokovnik.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ZPISrokovnik
 {
     public partial class App : Application
     {
+        public static bool IsUserLoggedIn { get; set; } = false;
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            if (!IsUserLoggedIn)
+                MainPage = new NavigationPage(new LoginView());
+            else
+                MainPage = new MainTabbedPage();         
         }
 
         protected override void OnStart()

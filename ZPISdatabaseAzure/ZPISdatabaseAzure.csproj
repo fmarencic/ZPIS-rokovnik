@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRepozitorijEF\IKorisnikRepozitorij.cs" />
     <Compile Include="IRepozitorijEF\IRepozitorij.cs" />
     <Compile Include="Migrations\201811131856290_13112018_1.cs" />
     <Compile Include="Migrations\201811131856290_13112018_1.Designer.cs">
@@ -97,6 +98,14 @@
     <Compile Include="Migrations\201811151709566_14112018_5.Designer.cs">
       <DependentUpon>201811151709566_14112018_5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811191902362_123.cs" />
+    <Compile Include="Migrations\201811191902362_123.Designer.cs">
+      <DependentUpon>201811191902362_123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811252058025_25112018_1.cs" />
+    <Compile Include="Migrations\201811252058025_25112018_1.Designer.cs">
+      <DependentUpon>201811252058025_25112018_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelEF\BaseModel.cs" />
     <Compile Include="ModelEF\DokumentEF.cs" />
@@ -117,11 +126,14 @@
     <Compile Include="ModelEF\UpisnikEF.cs" />
     <Compile Include="ModelEF\VrstaUpisnikaEF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepozitorijEF\KorisnikRepozitorij.cs" />
     <Compile Include="RepozitorijEF\Repozitorij.cs" />
     <Compile Include="ZPISRokovnikDatabaseContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811151709566_14112018_5.resx">
       <DependentUpon>201811151709566_14112018_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811191902362_123.resx">
+      <DependentUpon>201811191902362_123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811252058025_25112018_1.resx">
+      <DependentUpon>201811252058025_25112018_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
