@@ -51,7 +51,10 @@
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+<<<<<<< HEAD
         ".nupkg.metadata",
+=======
+>>>>>>> 92dd774c68df9cd21f23c15f679f9179dc6d940c
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",

@@ -57,8 +57,7 @@ namespace ZPISdatabaseAzure
         public virtual DbSet<SudionikEF> Sudionik { get; set; }
         public virtual DbSet<KalendarEF> Kalendar { get; set; }
         public virtual DbSet<VrstaUpisnikaEF> VrstaUpisnika { get; set; }
-
-
+        public virtual DbSet<KorisnikAuthEF> KorisnikAuth { get; set; }
         #endregion
 
 
