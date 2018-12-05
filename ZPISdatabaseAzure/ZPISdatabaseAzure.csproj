@@ -106,12 +106,17 @@
     <Compile Include="Migrations\201811252058025_25112018_1.Designer.cs">
       <DependentUpon>201811252058025_25112018_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812051253420_05122018_1.cs" />
+    <Compile Include="Migrations\201812051253420_05122018_1.Designer.cs">
+      <DependentUpon>201812051253420_05122018_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelEF\BaseModel.cs" />
     <Compile Include="ModelEF\DokumentEF.cs" />
     <Compile Include="ModelEF\DokumentPismenoEF.cs" />
     <Compile Include="ModelEF\DomenaEF.cs" />
     <Compile Include="ModelEF\KalendarEF.cs" />
+    <Compile Include="ModelEF\KorisnikAuthEF.cs" />
     <Compile Include="ModelEF\KorisnikEF.cs" />
     <Compile Include="ModelEF\KorisnikUlogaEF.cs" />
     <Compile Include="ModelEF\OsobaEF.cs" />
@@ -178,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811252058025_25112018_1.resx">
       <DependentUpon>201811252058025_25112018_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051253420_05122018_1.resx">
+      <DependentUpon>201812051253420_05122018_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
