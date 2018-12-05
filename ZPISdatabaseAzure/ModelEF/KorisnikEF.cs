@@ -21,6 +21,7 @@ namespace ZPISdatabaseAzure.Model
 
         public virtual ICollection<KalendarEF> Kalendari { get; set; }
         public virtual ICollection<KorisnikUlogaEF> UlogeKorisnika { get; set; }
+        public virtual ICollection<KorisnikAuthEF> AutentikacijeKorisnika { get; set; }
 
     }
 }
