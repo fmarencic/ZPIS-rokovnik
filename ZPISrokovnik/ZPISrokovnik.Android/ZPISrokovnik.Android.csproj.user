@@ -4,6 +4,7 @@
     <SelectedDevice>testmob</SelectedDevice>
     <DefaultDevice>testmob</DefaultDevice>
     <ProjectView>ShowAllFiles</ProjectView>
-    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

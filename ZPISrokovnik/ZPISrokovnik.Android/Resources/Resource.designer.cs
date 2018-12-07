@@ -3153,6 +3153,9 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f0900b7
 			public const int cancel_action = 2131296439;
 			
+			// aapt resource value: 0x7f0900c8
+			public const int caption = 2131296456;
+			
 			// aapt resource value: 0x7f090045
 			public const int center = 2131296325;
 			
@@ -3303,14 +3306,14 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f090061
 			public const int list_item = 2131296353;
 			
-			// aapt resource value: 0x7f0900ca
-			public const int masked = 2131296458;
+			// aapt resource value: 0x7f0900cb
+			public const int masked = 2131296459;
 			
 			// aapt resource value: 0x7f0900b9
 			public const int media_actions = 2131296441;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int message = 2131296456;
+			// aapt resource value: 0x7f0900c9
+			public const int message = 2131296457;
 			
 			// aapt resource value: 0x7f090031
 			public const int middle = 2131296305;
@@ -3639,8 +3642,8 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900c9
-			public const int visible = 2131296457;
+			// aapt resource value: 0x7f0900ca
+			public const int visible = 2131296458;
 			
 			// aapt resource value: 0x7f0900ab
 			public const int volume_item_container = 2131296427;
