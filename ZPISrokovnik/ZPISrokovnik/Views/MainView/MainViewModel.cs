@@ -10,12 +10,16 @@ namespace ZPISrokovnik.Views.MainView
 {
 	public class MainViewModel : BaseViewModel
 	{
-		public MainViewModel ()
+		public MainViewModel (IPageService page)
 		{
-
+            this.pageService = page;
+            SearchCommand = new Command(Search);
 		}
 
         string caption = "Zatvor u Zagrebu";
+        private IPageService pageService;
+
+        public Command SearchCommand { get; private set; }
 
         public string Caption
         {
@@ -24,6 +28,11 @@ namespace ZPISrokovnik.Views.MainView
                 caption = value;
                 OnPropertyChanged();
             }
+        }
+
+        private void Search()
+        {
+            pageService.PushAsync(new MainSearch());
         }
 	}
 }

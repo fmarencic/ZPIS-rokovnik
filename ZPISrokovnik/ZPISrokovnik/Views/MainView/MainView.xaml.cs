@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZPISrokovnik.Utils;
 
 namespace ZPISrokovnik.Views.MainView
 {
@@ -15,7 +16,7 @@ namespace ZPISrokovnik.Views.MainView
 		public MainView ()
 		{
 			InitializeComponent ();
-            BindingContext = new MainViewModel();
+            BindingContext = new MainViewModel(new PageService());
 		}
 	}
 }
