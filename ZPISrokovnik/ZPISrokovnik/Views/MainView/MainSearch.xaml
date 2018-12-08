@@ -22,7 +22,7 @@
                 <Label Grid.Column="1" Grid.Row="0" FontSize="15" Text="{Binding CaptionOIB}" FontAttributes="Bold"/>
                 <Label Grid.Column="2" Grid.Row="0" FontSize="15" Text="{Binding CaptionGodinaRodjenja}" FontAttributes="Bold"/>
             </Grid>
-            <ListView Margin="10,10,10,0">
+            <ListView Margin="10,10,10,0" SelectedItem="{Binding ItemSelected}">
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Test1</x:String>

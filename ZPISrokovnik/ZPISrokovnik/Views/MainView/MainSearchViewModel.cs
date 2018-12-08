@@ -22,6 +22,7 @@ namespace ZPISrokovnik.Views.MainView
         private string captionImeIPrezime = "Ime i prezime";
         private string captionOIB = "OIB";
         private string captionGodinaRodjenja = "Datum rođenja";
+        private string itemSelected;
         private IPageService pageService;
 
         public string Caption
@@ -45,6 +46,17 @@ namespace ZPISrokovnik.Views.MainView
         public string CaptionImeIPrezime {
             get { return captionImeIPrezime; }
             set { captionImeIPrezime = value; }
+        }
+        public string ItemSelected
+        {
+            get { return itemSelected; }
+            set {
+                if (itemSelected != value) {
+                    itemSelected = value;
+                    OnPropertyChanged();
+                    pageService.PushAsync(new MainDetails());
+                }
+                }
         }
         #endregion
 
