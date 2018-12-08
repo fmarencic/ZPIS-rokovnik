@@ -10,12 +10,19 @@ namespace ZPISrokovnik.Views.MainView
 {
 	public class MainSearchViewModel : BaseViewModel
 	{
-		public MainSearchViewModel ()
+        #region Constructor
+        public MainSearchViewModel (IPageService page)
 		{
-
+            this.pageService = page; 
 		}
+        #endregion
 
-        string caption = "Zatvor u Zagrebu";
+        #region Properties
+        private string caption = "Zatvor u Zagrebu";
+        private string captionImeIPrezime = "Ime i prezime";
+        private string captionOIB = "OIB";
+        private string captionGodinaRodjenja = "Datum rođenja";
+        private IPageService pageService;
 
         public string Caption
         {
@@ -26,5 +33,23 @@ namespace ZPISrokovnik.Views.MainView
                 OnPropertyChanged();
             }
         }
+
+        public string CaptionGodinaRodjenja {
+            get { return captionGodinaRodjenja; }
+            set { captionGodinaRodjenja = value; }
+        }
+        public string CaptionOIB {
+            get { return captionOIB; }
+            set { captionOIB = value; }
+        }
+        public string CaptionImeIPrezime {
+            get { return captionImeIPrezime; }
+            set { captionImeIPrezime = value; }
+        }
+        #endregion
+
+        #region Commands
+        public Command DetailsCommand { get; private set; }
+        #endregion
     }
 }

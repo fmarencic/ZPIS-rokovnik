@@ -10,29 +10,37 @@ namespace ZPISrokovnik.Views.MainView
 {
 	public class MainViewModel : BaseViewModel
 	{
-		public MainViewModel (IPageService page)
+        #region Constructor
+        public MainViewModel (IPageService page)
 		{
             this.pageService = page;
             SearchCommand = new Command(Search);
 		}
+        #endregion
 
+        #region Properties
         string caption = "Zatvor u Zagrebu";
         private IPageService pageService;
-
-        public Command SearchCommand { get; private set; }
-
         public string Caption
         {
             get { return caption; }
-            set {
+            set
+            {
                 caption = value;
                 OnPropertyChanged();
             }
         }
+        #endregion
 
+        #region Commands
+        public Command SearchCommand { get; private set; }
+        #endregion
+
+        #region Methods
         private void Search()
         {
             pageService.PushAsync(new MainSearch());
         }
-	}
+        #endregion
+    }
 }
