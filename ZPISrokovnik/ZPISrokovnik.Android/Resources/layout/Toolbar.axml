@@ -16,7 +16,7 @@
 		>
 		<TextView
 			android:layout_width="match_parent"
-			android:layout_height="53dp"
+			android:layout_height="55dp"
 			android:id="@+id/caption"
 			android:gravity="center_horizontal"
 			android:text="ZPIS rokovnik"
