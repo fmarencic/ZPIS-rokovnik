@@ -4,9 +4,37 @@
              x:Class="ZPISrokovnik.Views.MainView.MainDetails">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="testimage.png" HorizontalOptions="Center" Margin="0,20,0,0"/>
+            <Label Text="{Binding Caption}"
+                FontSize="25"
+                Margin="15,20,0,0" />
+            <ListView Margin="10,10,10,0">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Ime i prezime</x:String>
+                        <x:String>Datum rođenja</x:String>
+                        <x:String>Adresa</x:String>
+                        <x:String>OIB</x:String>
+                        <x:String>Kazneno djelo</x:String>
+                        <x:String>Presuda</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="White" Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding}"
+                                        TextColor="#9cb0d1" />
+                                    <Label Text="{Binding}"
+                                        HorizontalOptions="EndAndExpand"
+                                        TextColor="#503026" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
