@@ -13,6 +13,7 @@ namespace ZPISrokovnik.Views.MainView
         #region Constructor
         public MainSearchViewModel (IPageService page)
 		{
+            SearchCommand = new Command(Search);
             this.pageService = page; 
 		}
         #endregion
@@ -61,7 +62,14 @@ namespace ZPISrokovnik.Views.MainView
         #endregion
 
         #region Commands
-        public Command DetailsCommand { get; private set; }
+        public Command SearchCommand { get; private set; }
+        #endregion
+
+        #region Methods
+        private void Search()
+        {
+            pageService.PushAsync(new MainSearch());
+        }
         #endregion
     }
 }

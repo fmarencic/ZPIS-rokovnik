@@ -5,7 +5,7 @@
              x:Class="ZPISrokovnik.Views.MainView.MainSearch">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar x:Name="search"/>
+            <SearchBar SearchCommand="{Binding SearchCommand}"/>
             <Label Text="{Binding Caption}"
                 FontSize="20"
                 Margin="15,30,0,0" />
