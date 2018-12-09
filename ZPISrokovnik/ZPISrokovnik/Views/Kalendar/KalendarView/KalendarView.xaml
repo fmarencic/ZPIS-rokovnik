@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZPISrokovnik.Views.Kalendar.KalendarView.KalendarView">
+    <ContentPage.Content>
+        <StackLayout Margin="18,20">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Tip kalendara:" 
+                       VerticalOptions="Center"
+                       TextColor="White"/>
+                <Picker ItemsSource="{Binding TipKalendara}" 
+                SelectedItem="{Binding SelektiraniTip}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <Label Text="Pribilježene napomene:" TextColor="White"></Label>
+            <StackLayout>
+                <ListView x:Name="ElementListe"
+                          ItemsSource="{Binding Napomena}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="DodajNovuNapomenu" Text="Kreiraj novu napomenu" BackgroundColor="Teal"></Button>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

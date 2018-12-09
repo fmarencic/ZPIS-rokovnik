@@ -2,6 +2,46 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v8.1": {
+      "Syncfusion.Licensing/16.3.0.36": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.3.0.36"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "16.3.0.36",
+          "Xamarin.Forms": "2.5.1.527436"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.SfSchedule.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.SfSchedule.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.dll": {}
+        }
+      },
       "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
         "type": "package",
         "dependencies": {
@@ -357,6 +397,97 @@
     }
   },
   "libraries": {
+    "Syncfusion.Licensing/16.3.0.36": {
+      "sha512": "0fOgFIP7I19QutnlFjwZjAP5l2SFXE7gHuwg9j2TORPG2o8hNxQsqAFo5+Cz4xFkuk2uindftVh8JDNWzRx5vA==",
+      "type": "package",
+      "path": "syncfusion.licensing/16.3.0.36",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.16.3.0.36.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/16.3.0.36": {
+      "sha512": "cbhuoZZR0SxpsiKBWS1sNFPGGC63z3b5QDFmdFcrpCjYc/6c8H/RIC+0HJb3pJ2kMLOp7wIX8UjyRmI4uHScCQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/16.3.0.36",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xbf",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xbf",
+        "lib/uap10.0/Syncfusion.Core.XForms.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.xml",
+        "syncfusion.xamarin.core.16.3.0.36.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfSchedule/16.3.0.36": {
+      "sha512": "xQVI3kjOtvf/Ap59mVEksLE1I2fEdy9AKa+mpgc6NlIi8KIe8JepNyEHODosReWkY/dR8FfeRt7uh1Ds0YRB8Q==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfschedule/16.3.0.36",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll",
+        "lib/netstandard1.0/Syncfusion.SfSchedule.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.SfSchedule.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfSchedule.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfSchedule.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Properties/Syncfusion.SfSchedule.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.pdb",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.pdb",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.xml",
+        "syncfusion.xamarin.sfschedule.16.3.0.36.nupkg.sha512",
+        "syncfusion.xamarin.sfschedule.nuspec"
+      ]
+    },
     "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
       "sha512": "UiWrWginObSSfmhKMTnRthhAWuH9yPhqP5ZCCCI9tTWl+XS/+sqcDjd84vP+dr1ve2h/AVZo9NgCbE1Xgktw2g==",
       "type": "package",
@@ -769,6 +900,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
+      "Syncfusion.Xamarin.SfSchedule >= 16.3.0.36",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v4 >= 27.0.2.1",
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
@@ -779,20 +911,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10\\.nuget\\packages\\": {}
+    "C:\\Users\\root\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.Android\\ZPISrokovnik.Android.csproj",
+      "projectUniqueName": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik.Android\\ZPISrokovnik.Android.csproj",
       "projectName": "ZPISrokovnik.Android",
-      "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.Android\\ZPISrokovnik.Android.csproj",
-      "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.Android\\obj\\",
+      "projectPath": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik.Android\\ZPISrokovnik.Android.csproj",
+      "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -805,8 +937,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
-              "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
+            "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
+              "projectPath": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
             }
           }
         }
@@ -815,6 +947,10 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
+          "Syncfusion.Xamarin.SfSchedule": {
+            "target": "Package",
+            "version": "[16.3.0.36, )"
+          },
           "Xamarin.Android.Support.Design": {
             "target": "Package",
             "version": "[27.0.2.1, )"

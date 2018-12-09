@@ -72,7 +72,8 @@
                     Text="Prijava" 
                     Grid.Row="3"
                     Grid.ColumnSpan="2"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
             
         </Grid>
         

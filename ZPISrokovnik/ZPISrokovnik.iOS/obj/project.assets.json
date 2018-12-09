@@ -717,20 +717,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10\\.nuget\\packages\\": {}
+    "C:\\Users\\root\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
       "projectName": "ZPISrokovnik.iOS",
-      "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
-      "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\obj\\",
+      "projectPath": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -743,8 +743,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
-              "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
+            "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
+              "projectPath": "C:\\Users\\root\\source\\repos\\ZPIS rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
             }
           }
         }
