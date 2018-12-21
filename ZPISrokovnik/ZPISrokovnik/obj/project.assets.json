@@ -51,10 +51,7 @@
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
-<<<<<<< HEAD
         ".nupkg.metadata",
-=======
->>>>>>> 92dd774c68df9cd21f23c15f679f9179dc6d940c
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -65,12 +62,10 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -194,10 +189,11 @@
       ]
     },
     "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "oYfHpCY9i9wN4vLllsIhzDZY5iOCUtZ3RHxID1fiXOcf7yL9UA16NUsI8opoNmpv1Ru2lTGG9ZKKT1sYS6DLjA==",
+      "sha512": "6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
       "type": "package",
       "path": "xamarin.forms/3.1.0.697729",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
@@ -350,23 +346,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10\\.nuget\\packages\\": {},
+    "C:\\Users\\Matej\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "projectUniqueName": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
       "projectName": "ZPISrokovnik",
-      "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
-      "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
+      "projectPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "packagesPath": "C:\\Users\\Matej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matej\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -556,10 +556,11 @@
   },
   "libraries": {
     "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "oYfHpCY9i9wN4vLllsIhzDZY5iOCUtZ3RHxID1fiXOcf7yL9UA16NUsI8opoNmpv1Ru2lTGG9ZKKT1sYS6DLjA==",
+      "sha512": "6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
       "type": "package",
       "path": "xamarin.forms/3.1.0.697729",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
@@ -717,20 +718,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10\\.nuget\\packages\\": {}
+    "C:\\Users\\Matej\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
       "projectName": "ZPISrokovnik.iOS",
-      "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
-      "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "packagesPath": "C:\\Users\\Matej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matej\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -743,8 +744,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
-              "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
+            "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
+              "projectPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
             }
           }
         }
