@@ -56,6 +56,7 @@
                    VerticalOptions="Center"
                    Margin="0,0,25,0"
                    Text="{Binding Naziv}"
+                   x:Name="NazivNapomene"
             ></Entry>
                 <Label Text="Napomena:" 
                    Grid.Row="2" 
@@ -69,10 +70,11 @@
                 <StackLayout Padding="30,0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
                     <Frame OutlineColor="Black" CornerRadius="5" Padding="1" BackgroundColor="White"
                            >
-                        <Editor Text="{Binding Napomena}" 
+                        <Editor Text="{Binding Opis}" 
                                     HeightRequest="220"
                                     WidthRequest="450"
-                                TextColor="Black"
+                                    TextColor="Black"
+                                    x:Name="OpisNapomene"
                         />
                     </Frame>
                 </StackLayout>
@@ -80,10 +82,8 @@
                     <Button Margin="28,0"
                             Text="Spremi"
                             BackgroundColor="Teal"
-                    ></Button>
-                    <Button Margin="28,0"
-                            Text="Obriši"
-                            BackgroundColor="Tomato"
+                            x:Name="Unesi"
+                            Pressed="UnesiNapomenu_Pressed"
                     ></Button>
                 </StackLayout>
             </Grid>

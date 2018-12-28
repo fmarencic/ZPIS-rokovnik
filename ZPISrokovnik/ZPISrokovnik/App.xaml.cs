@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZPISrokovnik.Utils.Data;
 using ZPISrokovnik.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -10,6 +11,7 @@ namespace ZPISrokovnik
     {
         public static bool IsUserLoggedIn { get; set; } = false;
 
+        public static StorageDatabaseController DatabaseController;
         public App()
         {
             InitializeComponent();
@@ -18,6 +20,19 @@ namespace ZPISrokovnik
                 MainPage = new NavigationPage(new LoginView());
             else
                 MainPage = new MainTabbedPage();         
+        }
+
+        /// <summary>
+        /// App.NapomenaBaza.Metoda
+        /// </summary>
+        /// <returns></returns>
+        public static StorageDatabaseController NapomenaBaza()
+        {
+            if (DatabaseController == null)
+            {
+                DatabaseController = new StorageDatabaseController();
+            }
+            return DatabaseController;
         }
 
         protected override void OnStart()
