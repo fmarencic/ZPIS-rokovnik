@@ -26,6 +26,40 @@ namespace ZPISrokovnik.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::ZPISrokovnik.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::ZPISrokovnik.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.allowAppointmentDrag = global::ZPISrokovnik.Droid.Resource.Attribute.allowAppointmentDrag;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.enableNavigation = global::ZPISrokovnik.Droid.Resource.Attribute.enableNavigation;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.scheduleDateHeaderFormat = global::ZPISrokovnik.Droid.Resource.Attribute.scheduleDateHeaderFormat;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.scheduleFirstDayOfWeek = global::ZPISrokovnik.Droid.Resource.Attribute.scheduleFirstDayOfWeek;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.scheduleHeaderHeight = global::ZPISrokovnik.Droid.Resource.Attribute.scheduleHeaderHeight;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.scheduleView = global::ZPISrokovnik.Droid.Resource.Attribute.scheduleView;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.timeInterval = global::ZPISrokovnik.Droid.Resource.Attribute.timeInterval;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.timeIntervalHeight = global::ZPISrokovnik.Droid.Resource.Attribute.timeIntervalHeight;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.timeZone = global::ZPISrokovnik.Droid.Resource.Attribute.timeZone;
+			global::Com.Syncfusion.Schedule.Resource.Attribute.viewHeaderHeight = global::ZPISrokovnik.Droid.Resource.Attribute.viewHeaderHeight;
+			global::Com.Syncfusion.Schedule.Resource.Drawable.arrow_down = global::ZPISrokovnik.Droid.Resource.Drawable.arrow_down;
+			global::Com.Syncfusion.Schedule.Resource.Drawable.arrow_up = global::ZPISrokovnik.Droid.Resource.Drawable.arrow_up;
+			global::Com.Syncfusion.Schedule.Resource.Drawable.Recurrence = global::ZPISrokovnik.Droid.Resource.Drawable.Recurrence;
+			global::Com.Syncfusion.Schedule.Resource.Id.dayView = global::ZPISrokovnik.Droid.Resource.Id.dayView;
+			global::Com.Syncfusion.Schedule.Resource.Id.monthView = global::ZPISrokovnik.Droid.Resource.Id.monthView;
+			global::Com.Syncfusion.Schedule.Resource.Id.weekView = global::ZPISrokovnik.Droid.Resource.Id.weekView;
+			global::Com.Syncfusion.Schedule.Resource.Id.workWeekView = global::ZPISrokovnik.Droid.Resource.Id.workWeekView;
+			global::Com.Syncfusion.Schedule.Resource.String.NoSelectedDate = global::ZPISrokovnik.Droid.Resource.String.NoSelectedDate;
+			global::Com.Syncfusion.Schedule.Resource.String.No_Appointments = global::ZPISrokovnik.Droid.Resource.String.No_Appointments;
+			global::Com.Syncfusion.Schedule.Resource.String.all_day = global::ZPISrokovnik.Droid.Resource.String.all_day;
+			global::Com.Syncfusion.Schedule.Resource.String.library_name = global::ZPISrokovnik.Droid.Resource.String.library_name;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_allowAppointmentDrag = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_allowAppointmentDrag;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_enableNavigation = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_enableNavigation;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_scheduleDateHeaderFormat = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_scheduleDateHeaderFormat;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_scheduleFirstDayOfWeek = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_scheduleFirstDayOfWeek;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_scheduleHeaderHeight = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_scheduleHeaderHeight;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_scheduleView = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_scheduleView;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_timeInterval = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_timeInterval;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_timeIntervalHeight = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_timeIntervalHeight;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_timeZone = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_timeZone;
+			global::Com.Syncfusion.Schedule.Resource.Styleable.SfSchedule_viewHeaderHeight = global::ZPISrokovnik.Droid.Resource.Styleable.SfSchedule_viewHeaderHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ZPISrokovnik.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -222,6 +256,9 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F040026
 			public const int alertDialogTheme = 2130968614;
+			
+			// aapt resource value: 0x7F080009
+			public const int allowAppointmentDrag = 2131230729;
 			
 			// aapt resource value: 0x7F040027
 			public const int allowStacking = 2130968615;
@@ -516,6 +553,9 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F04007D
 			public const int elevation = 2130968701;
+			
+			// aapt resource value: 0x7F080007
+			public const int enableNavigation = 2131230727;
 			
 			// aapt resource value: 0x7F04007E
 			public const int errorEnabled = 2130968702;
@@ -904,6 +944,18 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F0400F0
 			public const int rippleColor = 2130968816;
 			
+			// aapt resource value: 0x7F080008
+			public const int scheduleDateHeaderFormat = 2131230728;
+			
+			// aapt resource value: 0x7F080010
+			public const int scheduleFirstDayOfWeek = 2131230736;
+			
+			// aapt resource value: 0x7F080005
+			public const int scheduleHeaderHeight = 2131230725;
+			
+			// aapt resource value: 0x7F080002
+			public const int scheduleView = 2131230722;
+			
 			// aapt resource value: 0x7F0400F1
 			public const int scrimAnimationDuration = 2130968817;
 			
@@ -1120,6 +1172,15 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F040138
 			public const int tickMarkTintMode = 2130968888;
 			
+			// aapt resource value: 0x7F080003
+			public const int timeInterval = 2131230723;
+			
+			// aapt resource value: 0x7F080004
+			public const int timeIntervalHeight = 2131230724;
+			
+			// aapt resource value: 0x7F080011
+			public const int timeZone = 2131230737;
+			
 			// aapt resource value: 0x7F040139
 			public const int tint = 2130968889;
 			
@@ -1188,6 +1249,9 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F04014F
 			public const int useCompatPadding = 2130968911;
+			
+			// aapt resource value: 0x7F080006
+			public const int viewHeaderHeight = 2131230726;
 			
 			// aapt resource value: 0x7F040150
 			public const int voiceIcon = 2130968912;
@@ -2339,6 +2403,12 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F090053
 			public const int abc_vector_test = 2131296339;
 			
+			// aapt resource value: 0x7F010008
+			public const int arrow_down = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int arrow_up = 2130771977;
+			
 			// aapt resource value: 0x7F090054
 			public const int avd_hide_password = 2131296340;
 			
@@ -2900,6 +2970,12 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F090104
 			public const int ic_vol_type_tv_light = 2131296516;
 			
+			// aapt resource value: 0x7F010006
+			public const int inputlayout_togglecollapseicon = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int inputlayout_togglevisibleicon = 2130771975;
+			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
 			
@@ -3001,6 +3077,9 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
+			
+			// aapt resource value: 0x7F010010
+			public const int Recurrence = 2130771984;
 			
 			// aapt resource value: 0x7F010005
 			public const int settings = 2130771973;
@@ -3132,6 +3211,9 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F0C0024
 			public const int customPanel = 2131492900;
 			
+			// aapt resource value: 0x7F020004
+			public const int dayView = 2130837508;
+			
 			// aapt resource value: 0x7F0C0025
 			public const int decor_content_parent = 2131492901;
 			
@@ -3230,6 +3312,9 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F0C0045
 			public const int mini = 2131492933;
+			
+			// aapt resource value: 0x7F020007
+			public const int monthView = 2130837511;
 			
 			// aapt resource value: 0x7F0C0033
 			public const int mr_art = 2131492915;
@@ -3536,6 +3621,12 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F0C007D
 			public const int volume_item_container = 2131492989;
+			
+			// aapt resource value: 0x7F020005
+			public const int weekView = 2130837509;
+			
+			// aapt resource value: 0x7F020006
+			public const int workWeekView = 2130837510;
 			
 			// aapt resource value: 0x7F0C0090
 			public const int wrap_content = 2131493008;
@@ -3950,6 +4041,9 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F15001D
 			public const int abc_toolbar_collapse_description = 2132082717;
 			
+			// aapt resource value: 0x7F090004
+			public const int all_day = 2131296260;
+			
 			// aapt resource value: 0x7F15001E
 			public const int appbar_scrolling_view_behavior = 2132082718;
 			
@@ -3958,6 +4052,9 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F150020
 			public const int character_counter_pattern = 2132082720;
+			
+			// aapt resource value: 0x7F090002
+			public const int library_name = 2131296258;
 			
 			// aapt resource value: 0x7F15001E
 			public const int mr_button_content_description = 2132082718;
@@ -4021,6 +4118,12 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7F150032
 			public const int mr_user_route_category_name = 2132082738;
+			
+			// aapt resource value: 0x7F090005
+			public const int NoSelectedDate = 2131296261;
+			
+			// aapt resource value: 0x7F090003
+			public const int No_Appointments = 2131296259;
 			
 			// aapt resource value: 0x7F150021
 			public const int password_toggle_content_description = 2132082721;
@@ -5309,11 +5412,11 @@ namespace ZPISrokovnik.Droid
 			public static int[] ActionBarLayout = new int[] {
 					16842931};
 			
-			// aapt resource value: 0x7F070047
-			public const int ActionBarLayout_android_layout_gravity = 2131165255;
+			// aapt resource value: 0x7F070058
+			public const int ActionBarLayout_android_layout_gravity = 2131165272;
 			
-			// aapt resource value: 0x7F070017
-			public const int ActionBar_background = 2131165207;
+			// aapt resource value: 0x7F070028
+			public const int ActionBar_background = 2131165224;
 			
 			// aapt resource value: 0x1
 			public const int ActionBar_backgroundSplit = 1;
@@ -5402,8 +5505,8 @@ namespace ZPISrokovnik.Droid
 			public static int[] ActionMenuItemView = new int[] {
 					16843071};
 			
-			// aapt resource value: 0x7F070049
-			public const int ActionMenuItemView_android_minWidth = 2131165257;
+			// aapt resource value: 0x7F070060
+			public const int ActionMenuItemView_android_minWidth = 2131165280;
 			
 			public static int[] ActionMode = new int[] {
 					2130968626,
@@ -5413,8 +5516,8 @@ namespace ZPISrokovnik.Droid
 					2130968847,
 					2130968901};
 			
-			// aapt resource value: 0x7F070051
-			public const int ActionMode_background = 2131165265;
+			// aapt resource value: 0x7F070062
+			public const int ActionMode_background = 2131165282;
 			
 			// aapt resource value: 0x1
 			public const int ActionMode_backgroundSplit = 1;
@@ -5435,8 +5538,8 @@ namespace ZPISrokovnik.Droid
 					2130968704,
 					2130968746};
 			
-			// aapt resource value: 0x7F070058
-			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131165272;
+			// aapt resource value: 0x7F070069
+			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131165289;
 			
 			// aapt resource value: 0x1
 			public const int ActivityChooserView_initialActivityCount = 1;
@@ -5450,8 +5553,8 @@ namespace ZPISrokovnik.Droid
 					2130968828,
 					2130968829};
 			
-			// aapt resource value: 0x7F070061
-			public const int AlertDialog_android_layout = 2131165281;
+			// aapt resource value: 0x7F070072
+			public const int AlertDialog_android_layout = 2131165298;
 			
 			// aapt resource value: 0x1
 			public const int AlertDialog_buttonPanelSideLayout = 1;
@@ -5482,14 +5585,14 @@ namespace ZPISrokovnik.Droid
 					2130968838,
 					2130968839};
 			
-			// aapt resource value: 0x7F070075
-			public const int AppBarLayoutStates_state_collapsed = 2131165301;
+			// aapt resource value: 0x7F070086
+			public const int AppBarLayoutStates_state_collapsed = 2131165318;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayoutStates_state_collapsible = 1;
 			
-			// aapt resource value: 0x7F070069
-			public const int AppBarLayout_android_background = 2131165289;
+			// aapt resource value: 0x7F070080
+			public const int AppBarLayout_android_background = 2131165312;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_android_keyboardNavigationCluster = 1;
@@ -5507,8 +5610,8 @@ namespace ZPISrokovnik.Droid
 					2130968765,
 					2130968766};
 			
-			// aapt resource value: 0x7F070078
-			public const int AppBarLayout_Layout_layout_scrollFlags = 2131165304;
+			// aapt resource value: 0x7F070089
+			public const int AppBarLayout_Layout_layout_scrollFlags = 2131165321;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_Layout_layout_scrollInterpolator = 1;
@@ -5519,8 +5622,8 @@ namespace ZPISrokovnik.Droid
 					2130968889,
 					2130968890};
 			
-			// aapt resource value: 0x7F070081
-			public const int AppCompatImageView_android_src = 2131165313;
+			// aapt resource value: 0x7F070092
+			public const int AppCompatImageView_android_src = 2131165330;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatImageView_srcCompat = 1;
@@ -5537,8 +5640,8 @@ namespace ZPISrokovnik.Droid
 					2130968887,
 					2130968888};
 			
-			// aapt resource value: 0x7F070086
-			public const int AppCompatSeekBar_android_thumb = 2131165318;
+			// aapt resource value: 0x7F070097
+			public const int AppCompatSeekBar_android_thumb = 2131165335;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatSeekBar_tickMark = 1;
@@ -5558,8 +5661,8 @@ namespace ZPISrokovnik.Droid
 					16843117,
 					16842804};
 			
-			// aapt resource value: 0x7F070091
-			public const int AppCompatTextHelper_android_drawableBottom = 2131165329;
+			// aapt resource value: 0x7F070102
+			public const int AppCompatTextHelper_android_drawableBottom = 2131165442;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextHelper_android_drawableEnd = 1;
@@ -5589,8 +5692,8 @@ namespace ZPISrokovnik.Droid
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F070099
-			public const int AppCompatTextView_android_textAppearance = 2131165337;
+			// aapt resource value: 0x7F070110
+			public const int AppCompatTextView_android_textAppearance = 2131165456;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextView_autoSizeMaxTextSize = 1;
@@ -5734,8 +5837,8 @@ namespace ZPISrokovnik.Droid
 					2130968921,
 					2130968922};
 			
-			// aapt resource value: 0x7F070108
-			public const int AppCompatTheme_actionBarDivider = 2131165448;
+			// aapt resource value: 0x7F070119
+			public const int AppCompatTheme_actionBarDivider = 2131165465;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTheme_actionBarItemBackground = 1;
@@ -6098,8 +6201,8 @@ namespace ZPISrokovnik.Droid
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F070228
-			public const int BottomNavigationView_elevation = 2131165736;
+			// aapt resource value: 0x7F070239
+			public const int BottomNavigationView_elevation = 2131165753;
 			
 			// aapt resource value: 0x1
 			public const int BottomNavigationView_itemBackground = 1;
@@ -6118,8 +6221,8 @@ namespace ZPISrokovnik.Droid
 					2130968635,
 					2130968636};
 			
-			// aapt resource value: 0x7F070234
-			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131165748;
+			// aapt resource value: 0x7F070245
+			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131165765;
 			
 			// aapt resource value: 0x1
 			public const int BottomSheetBehavior_Layout_behavior_peekHeight = 1;
@@ -6130,8 +6233,8 @@ namespace ZPISrokovnik.Droid
 			public static int[] ButtonBarLayout = new int[] {
 					2130968615};
 			
-			// aapt resource value: 0x7F070238
-			public const int ButtonBarLayout_allowStacking = 2131165752;
+			// aapt resource value: 0x7F070249
+			public const int ButtonBarLayout_allowStacking = 2131165769;
 			
 			public static int[] CardView = new int[] {
 					16843072,
@@ -6148,8 +6251,8 @@ namespace ZPISrokovnik.Droid
 					2130968586,
 					2130968587};
 			
-			// aapt resource value: 0x7F070541
-			public const int CardView_android_minHeight = 2131166529;
+			// aapt resource value: 0x7F070552
+			public const int CardView_android_minHeight = 2131166546;
 			
 			// aapt resource value: 0x1
 			public const int CardView_android_minWidth = 1;
@@ -6205,8 +6308,8 @@ namespace ZPISrokovnik.Droid
 					2130968892,
 					2130968902};
 			
-			// aapt resource value: 0x7F070240
-			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131165760;
+			// aapt resource value: 0x7F070251
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131165777;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 1;
@@ -6239,8 +6342,8 @@ namespace ZPISrokovnik.Droid
 					2130968760,
 					2130968761};
 			
-			// aapt resource value: 0x7F070257
-			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131165783;
+			// aapt resource value: 0x7F070268
+			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131165800;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
@@ -6268,8 +6371,8 @@ namespace ZPISrokovnik.Droid
 					16843551,
 					16843173};
 			
-			// aapt resource value: 0x7F070260
-			public const int ColorStateListItem_alpha = 2131165792;
+			// aapt resource value: 0x7F070271
+			public const int ColorStateListItem_alpha = 2131165809;
 			
 			// aapt resource value: 0x1
 			public const int ColorStateListItem_android_alpha = 1;
@@ -6282,8 +6385,8 @@ namespace ZPISrokovnik.Droid
 					2130968650,
 					2130968651};
 			
-			// aapt resource value: 0x7F070264
-			public const int CompoundButton_android_button = 2131165796;
+			// aapt resource value: 0x7F070275
+			public const int CompoundButton_android_button = 2131165813;
 			
 			// aapt resource value: 0x1
 			public const int CompoundButton_buttonTint = 1;
@@ -6295,8 +6398,8 @@ namespace ZPISrokovnik.Droid
 					2130968754,
 					2130968840};
 			
-			// aapt resource value: 0x7F070268
-			public const int CoordinatorLayout_keylines = 2131165800;
+			// aapt resource value: 0x7F070279
+			public const int CoordinatorLayout_keylines = 2131165817;
 			
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
@@ -6307,8 +6410,8 @@ namespace ZPISrokovnik.Droid
 					2130968763,
 					2130968764};
 			
-			// aapt resource value: 0x7F070271
-			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131165809;
+			// aapt resource value: 0x7F070282
+			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131165826;
 			
 			// aapt resource value: 0x1
 			public const int CoordinatorLayout_Layout_layout_anchor = 1;
@@ -6336,8 +6439,8 @@ namespace ZPISrokovnik.Droid
 					2130968640,
 					2130968879};
 			
-			// aapt resource value: 0x7F070279
-			public const int DesignTheme_bottomSheetDialogTheme = 2131165817;
+			// aapt resource value: 0x7F070290
+			public const int DesignTheme_bottomSheetDialogTheme = 2131165840;
 			
 			// aapt resource value: 0x1
 			public const int DesignTheme_bottomSheetStyle = 1;
@@ -6355,8 +6458,8 @@ namespace ZPISrokovnik.Droid
 					2130968831,
 					2130968882};
 			
-			// aapt resource value: 0x7F070283
-			public const int DrawerArrowToggle_arrowHeadLength = 2131165827;
+			// aapt resource value: 0x7F070294
+			public const int DrawerArrowToggle_arrowHeadLength = 2131165844;
 			
 			// aapt resource value: 0x1
 			public const int DrawerArrowToggle_arrowShaftLength = 1;
@@ -6389,8 +6492,8 @@ namespace ZPISrokovnik.Droid
 					2130968816,
 					2130968911};
 			
-			// aapt resource value: 0x7F070292
-			public const int FloatingActionButton_backgroundTint = 2131165842;
+			// aapt resource value: 0x7F070303
+			public const int FloatingActionButton_backgroundTint = 2131165955;
 			
 			// aapt resource value: 0x1
 			public const int FloatingActionButton_backgroundTintMode = 1;
@@ -6398,8 +6501,8 @@ namespace ZPISrokovnik.Droid
 			public static int[] FloatingActionButton_Behavior_Layout = new int[] {
 					2130968632};
 			
-			// aapt resource value: 0x7F070301
-			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131165953;
+			// aapt resource value: 0x7F070312
+			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131165970;
 			
 			// aapt resource value: 0x2
 			public const int FloatingActionButton_borderWidth = 2;
@@ -6435,8 +6538,8 @@ namespace ZPISrokovnik.Droid
 					2130968584,
 					2130968585};
 			
-			// aapt resource value: 0x7F070010
-			public const int FontFamilyFont_android_font = 2131165200;
+			// aapt resource value: 0x7F070021
+			public const int FontFamilyFont_android_font = 2131165217;
 			
 			// aapt resource value: 0x1
 			public const int FontFamilyFont_android_fontStyle = 1;
@@ -6453,8 +6556,8 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x5
 			public const int FontFamilyFont_fontWeight = 5;
 			
-			// aapt resource value: 0x7F070003
-			public const int FontFamily_fontProviderAuthority = 2131165187;
+			// aapt resource value: 0x7F070014
+			public const int FontFamily_fontProviderAuthority = 2131165204;
 			
 			// aapt resource value: 0x1
 			public const int FontFamily_fontProviderCerts = 1;
@@ -6476,8 +6579,8 @@ namespace ZPISrokovnik.Droid
 					16843264,
 					2130968729};
 			
-			// aapt resource value: 0x7F070303
-			public const int ForegroundLinearLayout_android_foreground = 2131165955;
+			// aapt resource value: 0x7F070314
+			public const int ForegroundLinearLayout_android_foreground = 2131165972;
 			
 			// aapt resource value: 0x1
 			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
@@ -6496,8 +6599,8 @@ namespace ZPISrokovnik.Droid
 					2130968782,
 					2130968826};
 			
-			// aapt resource value: 0x7F070307
-			public const int LinearLayoutCompat_android_baselineAligned = 2131165959;
+			// aapt resource value: 0x7F070318
+			public const int LinearLayoutCompat_android_baselineAligned = 2131165976;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_android_baselineAlignedChildIndex = 1;
@@ -6523,8 +6626,8 @@ namespace ZPISrokovnik.Droid
 					16843137,
 					16842996};
 			
-			// aapt resource value: 0x7F070317
-			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131165975;
+			// aapt resource value: 0x7F070328
+			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131165992;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_Layout_android_layout_height = 1;
@@ -6545,8 +6648,8 @@ namespace ZPISrokovnik.Droid
 					16843436,
 					16843437};
 			
-			// aapt resource value: 0x7F070322
-			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131165986;
+			// aapt resource value: 0x7F070333
+			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131166003;
 			
 			// aapt resource value: 0x1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
@@ -6557,8 +6660,8 @@ namespace ZPISrokovnik.Droid
 					2130968688,
 					2130968732};
 			
-			// aapt resource value: 0x7F070555
-			public const int MediaRouteButton_android_minHeight = 2131166549;
+			// aapt resource value: 0x7F070566
+			public const int MediaRouteButton_android_minHeight = 2131166566;
 			
 			// aapt resource value: 0x1
 			public const int MediaRouteButton_android_minWidth = 1;
@@ -6577,8 +6680,8 @@ namespace ZPISrokovnik.Droid
 					16843231,
 					16843156};
 			
-			// aapt resource value: 0x7F070325
-			public const int MenuGroup_android_checkableBehavior = 2131165989;
+			// aapt resource value: 0x7F070336
+			public const int MenuGroup_android_checkableBehavior = 2131166006;
 			
 			// aapt resource value: 0x1
 			public const int MenuGroup_android_enabled = 1;
@@ -6620,8 +6723,8 @@ namespace ZPISrokovnik.Droid
 					2130968825,
 					2130968907};
 			
-			// aapt resource value: 0x7F070332
-			public const int MenuItem_actionLayout = 2131166002;
+			// aapt resource value: 0x7F070343
+			public const int MenuItem_actionLayout = 2131166019;
 			
 			// aapt resource value: 0x1
 			public const int MenuItem_actionProviderClass = 1;
@@ -6700,8 +6803,8 @@ namespace ZPISrokovnik.Droid
 					2130968805,
 					2130968842};
 			
-			// aapt resource value: 0x7F070356
-			public const int MenuView_android_headerBackground = 2131166038;
+			// aapt resource value: 0x7F070367
+			public const int MenuView_android_headerBackground = 2131166055;
 			
 			// aapt resource value: 0x1
 			public const int MenuView_android_horizontalDivider = 1;
@@ -6739,8 +6842,8 @@ namespace ZPISrokovnik.Droid
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F070366
-			public const int NavigationView_android_background = 2131166054;
+			// aapt resource value: 0x7F070377
+			public const int NavigationView_android_background = 2131166071;
 			
 			// aapt resource value: 0x1
 			public const int NavigationView_android_fitsSystemWindows = 1;
@@ -6777,11 +6880,11 @@ namespace ZPISrokovnik.Droid
 			public static int[] PopupWindowBackgroundState = new int[] {
 					2130968837};
 			
-			// aapt resource value: 0x7F070381
-			public const int PopupWindowBackgroundState_state_above_anchor = 2131166081;
+			// aapt resource value: 0x7F070392
+			public const int PopupWindowBackgroundState_state_above_anchor = 2131166098;
 			
-			// aapt resource value: 0x7F070377
-			public const int PopupWindow_android_popupAnimationStyle = 2131166071;
+			// aapt resource value: 0x7F070388
+			public const int PopupWindow_android_popupAnimationStyle = 2131166088;
 			
 			// aapt resource value: 0x1
 			public const int PopupWindow_android_popupBackground = 1;
@@ -6793,8 +6896,8 @@ namespace ZPISrokovnik.Droid
 					2130968790,
 					2130968793};
 			
-			// aapt resource value: 0x7F070383
-			public const int RecycleListView_paddingBottomNoButtons = 2131166083;
+			// aapt resource value: 0x7F070394
+			public const int RecycleListView_paddingBottomNoButtons = 2131166100;
 			
 			// aapt resource value: 0x1
 			public const int RecycleListView_paddingTopNoTitle = 1;
@@ -6812,8 +6915,8 @@ namespace ZPISrokovnik.Droid
 					2130968830,
 					2130968836};
 			
-			// aapt resource value: 0x7F070386
-			public const int RecyclerView_android_descendantFocusability = 2131166086;
+			// aapt resource value: 0x7F070397
+			public const int RecyclerView_android_descendantFocusability = 2131166103;
 			
 			// aapt resource value: 0x1
 			public const int RecyclerView_android_orientation = 1;
@@ -6848,14 +6951,14 @@ namespace ZPISrokovnik.Droid
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130968747};
 			
-			// aapt resource value: 0x7F070398
-			public const int ScrimInsetsFrameLayout_insetForeground = 2131166104;
+			// aapt resource value: 0x7F070409
+			public const int ScrimInsetsFrameLayout_insetForeground = 2131166217;
 			
 			public static int[] ScrollingViewBehavior_Layout = new int[] {
 					2130968634};
 			
-			// aapt resource value: 0x7F070400
-			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131166208;
+			// aapt resource value: 0x7F070411
+			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131166225;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -6876,8 +6979,8 @@ namespace ZPISrokovnik.Droid
 					2130968848,
 					2130968912};
 			
-			// aapt resource value: 0x7F070402
-			public const int SearchView_android_focusable = 2131166210;
+			// aapt resource value: 0x7F070413
+			public const int SearchView_android_focusable = 2131166227;
 			
 			// aapt resource value: 0x1
 			public const int SearchView_android_imeOptions = 1;
@@ -6927,13 +7030,55 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x16
 			public const int SearchView_voiceIcon = 22;
 			
+			public static int[] SfSchedule = new int[] {
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0};
+			
+			// aapt resource value: 0x7F070009
+			public const int SfSchedule_allowAppointmentDrag = 2131165193;
+			
+			// aapt resource value: 0x7F070007
+			public const int SfSchedule_enableNavigation = 2131165191;
+			
+			// aapt resource value: 0x7F070008
+			public const int SfSchedule_scheduleDateHeaderFormat = 2131165192;
+			
+			// aapt resource value: 0x7F070010
+			public const int SfSchedule_scheduleFirstDayOfWeek = 2131165200;
+			
+			// aapt resource value: 0x7F070005
+			public const int SfSchedule_scheduleHeaderHeight = 2131165189;
+			
+			// aapt resource value: 0x7F070002
+			public const int SfSchedule_scheduleView = 2131165186;
+			
+			// aapt resource value: 0x7F070003
+			public const int SfSchedule_timeInterval = 2131165187;
+			
+			// aapt resource value: 0x7F070004
+			public const int SfSchedule_timeIntervalHeight = 2131165188;
+			
+			// aapt resource value: 0x7F070011
+			public const int SfSchedule_timeZone = 2131165201;
+			
+			// aapt resource value: 0x7F070006
+			public const int SfSchedule_viewHeaderHeight = 2131165190;
+			
 			public static int[] SnackbarLayout = new int[] {
 					16843039,
 					2130968701,
 					2130968780};
 			
-			// aapt resource value: 0x7F070420
-			public const int SnackbarLayout_android_maxWidth = 2131166240;
+			// aapt resource value: 0x7F070431
+			public const int SnackbarLayout_android_maxWidth = 2131166257;
 			
 			// aapt resource value: 0x1
 			public const int SnackbarLayout_elevation = 1;
@@ -6948,8 +7093,8 @@ namespace ZPISrokovnik.Droid
 					16843131,
 					2130968803};
 			
-			// aapt resource value: 0x7F070424
-			public const int Spinner_android_dropDownWidth = 2131166244;
+			// aapt resource value: 0x7F070435
+			public const int Spinner_android_dropDownWidth = 2131166261;
 			
 			// aapt resource value: 0x1
 			public const int Spinner_android_entries = 1;
@@ -6979,8 +7124,8 @@ namespace ZPISrokovnik.Droid
 					2130968909,
 					2130968910};
 			
-			// aapt resource value: 0x7F070430
-			public const int SwitchCompat_android_textOff = 2131166256;
+			// aapt resource value: 0x7F070441
+			public const int SwitchCompat_android_textOff = 2131166273;
 			
 			// aapt resource value: 0x1
 			public const int SwitchCompat_android_textOn = 1;
@@ -7026,8 +7171,8 @@ namespace ZPISrokovnik.Droid
 					16842994,
 					16843087};
 			
-			// aapt resource value: 0x7F070445
-			public const int TabItem_android_icon = 2131166277;
+			// aapt resource value: 0x7F070456
+			public const int TabItem_android_icon = 2131166294;
 			
 			// aapt resource value: 0x1
 			public const int TabItem_android_layout = 1;
@@ -7053,8 +7198,8 @@ namespace ZPISrokovnik.Droid
 					2130968867,
 					2130968868};
 			
-			// aapt resource value: 0x7F070449
-			public const int TabLayout_tabBackground = 2131166281;
+			// aapt resource value: 0x7F070460
+			public const int TabLayout_tabBackground = 2131166304;
 			
 			// aapt resource value: 0x1
 			public const int TabLayout_tabContentStart = 1;
@@ -7116,8 +7261,8 @@ namespace ZPISrokovnik.Droid
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F070466
-			public const int TextAppearance_android_fontFamily = 2131166310;
+			// aapt resource value: 0x7F070477
+			public const int TextAppearance_android_fontFamily = 2131166327;
 			
 			// aapt resource value: 0x1
 			public const int TextAppearance_android_shadowColor = 1;
@@ -7173,8 +7318,8 @@ namespace ZPISrokovnik.Droid
 					2130968800,
 					2130968801};
 			
-			// aapt resource value: 0x7F070480
-			public const int TextInputLayout_android_hint = 2131166336;
+			// aapt resource value: 0x7F070491
+			public const int TextInputLayout_android_hint = 2131166353;
 			
 			// aapt resource value: 0x1
 			public const int TextInputLayout_android_textColorHint = 1;
@@ -7252,8 +7397,8 @@ namespace ZPISrokovnik.Droid
 					2130968899,
 					2130968900};
 			
-			// aapt resource value: 0x7F070497
-			public const int Toolbar_android_gravity = 2131166359;
+			// aapt resource value: 0x7F070508
+			public const int Toolbar_android_gravity = 2131166472;
 			
 			// aapt resource value: 0x1
 			public const int Toolbar_android_minHeight = 1;
@@ -7351,8 +7496,8 @@ namespace ZPISrokovnik.Droid
 					2130968629,
 					2130968630};
 			
-			// aapt resource value: 0x7F070533
-			public const int ViewBackgroundHelper_android_background = 2131166515;
+			// aapt resource value: 0x7F070544
+			public const int ViewBackgroundHelper_android_background = 2131166532;
 			
 			// aapt resource value: 0x1
 			public const int ViewBackgroundHelper_backgroundTint = 1;
@@ -7365,8 +7510,8 @@ namespace ZPISrokovnik.Droid
 					16842995,
 					16842994};
 			
-			// aapt resource value: 0x7F070537
-			public const int ViewStubCompat_android_id = 2131166519;
+			// aapt resource value: 0x7F070548
+			public const int ViewStubCompat_android_id = 2131166536;
 			
 			// aapt resource value: 0x1
 			public const int ViewStubCompat_android_inflatedId = 1;
@@ -7374,8 +7519,8 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x2
 			public const int ViewStubCompat_android_layout = 2;
 			
-			// aapt resource value: 0x7F070527
-			public const int View_android_focusable = 2131166503;
+			// aapt resource value: 0x7F070538
+			public const int View_android_focusable = 2131166520;
 			
 			// aapt resource value: 0x1
 			public const int View_android_theme = 1;
