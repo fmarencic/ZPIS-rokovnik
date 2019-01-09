@@ -9,12 +9,9 @@ namespace ZPISrokovnik
 {
     public partial class App : Application
     {
-<<<<<<< HEAD
-=======
         public static bool IsUserLoggedIn { get; set; } = false;
 
         public static StorageDatabaseController DatabaseController;
->>>>>>> 9cc9c8339029fa7ec0bdb5e4a4abe3582d979da0
         public App()
         {
             InitializeComponent();       
