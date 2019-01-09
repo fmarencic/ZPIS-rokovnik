@@ -84,6 +84,7 @@
                             BackgroundColor="Teal"
                             x:Name="Unesi"
                             Pressed="UnesiNapomenu_Pressed"
+                            Command="UnesiNapomenuCommand"
                     ></Button>
                 </StackLayout>
             </Grid>

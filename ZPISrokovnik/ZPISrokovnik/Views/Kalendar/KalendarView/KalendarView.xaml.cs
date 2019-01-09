@@ -12,11 +12,11 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class KalendarView : ContentPage
 	{
-	    public NapomenaModel OznaceniDogadaj { get; set; }
+	    public Napomena OznaceniDogadaj { get; set; }
 		public KalendarView ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new NapomenaModel();
+            this.BindingContext = new Napomena();
 		    ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
 		}
 
@@ -32,7 +32,7 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 	            OznaceniDogadaj.Vidljivo = false;
 	        }
 	        var vm = BindingContext as UnesiNapomenuView;
-	        this.OznaceniDogadaj = e.Item as NapomenaModel;
+	        this.OznaceniDogadaj = e.Item as Napomena;
 	        vm.PrikaziIliSakrijDetalje(OznaceniDogadaj);
         }
 

@@ -14,14 +14,14 @@ namespace ZPISrokovnik.Views.Kalendar
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class UnesiNapomenuView : ContentPage
 	{
-	    public NapomenaModel Napomena { get; set; }
+	    public Napomena Napomena { get; set; }
 		public UnesiNapomenuView ()
 		{
 			InitializeComponent ();
             this.BindingContext = new UnesiNapomenuView();
 		}
 
-	    public UnesiNapomenuView(NapomenaModel napomena)
+	    public UnesiNapomenuView(Napomena napomena)
 	    {
 	        InitializeComponent();
 	        this.Napomena = napomena;
@@ -35,7 +35,7 @@ namespace ZPISrokovnik.Views.Kalendar
             //dohvatit vrijednosti i spremit u bazu
 	        if (Napomena == null)
 	        {
-	            Napomena = new NapomenaModel();
+	            Napomena = new Napomena();
             }
 	        
 	        Napomena.Naziv = NazivNapomene.Text;
@@ -47,7 +47,7 @@ namespace ZPISrokovnik.Views.Kalendar
             
 	    }
 
-	    public void PrikaziIliSakrijDetalje(NapomenaModel dogadaj)
+	    public void PrikaziIliSakrijDetalje(Napomena dogadaj)
 	    {
 	        dogadaj.Vidljivo = true;
 	    }

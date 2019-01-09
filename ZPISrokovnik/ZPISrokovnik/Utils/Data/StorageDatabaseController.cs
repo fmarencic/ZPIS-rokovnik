@@ -17,25 +17,22 @@ namespace ZPISrokovnik.Utils.Data
         public StorageDatabaseController()
         {
             this.Database = DependencyService.Get<ISQLite>().GetConnection();
-            this.Database.CreateTable<NapomenaModel>();
+            this.Database.CreateTable<Napomena>();
         }
 
         /// <summary>
         /// vraća prvi element
         /// </summary>
         /// <returns></returns>
-        public NapomenaModel DohvatiNapomenu()
+        public Napomena DohvatiNapomenu()
         {
             lock (locker)
             {
-                if (Database.Table<NapomenaModel>().Count() == 0)
+                if (Database.Table<Napomena>().Count() == 0)
                 {
                     return null;
                 }
-                else
-                {
-                    return this.Database.Table<NapomenaModel>().First();
-                }
+                return this.Database.Table<Napomena>().First();
             }
         }
 
@@ -43,18 +40,15 @@ namespace ZPISrokovnik.Utils.Data
         /// vraca listu napomena
         /// </summary>
         /// <returns></returns>
-        public List<NapomenaModel> DohvatiSveNapomene()
+        public List<Napomena> DohvatiSveNapomene()
         {
             lock (locker)
             {
-                if (Database.Table<NapomenaModel>().Count() == 0)
+                if (Database.Table<Napomena>().Count() == 0)
                 {
                     return null;
                 }
-                else
-                {
-                    return this.Database.Table<NapomenaModel>().ToList();
-                }
+                return this.Database.Table<Napomena>().ToList();
             }
         }
 
@@ -64,7 +58,7 @@ namespace ZPISrokovnik.Utils.Data
         /// </summary>
         /// <param name="napomena"></param>
         /// <returns></returns>
-        public int SpremiNapomenu(NapomenaModel napomena)
+        public int SpremiNapomenu(Napomena napomena)
         {
             lock (locker)
             {
@@ -73,10 +67,7 @@ namespace ZPISrokovnik.Utils.Data
                     this.Database.Update(napomena);
                     return napomena.Id;
                 }
-                else
-                {
-                    return this.Database.Insert(napomena);
-                }
+                return this.Database.Insert(napomena);
             }
         }
 
@@ -84,7 +75,7 @@ namespace ZPISrokovnik.Utils.Data
         {
             lock (locker)
             {
-                return this.Database.Delete<NapomenaModel>(id);
+                return this.Database.Delete<Napomena>(id);
             }
         }
     }

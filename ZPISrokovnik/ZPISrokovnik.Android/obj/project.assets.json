@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v8.1": {
+      "Behaviors.XamarinForms/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "compile": {
+          "lib/netstandard1.3/Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Behaviors.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.5.231": {
         "type": "package",
         "dependencies": {
@@ -456,6 +468,19 @@
     }
   },
   "libraries": {
+    "Behaviors.XamarinForms/3.0.0": {
+      "sha512": "Wkqx4BO4eR+18EyfUVfahGoariWyiHQOgU12ucPX1dndLMkwzYHpKbuO8eGIwP+zdVNwb37fdqGnPx9WJ5xmzA==",
+      "type": "package",
+      "path": "behaviors.xamarinforms/3.0.0",
+      "files": [
+        ".signature.p7s",
+        "behaviors.xamarinforms.3.0.0.nupkg.sha512",
+        "behaviors.xamarinforms.nuspec",
+        "lib/netstandard1.3/Behaviors.deps.json",
+        "lib/netstandard1.3/Behaviors.dll",
+        "lib/netstandard1.3/Behaviors.pdb"
+      ]
+    },
     "sqlite-net-pcl/1.5.231": {
       "sha512": "Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
       "type": "package",
@@ -1067,6 +1092,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
+      "Behaviors.XamarinForms >= 3.0.0",
       "Syncfusion.Xamarin.SfSchedule >= 16.3.0.36",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v4 >= 27.0.2.1",
@@ -1115,6 +1141,10 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
+          "Behaviors.XamarinForms": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
           "Syncfusion.Xamarin.SfSchedule": {
             "target": "Package",
             "version": "[16.3.0.36, )"
