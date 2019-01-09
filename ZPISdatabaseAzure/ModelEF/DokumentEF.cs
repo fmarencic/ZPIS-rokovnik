@@ -27,13 +27,13 @@ namespace ZPISdatabaseAzure.Model
         public string UrudzbeniBroj { get; set; }
 
         [Column("BROJSTRANICA")]
-        public long BrojStranica { get; set; }
+        public long? BrojStranica { get; set; }
 
         [Column("IMADIGITALIZIRANIDOKUMENT")]
         public bool ImaDigitaliziraniDokument { get; set; }
 
         [Column("DATUM")]
-        public DateTime Datum { get; set; }
+        public DateTime? Datum { get; set; }
 
         [Column("IMARADNIDOKUMENT")]
         public bool ImaRadniDokument { get; set; }

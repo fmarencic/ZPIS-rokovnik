@@ -15,6 +15,10 @@ namespace ZPISdatabaseAzure.Model
         [MaxLength(200)]
         public string KorisnickoIme { get; set; }
 
+        [Column("ZAPOSLENNATIJELIMA")]
+        [MaxLength(2000)]
+        public string ZaposlenNaTijelima { get; set; }
+
         [Column("LOZINKA")]
         [MaxLength(200)]
         public string Lozinka { get; set; }

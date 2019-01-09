@@ -34,7 +34,14 @@ namespace ZPISdatabaseAzure.Model
         [ForeignKey("Grupa")]
         public long GrupaId { get; set; }
 
+        [Column("SCHEMAID")]
+        [ForeignKey("Schema")]
+        public long SchemaId { get; set; }
+
         public virtual DomenaEF Grupa { get; set; }
+
+        public virtual SchemaEF Schema { get; set; }
+
 
         public virtual ICollection<PismenoEF> Pismena { get; set; }
        

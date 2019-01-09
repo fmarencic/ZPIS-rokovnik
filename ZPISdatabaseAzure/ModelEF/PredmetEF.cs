@@ -21,7 +21,7 @@ namespace ZPISdatabaseAzure.Model
         public string Naziv { get; set; }
 
         [Column("DATUMOSNIVANJA")]
-        public DateTime DatumOsnivanja { get; set; }
+        public DateTime? DatumOsnivanja { get; set; }
 
         [Column("OZNAKAPREDMETA")]
         [MaxLength(255)]
