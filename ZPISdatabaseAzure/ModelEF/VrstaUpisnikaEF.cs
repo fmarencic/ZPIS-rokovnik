@@ -26,14 +26,17 @@ namespace ZPISdatabaseAzure.Model
         public bool Aktivan { get; set; }
 
         [Column("REDNIBROJ")]
-        public long RedniBroj { get; set; }
+        public long? RedniBroj { get; set; }
 
         [Column("PRIPADAVRSTIUPISNIKAID")]
-        public long PripadaVrstiUpisnikaId { get; set; }
+        public long? PripadaVrstiUpisnikaId { get; set; }
 
         public virtual VrstaUpisnikaEF PripadaVrstiUpisnika { get; set; }
 
         public virtual ICollection<VrstaUpisnikaEF> VrsteUpisnikaPripadaju { get; set; }
+
+        public virtual ICollection<UpisnikEF> Upisnici { get; set; }
+
 
     }
 }

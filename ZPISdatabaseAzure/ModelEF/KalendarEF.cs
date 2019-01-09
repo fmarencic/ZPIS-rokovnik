@@ -25,8 +25,14 @@ namespace ZPISdatabaseAzure.Model
         [ForeignKey("Korisnik")]
         public long KorisnikId { get; set; }
 
+        [Column("VRSTAKALENDARAID")]
+        [ForeignKey("VrstaKalendara")]
+        public long? VrstaKalendataId { get; set; }
+
         public virtual KorisnikEF Korisnik { get; set; }
 
         public virtual PredmetEF Predmet { get; set; }
+
+        public virtual DomenaEF VrstaKalendara { get; set; }
     }
 }

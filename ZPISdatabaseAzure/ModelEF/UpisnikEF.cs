@@ -15,6 +15,10 @@ namespace ZPISdatabaseAzure.Model
         [MaxLength(255)]
         public string Naziv { get; set; }
 
+        [Column("VRSTAUPISNIKAID")]
+        [ForeignKey("VrstaUpisnika")]
+        public long VrstaUpisnikaId { get; set; }
+
         [Column("OZNAKA")]
         [MaxLength(255)]
         public string Oznaka { get; set; }
@@ -30,6 +34,9 @@ namespace ZPISdatabaseAzure.Model
         public long TijeloId { get; set; }
 
         public virtual OsobaEF Tijelo { get; set; }
+        public virtual VrstaUpisnikaEF VrstaUpisnika { get; set; }
+
+
 
         public virtual ICollection<PredmetEF> Predmeti { get; set; }
     }

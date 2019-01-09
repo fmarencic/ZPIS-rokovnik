@@ -39,6 +39,9 @@ namespace ZPISdatabaseAzure.Model
         [MaxLength(11)]
         public string OIB { get; set; }
 
+        [Column("Spol")]
+        public long? Spol { get; set; }
+
         [Column("VRSTAOSOBEID")]
         [ForeignKey("VrstaOsobe")]
         public long VrstaOsobeId { get; set; }

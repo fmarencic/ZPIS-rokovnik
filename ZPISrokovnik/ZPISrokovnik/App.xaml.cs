@@ -8,16 +8,9 @@ namespace ZPISrokovnik
 {
     public partial class App : Application
     {
-        public static bool IsUserLoggedIn { get; set; } = false;
-
         public App()
         {
-            InitializeComponent();
-
-            if (!IsUserLoggedIn)
-                MainPage = new NavigationPage(new LoginView());
-            else
-                MainPage = new MainTabbedPage();         
+            InitializeComponent();       
         }
 
         protected override void OnStart()

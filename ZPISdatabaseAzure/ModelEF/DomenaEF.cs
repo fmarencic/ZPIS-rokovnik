@@ -31,6 +31,7 @@ namespace ZPISdatabaseAzure.Model
         public virtual ICollection<DokumentPismenoEF> DokumentiUPismenima { get; set; }
         public virtual ICollection<PismenoVrstaEF> Grupe { get; set; }
         public virtual ICollection<OsobaEF> VrsteOsoba { get; set; }
+        public virtual ICollection<KalendarEF> VrsteKalendara{ get; set; }
 
     }
 }
