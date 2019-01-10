@@ -18,13 +18,15 @@ namespace ZPISrokovnik.Views.Kalendar
 		public UnesiNapomenuView ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new UnesiNapomenuView();
+            this.BindingContext = new UnesiNapomenuViewModel();
 		}
 
 	    public UnesiNapomenuView(Napomena napomena)
 	    {
 	        InitializeComponent();
-	        this.Napomena = napomena;
+	        this.BindingContext = new UnesiNapomenuViewModel(napomena);
+            //ovo zamjena.. 
+            this.Napomena = napomena;
 	        NazivNapomene.Text = napomena.Naziv;
 	        OdabraniDatum.Date = napomena.Datum;
 	        OpisNapomene.Text = napomena.Opis;

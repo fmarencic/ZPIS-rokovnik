@@ -20,12 +20,11 @@
             <StackLayout>
                 <ListView x:Name="ElementListe"
                           HasUnevenRows="True"
-                          ItemTapped="ElementListe_OnItemTapped"
-                          SelectedItem="{Binding ElementListeNapomena, Mode=TwoWay}">
+                          SelectedItem="{Binding ElementListeNapomena, Mode=TwoWay}"
+                          ItemsSource="{Binding ListaNapomena, Mode=TwoWay}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                
                                 <StackLayout>
                                     <Label Text="{Binding Datum}"></Label>
                                     <Label Text="{Binding Naziv}"></Label>
@@ -35,13 +34,11 @@
                                             BackgroundColor="Orange"
                                             TextColor="Black"
                                             IsVisible="{Binding Vidljivo}"
-                                            Pressed="UrediDogadaj_OnPressed"
                                             Command="{Binding UrediNapomenuCommand}">
                                     </Button>
                                     <Button Text="Obriši"
                                             BackgroundColor="Tomato"
                                             x:Name="Obrisi"
-                                            Pressed="ObrisiNapomenu_Pressed"
                                             Command="{Binding ObrisiNapomenuCommand}"
                                     ></Button>
                                 </StackLayout>
@@ -55,7 +52,6 @@
                 <Button x:Name="DodajNovuNapomenu" 
                         Text="Kreiraj novu napomenu" 
                         BackgroundColor="Teal"
-                        Pressed="DodajNovuNapomenu_OnPressed"
                         Command="{Binding UnesiNapomenuCommand}"></Button>
             </StackLayout>
         </StackLayout>

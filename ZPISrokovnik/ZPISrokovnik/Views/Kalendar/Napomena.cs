@@ -17,14 +17,6 @@ namespace ZPISrokovnik.Views.Kalendar
         public string Opis { get; set; }
 
         public bool Vidljivo { get; set; } = false;
-
-        public List<string> Kalendari =
-            new List<string>()
-            {
-                "Napomena tjeralica",
-                "Napomena preprata",
-                "Napomena najava"
-            };
         
         public Napomena()
         {
