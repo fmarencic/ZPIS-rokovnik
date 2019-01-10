@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using SQLite;
 using Xamarin.Forms;
@@ -40,7 +42,7 @@ namespace ZPISrokovnik.Utils.Data
         /// vraca listu napomena
         /// </summary>
         /// <returns></returns>
-        public List<Napomena> DohvatiSveNapomene()
+        public ObservableCollection<Napomena> DohvatiSveNapomene()
         {
             lock (locker)
             {
@@ -48,7 +50,11 @@ namespace ZPISrokovnik.Utils.Data
                 {
                     return null;
                 }
-                return this.Database.Table<Napomena>().ToList();
+
+                var _listaNapomena = this.Database.Table<Napomena>().ToList();
+                ObservableCollection<Napomena> listaNapomena = new ObservableCollection<Napomena>(_listaNapomena);
+                return listaNapomena;
+                //return this.Database.Table<Napomena>().ToList();
             }
         }
 

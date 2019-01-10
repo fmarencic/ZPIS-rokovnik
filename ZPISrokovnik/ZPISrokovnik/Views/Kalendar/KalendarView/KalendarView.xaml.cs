@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZPISrokovnik.Utils;
 
 namespace ZPISrokovnik.Views.Kalendar.KalendarView
 {
@@ -16,41 +17,41 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 		public KalendarView ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new Napomena();
-		    ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
+            this.BindingContext = new KalendarViewModel(new PageService());
+		    //ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
 		}
 
-        private async void DodajNovuNapomenu_OnPressed(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new UnesiNapomenuView());
-        }
+     //   private async void DodajNovuNapomenu_OnPressed(object sender, EventArgs e)
+     //   {
+     //       await Navigation.PushAsync(new UnesiNapomenuView());
+     //   }
 
-	    private void ElementListe_OnItemTapped(object sender, ItemTappedEventArgs e)
-	    {
-	        if(OznaceniDogadaj != null)
-	        {
-	            OznaceniDogadaj.Vidljivo = false;
-	        }
-	        var vm = BindingContext as UnesiNapomenuView;
-	        this.OznaceniDogadaj = e.Item as Napomena;
-	        vm.PrikaziIliSakrijDetalje(OznaceniDogadaj);
-        }
+	    //private void ElementListe_OnItemTapped(object sender, ItemTappedEventArgs e)
+	    //{
+	    //    if(OznaceniDogadaj != null)
+	    //    {
+	    //        OznaceniDogadaj.Vidljivo = false;
+	    //    }
+	    //    var vm = BindingContext as UnesiNapomenuView;
+	    //    this.OznaceniDogadaj = e.Item as Napomena;
+	    //    vm.PrikaziIliSakrijDetalje(OznaceniDogadaj);
+     //   }
 
 
-	    private void ObrisiNapomenu_Pressed(object sender, EventArgs e)
-	    {
-            //obrise ga nakon toga se source brise i ponovo se azurira
-	        App.DatabaseController.ObrisiNapomenu(OznaceniDogadaj.Id);
-	        ElementListe.ItemsSource = null;
-	        ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
-        }
+	    //private void ObrisiNapomenu_Pressed(object sender, EventArgs e)
+	    //{
+     //       //obrise ga nakon toga se source brise i ponovo se azurira
+	    //    App.DatabaseController.ObrisiNapomenu(OznaceniDogadaj.Id);
+	    //    ElementListe.ItemsSource = null;
+	    //    ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
+     //   }
 
-	    private async void UrediDogadaj_OnPressed(object sender, EventArgs e)
-	    {
-            //MainPage = new NavigationPage(new UnesiNapomenuView());
-            //i predajemo oznaceni item postavljamo polja na ta i zovemo insert app....
+	    //private async void UrediDogadaj_OnPressed(object sender, EventArgs e)
+	    //{
+     //       //MainPage = new NavigationPage(new UnesiNapomenuView());
+     //       //i predajemo oznaceni item postavljamo polja na ta i zovemo insert app....
 
-	        await Navigation.PushAsync(new UnesiNapomenuView(this.OznaceniDogadaj));
-        }
+	    //    await Navigation.PushAsync(new UnesiNapomenuView(this.OznaceniDogadaj));
+     //   }
     }
 }
