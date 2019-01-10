@@ -60,7 +60,7 @@ namespace ZPISrokovnik.Views
         //        }
         //    }
         //}
-        
+
         //mislim da je binding dobar tako za viewcell
 
         public KalendarViewModel(IPageService page)
