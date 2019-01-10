@@ -1,52 +1,53 @@
-﻿using System;
+﻿using Android.Net;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ServiceModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-//using ZPISdatabaseAzure;
-//using ZPISdatabaseAzure.Model;
 using ZPISrokovnik.Utils;
+using ZPISrokovnik.ValidationRules;
 using ZpisRokovnikService.DataLayer;
 
 namespace ZPISrokovnik.Views
 {
     public class LoginViewModel : BaseViewModel
-    {
-        private Service1Client Client;
-
-        static BasicHttpBinding CreateBasicHttpBinding()
-        {
-            BasicHttpBinding binding = new BasicHttpBinding
-            {
-                Name = "basicHttpBinding",
-                MaxBufferSize = 2147483647,
-                MaxReceivedMessageSize = 2147483647
-            };
-
-            //TimeSpan timeout = new TimeSpan(0, 0, 30);
-            //binding.SendTimeout = timeout;
-            //binding.OpenTimeout = timeout;
-            //binding.ReceiveTimeout = timeout;
-            return binding;
-        }
-
+    {    
         #region Contructor(s)
 
         public LoginViewModel(ILoginPageService page)
         {
-            LogInCommand = new Command(LogIn);
+            Lozinka = new ValidatableObject<string>();
+            KorisnickoIme = new ValidatableObject<string>();
 
-            EndpointAddress Endpoint = new EndpointAddress("http://zpiscloudservice.cloudapp.net/Service1.svc");
+            pageService = page;
 
-            Client = new Service1Client(CreateBasicHttpBinding(), Endpoint);
+            UneseniIspravniPodaci = false;
+        }
+
+        #endregion
+
+        #region ValidationRules
+
+        private void AddValidation()
+        {
+            korisnickoIme.Validations.Add(new IsNotNullOrEmptyRule<string>
+            {
+                ValidationMessage = "Korisničko ime je obavezno."
+            });
+            lozinka.Validations.Add(new IsNotNullOrEmptyRule<string>
+            {
+                ValidationMessage = "Lozinka je obavezna."
+            });
         }
 
         #endregion
 
         #region Properties
 
-        private string korisnickoIme;
-        public string KorisnickoIme
+        private ValidatableObject<string> korisnickoIme;
+        public ValidatableObject<string> KorisnickoIme
         {
             get
             {
@@ -59,8 +60,8 @@ namespace ZPISrokovnik.Views
             }
         }
 
-        private string lozinka;
-        public string Lozinka
+        private ValidatableObject<string> lozinka;
+        public ValidatableObject<string> Lozinka
         {
             get
             {
@@ -73,17 +74,62 @@ namespace ZPISrokovnik.Views
             }
         }
 
-        private long tijeloId;
-        public long TijeloId
+        private ObservableCollection<KeyValuePair<long, string>>  tijela;
+
+        public ObservableCollection<KeyValuePair<long, string>> Tijela
         {
             get
             {
-                return tijeloId;
+                return tijela;
             }
             set
             {
-                SetValue(ref tijeloId, value);
-                OnPropertyChanged(nameof(TijeloId));
+                SetValue(ref tijela, value);
+                OnPropertyChanged(nameof(Tijela));
+            }
+        }
+
+        private KeyValuePair<long, string> selectedItem;
+        public KeyValuePair<long, string> SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                SetValue(ref selectedItem, value);
+                if(value.Value != null)
+                    UneseniIspravniPodaci = true;
+                OnPropertyChanged(nameof(SelectedItem));
+            }
+        }
+
+        private bool uneseniIspravniPodaci;
+        public bool UneseniIspravniPodaci
+        {
+            get
+            {
+                return uneseniIspravniPodaci;
+            }
+            set
+            {
+                SetValue(ref uneseniIspravniPodaci, value);
+                OnPropertyChanged(nameof(UneseniIspravniPodaci));
+            }
+        }
+
+        private bool postojeKorisnickeInstance;
+        public bool PostojeKorisnickeInstance
+        {
+            get
+            {
+                return postojeKorisnickeInstance;
+            }
+            set
+            {
+                SetValue(ref postojeKorisnickeInstance, value);
+                OnPropertyChanged(nameof(PostojeKorisnickeInstance));
             }
         }
 
@@ -91,7 +137,10 @@ namespace ZPISrokovnik.Views
 
         #region Commands
 
-        public ICommand LogInCommand { get; private set; }
+        public ICommand DohvatiKorisnickeInstanceCommand => new Command(() => DohvatiKorisnickeInstance());
+        public ICommand LoginCommand => new Command(() => OnLogin());
+        public ICommand ValidateUserNameCommand => new Command(() => ValidateUserName());
+        public ICommand ValidatePasswordCommand => new Command(() => ValidatePassword());
 
         #endregion
 
@@ -103,43 +152,85 @@ namespace ZPISrokovnik.Views
 
         #region Methods
 
-        private void LogIn()
+        private void DohvatiKorisnickeInstance()
         {
-            OnLogin();
+            Osvjezi();
+            Dohvati();
+        }
 
+        private void Osvjezi()
+        {
+            if (Tijela != null)
+            {
+                Tijela.Clear();
+                PostojeKorisnickeInstance = false;
+            }
+        }
 
-            pageService.PushAfterLogin(new MainTabbedPage());
+        private void Dohvati()
+        {
+            if (KorisnickoIme.Value != null)
+            {
+                KorisnikDTO korisnik = App.client.GetKorisnikByUsername(KorisnickoIme.Value, "");
+                if (korisnik != null)
+                {
+                    Tijela = new ObservableCollection<KeyValuePair<long, string>>(VratiListuSudovaSaKorisnika(korisnik));
+                    PostojeKorisnickeInstance = true;
+                }
+            }
+        }
+
+        public List<KeyValuePair<long, string>> VratiListuSudovaSaKorisnika(KorisnikDTO k)
+        {
+            try
+            {
+
+                string[] tijela = k.ZaposlenNaTijelima.Split(';');
+
+                var l = new List<KeyValuePair<long, string>>();
+
+                foreach (var t in tijela)
+                {
+                    var tijelo = t.Split('/');
+                    l.Add(new KeyValuePair<long, string>(long.Parse(tijelo[0]), tijelo[1]));
+                }
+                return l;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void OnLogin()
         {
-            var login = Client.LoginUser(KorisnickoIme, Lozinka);
+            var login = App.client.LoginUser(KorisnickoIme.Value, Lozinka.Value);
 
-            KorisnikDTO korisnik = Client.GetKorisnikByUsername(KorisnickoIme, login.Token);
+            if (!(string.IsNullOrEmpty(login.Token)))
+            {          
+                if (SelectedItem.Value != null)
+                {
+                    App.Token = login.Token;
+                    App.TijeloId = SelectedItem.Key;
+                    pageService.PushAfterLogin(new MainTabbedPage());
+                }
+            }
+            else
+                pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
+        }
+
+        private bool ValidateUserName()
+        {
+            return korisnickoIme.Validate();
+        }
+
+        private bool ValidatePassword()
+        {
+            return lozinka.Validate();
         }
 
 
-        //public List<KeyValuePair<long, string>> VratiListuSudovaSaKorisnika(KorisnikDTO k)
-        //{
-        //    try
-        //    {
 
-        //        string[] tijela = k.osoba.Split(';');
-
-        //        var l = new List<KeyValuePair<long, string>>();
-
-        //        foreach (var t in tijela)
-        //        {
-        //            var tijelo = t.Split('/');
-        //            l.Add(new KeyValuePair<long, string>(long.Parse(tijelo[0]), tijelo[1]));
-        //        }
-        //        return l;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
 
         #endregion
 

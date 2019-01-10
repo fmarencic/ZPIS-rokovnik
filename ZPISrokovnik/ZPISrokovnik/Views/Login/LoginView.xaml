@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:ZPISrokovnik.Behaviors"
              Title="Prijava"
              x:Class="ZPISrokovnik.Views.LoginView">
     <ContentPage.Content>
@@ -11,6 +12,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -31,7 +33,16 @@
                 </Grid.ColumnDefinitions>
 
                 <Entry Grid.Column="0"
-                       Text="{Binding KorisnickoIme}"/>
+                       Text="{Binding KorisnickoIme.Value}">
+                    <Entry.Behaviors>
+                        <behaviors:EventToCommandBehavior
+                            EventName="Unfocused"
+                            Command="{Binding DohvatiKorisnickeInstanceCommand}"/>
+                        <behaviors:EventToCommandBehavior
+                            EventName="TextChanged"
+                            Command="{Binding ValidateUserNameCommand}"/>
+                    </Entry.Behaviors>
+                </Entry>
             </Grid>
 
             <Label Grid.Column="0"
@@ -48,7 +59,19 @@
                 </Grid.ColumnDefinitions>
 
                 <Entry Grid.Column="0"
-                   Text="{Binding Lozinka}"/>
+                   IsPassword="True"
+                   Text="{Binding Lozinka.Value}">
+                    <Entry.Behaviors>
+                        <behaviors:EventToCommandBehavior
+                            EventName="TextChanged"
+                            Command="{Binding ValidatePasswordCommand}"/>
+                    </Entry.Behaviors>
+                    <Entry.Style>
+                        <OnPlatform x:TypeArguments="Style">
+                            <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
+                        </OnPlatform>
+                    </Entry.Style>
+                </Entry>
             </Grid>
 
             <Label Grid.Column="0"
@@ -56,25 +79,31 @@
                    Text="Korisnička instanca"
                    HorizontalTextAlignment="End"
                    />
-            
+
             <Grid Grid.Column="1"
                   Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Picker Title="Korisnička instanca"  
-                    Grid.Column="0"/>
+                <Picker Title="Korisnička instanca"
+                        ItemsSource="{Binding Tijela, Mode=TwoWay}"
+                        ItemDisplayBinding="{Binding Path=Value}"
+                        SelectedItem="{Binding SelectedItem}"
+                        IsEnabled="{Binding PostojeKorisnickeInstance, Mode=TwoWay}"
+                    Grid.Column="0">
+                </Picker>
             </Grid>
 
-            <Button Command="{Binding LogInCommand}"
-                    Text="Prijava" 
+            <Button Command="{Binding LoginCommand}"
+                    Text="Prijava"
+                    IsEnabled="{Binding UneseniIspravniPodaci}"
                     Grid.Row="3"
                     Grid.ColumnSpan="2"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
-            
+
         </Grid>
         
     </ContentPage.Content>

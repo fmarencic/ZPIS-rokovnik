@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite;
+﻿using SQLite;
 
-namespace ZPISrokovnik.Utils.Interface
+namespace ZPISrokovnik.Utils
 {
     public interface ISQLite
     {

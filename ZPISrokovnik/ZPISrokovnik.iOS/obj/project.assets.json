@@ -1333,20 +1333,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\root\\.nuget\\packages\\": {}
+    "C:\\Users\\Josip\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
       "projectName": "ZPISrokovnik.iOS",
-      "projectPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
-      "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-      "outputPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "packagesPath": "C:\\Users\\Josip\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Josip\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1359,8 +1359,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
-              "projectPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
+            "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
+              "projectPath": "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
             }
           }
         }

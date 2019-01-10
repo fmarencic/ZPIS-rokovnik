@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SQLite;
 using Xamarin.Forms;
-using ZPISrokovnik.Utils.Interface;
+using ZPISrokovnik.Utils;
 using ZPISrokovnik.Views.Kalendar;
 
 namespace ZPISrokovnik.Utils.Data
