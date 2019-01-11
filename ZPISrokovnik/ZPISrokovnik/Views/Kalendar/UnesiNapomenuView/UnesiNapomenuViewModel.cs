@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using Android.Hardware.Display;
 using Android.Views;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
@@ -11,9 +12,35 @@ namespace ZPISrokovnik.Views
 {
     public class UnesiNapomenuViewModel : BaseViewModel
     {
-        public ICommand UnesiNapomenuCommand => new Command(() => UnesiNapomenu()));
-        private Napomena napomena;
+        public ICommand UnesiNapomenuCommand => new Command(() => UnesiNapomenu());
 
+        public ICommand ProvjeriPodatke => new Command(() => ProvjeraPopunjenosti());
+
+        private DateTime danas = DateTime.Now;
+
+        public DateTime Danas
+        {
+            get { return danas; }
+            set
+            {
+                SetValue(ref danas, value);
+                OnPropertyChanged(nameof(Danas));
+            }
+        }
+
+        private bool provjera;
+
+        public bool Provjera
+        {
+            get { return provjera; }
+            set
+            {
+                SetValue(ref provjera, value);
+                OnPropertyChanged(nameof(provjera));
+            }
+        }
+
+        private Napomena napomena;
         public Napomena Napomena
         {
             get { return napomena; }
@@ -21,42 +48,6 @@ namespace ZPISrokovnik.Views
             {
                 SetValue(ref napomena, value);
                 OnPropertyChanged(nameof(Napomena));
-            }
-        }
-
-        private DateTime datum;
-
-        public DateTime Datum
-        {
-            get { return datum; }
-            set
-            {
-                SetValue(ref datum, value);
-                OnPropertyChanged(nameof(datum));
-            }
-        }
-
-        private string naziv;
-
-        public string Naziv
-        {
-            get { return naziv; }
-            set
-            {
-                SetValue(ref naziv, value);
-                OnPropertyChanged(nameof(naziv));
-            }
-        }
-
-        private string opis;
-
-        public string Opis
-        {
-            get { return opis; }
-            set
-            {
-                SetValue(ref opis, value);
-                OnPropertyChanged(nameof(opis));
             }
         }
 
@@ -68,14 +59,33 @@ namespace ZPISrokovnik.Views
         public UnesiNapomenuViewModel(Napomena napomena)
         {
             this.Napomena = napomena;
+
+        }
+
+        private void ProvjeraPopunjenosti()
+        {
+            if (Napomena.Datum != null && !string.IsNullOrEmpty(Napomena.Naziv) &&  
+                !string.IsNullOrEmpty(Napomena.Opis))
+            {
+                this.Provjera = true;
+                return;
+            }
+            this.Provjera = false;
         }
 
         private void UnesiNapomenu()
         {
-            App.DatabaseController.SpremiNapomenu(this.Napomena);
-            Console.WriteLine("Unio" + Napomena.Naziv);
+            if (Provjera)
+            {
+                App.DatabaseController.SpremiNapomenu(this.Napomena);
+                IPageService page = new PageService();
+                
+                Console.WriteLine("Unio" + Napomena.Naziv);
+            }
+            
 
         }
 
+        
     }
 }
