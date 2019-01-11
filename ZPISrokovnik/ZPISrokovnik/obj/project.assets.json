@@ -226,11 +226,10 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "5BdAWDgMNwf90L0J+C/eh6kfHDa37ViL1cBL1nv5zPA4TB2cGV51YiQyvzCEy9DBE0LwwMI4+PkUpIekKyocSA==",
+      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
@@ -991,23 +990,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Josip\\.nuget\\packages\\": {},
+    "C:\\Users\\root\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "projectUniqueName": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
       "projectName": "ZPISrokovnik",
-      "projectPath": "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
-      "packagesPath": "C:\\Users\\Josip\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Josip\\Projekti\\zpis-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
+      "projectPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
+      "outputPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Josip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Android.Net;
+using System;
+using System.ServiceModel;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZPISrokovnik.Utils;
@@ -22,6 +25,8 @@ namespace ZPISrokovnik
             MainPage = new NavigationPage(new LoginView());
 
             client = new Service1Client(ServiceConnection.CreateBasicHttpBinding(), ServiceConnection.Endpoint);
+
+            NapomenaBaza();
         }
 
         /// <summary>

@@ -8,7 +8,7 @@
             <StackLayout Orientation="Horizontal">
                 <Label Text="Tip kalendara:" 
                        VerticalOptions="Center"
-                       TextColor="White"/>
+                       TextColor="Black"/>
                 <Picker 
                     ItemsSource="{Binding TipKalendara}"  
                     VerticalOptions="Center" 
@@ -16,11 +16,11 @@
                     x:Name="TipKalendara"/>
             </StackLayout>
             <Label Text="Pribilježene napomene:" 
-                   TextColor="White"></Label>
+                   TextColor="Black"></Label>
             <StackLayout>
                 <ListView x:Name="ElementListe"
                           HasUnevenRows="True"
-                          SelectedItem="{Binding ElementListeNapomena, Mode=TwoWay}"
+                          SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                           ItemsSource="{Binding ListaNapomena, Mode=TwoWay}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -39,6 +39,7 @@
                                     <Button Text="Obriši"
                                             BackgroundColor="Tomato"
                                             x:Name="Obrisi"
+                                            TextColor="Black"
                                             IsVisible="{Binding Vidljivo}"
                                             Command="{Binding ObrisiNapomenuCommand}"
                                     ></Button>
@@ -51,7 +52,8 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Button x:Name="DodajNovuNapomenu" 
-                        Text="Kreiraj novu napomenu" 
+                        Text="Kreiraj novu napomenu"
+                        TextColor="Black"
                         BackgroundColor="Teal"
                         Command="{Binding UnesiNapomenuCommand}"></Button>
             </StackLayout>

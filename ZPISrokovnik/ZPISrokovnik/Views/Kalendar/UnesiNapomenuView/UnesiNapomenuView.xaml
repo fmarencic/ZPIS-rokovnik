@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              x:Class="ZPISrokovnik.Views.Kalendar.UnesiNapomenuView">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
@@ -27,25 +28,25 @@
                        Grid.Row="0" 
                        Grid.Column="0" 
                        Grid.ColumnSpan="2"
-                       TextColor="White"
+                       TextColor="Black"
                        HorizontalTextAlignment="Start"
                        VerticalOptions="Center"
                        Margin="30,0,0,0"
                 ></Label>
                 <DatePicker x:Name="OdabraniDatum"
-                            Format="D"
+                            Format="dd-MM-yyyy"
                             Grid.Row="0" 
                             Grid.ColumnSpan="2"
                             Grid.Column="1"
                             Margin="0,0,25,0"
-                            Date="{Binding Napomena.Datum}"
-                            
+                            Date="{Binding Datum}"
+                            MinimumDate="{x:Static system:DateTime.Today}"
                 />
                 <Label Text="Naziv:" 
                    Grid.Row="1" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="2"
-                   TextColor="White"
+                   TextColor="Black"
                    HorizontalTextAlignment="Start"
                    VerticalOptions="Center"
                    Margin="30,0,0,0"
@@ -55,14 +56,14 @@
                    Grid.Column="1"
                    VerticalOptions="Center"
                    Margin="0,0,25,0"
-                   Text="{Binding Napomena.Naziv}"
+                   Text="{Binding Naziv}"
                    x:Name="NazivNapomene"
             ></Entry>
                 <Label Text="Napomena:" 
                    Grid.Row="2" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="2"
-                   TextColor="White"
+                   TextColor="Black"
                    HorizontalTextAlignment="Start"
                    VerticalOptions="Center"
                    Margin="30,0,0,0"
@@ -70,7 +71,7 @@
                 <StackLayout Padding="30,0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
                     <Frame OutlineColor="Black" CornerRadius="5" Padding="1" BackgroundColor="White"
                            >
-                        <Editor Text="{Binding Napomena.Opis}" 
+                        <Editor Text="{Binding Opis}" 
                                     HeightRequest="220"
                                     WidthRequest="450"
                                     TextColor="Black"
@@ -81,6 +82,7 @@
                 <StackLayout Grid.Row="8" Grid.ColumnSpan="3">
                     <Button Margin="28,0"
                             Text="Spremi"
+                            TextColor="Black"
                             BackgroundColor="Teal"
                             x:Name="Unesi"
                             Command="UnesiNapomenuCommand"

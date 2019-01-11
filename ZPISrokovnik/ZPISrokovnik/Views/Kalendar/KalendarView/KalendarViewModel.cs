@@ -11,11 +11,20 @@ namespace ZPISrokovnik.Views
 {
     public class KalendarViewModel : BaseViewModel
     {
-        public ObservableCollection<Napomena> ListaNapomena { get; set; }
-        public ICommand UnesiNapomenuCommand { get; private set; }
-        public ICommand UrediNapomenuCommand { get; private set; }
-        public ICommand ObrisiNapomenuCommand { get; private set; }
+        public ICommand UnesiNapomenuCommand => new Command(() => UnesiNapomenu());
+        public ICommand UrediNapomenuCommand => new Command(() => UrediNapomenu());
+        public ICommand ObrisiNapomenuCommand => new Command(() => ObrisiNapomenu());
 
+        private ObservableCollection<Napomena> listaNapomena;
+        public ObservableCollection<Napomena> ListaNapomena
+        {
+            get { return listaNapomena; }
+            set
+            {
+                SetValue(ref listaNapomena, value);
+                OnPropertyChanged(nameof(ListaNapomena));
+            }
+        }
         public List<string> TipKalendara =
             new List<string>()
             {
@@ -24,50 +33,21 @@ namespace ZPISrokovnik.Views
                 "Napomena najava"
             };
 
-        public Napomena ElementListeNapomena
+        private Napomena selectedItem;
+        public Napomena SelectedItem
         {
-            get { return ElementListeNapomena; }
+            get { return selectedItem; }
             set
             {
-                if (ElementListeNapomena != value)
-                {
-                    ElementListeNapomena.Vidljivo = true;
-                }
+                SetValue(ref selectedItem, value);
+                OnPropertyChanged(nameof(SelectedItem));
             }
         }
 
         private readonly IPageService Page;
 
-        //private Napomena SelektiranaNapomena;
-
-        //public Napomena ElementListeNapomena
-        //{
-        //    get { return SelektiranaNapomena; }
-        //    set
-        //    {
-        //        if (SelektiranaNapomena != value)
-        //        {
-        //            SelektiranaNapomena = value;
-        //            OnPropertyChanged("ItemSelected");
-        //            /*
-        //             * And if you want to perform any additional
-        //             * functionality like navigating to detail page,
-        //             * you can do it from the set property after
-        //             * OnPropertyChanged statement is executed.
-        //             */
-        //            SelektiranaNapomena.Vidljivo = true;
-        //            //ovo ce trebat fixat jer ce vidljivo ostat njima true i nakon..
-        //        }
-        //    }
-        //}
-
-        //mislim da je binding dobar tako za viewcell
-
         public KalendarViewModel(IPageService page)
         {
-            UnesiNapomenuCommand = new Command(UnesiNapomenu);
-            UrediNapomenuCommand = new Command(UrediNapomenu);
-            ObrisiNapomenuCommand = new Command(ObrisiNapomenu);
             this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
             this.Page = page;
         }
@@ -81,17 +61,17 @@ namespace ZPISrokovnik.Views
         private void UrediNapomenu()
         {
             //selektiranaNapomena i dole 2 x
-            Page.PushAsync(new UnesiNapomenuView(ElementListeNapomena));
+            Page.PushAsync(new UnesiNapomenuView(SelectedItem));
         }
 
         private async void ObrisiNapomenu()
         {
             bool obrisi = await Page.DisplayAlert("Obriši?",
-                "Želite li obrisati napomenu " + ElementListeNapomena.Naziv + "?", "Uredu",
+                "Želite li obrisati napomenu " + SelectedItem.Naziv + "?", "Uredu",
                 "Odustani");
             if (obrisi)
             {
-                App.DatabaseController.ObrisiNapomenu(ElementListeNapomena.Id);
+                App.DatabaseController.ObrisiNapomenu(SelectedItem.Id);
                 this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
                 //mislim da ni ova zadnja nije potrebna linija jer je observablecollection vidi
             }
