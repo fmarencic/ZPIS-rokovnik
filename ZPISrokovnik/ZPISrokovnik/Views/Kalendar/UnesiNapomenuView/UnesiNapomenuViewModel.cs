@@ -7,6 +7,7 @@ using Android.Views;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Views.Kalendar;
+using ZPISrokovnik.Views.Kalendar.KalendarView;
 
 namespace ZPISrokovnik.Views
 {
@@ -59,7 +60,6 @@ namespace ZPISrokovnik.Views
         public UnesiNapomenuViewModel(Napomena napomena)
         {
             this.Napomena = napomena;
-
         }
 
         private void ProvjeraPopunjenosti()
@@ -77,10 +77,14 @@ namespace ZPISrokovnik.Views
         {
             if (Provjera)
             {
+                this.Napomena.Vidljivo = false;
                 App.DatabaseController.SpremiNapomenu(this.Napomena);
+                //promjena
                 IPageService page = new PageService();
+                page.PushAsync(new KalendarView());
+                Page _page = new Page();
                 
-                Console.WriteLine("Unio" + Napomena.Naziv);
+
             }
             
 

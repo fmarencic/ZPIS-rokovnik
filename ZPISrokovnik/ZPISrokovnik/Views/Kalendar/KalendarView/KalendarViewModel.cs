@@ -6,14 +6,15 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Views.Kalendar;
+using ZPISrokovnik.Views.Kalendar.KalendarView;
 
 namespace ZPISrokovnik.Views
 {
     public class KalendarViewModel : BaseViewModel
     {
-        public ICommand UnesiNapomenuCommand => new Command(() => UnesiNapomenu());
-        public ICommand UrediNapomenuCommand => new Command(() => UrediNapomenu());
-        public ICommand ObrisiNapomenuCommand => new Command(() => ObrisiNapomenu());
+        public ICommand UnesiNapomenuCommand => new Command(UnesiNapomenu);
+        public ICommand UrediNapomenuCommand => new Command(UrediNapomenu);
+        public ICommand ObrisiNapomenuCommand => new Command(ObrisiNapomenu);
 
         private ObservableCollection<Napomena> listaNapomena;
         public ObservableCollection<Napomena> ListaNapomena
@@ -36,11 +37,21 @@ namespace ZPISrokovnik.Views
         private Napomena selectedItem;
         public Napomena SelectedItem
         {
-            get { return selectedItem; }
+            get
+            {
+                return selectedItem;
+            }
             set
             {
-                SetValue(ref selectedItem, value);
-                OnPropertyChanged(nameof(SelectedItem));
+                if (selectedItem != value)
+                {
+                    if (selectedItem != null)
+                    {
+                        selectedItem.Vidljivo = false;
+                    }
+                    selectedItem = value;
+                    selectedItem.Vidljivo = true;
+                }
             }
         }
 
@@ -48,11 +59,11 @@ namespace ZPISrokovnik.Views
 
         public KalendarViewModel(IPageService page)
         {
+            this.ListaNapomena = null;
             this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
             this.Page = page;
         }
 
-        //CommandParameter="{Binding Source={x:Reference entry}, Path=Text}"
         private void UnesiNapomenu()
         {
             Page.PushAsync(new UnesiNapomenuView());
@@ -60,20 +71,26 @@ namespace ZPISrokovnik.Views
 
         private void UrediNapomenu()
         {
-            //selektiranaNapomena i dole 2 x
             Page.PushAsync(new UnesiNapomenuView(SelectedItem));
         }
 
         private async void ObrisiNapomenu()
         {
-            bool obrisi = await Page.DisplayAlert("Obriši?",
+            var obrisi = await Application.Current.MainPage.DisplayAlert("Obriši?",
                 "Želite li obrisati napomenu " + SelectedItem.Naziv + "?", "Uredu",
                 "Odustani");
-            if (obrisi)
+            //bool obrisi = await Page.DisplayAlert("Obriši?",
+            //    "Želite li obrisati napomenu " + SelectedItem.Naziv + "?", "Uredu",
+            //    "Odustani");
+            if (obrisi) //obrisi
             {
                 App.DatabaseController.ObrisiNapomenu(SelectedItem.Id);
-                this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
+                ListaNapomena.Remove(SelectedItem);
+                ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
+                //this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
                 //mislim da ni ova zadnja nije potrebna linija jer je observablecollection vidi
+                //Page.PushAsync(new KalendarView());
+
             }
         }
         

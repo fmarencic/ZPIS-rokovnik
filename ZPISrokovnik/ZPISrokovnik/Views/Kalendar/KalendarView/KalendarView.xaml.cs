@@ -13,7 +13,6 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class KalendarView : ContentPage
 	{
-	    public Napomena OznaceniDogadaj { get; set; }
 		public KalendarView ()
 		{
 			InitializeComponent ();
@@ -21,37 +20,18 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 		    //ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
 		}
 
-     //   private async void DodajNovuNapomenu_OnPressed(object sender, EventArgs e)
-     //   {
-     //       await Navigation.PushAsync(new UnesiNapomenuView());
-     //   }
 
-	    //private void ElementListe_OnItemTapped(object sender, ItemTappedEventArgs e)
-	    //{
-	    //    if(OznaceniDogadaj != null)
-	    //    {
-	    //        OznaceniDogadaj.Vidljivo = false;
-	    //    }
-	    //    var vm = BindingContext as UnesiNapomenuView;
-	    //    this.OznaceniDogadaj = e.Item as Napomena;
-	    //    vm.PrikaziIliSakrijDetalje(OznaceniDogadaj);
-     //   }
+	    private void Uredi_OnClicked(object sender, EventArgs e)
+	    {
+	        var viewModel = this.BindingContext as KalendarViewModel;
+            viewModel?.UrediNapomenuCommand.Execute(null);
+            
+	    }
 
-
-	    //private void ObrisiNapomenu_Pressed(object sender, EventArgs e)
-	    //{
-     //       //obrise ga nakon toga se source brise i ponovo se azurira
-	    //    App.DatabaseController.ObrisiNapomenu(OznaceniDogadaj.Id);
-	    //    ElementListe.ItemsSource = null;
-	    //    ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
-     //   }
-
-	    //private async void UrediDogadaj_OnPressed(object sender, EventArgs e)
-	    //{
-     //       //MainPage = new NavigationPage(new UnesiNapomenuView());
-     //       //i predajemo oznaceni item postavljamo polja na ta i zovemo insert app....
-
-	    //    await Navigation.PushAsync(new UnesiNapomenuView(this.OznaceniDogadaj));
-     //   }
-    }
+	    private void Obrisi_OnClicked(object sender, EventArgs e)
+	    {
+	        var viewModel = this.BindingContext as KalendarViewModel;
+	        viewModel?.ObrisiNapomenuCommand.Execute(null);
+        }
+	}
 }

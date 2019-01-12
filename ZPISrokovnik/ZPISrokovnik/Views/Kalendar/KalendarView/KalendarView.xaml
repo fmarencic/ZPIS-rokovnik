@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ZPISrokovnik.Views.Kalendar.KalendarView.KalendarView">
+             xmlns:views="clr-namespace:ZPISrokovnik.Views;assembly=ZPISrokovnik"
+             x:Class="ZPISrokovnik.Views.Kalendar.KalendarView.KalendarView"
+             Title="Kalendar">
     <ContentPage.Content>
-
-        <StackLayout Margin="18,20">
+        <StackLayout Margin="15,8,15,3">
             <StackLayout Orientation="Horizontal">
                 <Label Text="Tip kalendara:" 
                        VerticalOptions="Center"
@@ -15,9 +16,9 @@
                     HorizontalOptions="FillAndExpand" 
                     x:Name="TipKalendara"/>
             </StackLayout>
-            <Label Text="Pribilježene napomene:" 
-                   TextColor="Black"></Label>
+            
             <StackLayout>
+                <!--<Label Text="Pribilježene napomene:" TextColor="Black"/>-->
                 <ListView x:Name="ElementListe"
                           HasUnevenRows="True"
                           SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
@@ -25,37 +26,45 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout>
-                                    <Label Text="{Binding Datum, StringFormat='\{0:dd/MM/yyyy}'}"></Label>
-                                    <Label Text="{Binding Naziv}"></Label>
-                                    <Label Text="{Binding Opis}"></Label>
-                                    <Button x:Name="UrediDogadaj"
-                                            Text="Uredi"
-                                            BackgroundColor="Orange"
-                                            TextColor="Black"
-                                            IsVisible="{Binding Vidljivo}"
-                                            Command="{Binding UrediNapomenuCommand}">
-                                    </Button>
-                                    <Button Text="Obriši"
-                                            BackgroundColor="Tomato"
-                                            x:Name="Obrisi"
-                                            TextColor="Black"
-                                            IsVisible="{Binding Vidljivo}"
-                                            Command="{Binding ObrisiNapomenuCommand}"
-                                    ></Button>
-                                </StackLayout>
+                                <Frame OutlineColor="Black" HasShadow="True" Margin="3">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal" Spacing="0">
+                                            <Label Text="Datum: " FontAttributes="Bold" TextColor="Black" />
+                                            <Label Text="{Binding Datum, StringFormat='\{0:dd/MM/yyyy}'}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Spacing="0">
+                                            <Label Text="Naziv: " FontAttributes="Bold" TextColor="Black"/>
+                                            <Label Text="{Binding Naziv, StringFormat='\{0}'}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Spacing="0">
+                                            <Label Text="Opis: " FontAttributes="Bold" TextColor="Black" IsVisible="{Binding Vidljivo}"/>
+                                            <Label Text="{Binding Opis, StringFormat='\{0}'}" IsVisible="{Binding Vidljivo}"/>
+                                        </StackLayout>
+                                        <Button 
+                                                Text="Uredi"
+                                                BackgroundColor="Orange"
+                                                TextColor="Black"
+                                                IsVisible="{Binding Vidljivo}"
+                                                Clicked="Uredi_OnClicked"/>
+                                        <Button Text="Obriši"
+                                                BackgroundColor="Tomato"
+                                                TextColor="Black"
+                                                IsVisible="{Binding Vidljivo}"
+                                                Clicked="Obrisi_OnClicked"/>
+                                    </StackLayout>
+                                </Frame>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
 
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
                 <Button x:Name="DodajNovuNapomenu" 
                         Text="Kreiraj novu napomenu"
                         TextColor="Black"
-                        BackgroundColor="Teal"
-                        Command="{Binding UnesiNapomenuCommand}"></Button>
+                        BackgroundColor="#4285F4"
+                        Command="{Binding UnesiNapomenuCommand}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

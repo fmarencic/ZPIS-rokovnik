@@ -13,10 +13,6 @@ namespace ZPISrokovnik.Views.Kalendar
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        //public DateTime Datum { get; set; }
-        //public string Naziv { get; set; }
-        //public string Opis { get; set; }
-        //public bool Vidljivo { get; set; } = false;
 
         private DateTime datum;
 

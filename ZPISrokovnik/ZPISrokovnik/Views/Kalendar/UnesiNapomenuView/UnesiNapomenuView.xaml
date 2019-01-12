@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:behaviors="clr-namespace:ZPISrokovnik.Behaviors"
-             x:Class="ZPISrokovnik.Views.Kalendar.UnesiNapomenuView">
+             x:Class="ZPISrokovnik.Views.Kalendar.UnesiNapomenuView"
+             Title="Unesi/Uredi napomenu">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <Grid>
