@@ -20,5 +20,7 @@ namespace ZPISdatabaseAzure.Model
         public string Oznaka { get; set; }
 
         public virtual ICollection<SchemaDokumentaEF> SchemeDokumenta { get; set; }
+
+        public virtual ICollection<PismenoVrstaEF> PismenaVrste { get; set; }
     }
 }

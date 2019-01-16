@@ -36,6 +36,21 @@ namespace ZPISdatabaseAzure
             .HasRequired(p => p.Uloga)
             .WithMany(p => p.Sudionici)
             .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<UpisnikEF>()
+            .HasRequired(p => p.VrstaUpisnika)
+            .WithMany(p => p.Upisnici)
+            .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<PismenoVrstaEF>()
+            .HasRequired(p => p.Schema)
+            .WithMany(p => p.PismenaVrste)
+            .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<KalendarEF>()
+            .HasOptional(p => p.VrstaKalendara)
+            .WithMany(p => p.VrsteKalendara)
+            .WillCascadeOnDelete(false);
         }
 
         #region DbSet
@@ -58,6 +73,7 @@ namespace ZPISdatabaseAzure
         public virtual DbSet<KalendarEF> Kalendar { get; set; }
         public virtual DbSet<VrstaUpisnikaEF> VrstaUpisnika { get; set; }
         public virtual DbSet<KorisnikAuthEF> KorisnikAuth { get; set; }
+        public virtual DbSet<BrojnoStanjeViewEF> BrojnoStanjeView { get; set; }
         #endregion
 
 
