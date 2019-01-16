@@ -230,6 +230,10 @@
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
+<<<<<<< HEAD
+        ".nupkg.metadata",
+=======
+>>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -832,6 +836,7 @@
       "type": "package",
       "path": "xamarin.forms/3.1.0.697729",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
