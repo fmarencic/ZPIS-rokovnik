@@ -2403,11 +2403,11 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F090053
 			public const int abc_vector_test = 2131296339;
 			
-			// aapt resource value: 0x7F010008
-			public const int arrow_down = 2130771976;
-			
 			// aapt resource value: 0x7F010009
-			public const int arrow_up = 2130771977;
+			public const int arrow_down = 2130771977;
+			
+			// aapt resource value: 0x7F010010
+			public const int arrow_up = 2130771984;
 			
 			// aapt resource value: 0x7F090054
 			public const int avd_hide_password = 2131296340;
@@ -2970,11 +2970,11 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F090104
 			public const int ic_vol_type_tv_light = 2131296516;
 			
-			// aapt resource value: 0x7F010006
-			public const int inputlayout_togglecollapseicon = 2130771974;
-			
 			// aapt resource value: 0x7F010007
-			public const int inputlayout_togglevisibleicon = 2130771975;
+			public const int inputlayout_togglecollapseicon = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int inputlayout_togglevisibleicon = 2130771976;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -3078,11 +3078,14 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010010
-			public const int Recurrence = 2130771984;
+			// aapt resource value: 0x7F010011
+			public const int Recurrence = 2130771985;
 			
 			// aapt resource value: 0x7F010005
 			public const int settings = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int testimage = 2130771974;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -3187,6 +3190,9 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F0C001C
 			public const int cancel_action = 2131492892;
 			
+			// aapt resource value: 0x7F020004
+			public const int caption = 2130837508;
+			
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
 			
@@ -3211,8 +3217,8 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F0C0024
 			public const int customPanel = 2131492900;
 			
-			// aapt resource value: 0x7F020004
-			public const int dayView = 2130837508;
+			// aapt resource value: 0x7F020005
+			public const int dayView = 2130837509;
 			
 			// aapt resource value: 0x7F0C0025
 			public const int decor_content_parent = 2131492901;
@@ -3313,8 +3319,8 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F0C0045
 			public const int mini = 2131492933;
 			
-			// aapt resource value: 0x7F020007
-			public const int monthView = 2130837511;
+			// aapt resource value: 0x7F020008
+			public const int monthView = 2130837512;
 			
 			// aapt resource value: 0x7F0C0033
 			public const int mr_art = 2131492915;
@@ -3622,11 +3628,11 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7F0C007D
 			public const int volume_item_container = 2131492989;
 			
-			// aapt resource value: 0x7F020005
-			public const int weekView = 2130837509;
-			
 			// aapt resource value: 0x7F020006
-			public const int workWeekView = 2130837510;
+			public const int weekView = 2130837510;
+			
+			// aapt resource value: 0x7F020007
+			public const int workWeekView = 2130837511;
 			
 			// aapt resource value: 0x7F0C0090
 			public const int wrap_content = 2131493008;
@@ -3939,7 +3945,10 @@ namespace ZPISrokovnik.Droid
 			public const int icon_round = 2130968579;
 			
 			// aapt resource value: 0x7F040004
-			public const int launcher_foreground = 2130968580;
+			public const int ic_launcher = 2130968580;
+			
+			// aapt resource value: 0x7F040005
+			public const int launcher_foreground = 2130968581;
 			
 			static Mipmap()
 			{

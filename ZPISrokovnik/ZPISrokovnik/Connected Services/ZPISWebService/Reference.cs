@@ -246,28 +246,6 @@ namespace ZpisRokovnikService.DataLayer
 
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfBROJNOSTANJE_VIEWBrojcanoStanjeDTOfY6h9TEE", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO))]
-    public partial class BaseDTOOfBROJNOSTANJE_VIEWBrojcanoStanjeDTOfY6h9TEE : object, System.Runtime.Serialization.IExtensibleDataObject
-    {
-
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-        {
-            get
-            {
-                return this.extensionDataField;
-            }
-            set
-            {
-                this.extensionDataField = value;
-            }
-        }
-    }
-
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name = "PredmetDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class PredmetDTO : ZpisRokovnikService.DataLayer.BaseDTOOfPREDMETPredmetDTOCAdBun5G
     {
@@ -482,8 +460,10 @@ namespace WCFServiceWebRole1.DataLayer
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name = "BrojcanoStanjeDTO", Namespace = "http://schemas.datacontract.org/2004/07/WCFServiceWebRole1.DataLayer")]
-    public partial class BrojcanoStanjeDTO : ZpisRokovnikService.DataLayer.BaseDTOOfBROJNOSTANJE_VIEWBrojcanoStanjeDTOfY6h9TEE
+    public partial class BrojcanoStanjeDTO : object, System.Runtime.Serialization.IExtensibleDataObject
     {
+
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
         private System.Nullable<long> BrojIstraznihZatvorenikaMuskiField;
 
@@ -503,6 +483,8 @@ namespace WCFServiceWebRole1.DataLayer
 
         private System.Nullable<long> NaPrekidMuskiField;
 
+        private System.Nullable<long> NaPrekidZenskiField;
+
         private string NazivTijelaField;
 
         private System.Nullable<long> ProlazniMuskiField;
@@ -514,6 +496,18 @@ namespace WCFServiceWebRole1.DataLayer
         private System.Nullable<long> UBijeguMuskiField;
 
         private System.Nullable<long> UBijeguZenskiField;
+
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> BrojIstraznihZatvorenikaMuski
@@ -633,6 +627,19 @@ namespace WCFServiceWebRole1.DataLayer
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> NaPrekidZenski
+        {
+            get
+            {
+                return this.NaPrekidZenskiField;
+            }
+            set
+            {
+                this.NaPrekidZenskiField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string NazivTijela
         {
             get
@@ -721,62 +728,82 @@ public interface IService1
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/TestMethod", ReplyAction = "http://tempuri.org/IService1/TestMethodResponse")]
     string[] TestMethod();
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/TestMethod", ReplyAction = "http://tempuri.org/IService1/TestMethodResponse")]
-    System.Threading.Tasks.Task<string[]> TestMethodAsync();
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/TestMethod", ReplyAction = "http://tempuri.org/IService1/TestMethodResponse")]
+    System.IAsyncResult BeginTestMethod(System.AsyncCallback callback, object asyncState);
+
+    string[] EndTestMethod(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/LoginUser", ReplyAction = "http://tempuri.org/IService1/LoginUserResponse")]
     ZpisRokovnikService.DataLayer.LoginDTO LoginUser(string Username, string Password);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/LoginUser", ReplyAction = "http://tempuri.org/IService1/LoginUserResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.LoginDTO> LoginUserAsync(string Username, string Password);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/LoginUser", ReplyAction = "http://tempuri.org/IService1/LoginUserResponse")]
+    System.IAsyncResult BeginLoginUser(string Username, string Password, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.LoginDTO EndLoginUser(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetKorisnikByUsername", ReplyAction = "http://tempuri.org/IService1/GetKorisnikByUsernameResponse")]
     ZpisRokovnikService.DataLayer.KorisnikDTO GetKorisnikByUsername(string Username, string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetKorisnikByUsername", ReplyAction = "http://tempuri.org/IService1/GetKorisnikByUsernameResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.KorisnikDTO> GetKorisnikByUsernameAsync(string Username, string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/GetKorisnikByUsername", ReplyAction = "http://tempuri.org/IService1/GetKorisnikByUsernameResponse")]
+    System.IAsyncResult BeginGetKorisnikByUsername(string Username, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.KorisnikDTO EndGetKorisnikByUsername(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiPrijavljenoTijelo", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenoTijeloResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiPrijavljenoTijelo", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenoTijeloResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO> VratiPrijavljenoTijeloAsync(string nazivPrijavljenogTijela, string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiPrijavljenoTijelo", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenoTijeloResponse")]
+    System.IAsyncResult BeginVratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenoTijelo(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiPrijavljenuOsobu", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenuOsobuResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenuOsobu(long id, string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiPrijavljenuOsobu", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenuOsobuResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO> VratiPrijavljenuOsobuAsync(long id, string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiPrijavljenuOsobu", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenuOsobuResponse")]
+    System.IAsyncResult BeginVratiPrijavljenuOsobu(long id, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenuOsobu(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction = "http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
     WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] VratiBrojcanoStanje(string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction = "http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
-    System.Threading.Tasks.Task<WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[]> VratiBrojcanoStanjeAsync(string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction = "http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
+    System.IAsyncResult BeginVratiBrojcanoStanje(string token, System.AsyncCallback callback, object asyncState);
+
+    WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] EndVratiBrojcanoStanje(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO[] PretraziPoImenuIPrezimenu(string Ime, string Prezime, string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO[]> PretraziPoImenuIPrezimenuAsync(string Ime, string Prezime, string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
+    System.IAsyncResult BeginPretraziPoImenuIPrezimenu(string Ime, string Prezime, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.OsobaDTO[] EndPretraziPoImenuIPrezimenu(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/PretraziPoOIBu", ReplyAction = "http://tempuri.org/IService1/PretraziPoOIBuResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO PretraziPoOIBu(string OIB, string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/PretraziPoOIBu", ReplyAction = "http://tempuri.org/IService1/PretraziPoOIBuResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO> PretraziPoOIBuAsync(string OIB, string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/PretraziPoOIBu", ReplyAction = "http://tempuri.org/IService1/PretraziPoOIBuResponse")]
+    System.IAsyncResult BeginPretraziPoOIBu(string OIB, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.OsobaDTO EndPretraziPoOIBu(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenik", ReplyAction = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenikResponse")]
     ZpisRokovnikService.DataLayer.PredmetDTO[] DohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenik", ReplyAction = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenikResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.PredmetDTO[]> DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(long OsobaId, string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenik", ReplyAction = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenikResponse")]
+    System.IAsyncResult BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.PredmetDTO[] EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiKalendarskeZapise", ReplyAction = "http://tempuri.org/IService1/DohvatiKalendarskeZapiseResponse")]
     ZpisRokovnikService.DataLayer.KalendarDTO[] DohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token);
 
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiKalendarskeZapise", ReplyAction = "http://tempuri.org/IService1/DohvatiKalendarskeZapiseResponse")]
-    System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.KalendarDTO[]> DohvatiKalendarskeZapiseAsync(string[] VrsteKalendara, long tijeloId, string token);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/DohvatiKalendarskeZapise", ReplyAction = "http://tempuri.org/IService1/DohvatiKalendarskeZapiseResponse")]
+    System.IAsyncResult BeginDohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.KalendarDTO[] EndDohvatiKalendarskeZapise(System.IAsyncResult result);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -786,8 +813,298 @@ public interface IService1Channel : IService1, System.ServiceModel.IClientChanne
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class TestMethodCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public TestMethodCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public string[] Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((string[])(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class LoginUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public LoginUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.LoginDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.LoginDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class GetKorisnikByUsernameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public GetKorisnikByUsernameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.KorisnikDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.KorisnikDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class VratiPrijavljenoTijeloCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public VratiPrijavljenoTijeloCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class VratiPrijavljenuOsobuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public VratiPrijavljenuOsobuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class VratiBrojcanoStanjeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public VratiBrojcanoStanjeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[])(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class PretraziPoImenuIPrezimenuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public PretraziPoImenuIPrezimenuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaDTO[] Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaDTO[])(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class PretraziPoOIBuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public PretraziPoOIBuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.PredmetDTO[] Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.PredmetDTO[])(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class DohvatiKalendarskeZapiseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public DohvatiKalendarskeZapiseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.KalendarDTO[] Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.KalendarDTO[])(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class Service1Client : System.ServiceModel.ClientBase<IService1>, IService1
 {
+
+    private BeginOperationDelegate onBeginTestMethodDelegate;
+
+    private EndOperationDelegate onEndTestMethodDelegate;
+
+    private System.Threading.SendOrPostCallback onTestMethodCompletedDelegate;
+
+    private BeginOperationDelegate onBeginLoginUserDelegate;
+
+    private EndOperationDelegate onEndLoginUserDelegate;
+
+    private System.Threading.SendOrPostCallback onLoginUserCompletedDelegate;
+
+    private BeginOperationDelegate onBeginGetKorisnikByUsernameDelegate;
+
+    private EndOperationDelegate onEndGetKorisnikByUsernameDelegate;
+
+    private System.Threading.SendOrPostCallback onGetKorisnikByUsernameCompletedDelegate;
+
+    private BeginOperationDelegate onBeginVratiPrijavljenoTijeloDelegate;
+
+    private EndOperationDelegate onEndVratiPrijavljenoTijeloDelegate;
+
+    private System.Threading.SendOrPostCallback onVratiPrijavljenoTijeloCompletedDelegate;
+
+    private BeginOperationDelegate onBeginVratiPrijavljenuOsobuDelegate;
+
+    private EndOperationDelegate onEndVratiPrijavljenuOsobuDelegate;
+
+    private System.Threading.SendOrPostCallback onVratiPrijavljenuOsobuCompletedDelegate;
+
+    private BeginOperationDelegate onBeginVratiBrojcanoStanjeDelegate;
+
+    private EndOperationDelegate onEndVratiBrojcanoStanjeDelegate;
+
+    private System.Threading.SendOrPostCallback onVratiBrojcanoStanjeCompletedDelegate;
+
+    private BeginOperationDelegate onBeginPretraziPoImenuIPrezimenuDelegate;
+
+    private EndOperationDelegate onEndPretraziPoImenuIPrezimenuDelegate;
+
+    private System.Threading.SendOrPostCallback onPretraziPoImenuIPrezimenuCompletedDelegate;
+
+    private BeginOperationDelegate onBeginPretraziPoOIBuDelegate;
+
+    private EndOperationDelegate onEndPretraziPoOIBuDelegate;
+
+    private System.Threading.SendOrPostCallback onPretraziPoOIBuCompletedDelegate;
+
+    private BeginOperationDelegate onBeginDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate;
+
+    private EndOperationDelegate onEndDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate;
+
+    private System.Threading.SendOrPostCallback onDohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedDelegate;
+
+    private BeginOperationDelegate onBeginDohvatiKalendarskeZapiseDelegate;
+
+    private EndOperationDelegate onEndDohvatiKalendarskeZapiseDelegate;
+
+    private System.Threading.SendOrPostCallback onDohvatiKalendarskeZapiseCompletedDelegate;
 
     public Service1Client()
     {
@@ -813,14 +1130,84 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
     {
     }
 
+    public event System.EventHandler<TestMethodCompletedEventArgs> TestMethodCompleted;
+
+    public event System.EventHandler<LoginUserCompletedEventArgs> LoginUserCompleted;
+
+    public event System.EventHandler<GetKorisnikByUsernameCompletedEventArgs> GetKorisnikByUsernameCompleted;
+
+    public event System.EventHandler<VratiPrijavljenoTijeloCompletedEventArgs> VratiPrijavljenoTijeloCompleted;
+
+    public event System.EventHandler<VratiPrijavljenuOsobuCompletedEventArgs> VratiPrijavljenuOsobuCompleted;
+
+    public event System.EventHandler<VratiBrojcanoStanjeCompletedEventArgs> VratiBrojcanoStanjeCompleted;
+
+    public event System.EventHandler<PretraziPoImenuIPrezimenuCompletedEventArgs> PretraziPoImenuIPrezimenuCompleted;
+
+    public event System.EventHandler<PretraziPoOIBuCompletedEventArgs> PretraziPoOIBuCompleted;
+
+    public event System.EventHandler<DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs> DohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted;
+
+    public event System.EventHandler<DohvatiKalendarskeZapiseCompletedEventArgs> DohvatiKalendarskeZapiseCompleted;
+
     public string[] TestMethod()
     {
         return base.Channel.TestMethod();
     }
 
-    public System.Threading.Tasks.Task<string[]> TestMethodAsync()
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginTestMethod(System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.TestMethodAsync();
+        return base.Channel.BeginTestMethod(callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public string[] EndTestMethod(System.IAsyncResult result)
+    {
+        return base.Channel.EndTestMethod(result);
+    }
+
+    private System.IAsyncResult OnBeginTestMethod(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        return this.BeginTestMethod(callback, asyncState);
+    }
+
+    private object[] OnEndTestMethod(System.IAsyncResult result)
+    {
+        string[] retVal = this.EndTestMethod(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnTestMethodCompleted(object state)
+    {
+        if ((this.TestMethodCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.TestMethodCompleted(this, new TestMethodCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void TestMethodAsync()
+    {
+        this.TestMethodAsync(null);
+    }
+
+    public void TestMethodAsync(object userState)
+    {
+        if ((this.onBeginTestMethodDelegate == null))
+        {
+            this.onBeginTestMethodDelegate = new BeginOperationDelegate(this.OnBeginTestMethod);
+        }
+        if ((this.onEndTestMethodDelegate == null))
+        {
+            this.onEndTestMethodDelegate = new EndOperationDelegate(this.OnEndTestMethod);
+        }
+        if ((this.onTestMethodCompletedDelegate == null))
+        {
+            this.onTestMethodCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTestMethodCompleted);
+        }
+        base.InvokeAsync(this.onBeginTestMethodDelegate, null, this.onEndTestMethodDelegate, this.onTestMethodCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.LoginDTO LoginUser(string Username, string Password)
@@ -828,9 +1215,63 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.LoginUser(Username, Password);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.LoginDTO> LoginUserAsync(string Username, string Password)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginLoginUser(string Username, string Password, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.LoginUserAsync(Username, Password);
+        return base.Channel.BeginLoginUser(Username, Password, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.LoginDTO EndLoginUser(System.IAsyncResult result)
+    {
+        return base.Channel.EndLoginUser(result);
+    }
+
+    private System.IAsyncResult OnBeginLoginUser(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string Username = ((string)(inValues[0]));
+        string Password = ((string)(inValues[1]));
+        return this.BeginLoginUser(Username, Password, callback, asyncState);
+    }
+
+    private object[] OnEndLoginUser(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.LoginDTO retVal = this.EndLoginUser(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnLoginUserCompleted(object state)
+    {
+        if ((this.LoginUserCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.LoginUserCompleted(this, new LoginUserCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void LoginUserAsync(string Username, string Password)
+    {
+        this.LoginUserAsync(Username, Password, null);
+    }
+
+    public void LoginUserAsync(string Username, string Password, object userState)
+    {
+        if ((this.onBeginLoginUserDelegate == null))
+        {
+            this.onBeginLoginUserDelegate = new BeginOperationDelegate(this.OnBeginLoginUser);
+        }
+        if ((this.onEndLoginUserDelegate == null))
+        {
+            this.onEndLoginUserDelegate = new EndOperationDelegate(this.OnEndLoginUser);
+        }
+        if ((this.onLoginUserCompletedDelegate == null))
+        {
+            this.onLoginUserCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLoginUserCompleted);
+        }
+        base.InvokeAsync(this.onBeginLoginUserDelegate, new object[] {
+                    Username,
+                    Password}, this.onEndLoginUserDelegate, this.onLoginUserCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.KorisnikDTO GetKorisnikByUsername(string Username, string token)
@@ -838,9 +1279,63 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.GetKorisnikByUsername(Username, token);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.KorisnikDTO> GetKorisnikByUsernameAsync(string Username, string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginGetKorisnikByUsername(string Username, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.GetKorisnikByUsernameAsync(Username, token);
+        return base.Channel.BeginGetKorisnikByUsername(Username, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.KorisnikDTO EndGetKorisnikByUsername(System.IAsyncResult result)
+    {
+        return base.Channel.EndGetKorisnikByUsername(result);
+    }
+
+    private System.IAsyncResult OnBeginGetKorisnikByUsername(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string Username = ((string)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginGetKorisnikByUsername(Username, token, callback, asyncState);
+    }
+
+    private object[] OnEndGetKorisnikByUsername(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.KorisnikDTO retVal = this.EndGetKorisnikByUsername(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnGetKorisnikByUsernameCompleted(object state)
+    {
+        if ((this.GetKorisnikByUsernameCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.GetKorisnikByUsernameCompleted(this, new GetKorisnikByUsernameCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void GetKorisnikByUsernameAsync(string Username, string token)
+    {
+        this.GetKorisnikByUsernameAsync(Username, token, null);
+    }
+
+    public void GetKorisnikByUsernameAsync(string Username, string token, object userState)
+    {
+        if ((this.onBeginGetKorisnikByUsernameDelegate == null))
+        {
+            this.onBeginGetKorisnikByUsernameDelegate = new BeginOperationDelegate(this.OnBeginGetKorisnikByUsername);
+        }
+        if ((this.onEndGetKorisnikByUsernameDelegate == null))
+        {
+            this.onEndGetKorisnikByUsernameDelegate = new EndOperationDelegate(this.OnEndGetKorisnikByUsername);
+        }
+        if ((this.onGetKorisnikByUsernameCompletedDelegate == null))
+        {
+            this.onGetKorisnikByUsernameCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetKorisnikByUsernameCompleted);
+        }
+        base.InvokeAsync(this.onBeginGetKorisnikByUsernameDelegate, new object[] {
+                    Username,
+                    token}, this.onEndGetKorisnikByUsernameDelegate, this.onGetKorisnikByUsernameCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token)
@@ -848,9 +1343,63 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.VratiPrijavljenoTijelo(nazivPrijavljenogTijela, token);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO> VratiPrijavljenoTijeloAsync(string nazivPrijavljenogTijela, string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginVratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.VratiPrijavljenoTijeloAsync(nazivPrijavljenogTijela, token);
+        return base.Channel.BeginVratiPrijavljenoTijelo(nazivPrijavljenogTijela, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenoTijelo(System.IAsyncResult result)
+    {
+        return base.Channel.EndVratiPrijavljenoTijelo(result);
+    }
+
+    private System.IAsyncResult OnBeginVratiPrijavljenoTijelo(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string nazivPrijavljenogTijela = ((string)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginVratiPrijavljenoTijelo(nazivPrijavljenogTijela, token, callback, asyncState);
+    }
+
+    private object[] OnEndVratiPrijavljenoTijelo(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndVratiPrijavljenoTijelo(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnVratiPrijavljenoTijeloCompleted(object state)
+    {
+        if ((this.VratiPrijavljenoTijeloCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.VratiPrijavljenoTijeloCompleted(this, new VratiPrijavljenoTijeloCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void VratiPrijavljenoTijeloAsync(string nazivPrijavljenogTijela, string token)
+    {
+        this.VratiPrijavljenoTijeloAsync(nazivPrijavljenogTijela, token, null);
+    }
+
+    public void VratiPrijavljenoTijeloAsync(string nazivPrijavljenogTijela, string token, object userState)
+    {
+        if ((this.onBeginVratiPrijavljenoTijeloDelegate == null))
+        {
+            this.onBeginVratiPrijavljenoTijeloDelegate = new BeginOperationDelegate(this.OnBeginVratiPrijavljenoTijelo);
+        }
+        if ((this.onEndVratiPrijavljenoTijeloDelegate == null))
+        {
+            this.onEndVratiPrijavljenoTijeloDelegate = new EndOperationDelegate(this.OnEndVratiPrijavljenoTijelo);
+        }
+        if ((this.onVratiPrijavljenoTijeloCompletedDelegate == null))
+        {
+            this.onVratiPrijavljenoTijeloCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVratiPrijavljenoTijeloCompleted);
+        }
+        base.InvokeAsync(this.onBeginVratiPrijavljenoTijeloDelegate, new object[] {
+                    nazivPrijavljenogTijela,
+                    token}, this.onEndVratiPrijavljenoTijeloDelegate, this.onVratiPrijavljenoTijeloCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenuOsobu(long id, string token)
@@ -858,9 +1407,63 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.VratiPrijavljenuOsobu(id, token);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO> VratiPrijavljenuOsobuAsync(long id, string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginVratiPrijavljenuOsobu(long id, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.VratiPrijavljenuOsobuAsync(id, token);
+        return base.Channel.BeginVratiPrijavljenuOsobu(id, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenuOsobu(System.IAsyncResult result)
+    {
+        return base.Channel.EndVratiPrijavljenuOsobu(result);
+    }
+
+    private System.IAsyncResult OnBeginVratiPrijavljenuOsobu(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        long id = ((long)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginVratiPrijavljenuOsobu(id, token, callback, asyncState);
+    }
+
+    private object[] OnEndVratiPrijavljenuOsobu(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndVratiPrijavljenuOsobu(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnVratiPrijavljenuOsobuCompleted(object state)
+    {
+        if ((this.VratiPrijavljenuOsobuCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.VratiPrijavljenuOsobuCompleted(this, new VratiPrijavljenuOsobuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void VratiPrijavljenuOsobuAsync(long id, string token)
+    {
+        this.VratiPrijavljenuOsobuAsync(id, token, null);
+    }
+
+    public void VratiPrijavljenuOsobuAsync(long id, string token, object userState)
+    {
+        if ((this.onBeginVratiPrijavljenuOsobuDelegate == null))
+        {
+            this.onBeginVratiPrijavljenuOsobuDelegate = new BeginOperationDelegate(this.OnBeginVratiPrijavljenuOsobu);
+        }
+        if ((this.onEndVratiPrijavljenuOsobuDelegate == null))
+        {
+            this.onEndVratiPrijavljenuOsobuDelegate = new EndOperationDelegate(this.OnEndVratiPrijavljenuOsobu);
+        }
+        if ((this.onVratiPrijavljenuOsobuCompletedDelegate == null))
+        {
+            this.onVratiPrijavljenuOsobuCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVratiPrijavljenuOsobuCompleted);
+        }
+        base.InvokeAsync(this.onBeginVratiPrijavljenuOsobuDelegate, new object[] {
+                    id,
+                    token}, this.onEndVratiPrijavljenuOsobuDelegate, this.onVratiPrijavljenuOsobuCompletedDelegate, userState);
     }
 
     public WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] VratiBrojcanoStanje(string token)
@@ -868,9 +1471,61 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.VratiBrojcanoStanje(token);
     }
 
-    public System.Threading.Tasks.Task<WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[]> VratiBrojcanoStanjeAsync(string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginVratiBrojcanoStanje(string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.VratiBrojcanoStanjeAsync(token);
+        return base.Channel.BeginVratiBrojcanoStanje(token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] EndVratiBrojcanoStanje(System.IAsyncResult result)
+    {
+        return base.Channel.EndVratiBrojcanoStanje(result);
+    }
+
+    private System.IAsyncResult OnBeginVratiBrojcanoStanje(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string token = ((string)(inValues[0]));
+        return this.BeginVratiBrojcanoStanje(token, callback, asyncState);
+    }
+
+    private object[] OnEndVratiBrojcanoStanje(System.IAsyncResult result)
+    {
+        WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] retVal = this.EndVratiBrojcanoStanje(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnVratiBrojcanoStanjeCompleted(object state)
+    {
+        if ((this.VratiBrojcanoStanjeCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.VratiBrojcanoStanjeCompleted(this, new VratiBrojcanoStanjeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void VratiBrojcanoStanjeAsync(string token)
+    {
+        this.VratiBrojcanoStanjeAsync(token, null);
+    }
+
+    public void VratiBrojcanoStanjeAsync(string token, object userState)
+    {
+        if ((this.onBeginVratiBrojcanoStanjeDelegate == null))
+        {
+            this.onBeginVratiBrojcanoStanjeDelegate = new BeginOperationDelegate(this.OnBeginVratiBrojcanoStanje);
+        }
+        if ((this.onEndVratiBrojcanoStanjeDelegate == null))
+        {
+            this.onEndVratiBrojcanoStanjeDelegate = new EndOperationDelegate(this.OnEndVratiBrojcanoStanje);
+        }
+        if ((this.onVratiBrojcanoStanjeCompletedDelegate == null))
+        {
+            this.onVratiBrojcanoStanjeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVratiBrojcanoStanjeCompleted);
+        }
+        base.InvokeAsync(this.onBeginVratiBrojcanoStanjeDelegate, new object[] {
+                    token}, this.onEndVratiBrojcanoStanjeDelegate, this.onVratiBrojcanoStanjeCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.OsobaDTO[] PretraziPoImenuIPrezimenu(string Ime, string Prezime, string token)
@@ -878,9 +1533,65 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.PretraziPoImenuIPrezimenu(Ime, Prezime, token);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO[]> PretraziPoImenuIPrezimenuAsync(string Ime, string Prezime, string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginPretraziPoImenuIPrezimenu(string Ime, string Prezime, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.PretraziPoImenuIPrezimenuAsync(Ime, Prezime, token);
+        return base.Channel.BeginPretraziPoImenuIPrezimenu(Ime, Prezime, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaDTO[] EndPretraziPoImenuIPrezimenu(System.IAsyncResult result)
+    {
+        return base.Channel.EndPretraziPoImenuIPrezimenu(result);
+    }
+
+    private System.IAsyncResult OnBeginPretraziPoImenuIPrezimenu(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string Ime = ((string)(inValues[0]));
+        string Prezime = ((string)(inValues[1]));
+        string token = ((string)(inValues[2]));
+        return this.BeginPretraziPoImenuIPrezimenu(Ime, Prezime, token, callback, asyncState);
+    }
+
+    private object[] OnEndPretraziPoImenuIPrezimenu(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaDTO[] retVal = this.EndPretraziPoImenuIPrezimenu(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnPretraziPoImenuIPrezimenuCompleted(object state)
+    {
+        if ((this.PretraziPoImenuIPrezimenuCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.PretraziPoImenuIPrezimenuCompleted(this, new PretraziPoImenuIPrezimenuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void PretraziPoImenuIPrezimenuAsync(string Ime, string Prezime, string token)
+    {
+        this.PretraziPoImenuIPrezimenuAsync(Ime, Prezime, token, null);
+    }
+
+    public void PretraziPoImenuIPrezimenuAsync(string Ime, string Prezime, string token, object userState)
+    {
+        if ((this.onBeginPretraziPoImenuIPrezimenuDelegate == null))
+        {
+            this.onBeginPretraziPoImenuIPrezimenuDelegate = new BeginOperationDelegate(this.OnBeginPretraziPoImenuIPrezimenu);
+        }
+        if ((this.onEndPretraziPoImenuIPrezimenuDelegate == null))
+        {
+            this.onEndPretraziPoImenuIPrezimenuDelegate = new EndOperationDelegate(this.OnEndPretraziPoImenuIPrezimenu);
+        }
+        if ((this.onPretraziPoImenuIPrezimenuCompletedDelegate == null))
+        {
+            this.onPretraziPoImenuIPrezimenuCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnPretraziPoImenuIPrezimenuCompleted);
+        }
+        base.InvokeAsync(this.onBeginPretraziPoImenuIPrezimenuDelegate, new object[] {
+                    Ime,
+                    Prezime,
+                    token}, this.onEndPretraziPoImenuIPrezimenuDelegate, this.onPretraziPoImenuIPrezimenuCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.OsobaDTO PretraziPoOIBu(string OIB, string token)
@@ -888,9 +1599,63 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.PretraziPoOIBu(OIB, token);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.OsobaDTO> PretraziPoOIBuAsync(string OIB, string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginPretraziPoOIBu(string OIB, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.PretraziPoOIBuAsync(OIB, token);
+        return base.Channel.BeginPretraziPoOIBu(OIB, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaDTO EndPretraziPoOIBu(System.IAsyncResult result)
+    {
+        return base.Channel.EndPretraziPoOIBu(result);
+    }
+
+    private System.IAsyncResult OnBeginPretraziPoOIBu(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string OIB = ((string)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginPretraziPoOIBu(OIB, token, callback, asyncState);
+    }
+
+    private object[] OnEndPretraziPoOIBu(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndPretraziPoOIBu(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnPretraziPoOIBuCompleted(object state)
+    {
+        if ((this.PretraziPoOIBuCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.PretraziPoOIBuCompleted(this, new PretraziPoOIBuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void PretraziPoOIBuAsync(string OIB, string token)
+    {
+        this.PretraziPoOIBuAsync(OIB, token, null);
+    }
+
+    public void PretraziPoOIBuAsync(string OIB, string token, object userState)
+    {
+        if ((this.onBeginPretraziPoOIBuDelegate == null))
+        {
+            this.onBeginPretraziPoOIBuDelegate = new BeginOperationDelegate(this.OnBeginPretraziPoOIBu);
+        }
+        if ((this.onEndPretraziPoOIBuDelegate == null))
+        {
+            this.onEndPretraziPoOIBuDelegate = new EndOperationDelegate(this.OnEndPretraziPoOIBu);
+        }
+        if ((this.onPretraziPoOIBuCompletedDelegate == null))
+        {
+            this.onPretraziPoOIBuCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnPretraziPoOIBuCompleted);
+        }
+        base.InvokeAsync(this.onBeginPretraziPoOIBuDelegate, new object[] {
+                    OIB,
+                    token}, this.onEndPretraziPoOIBuDelegate, this.onPretraziPoOIBuCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.PredmetDTO[] DohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token)
@@ -898,9 +1663,63 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.DohvatiPredmeteNaKojojJeOsobaKaznjenik(OsobaId, token);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.PredmetDTO[]> DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(long OsobaId, string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(OsobaId, token);
+        return base.Channel.BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(OsobaId, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.PredmetDTO[] EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(System.IAsyncResult result)
+    {
+        return base.Channel.EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(result);
+    }
+
+    private System.IAsyncResult OnBeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        long OsobaId = ((long)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(OsobaId, token, callback, asyncState);
+    }
+
+    private object[] OnEndDohvatiPredmeteNaKojojJeOsobaKaznjenik(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.PredmetDTO[] retVal = this.EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnDohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted(object state)
+    {
+        if ((this.DohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.DohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted(this, new DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(long OsobaId, string token)
+    {
+        this.DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(OsobaId, token, null);
+    }
+
+    public void DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(long OsobaId, string token, object userState)
+    {
+        if ((this.onBeginDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate == null))
+        {
+            this.onBeginDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate = new BeginOperationDelegate(this.OnBeginDohvatiPredmeteNaKojojJeOsobaKaznjenik);
+        }
+        if ((this.onEndDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate == null))
+        {
+            this.onEndDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate = new EndOperationDelegate(this.OnEndDohvatiPredmeteNaKojojJeOsobaKaznjenik);
+        }
+        if ((this.onDohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedDelegate == null))
+        {
+            this.onDohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted);
+        }
+        base.InvokeAsync(this.onBeginDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate, new object[] {
+                    OsobaId,
+                    token}, this.onEndDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate, this.onDohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedDelegate, userState);
     }
 
     public ZpisRokovnikService.DataLayer.KalendarDTO[] DohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token)
@@ -908,8 +1727,64 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.DohvatiKalendarskeZapise(VrsteKalendara, tijeloId, token);
     }
 
-    public System.Threading.Tasks.Task<ZpisRokovnikService.DataLayer.KalendarDTO[]> DohvatiKalendarskeZapiseAsync(string[] VrsteKalendara, long tijeloId, string token)
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginDohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.DohvatiKalendarskeZapiseAsync(VrsteKalendara, tijeloId, token);
+        return base.Channel.BeginDohvatiKalendarskeZapise(VrsteKalendara, tijeloId, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.KalendarDTO[] EndDohvatiKalendarskeZapise(System.IAsyncResult result)
+    {
+        return base.Channel.EndDohvatiKalendarskeZapise(result);
+    }
+
+    private System.IAsyncResult OnBeginDohvatiKalendarskeZapise(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string[] VrsteKalendara = ((string[])(inValues[0]));
+        long tijeloId = ((long)(inValues[1]));
+        string token = ((string)(inValues[2]));
+        return this.BeginDohvatiKalendarskeZapise(VrsteKalendara, tijeloId, token, callback, asyncState);
+    }
+
+    private object[] OnEndDohvatiKalendarskeZapise(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.KalendarDTO[] retVal = this.EndDohvatiKalendarskeZapise(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnDohvatiKalendarskeZapiseCompleted(object state)
+    {
+        if ((this.DohvatiKalendarskeZapiseCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.DohvatiKalendarskeZapiseCompleted(this, new DohvatiKalendarskeZapiseCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void DohvatiKalendarskeZapiseAsync(string[] VrsteKalendara, long tijeloId, string token)
+    {
+        this.DohvatiKalendarskeZapiseAsync(VrsteKalendara, tijeloId, token, null);
+    }
+
+    public void DohvatiKalendarskeZapiseAsync(string[] VrsteKalendara, long tijeloId, string token, object userState)
+    {
+        if ((this.onBeginDohvatiKalendarskeZapiseDelegate == null))
+        {
+            this.onBeginDohvatiKalendarskeZapiseDelegate = new BeginOperationDelegate(this.OnBeginDohvatiKalendarskeZapise);
+        }
+        if ((this.onEndDohvatiKalendarskeZapiseDelegate == null))
+        {
+            this.onEndDohvatiKalendarskeZapiseDelegate = new EndOperationDelegate(this.OnEndDohvatiKalendarskeZapise);
+        }
+        if ((this.onDohvatiKalendarskeZapiseCompletedDelegate == null))
+        {
+            this.onDohvatiKalendarskeZapiseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDohvatiKalendarskeZapiseCompleted);
+        }
+        base.InvokeAsync(this.onBeginDohvatiKalendarskeZapiseDelegate, new object[] {
+                    VrsteKalendara,
+                    tijeloId,
+                    token}, this.onEndDohvatiKalendarskeZapiseDelegate, this.onDohvatiKalendarskeZapiseCompletedDelegate, userState);
     }
 }

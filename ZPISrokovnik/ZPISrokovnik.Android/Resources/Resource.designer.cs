@@ -2406,54 +2406,32 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f020053
 			public const int arrow_down = 2130837587;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f020134
-			public const int avd_hide_password_1 = 2130837812;
-			
-			// aapt resource value: 0x7f020135
-			public const int avd_hide_password_2 = 2130837813;
-			
-			// aapt resource value: 0x7f020136
-			public const int avd_hide_password_3 = 2130837814;
-=======
 			// aapt resource value: 0x7f020054
 			public const int arrow_up = 2130837588;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_hide_password = 2130837589;
 			
-			// aapt resource value: 0x7f020138
-			public const int avd_hide_password_1 = 2130837816;
->>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
-			
 			// aapt resource value: 0x7f020139
-			public const int avd_hide_password_2 = 2130837817;
+			public const int avd_hide_password_1 = 2130837817;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f020137
-			public const int avd_show_password_1 = 2130837815;
-			
-			// aapt resource value: 0x7f020138
-			public const int avd_show_password_2 = 2130837816;
-			
-			// aapt resource value: 0x7f020139
-			public const int avd_show_password_3 = 2130837817;
-=======
 			// aapt resource value: 0x7f02013a
-			public const int avd_hide_password_3 = 2130837818;
+			public const int avd_hide_password_2 = 2130837818;
+			
+			// aapt resource value: 0x7f02013b
+			public const int avd_hide_password_3 = 2130837819;
 			
 			// aapt resource value: 0x7f020056
 			public const int avd_show_password = 2130837590;
 			
-			// aapt resource value: 0x7f02013b
-			public const int avd_show_password_1 = 2130837819;
->>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
-			
 			// aapt resource value: 0x7f02013c
-			public const int avd_show_password_2 = 2130837820;
+			public const int avd_show_password_1 = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int avd_show_password_3 = 2130837821;
+			public const int avd_show_password_2 = 2130837821;
+			
+			// aapt resource value: 0x7f02013e
+			public const int avd_show_password_3 = 2130837822;
 			
 			// aapt resource value: 0x7f020057
 			public const int calendar = 2130837591;
@@ -3092,17 +3070,7 @@ namespace ZPISrokovnik.Droid
 			public const int notification_bg_low = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-<<<<<<< HEAD
-			public const int notification_icon_background = 2130837803;
-			
-			// aapt resource value: 0x7f020132
-			public const int notification_template_icon_bg = 2130837810;
-			
-			// aapt resource value: 0x7f020133
-			public const int notification_template_icon_low_bg = 2130837811;
-=======
 			public const int notification_bg_low_normal = 2130837803;
->>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
 			
 			// aapt resource value: 0x7f02012c
 			public const int notification_bg_low_pressed = 2130837804;
@@ -3114,22 +3082,13 @@ namespace ZPISrokovnik.Droid
 			public const int notification_bg_normal_pressed = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-<<<<<<< HEAD
-			public const int testimage = 2130837807;
-			
-			// aapt resource value: 0x7f020130
-			public const int tooltip_frame_dark = 2130837808;
-			
-			// aapt resource value: 0x7f020131
-			public const int tooltip_frame_light = 2130837809;
-=======
 			public const int notification_icon_background = 2130837807;
 			
-			// aapt resource value: 0x7f020136
-			public const int notification_template_icon_bg = 2130837814;
-			
 			// aapt resource value: 0x7f020137
-			public const int notification_template_icon_low_bg = 2130837815;
+			public const int notification_template_icon_bg = 2130837815;
+			
+			// aapt resource value: 0x7f020138
+			public const int notification_template_icon_low_bg = 2130837816;
 			
 			// aapt resource value: 0x7f020130
 			public const int notification_tile_bg = 2130837808;
@@ -3144,11 +3103,13 @@ namespace ZPISrokovnik.Droid
 			public const int settings = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int tooltip_frame_dark = 2130837812;
+			public const int testimage = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int tooltip_frame_light = 2130837813;
->>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
+			public const int tooltip_frame_dark = 2130837813;
+			
+			// aapt resource value: 0x7f020136
+			public const int tooltip_frame_light = 2130837814;
 			
 			static Drawable()
 			{
@@ -3274,8 +3235,8 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f0900bb
 			public const int cancel_action = 2131296443;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int caption = 2131296456;
+			// aapt resource value: 0x7f0900cc
+			public const int caption = 2131296460;
 			
 			// aapt resource value: 0x7f090045
 			public const int center = 2131296325;
@@ -3430,24 +3391,14 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f090065
 			public const int list_item = 2131296357;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f0900cb
-			public const int masked = 2131296459;
-=======
-			// aapt resource value: 0x7f0900ce
-			public const int masked = 2131296462;
->>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
+			// aapt resource value: 0x7f0900cf
+			public const int masked = 2131296463;
 			
 			// aapt resource value: 0x7f0900bd
 			public const int media_actions = 2131296445;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f0900c9
-			public const int message = 2131296457;
-=======
-			// aapt resource value: 0x7f0900cc
-			public const int message = 2131296460;
->>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
+			// aapt resource value: 0x7f0900cd
+			public const int message = 2131296461;
 			
 			// aapt resource value: 0x7f090031
 			public const int middle = 2131296305;
@@ -3779,13 +3730,8 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f0900ca
-			public const int visible = 2131296458;
-=======
-			// aapt resource value: 0x7f0900cd
-			public const int visible = 2131296461;
->>>>>>> 82b1b28c5e871866832fa55cb26ac3aa441d0b9b
+			// aapt resource value: 0x7f0900ce
+			public const int visible = 2131296462;
 			
 			// aapt resource value: 0x7f0900af
 			public const int volume_item_container = 2131296431;
