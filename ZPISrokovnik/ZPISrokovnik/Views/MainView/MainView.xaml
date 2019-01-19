@@ -4,12 +4,13 @@
              x:Class="ZPISrokovnik.Views.MainView.MainView">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar SearchCommand="{Binding SearchCommand}"/>
+            <SearchBar Placeholder="Unesite ime, prezime, OIB" SearchCommand="{Binding SearchCommand}" Text="{Binding SearchText, Mode=TwoWay}"/>
             <Label Text="{Binding Caption}"
                 FontSize="20"
                 Margin="15,30,0,0" />
-            <Grid Margin="15,20,0,0">
+            <Grid Margin="15,20,15,0">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="25"/>
@@ -20,22 +21,33 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50*"/>
-                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Text="Zatvorenici"/>
-                <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" Text="Kažnjenici"/>
-                <Label Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" Text="Prolaznici"/>
-                <Label Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center" Text="Na izlasku"/>
-                <Label Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" Text="U bijegu"/>
+                <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Text=""/>
+                <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" Text="Istražni zatvorenici"/>
+                <Label Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" Text="Kažnjenici"/>
+                <Label Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center" Text="Zatvorenici"/>
+                <Label Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" Text="Na izlasku"/>
                 <Label Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center" Text="Na prekidu"/>
-                <Label Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center" Text="Ukupno" FontAttributes="Bold"/>
-                <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" Text="50"/>
-                <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" Text="20"/>
-                <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" Text="10"/>
-                <Label Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center" Text="5"/>
-                <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center" Text="0"/>
-                <Label Grid.Row="5" Grid.Column="1" HorizontalTextAlignment="Center" Text="1"/>
-                <Label Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Center" Text="87" FontAttributes="Bold"/>
+                <Label Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center" Text="Prolazni"/>
+                <Label Grid.Row="7" Grid.Column="0" HorizontalTextAlignment="Center" Text="U bijegu"/>
+                <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" Text="Muški"/>
+                <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding BrojIstraznihZatvorenikaMuski}"/>
+                <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding BrojKaznjenikaMuski}"/>
+                <Label Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding BrojZatvorenikaMuski}"/>
+                <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding NaIzlaskuMuski}"/>
+                <Label Grid.Row="5" Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding NaPrekidMuski}"/>
+                <Label Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding ProlazniMuski}"/>
+                <Label Grid.Row="7" Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding UBijeguMuski}"/>
+                <Label Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" Text="Ženski"/>
+                <Label Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" Text="{Binding BrojIstraznihZatvorenikaZenski}"/>
+                <Label Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center" Text="{Binding BrojKaznjenikaZenski}"/>
+                <Label Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="Center" Text="{Binding BrojZatvorenikaZenski}"/>
+                <Label Grid.Row="4" Grid.Column="2" HorizontalTextAlignment="Center" Text="{Binding NaIzlaskuZenski}"/>
+                <Label Grid.Row="5" Grid.Column="2" HorizontalTextAlignment="Center" Text="{Binding NaPrekidZenski}"/>
+                <Label Grid.Row="6" Grid.Column="2" HorizontalTextAlignment="Center" Text="{Binding ProlazniZenski}"/>
+                <Label Grid.Row="7" Grid.Column="2" HorizontalTextAlignment="Center" Text="{Binding UBijeguZenski}"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

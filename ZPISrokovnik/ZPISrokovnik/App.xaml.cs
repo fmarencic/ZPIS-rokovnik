@@ -19,9 +19,8 @@ namespace ZPISrokovnik
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new LoginView());
-
             client = new Service1Client(ServiceConnection.CreateBasicHttpBinding(), ServiceConnection.Endpoint);
+            MainPage = new NavigationPage(new LoginView());
         }
 
         /// <summary>
