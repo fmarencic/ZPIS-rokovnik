@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZpisRokovnikService.DataLayer;
@@ -207,6 +206,7 @@ namespace ZPISrokovnik.Views.MainView
         private void Search()
         {
             //if(Regex.IsMatch(SearchText, @"^\d+$"))
+            MessagingCenter.Send<MainViewModel, string>(this, "oibImePrezime", SearchText);
             pageService.PushAsync(new MainSearch());
         }
 

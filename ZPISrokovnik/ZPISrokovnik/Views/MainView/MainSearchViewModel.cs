@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 
@@ -14,18 +14,27 @@ namespace ZPISrokovnik.Views.MainView
         public MainSearchViewModel (IPageService page)
 		{
             SearchCommand = new Command(Search);
-            this.pageService = page; 
-		}
+            this.pageService = page;
+            ListenForSearchText();
+		}   
         #endregion
 
         #region Properties
-        private string caption = "Zatvor u Zagrebu";
-        private string captionImeIPrezime = "Ime i prezime";
-        private string captionOIB = "OIB";
-        private string captionGodinaRodjenja = "Datum rođenja";
         private string itemSelected;
         private IPageService pageService;
 
+        private string searchText;
+        public string SearchText
+        {
+            get { return searchText; }
+            set
+            {
+                SetValue(ref searchText, value);
+                OnPropertyChanged(nameof(SearchText));
+            }
+        }
+
+        private string caption = "Zatvor u Zagrebu";
         public string Caption
         {
             get { return caption; }
@@ -34,19 +43,6 @@ namespace ZPISrokovnik.Views.MainView
                 caption = value;
                 OnPropertyChanged();
             }
-        }
-
-        public string CaptionGodinaRodjenja {
-            get { return captionGodinaRodjenja; }
-            set { captionGodinaRodjenja = value; }
-        }
-        public string CaptionOIB {
-            get { return captionOIB; }
-            set { captionOIB = value; }
-        }
-        public string CaptionImeIPrezime {
-            get { return captionImeIPrezime; }
-            set { captionImeIPrezime = value; }
         }
         public string ItemSelected
         {
@@ -69,6 +65,12 @@ namespace ZPISrokovnik.Views.MainView
         private void Search()
         {
             pageService.PushAsync(new MainSearch());
+        }
+        private void ListenForSearchText()
+        {
+            MessagingCenter.Subscribe<MainViewModel, string>(this, "oibImePrezime", (sender, arg) => {
+                SearchText = arg;
+            });
         }
         #endregion
     }

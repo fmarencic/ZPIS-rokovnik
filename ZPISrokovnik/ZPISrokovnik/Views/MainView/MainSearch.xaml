@@ -18,9 +18,9 @@
                     <ColumnDefinition Width="30*" />
                     <ColumnDefinition Width="30*" />
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" FontSize="15" Text="{Binding CaptionImeIPrezime}" FontAttributes="Bold"/>
-                <Label Grid.Column="1" Grid.Row="0" FontSize="15" Text="{Binding CaptionOIB}" FontAttributes="Bold"/>
-                <Label Grid.Column="2" Grid.Row="0" FontSize="15" Text="{Binding CaptionGodinaRodjenja}" FontAttributes="Bold"/>
+                <Label Grid.Column="0" Grid.Row="0" FontSize="15" Text="Ime i prezime" FontAttributes="Bold"/>
+                <Label Grid.Column="1" Grid.Row="0" FontSize="15" Text="OIB" FontAttributes="Bold"/>
+                <Label Grid.Column="2" Grid.Row="0" FontSize="15" Text="Datum rođenja" FontAttributes="Bold"/>
             </Grid>
             <ListView Margin="10,10,10,0" SelectedItem="{Binding ItemSelected}">
                 <ListView.ItemsSource>
