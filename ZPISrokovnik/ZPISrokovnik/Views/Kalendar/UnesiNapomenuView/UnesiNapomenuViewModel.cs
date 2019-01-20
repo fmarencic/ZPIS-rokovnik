@@ -69,8 +69,8 @@ namespace ZPISrokovnik.Views
                 this.Napomena.Vidljivo = false;
                 App.DatabaseController.SpremiNapomenu(this.Napomena);
                 //promjena
-                Application.Current.MainPage = new NavigationPage(new KalendarView());
-                //pageService.PushAfterLogin(new MainTabbedPage());
+                //KalendarViewModel viewModel = new KalendarViewModel();
+                Application.Current.MainPage.Navigation.PopAsync();
             }
             
 

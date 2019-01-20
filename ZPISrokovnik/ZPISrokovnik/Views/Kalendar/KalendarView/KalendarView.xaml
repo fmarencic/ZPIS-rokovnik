@@ -9,7 +9,6 @@
         <ToolbarItem Text="Dodaj" Command="{Binding UnesiNapomenuCommand}"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-
         <StackLayout Margin="15,8,15,3">
             <xForms:SfSchedule
                 ScheduleView="MonthView"

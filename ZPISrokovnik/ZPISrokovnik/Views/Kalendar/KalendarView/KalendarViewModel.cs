@@ -58,6 +58,12 @@ namespace ZPISrokovnik.Views
             this.Page = page;
         }
 
+        public KalendarViewModel()
+        {
+            this.ListaNapomena = null;
+            this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
+        }
+
         private void UnesiNapomenu()
         {
             Page.PushAsync(new UnesiNapomenuView());
