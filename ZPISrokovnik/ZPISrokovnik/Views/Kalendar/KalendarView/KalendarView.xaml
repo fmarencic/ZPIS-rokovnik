@@ -2,23 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:ZPISrokovnik.Views;assembly=ZPISrokovnik"
+             xmlns:xForms="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
              x:Class="ZPISrokovnik.Views.Kalendar.KalendarView.KalendarView"
              Title="Kalendar">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Dodaj" Command="{Binding UnesiNapomenuCommand}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
+
         <StackLayout Margin="15,8,15,3">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Tip kalendara:" 
-                       VerticalOptions="Center"
-                       TextColor="Black"/>
-                <Picker 
-                    ItemsSource="{Binding TipKalendara}"  
-                    VerticalOptions="Center" 
-                    HorizontalOptions="FillAndExpand" 
-                    x:Name="TipKalendara"/>
-            </StackLayout>
-            
+            <xForms:SfSchedule
+                ScheduleView="MonthView"
+                ShowAppointmentsInline="True"
+                DataSource="{Binding ListaNapomena}"
+                MonthInlineAppointmentTapped="Napomena_OnMonthInlineAppointmentTapped">
+                <xForms:SfSchedule.AppointmentMapping>
+                    <xForms:ScheduleAppointmentMapping
+                        StartTimeMapping="Datum"
+                        EndTimeMapping="DatumDo"
+                        NotesMapping="Opis"
+                        SubjectMapping="Naziv"
+                        IsAllDayMapping="AllDay" >
+                    </xForms:ScheduleAppointmentMapping>
+                </xForms:SfSchedule.AppointmentMapping>
+            </xForms:SfSchedule>
             <StackLayout>
-                <!--<Label Text="Pribilježene napomene:" TextColor="Black"/>-->
                 <ListView x:Name="ElementListe"
                           HasUnevenRows="True"
                           SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
@@ -26,45 +34,51 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame OutlineColor="Black" HasShadow="True" Margin="3">
+                                <Frame BorderColor="Black" HasShadow="True" Margin="2" Padding="4">
                                     <StackLayout>
-                                        <StackLayout Orientation="Horizontal" Spacing="0">
-                                            <Label Text="Datum: " FontAttributes="Bold" TextColor="Black" />
-                                            <Label Text="{Binding Datum, StringFormat='\{0:dd/MM/yyyy}'}"/>
-                                        </StackLayout>
                                         <StackLayout Orientation="Horizontal" Spacing="0">
                                             <Label Text="Naziv: " FontAttributes="Bold" TextColor="Black"/>
                                             <Label Text="{Binding Naziv, StringFormat='\{0}'}"/>
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal" Spacing="0">
+                                            <Label Text="Datum: " FontAttributes="Bold" TextColor="Black" />
+                                            <Label Text="{Binding Datum, StringFormat='\{0:dd/MM/yyyy}'}"/>
+                                            <Label Text="{Binding DatumDo, StringFormat='\ - {0:dd/MM/yyyy}'}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Spacing="0">
                                             <Label Text="Opis: " FontAttributes="Bold" TextColor="Black" IsVisible="{Binding Vidljivo}"/>
                                             <Label Text="{Binding Opis, StringFormat='\{0}'}" IsVisible="{Binding Vidljivo}"/>
                                         </StackLayout>
-                                        <Button 
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Button
+                                                Grid.Column="0"
+                                                Grid.Row="0"
                                                 Text="Uredi"
                                                 BackgroundColor="Orange"
                                                 TextColor="Black"
                                                 IsVisible="{Binding Vidljivo}"
                                                 Clicked="Uredi_OnClicked"/>
-                                        <Button Text="Obriši"
-                                                BackgroundColor="Tomato"
-                                                TextColor="Black"
-                                                IsVisible="{Binding Vidljivo}"
-                                                Clicked="Obrisi_OnClicked"/>
+                                            <Button Text="Obriši"
+                                                        Grid.Column="1"
+                                                        Grid.Row="0"
+                                                        BackgroundColor="Tomato"
+                                                        TextColor="Black"
+                                                        IsVisible="{Binding Vidljivo}"
+                                                        Clicked="Obrisi_OnClicked"/>
+                                        </Grid>
                                     </StackLayout>
                                 </Frame>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
-            </StackLayout>
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
-                <Button x:Name="DodajNovuNapomenu" 
-                        Text="Kreiraj novu napomenu"
-                        TextColor="Black"
-                        BackgroundColor="#4285F4"
-                        Command="{Binding UnesiNapomenuCommand}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

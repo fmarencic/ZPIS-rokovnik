@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
+using Syncfusion.SfSchedule.XForms;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Views.Kalendar;
@@ -26,13 +27,6 @@ namespace ZPISrokovnik.Views
                 OnPropertyChanged(nameof(ListaNapomena));
             }
         }
-        public List<string> TipKalendara =
-            new List<string>()
-            {
-                "Napomena tjeralica",
-                "Napomena preprata",
-                "Napomena najava"
-            };
 
         private Napomena selectedItem;
         public Napomena SelectedItem

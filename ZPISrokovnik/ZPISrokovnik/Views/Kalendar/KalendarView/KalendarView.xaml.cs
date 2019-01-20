@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Java.Util;
+using Syncfusion.SfSchedule.XForms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZPISrokovnik.Utils;
@@ -17,7 +18,6 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 		{
 			InitializeComponent ();
             this.BindingContext = new KalendarViewModel(new PageService());
-		    //ElementListe.ItemsSource = App.DatabaseController.DohvatiSveNapomene();
 		}
 
 
@@ -33,5 +33,18 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 	        var viewModel = this.BindingContext as KalendarViewModel;
 	        viewModel?.ObrisiNapomenuCommand.Execute(null);
         }
+
+	    private void Napomena_OnMonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)
+	    {
+	        var napomena = (e.Appointment as Napomena);
+            if (napomena != null)
+            {
+                DisplayAlert(napomena.Naziv,
+                    napomena.Datum.Date.ToString("dd/MM/yyyy") + " - "
+                    + napomena.DatumDo.Date.ToString("dd/MM/yyyy")
+                    + '\n' + napomena.Opis, "Uredu");
+            }
+        }
+
 	}
 }

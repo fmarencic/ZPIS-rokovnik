@@ -27,6 +27,9 @@
     <Reference Include="Mono.Android">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfSchedule.XForms">
+      <HintPath>C:\Users\root\.nuget\packages\syncfusion.xamarin.sfschedule\16.4.0.47\lib\MonoAndroid10\Syncfusion.SfSchedule.XForms.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.iOS">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Xamarin.iOS.dll</HintPath>
     </Reference>

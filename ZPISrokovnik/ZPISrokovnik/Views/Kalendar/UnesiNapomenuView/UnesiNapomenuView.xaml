@@ -25,7 +25,7 @@
                 <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-                <Label Text="Datum:" 
+                <Label Text="Datum od: " 
                        Grid.Row="0" 
                        Grid.Column="0" 
                        Grid.ColumnSpan="2"
@@ -34,8 +34,9 @@
                        VerticalOptions="Center"
                        Margin="30,0,0,0"
                 ></Label>
+                <!--Format="MM-dd-yyyy"-->
                 <DatePicker x:Name="OdabraniDatum"
-                            Format="MM-dd-yyyy"
+                            Format="dd-MM-yyyy"
                             Grid.Row="0" 
                             Grid.ColumnSpan="2"
                             Grid.Column="1"
@@ -48,8 +49,35 @@
                             Command="{Binding ProvjeriPodatke}"/>
                     </DatePicker.Behaviors>
                 </DatePicker>
+
+                <Label Text="Datum do: " 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Start"
+                       VerticalOptions="Center"
+                       Margin="30,0,0,0"
+                ></Label>
+                <!--Format="MM-dd-yyyy"-->
+                <DatePicker Format="dd-MM-yyyy"
+                            Grid.Row="1" 
+                            Grid.ColumnSpan="2"
+                            Grid.Column="1"
+                            Margin="0,0,25,0"
+                            Date="{Binding Napomena.DatumDo}"
+                            MinimumDate="{Binding Danas}">
+                    <DatePicker.Behaviors>
+                        <behaviors:EventToCommandBehavior
+                            EventName="Unfocused"
+                            Command="{Binding ProvjeriPodatke}"/>
+                    </DatePicker.Behaviors>
+                </DatePicker>
+
+
+
                 <Label Text="Naziv:" 
-                   Grid.Row="1" 
+                   Grid.Row="2" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="2"
                    TextColor="Black"
@@ -57,7 +85,7 @@
                    VerticalOptions="Center"
                    Margin="30,0,0,0"
             ></Label>
-            <Entry Grid.Row="1" 
+            <Entry Grid.Row="2" 
                    Grid.ColumnSpan="2"
                    Grid.Column="1"
                    VerticalOptions="Center"
@@ -71,7 +99,7 @@
                 </Entry.Behaviors>
             </Entry>
             <Label Text="Napomena:" 
-                   Grid.Row="2" 
+                   Grid.Row="3" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="2"
                    TextColor="Black"

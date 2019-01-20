@@ -18,16 +18,7 @@ namespace ZPISrokovnik.Views
         public ICommand ProvjeriPodatke => new Command(() => ProvjeraPopunjenosti());
 
         private DateTime danas = DateTime.Now;
-
-        public DateTime Danas
-        {
-            get { return danas; }
-            set
-            {
-                SetValue(ref danas, value);
-                OnPropertyChanged(nameof(Danas));
-            }
-        }
+        public DateTime Danas => danas;
 
         private bool provjera;
 
@@ -64,15 +55,13 @@ namespace ZPISrokovnik.Views
 
         private void ProvjeraPopunjenosti()
         {
-            if (Napomena.Datum != null && !string.IsNullOrEmpty(Napomena.Naziv) &&  
-                !string.IsNullOrEmpty(Napomena.Opis))
-            {
+            if (!string.IsNullOrEmpty(Napomena.Naziv) &&
+                !string.IsNullOrEmpty(Napomena.Opis)) {  
                 this.Provjera = true;
                 return;
             }
             this.Provjera = false;
         }
-
         private void UnesiNapomenu()
         {
             if (Provjera)
@@ -80,11 +69,8 @@ namespace ZPISrokovnik.Views
                 this.Napomena.Vidljivo = false;
                 App.DatabaseController.SpremiNapomenu(this.Napomena);
                 //promjena
-                IPageService page = new PageService();
-                page.PushAsync(new KalendarView());
-                Page _page = new Page();
-                
-
+                Application.Current.MainPage = new NavigationPage(new KalendarView());
+                //pageService.PushAfterLogin(new MainTabbedPage());
             }
             
 

@@ -72,7 +72,7 @@
           "lib/MonoAndroid/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
-      "Syncfusion.Licensing/16.3.0.36": {
+      "Syncfusion.Licensing/16.4.0.47": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
@@ -81,10 +81,10 @@
           "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/16.3.0.36": {
+      "Syncfusion.Xamarin.Core/16.4.0.47": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "16.3.0.36"
+          "Syncfusion.Licensing": "16.4.0.47"
         },
         "compile": {
           "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll": {},
@@ -95,10 +95,10 @@
           "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfSchedule/16.3.0.36": {
+      "Syncfusion.Xamarin.SfSchedule/16.4.0.47": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "16.3.0.36",
+          "Syncfusion.Xamarin.Core": "16.4.0.47",
           "Xamarin.Forms": "2.5.1.527436"
         },
         "compile": {
@@ -629,10 +629,10 @@
         "sqlitepclraw.provider.e_sqlite3.android.nuspec"
       ]
     },
-    "Syncfusion.Licensing/16.3.0.36": {
-      "sha512": "0fOgFIP7I19QutnlFjwZjAP5l2SFXE7gHuwg9j2TORPG2o8hNxQsqAFo5+Cz4xFkuk2uindftVh8JDNWzRx5vA==",
+    "Syncfusion.Licensing/16.4.0.47": {
+      "sha512": "2xXYev2e2hWDdwUQ1/zPDTvY9p76fcvh52cmTNNY7TF5FzeqHpD3KxTbZUBmWPO0xMXs39c/yGyzBYiaEEYLvg==",
       "type": "package",
-      "path": "syncfusion.licensing/16.3.0.36",
+      "path": "syncfusion.licensing/16.4.0.47",
       "files": [
         ".signature.p7s",
         "lib/MonoAndroid10/Syncfusion.Licensing.dll",
@@ -640,24 +640,29 @@
         "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
         "lib/net20/Syncfusion.Licensing.dll",
         "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/MVC3Assemblies/Syncfusion.Licensing.dll",
+        "lib/net40/MVC4Assemblies/Syncfusion.Licensing.dll",
         "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/MVC5Assemblies/Syncfusion.Licensing.dll",
         "lib/net45/Syncfusion.Licensing.dll",
         "lib/net451/Syncfusion.Licensing.dll",
         "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net46/_PublishedWebsites/Syncfusion.EJ.Web_2015/bin/Syncfusion.Licensing.dll",
+        "lib/net46/_PublishedWebsites/Syncfusion.EJ_2015/bin/Syncfusion.Licensing.dll",
         "lib/netstandard1.0/Syncfusion.Licensing.dll",
         "lib/netstandard1.2/Syncfusion.Licensing.dll",
         "lib/netstandard1.4/Syncfusion.Licensing.dll",
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.16.3.0.36.nupkg.sha512",
+        "syncfusion.licensing.16.4.0.47.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/16.3.0.36": {
-      "sha512": "cbhuoZZR0SxpsiKBWS1sNFPGGC63z3b5QDFmdFcrpCjYc/6c8H/RIC+0HJb3pJ2kMLOp7wIX8UjyRmI4uHScCQ==",
+    "Syncfusion.Xamarin.Core/16.4.0.47": {
+      "sha512": "m2cW13UBXsuKGnW34fftJa4qP6bZ8LcKIVbczpEct4Kkg2Q2MRZqNMM1r7F93o0nbVFakzafEL4HcFj42wLkWw==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/16.3.0.36",
+      "path": "syncfusion.xamarin.core/16.4.0.47",
       "files": [
         ".signature.p7s",
         "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll",
@@ -681,14 +686,14 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xbf",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.16.3.0.36.nupkg.sha512",
+        "syncfusion.xamarin.core.16.4.0.47.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfSchedule/16.3.0.36": {
-      "sha512": "xQVI3kjOtvf/Ap59mVEksLE1I2fEdy9AKa+mpgc6NlIi8KIe8JepNyEHODosReWkY/dR8FfeRt7uh1Ds0YRB8Q==",
+    "Syncfusion.Xamarin.SfSchedule/16.4.0.47": {
+      "sha512": "Y93RwXacr6pFY0fIOX0yk8Fvnykwz1zBfBVmjf/08X3vylnwyJtpAroEFuskgeA/HqOu876+2ChsUAO+R125Yg==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfschedule/16.3.0.36",
+      "path": "syncfusion.xamarin.sfschedule/16.4.0.47",
       "files": [
         ".signature.p7s",
         "lib/MonoAndroid10/Syncfusion.SfSchedule.Android.dll",
@@ -707,16 +712,14 @@
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Properties/Syncfusion.SfSchedule.XForms.UWP.rd.xml",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.pdb",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.xr.xml",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.pdb",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.xml",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Themes/Generic.xbf",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.dll",
         "lib/uap10.0/Syncfusion.SfSchedule.XForms.xml",
-        "syncfusion.xamarin.sfschedule.16.3.0.36.nupkg.sha512",
+        "syncfusion.xamarin.sfschedule.16.4.0.47.nupkg.sha512",
         "syncfusion.xamarin.sfschedule.nuspec"
       ]
     },
@@ -1442,7 +1445,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
       "Behaviors.XamarinForms >= 3.0.0",
-      "Syncfusion.Xamarin.SfSchedule >= 16.3.0.36",
+      "Syncfusion.Xamarin.SfSchedule >= 16.4.0.47",
       "Xamarin.Android.Support.Design >= 28.0.0",
       "Xamarin.Android.Support.v4 >= 28.0.0",
       "Xamarin.Android.Support.v7.AppCompat >= 28.0.0",
@@ -1496,7 +1499,7 @@
           },
           "Syncfusion.Xamarin.SfSchedule": {
             "target": "Package",
-            "version": "[16.3.0.36, )"
+            "version": "[16.4.0.47, )"
           },
           "Xamarin.Android.Support.Design": {
             "target": "Package",

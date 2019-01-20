@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 using SQLite;
 using ZPISrokovnik.Utils;
 
 namespace ZPISrokovnik.Views.Kalendar
 {
-    /// <summary>
-    /// za display 
-    /// </summary>
     public class Napomena : BaseViewModel
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
         private DateTime datum;
-
         public DateTime Datum
         {
             get { return datum; }
@@ -23,6 +20,17 @@ namespace ZPISrokovnik.Views.Kalendar
             {
                 SetValue(ref datum, value);
                 OnPropertyChanged(nameof(datum));
+            }
+        }
+
+        private DateTime datumDo;
+        public DateTime DatumDo
+        {
+            get { return datumDo; }
+            set
+            {
+                SetValue(ref datumDo, value);
+                OnPropertyChanged(nameof(datumDo));
             }
         }
 
@@ -37,6 +45,9 @@ namespace ZPISrokovnik.Views.Kalendar
                 OnPropertyChanged(nameof(naziv));
             }
         }
+
+        private readonly bool allday = true;
+        public bool AllDay => allday;
 
         private string opis;
 
@@ -67,9 +78,10 @@ namespace ZPISrokovnik.Views.Kalendar
         {
         }
 
-        public Napomena(DateTime datum, string naziv, string opis)
+        public Napomena(DateTime datum, DateTime datumDo, string naziv, string opis)
         {
             this.Datum = datum;
+            this.DatumDo = datumDo;
             this.Naziv = naziv;
             this.Opis = opis;
         }
