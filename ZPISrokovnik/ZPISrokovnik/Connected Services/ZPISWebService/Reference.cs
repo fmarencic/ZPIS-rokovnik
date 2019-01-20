@@ -246,220 +246,7 @@ namespace ZpisRokovnikService.DataLayer
 
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "PredmetDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
-    public partial class PredmetDTO : ZpisRokovnikService.DataLayer.BaseDTOOfPREDMETPredmetDTOCAdBun5G
-    {
-
-        private System.Nullable<System.DateTime> DatumOsnivanjaField;
-
-        private string NazivPredmetaField;
-
-        private string OznakaPredmetaField;
-
-        private long RedniBrojField;
-
-        private long UpisnikIdField;
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> DatumOsnivanja
-        {
-            get
-            {
-                return this.DatumOsnivanjaField;
-            }
-            set
-            {
-                this.DatumOsnivanjaField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NazivPredmeta
-        {
-            get
-            {
-                return this.NazivPredmetaField;
-            }
-            set
-            {
-                this.NazivPredmetaField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string OznakaPredmeta
-        {
-            get
-            {
-                return this.OznakaPredmetaField;
-            }
-            set
-            {
-                this.OznakaPredmetaField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long RedniBroj
-        {
-            get
-            {
-                return this.RedniBrojField;
-            }
-            set
-            {
-                this.RedniBrojField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long UpisnikId
-        {
-            get
-            {
-                return this.UpisnikIdField;
-            }
-            set
-            {
-                this.UpisnikIdField = value;
-            }
-        }
-    }
-
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfPREDMETPredmetDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.PredmetDTO))]
-    public partial class BaseDTOOfPREDMETPredmetDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
-    {
-
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-        {
-            get
-            {
-                return this.extensionDataField;
-            }
-            set
-            {
-                this.extensionDataField = value;
-            }
-        }
-    }
-
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "KalendarDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
-    public partial class KalendarDTO : ZpisRokovnikService.DataLayer.BaseDTOOfKALENDARKalendarDTOCAdBun5G
-    {
-
-        private long KorisnikIdField;
-
-        private System.Nullable<System.DateTime> KrajField;
-
-        private System.Nullable<System.DateTime> PocetakField;
-
-        private long PredmetIdField;
-
-        private System.Nullable<long> VrstaKalendaraIdField;
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long KorisnikId
-        {
-            get
-            {
-                return this.KorisnikIdField;
-            }
-            set
-            {
-                this.KorisnikIdField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Kraj
-        {
-            get
-            {
-                return this.KrajField;
-            }
-            set
-            {
-                this.KrajField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Pocetak
-        {
-            get
-            {
-                return this.PocetakField;
-            }
-            set
-            {
-                this.PocetakField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long PredmetId
-        {
-            get
-            {
-                return this.PredmetIdField;
-            }
-            set
-            {
-                this.PredmetIdField = value;
-            }
-        }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> VrstaKalendaraId
-        {
-            get
-            {
-                return this.VrstaKalendaraIdField;
-            }
-            set
-            {
-                this.VrstaKalendaraIdField = value;
-            }
-        }
-    }
-
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfKALENDARKalendarDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.KalendarDTO))]
-    public partial class BaseDTOOfKALENDARKalendarDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
-    {
-
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-        {
-            get
-            {
-                return this.extensionDataField;
-            }
-            set
-            {
-                this.extensionDataField = value;
-            }
-        }
-    }
-}
-namespace WCFServiceWebRole1.DataLayer
-{
-    using System.Runtime.Serialization;
-
-
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BrojcanoStanjeDTO", Namespace = "http://schemas.datacontract.org/2004/07/WCFServiceWebRole1.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "BrojcanoStanjeDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class BrojcanoStanjeDTO : object, System.Runtime.Serialization.IExtensibleDataObject
     {
 
@@ -717,6 +504,214 @@ namespace WCFServiceWebRole1.DataLayer
             }
         }
     }
+
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "PredmetDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    public partial class PredmetDTO : ZpisRokovnikService.DataLayer.BaseDTOOfPREDMETPredmetDTOCAdBun5G
+    {
+
+        private System.Nullable<System.DateTime> DatumOsnivanjaField;
+
+        private string NazivPredmetaField;
+
+        private string OznakaPredmetaField;
+
+        private long RedniBrojField;
+
+        private long UpisnikIdField;
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DatumOsnivanja
+        {
+            get
+            {
+                return this.DatumOsnivanjaField;
+            }
+            set
+            {
+                this.DatumOsnivanjaField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NazivPredmeta
+        {
+            get
+            {
+                return this.NazivPredmetaField;
+            }
+            set
+            {
+                this.NazivPredmetaField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OznakaPredmeta
+        {
+            get
+            {
+                return this.OznakaPredmetaField;
+            }
+            set
+            {
+                this.OznakaPredmetaField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long RedniBroj
+        {
+            get
+            {
+                return this.RedniBrojField;
+            }
+            set
+            {
+                this.RedniBrojField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long UpisnikId
+        {
+            get
+            {
+                return this.UpisnikIdField;
+            }
+            set
+            {
+                this.UpisnikIdField = value;
+            }
+        }
+    }
+
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfPREDMETPredmetDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.PredmetDTO))]
+    public partial class BaseDTOOfPREDMETPredmetDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
+    {
+
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+    }
+
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "KalendarDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    public partial class KalendarDTO : ZpisRokovnikService.DataLayer.BaseDTOOfKALENDARKalendarDTOCAdBun5G
+    {
+
+        private long KorisnikIdField;
+
+        private System.Nullable<System.DateTime> KrajField;
+
+        private System.Nullable<System.DateTime> PocetakField;
+
+        private long PredmetIdField;
+
+        private System.Nullable<long> VrstaKalendaraIdField;
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long KorisnikId
+        {
+            get
+            {
+                return this.KorisnikIdField;
+            }
+            set
+            {
+                this.KorisnikIdField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Kraj
+        {
+            get
+            {
+                return this.KrajField;
+            }
+            set
+            {
+                this.KrajField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Pocetak
+        {
+            get
+            {
+                return this.PocetakField;
+            }
+            set
+            {
+                this.PocetakField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long PredmetId
+        {
+            get
+            {
+                return this.PredmetIdField;
+            }
+            set
+            {
+                this.PredmetIdField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> VrstaKalendaraId
+        {
+            get
+            {
+                return this.VrstaKalendaraIdField;
+            }
+            set
+            {
+                this.VrstaKalendaraIdField = value;
+            }
+        }
+    }
+
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfKALENDARKalendarDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.KalendarDTO))]
+    public partial class BaseDTOOfKALENDARKalendarDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
+    {
+
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+    }
 }
 
 
@@ -766,12 +761,12 @@ public interface IService1
     ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenuOsobu(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction = "http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
-    WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] VratiBrojcanoStanje(string token);
+    ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO VratiBrojcanoStanje(long tijeloId, string token);
 
     [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction = "http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
-    System.IAsyncResult BeginVratiBrojcanoStanje(string token, System.AsyncCallback callback, object asyncState);
+    System.IAsyncResult BeginVratiBrojcanoStanje(long tijeloId, string token, System.AsyncCallback callback, object asyncState);
 
-    WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] EndVratiBrojcanoStanje(System.IAsyncResult result);
+    ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO EndVratiBrojcanoStanje(System.IAsyncResult result);
 
     [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO[] PretraziPoImenuIPrezimenu(string Ime, string Prezime, string token);
@@ -939,12 +934,12 @@ public partial class VratiBrojcanoStanjeCompletedEventArgs : System.ComponentMod
         this.results = results;
     }
 
-    public WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] Result
+    public ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO Result
     {
         get
         {
             base.RaiseExceptionIfNecessary();
-            return ((WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[])(this.results[0]));
+            return ((ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO)(this.results[0]));
         }
     }
 }
@@ -1466,32 +1461,33 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     token}, this.onEndVratiPrijavljenuOsobuDelegate, this.onVratiPrijavljenuOsobuCompletedDelegate, userState);
     }
 
-    public WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] VratiBrojcanoStanje(string token)
+    public ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO VratiBrojcanoStanje(long tijeloId, string token)
     {
-        return base.Channel.VratiBrojcanoStanje(token);
+        return base.Channel.VratiBrojcanoStanje(tijeloId, token);
     }
 
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    public System.IAsyncResult BeginVratiBrojcanoStanje(string token, System.AsyncCallback callback, object asyncState)
+    public System.IAsyncResult BeginVratiBrojcanoStanje(long tijeloId, string token, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.BeginVratiBrojcanoStanje(token, callback, asyncState);
+        return base.Channel.BeginVratiBrojcanoStanje(tijeloId, token, callback, asyncState);
     }
 
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    public WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] EndVratiBrojcanoStanje(System.IAsyncResult result)
+    public ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO EndVratiBrojcanoStanje(System.IAsyncResult result)
     {
         return base.Channel.EndVratiBrojcanoStanje(result);
     }
 
     private System.IAsyncResult OnBeginVratiBrojcanoStanje(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
-        string token = ((string)(inValues[0]));
-        return this.BeginVratiBrojcanoStanje(token, callback, asyncState);
+        long tijeloId = ((long)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginVratiBrojcanoStanje(tijeloId, token, callback, asyncState);
     }
 
     private object[] OnEndVratiBrojcanoStanje(System.IAsyncResult result)
     {
-        WCFServiceWebRole1.DataLayer.BrojcanoStanjeDTO[] retVal = this.EndVratiBrojcanoStanje(result);
+        ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO retVal = this.EndVratiBrojcanoStanje(result);
         return new object[] {
                 retVal};
     }
@@ -1505,12 +1501,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         }
     }
 
-    public void VratiBrojcanoStanjeAsync(string token)
+    public void VratiBrojcanoStanjeAsync(long tijeloId, string token)
     {
-        this.VratiBrojcanoStanjeAsync(token, null);
+        this.VratiBrojcanoStanjeAsync(tijeloId, token, null);
     }
 
-    public void VratiBrojcanoStanjeAsync(string token, object userState)
+    public void VratiBrojcanoStanjeAsync(long tijeloId, string token, object userState)
     {
         if ((this.onBeginVratiBrojcanoStanjeDelegate == null))
         {
@@ -1525,6 +1521,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.onVratiBrojcanoStanjeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVratiBrojcanoStanjeCompleted);
         }
         base.InvokeAsync(this.onBeginVratiBrojcanoStanjeDelegate, new object[] {
+                    tijeloId,
                     token}, this.onEndVratiBrojcanoStanjeDelegate, this.onVratiBrojcanoStanjeCompletedDelegate, userState);
     }
 
