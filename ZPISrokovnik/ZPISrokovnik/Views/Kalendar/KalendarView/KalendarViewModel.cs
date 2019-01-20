@@ -3,76 +3,61 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
+using Syncfusion.SfSchedule.XForms;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Views.Kalendar;
+using ZPISrokovnik.Views.Kalendar.KalendarView;
 
 namespace ZPISrokovnik.Views
 {
     public class KalendarViewModel : BaseViewModel
     {
-        public ObservableCollection<Napomena> ListaNapomena { get; set; }
-        public ICommand UnesiNapomenuCommand { get; private set; }
-        public ICommand UrediNapomenuCommand { get; private set; }
-        public ICommand ObrisiNapomenuCommand { get; private set; }
+        public ICommand UnesiNapomenuCommand => new Command(UnesiNapomenu);
+        public ICommand UrediNapomenuCommand => new Command(UrediNapomenu);
+        public ICommand ObrisiNapomenuCommand => new Command(ObrisiNapomenu);
 
-        public List<string> TipKalendara =
-            new List<string>()
-            {
-                "Napomena tjeralica",
-                "Napomena preprata",
-                "Napomena najava"
-            };
-
-        public Napomena ElementListeNapomena
+        private ObservableCollection<Napomena> listaNapomena;
+        public ObservableCollection<Napomena> ListaNapomena
         {
-            get { return ElementListeNapomena; }
+            get { return listaNapomena; }
             set
             {
-                if (ElementListeNapomena != value)
+                SetValue(ref listaNapomena, value);
+                OnPropertyChanged(nameof(ListaNapomena));
+            }
+        }
+
+        private Napomena selectedItem;
+        public Napomena SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                if (selectedItem != value)
                 {
-                    ElementListeNapomena.Vidljivo = true;
+                    if (selectedItem != null)
+                    {
+                        selectedItem.Vidljivo = false;
+                    }
+                    selectedItem = value;
+                    selectedItem.Vidljivo = true;
                 }
             }
         }
 
         private readonly IPageService Page;
 
-        //private Napomena SelektiranaNapomena;
-
-        //public Napomena ElementListeNapomena
-        //{
-        //    get { return SelektiranaNapomena; }
-        //    set
-        //    {
-        //        if (SelektiranaNapomena != value)
-        //        {
-        //            SelektiranaNapomena = value;
-        //            OnPropertyChanged("ItemSelected");
-        //            /*
-        //             * And if you want to perform any additional
-        //             * functionality like navigating to detail page,
-        //             * you can do it from the set property after
-        //             * OnPropertyChanged statement is executed.
-        //             */
-        //            SelektiranaNapomena.Vidljivo = true;
-        //            //ovo ce trebat fixat jer ce vidljivo ostat njima true i nakon..
-        //        }
-        //    }
-        //}
-
-        //mislim da je binding dobar tako za viewcell
-
         public KalendarViewModel(IPageService page)
         {
-            UnesiNapomenuCommand = new Command(UnesiNapomenu);
-            UrediNapomenuCommand = new Command(UrediNapomenu);
-            ObrisiNapomenuCommand = new Command(ObrisiNapomenu);
+            this.ListaNapomena = null;
             this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
             this.Page = page;
         }
 
-        //CommandParameter="{Binding Source={x:Reference entry}, Path=Text}"
         private void UnesiNapomenu()
         {
             Page.PushAsync(new UnesiNapomenuView());
@@ -80,20 +65,26 @@ namespace ZPISrokovnik.Views
 
         private void UrediNapomenu()
         {
-            //selektiranaNapomena i dole 2 x
-            Page.PushAsync(new UnesiNapomenuView(ElementListeNapomena));
+            Page.PushAsync(new UnesiNapomenuView(SelectedItem));
         }
 
         private async void ObrisiNapomenu()
         {
-            bool obrisi = await Page.DisplayAlert("Obriši?",
-                "Želite li obrisati napomenu " + ElementListeNapomena.Naziv + "?", "Uredu",
+            var obrisi = await Application.Current.MainPage.DisplayAlert("Obriši?",
+                "Želite li obrisati napomenu " + SelectedItem.Naziv + "?", "Uredu",
                 "Odustani");
-            if (obrisi)
+            //bool obrisi = await Page.DisplayAlert("Obriši?",
+            //    "Želite li obrisati napomenu " + SelectedItem.Naziv + "?", "Uredu",
+            //    "Odustani");
+            if (obrisi) //obrisi
             {
-                App.DatabaseController.ObrisiNapomenu(ElementListeNapomena.Id);
-                this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
+                App.DatabaseController.ObrisiNapomenu(SelectedItem.Id);
+                ListaNapomena.Remove(SelectedItem);
+                ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
+                //this.ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
                 //mislim da ni ova zadnja nije potrebna linija jer je observablecollection vidi
+                //Page.PushAsync(new KalendarView());
+
             }
         }
         

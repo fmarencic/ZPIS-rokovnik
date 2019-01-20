@@ -51,7 +51,7 @@ namespace ZPISrokovnik.Utils.Data
                     return null;
                 }
 
-                var _listaNapomena = this.Database.Table<Napomena>().ToList();
+                var _listaNapomena = this.Database.Table<Napomena>().ToList().OrderBy(napomena=>napomena.Datum);
                 ObservableCollection<Napomena> listaNapomena = new ObservableCollection<Napomena>(_listaNapomena);
                 return listaNapomena;
                 //return this.Database.Table<Napomena>().ToList();

@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ZPISrokovnik.Views.Kalendar.UnesiNapomenuView">
+             xmlns:behaviors="clr-namespace:ZPISrokovnik.Behaviors"
+             x:Class="ZPISrokovnik.Views.Kalendar.UnesiNapomenuView"
+             Title="Unesi/Uredi napomenu">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <Grid>
@@ -23,69 +25,113 @@
                 <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-                <Label Text="Datum:" 
+                <Label Text="Datum od: " 
                        Grid.Row="0" 
                        Grid.Column="0" 
                        Grid.ColumnSpan="2"
-                       TextColor="White"
+                       TextColor="Black"
                        HorizontalTextAlignment="Start"
                        VerticalOptions="Center"
                        Margin="30,0,0,0"
                 ></Label>
+                <!--Format="MM-dd-yyyy"-->
                 <DatePicker x:Name="OdabraniDatum"
-                            Format="D"
+                            Format="dd-MM-yyyy"
                             Grid.Row="0" 
                             Grid.ColumnSpan="2"
                             Grid.Column="1"
                             Margin="0,0,25,0"
                             Date="{Binding Napomena.Datum}"
-                            
-                />
+                            MinimumDate="{Binding Danas}">
+                    <DatePicker.Behaviors>
+                        <behaviors:EventToCommandBehavior
+                            EventName="Unfocused"
+                            Command="{Binding ProvjeriPodatke}"/>
+                    </DatePicker.Behaviors>
+                </DatePicker>
+
+                <Label Text="Datum do: " 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Start"
+                       VerticalOptions="Center"
+                       Margin="30,0,0,0"
+                ></Label>
+                <!--Format="MM-dd-yyyy"-->
+                <DatePicker Format="dd-MM-yyyy"
+                            Grid.Row="1" 
+                            Grid.ColumnSpan="2"
+                            Grid.Column="1"
+                            Margin="0,0,25,0"
+                            Date="{Binding Napomena.DatumDo}"
+                            MinimumDate="{Binding Danas}">
+                    <DatePicker.Behaviors>
+                        <behaviors:EventToCommandBehavior
+                            EventName="Unfocused"
+                            Command="{Binding ProvjeriPodatke}"/>
+                    </DatePicker.Behaviors>
+                </DatePicker>
+
+
+
                 <Label Text="Naziv:" 
-                   Grid.Row="1" 
+                   Grid.Row="2" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="2"
-                   TextColor="White"
+                   TextColor="Black"
                    HorizontalTextAlignment="Start"
                    VerticalOptions="Center"
                    Margin="30,0,0,0"
             ></Label>
-            <Entry Grid.Row="1" 
+            <Entry Grid.Row="2" 
                    Grid.ColumnSpan="2"
                    Grid.Column="1"
                    VerticalOptions="Center"
                    Margin="0,0,25,0"
                    Text="{Binding Napomena.Naziv}"
-                   x:Name="NazivNapomene"
-            ></Entry>
-                <Label Text="Napomena:" 
-                   Grid.Row="2" 
+                   x:Name="NazivNapomene">
+                <Entry.Behaviors>
+                        <behaviors:EventToCommandBehavior
+                        EventName="Unfocused"
+                        Command="{Binding ProvjeriPodatke}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Text="Napomena:" 
+                   Grid.Row="3" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="2"
-                   TextColor="White"
+                   TextColor="Black"
                    HorizontalTextAlignment="Start"
                    VerticalOptions="Center"
                    Margin="30,0,0,0"
             ></Label>
-                <StackLayout Padding="30,0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
-                    <Frame OutlineColor="Black" CornerRadius="5" Padding="1" BackgroundColor="White"
-                           >
+            <StackLayout Padding="30,0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+                    <Frame OutlineColor="Black" CornerRadius="5" Padding="1" BackgroundColor="White">
                         <Editor Text="{Binding Napomena.Opis}" 
                                     HeightRequest="220"
                                     WidthRequest="450"
                                     TextColor="Black"
-                                    x:Name="OpisNapomene"
-                        />
+                                    x:Name="OpisNapomene">
+                            <Editor.Behaviors>
+                                <behaviors:EventToCommandBehavior
+                                    EventName="Unfocused"
+                                    Command="{Binding ProvjeriPodatke}"/>
+                            </Editor.Behaviors>
+                        </Editor>
                     </Frame>
-                </StackLayout>
-                <StackLayout Grid.Row="8" Grid.ColumnSpan="3">
+            </StackLayout>
+            <StackLayout Grid.Row="8" Grid.ColumnSpan="3">
                     <Button Margin="28,0"
                             Text="Spremi"
+                            TextColor="Black"
                             BackgroundColor="Teal"
                             x:Name="Unesi"
-                            Command="UnesiNapomenuCommand"
+                            Command="{Binding UnesiNapomenuCommand}"
+                            IsEnabled="{Binding Provjera}"
                     ></Button>
-                </StackLayout>
+            </StackLayout>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
