@@ -202,6 +202,10 @@
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+<<<<<<< HEAD
+=======
+        ".nupkg.metadata",
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -340,6 +344,7 @@
         "netstandard.library.nuspec"
       ]
     },
+<<<<<<< HEAD
     "sqlite-net-pcl/1.5.231": {
       "sha512": "Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
       "type": "package",
@@ -403,9 +408,14 @@
     },
     "SQLitePCLRaw.core/1.1.11": {
       "sha512": "bWiOso10I1vDuc5rbzT69LQT0+oXfYnoqx8vKJ8zim/CJ4ytSd20QNTE/FE0dvWEgXGnvDp7gGJFu6PeWnhx9g==",
+=======
+    "Xamarin.Forms/3.1.0.697729": {
+      "sha512": "6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
       "type": "package",
       "path": "sqlitepclraw.core/1.1.11",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid/SQLitePCLRaw.core.dll",
         "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
@@ -925,23 +935,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\root\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Matej\\.nuget\\packages\\": {},
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
       "projectName": "ZPISrokovnik",
       "projectPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
       "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
       "outputPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "projectName": "ZPISrokovnik",
+      "projectPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "packagesPath": "C:\\Users\\Matej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Matej\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

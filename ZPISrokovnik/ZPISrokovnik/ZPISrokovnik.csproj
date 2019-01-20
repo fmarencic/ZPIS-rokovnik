@@ -60,6 +60,7 @@
     <EmbeddedResource Update="Views\MainTabbedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Update="Views\MainView\MainDetails.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -73,5 +74,13 @@
 
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
+=======
+    <EmbeddedResource Update="Views\Postavke\PostavkeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Postavke\PromjenaLozinkeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
   </ItemGroup>
 </Project>

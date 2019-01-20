@@ -911,6 +911,7 @@
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "sqlite-net-pcl/1.5.231": {
       "sha512": "Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
       "type": "package",
@@ -974,9 +975,14 @@
     },
     "SQLitePCLRaw.core/1.1.11": {
       "sha512": "bWiOso10I1vDuc5rbzT69LQT0+oXfYnoqx8vKJ8zim/CJ4ytSd20QNTE/FE0dvWEgXGnvDp7gGJFu6PeWnhx9g==",
+=======
+    "Xamarin.Forms/3.1.0.697729": {
+      "sha512": "6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
       "type": "package",
       "path": "sqlitepclraw.core/1.1.11",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid/SQLitePCLRaw.core.dll",
         "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
@@ -1345,11 +1351,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\root\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Matej\\.nuget\\packages\\": {}
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
       "projectName": "ZPISrokovnik.iOS",
       "projectPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
@@ -1359,6 +1370,17 @@
       "skipContentFileWrite": true,
       "configFilePaths": [
         "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "projectName": "ZPISrokovnik.iOS",
+      "projectPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik.iOS\\ZPISrokovnik.iOS.csproj",
+      "packagesPath": "C:\\Users\\Matej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik.iOS\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Matej\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1371,8 +1393,13 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
+<<<<<<< HEAD
             "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
               "projectPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
+=======
+            "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj": {
+              "projectPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj"
+>>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
             }
           }
         }
