@@ -23,12 +23,8 @@ namespace ZPISrokovnik
         {
             InitializeComponent();
             client = new Service1Client(ServiceConnection.CreateBasicHttpBinding(), ServiceConnection.Endpoint);
-<<<<<<< HEAD
-
             NapomenaBaza();
-=======
             MainPage = new NavigationPage(new LoginView());
->>>>>>> 06c8959b9db1df06032a19062da47ab06d7ea0ef
         }
 
         /// <summary>

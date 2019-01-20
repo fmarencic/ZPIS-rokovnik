@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="16.4.0.47" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.5.3" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.5.3" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.5.3" />
@@ -26,9 +27,6 @@
   <ItemGroup>
     <Reference Include="Mono.Android">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfSchedule.XForms">
-      <HintPath>C:\Users\root\.nuget\packages\syncfusion.xamarin.sfschedule\16.4.0.47\lib\MonoAndroid10\Syncfusion.SfSchedule.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Xamarin.iOS.dll</HintPath>
@@ -60,7 +58,6 @@
     <EmbeddedResource Update="Views\MainTabbedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Update="Views\MainView\MainDetails.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -74,13 +71,11 @@
 
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
-=======
     <EmbeddedResource Update="Views\Postavke\PostavkeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Postavke\PromjenaLozinkeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
->>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
   </ItemGroup>
 </Project>

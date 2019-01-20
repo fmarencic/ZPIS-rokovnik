@@ -66,6 +66,40 @@
           "lib/netstandard1.1/SQLitePCLRaw.core.dll": {}
         }
       },
+      "Syncfusion.Licensing/16.4.0.47": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.4.0.47": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.4.0.47"
+        },
+        "compile": {
+          "lib/netstandard1.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule/16.4.0.47": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "16.4.0.47",
+          "Xamarin.Forms": "2.5.1.527436"
+        },
+        "compile": {
+          "lib/netstandard1.0/Syncfusion.SfSchedule.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Syncfusion.SfSchedule.XForms.dll": {}
+        }
+      },
       "System.Private.ServiceModel/4.5.3": {
         "type": "package",
         "dependencies": {
@@ -198,14 +232,11 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "GmkKfoyerqmsHMn7OZj0AKpcBabD+GaafqphvX2Mw406IwiJRy1pKcKqdCfKJfYmkRyJ6+e+RaUylgdJoDa1jQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
-<<<<<<< HEAD
-=======
         ".nupkg.metadata",
->>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -218,10 +249,12 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -344,12 +377,12 @@
         "netstandard.library.nuspec"
       ]
     },
-<<<<<<< HEAD
     "sqlite-net-pcl/1.5.231": {
       "sha512": "Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
       "type": "package",
       "path": "sqlite-net-pcl/1.5.231",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard1.1/SQLite-net.deps.json",
         "lib/netstandard1.1/SQLite-net.dll",
@@ -365,6 +398,7 @@
       "type": "package",
       "path": "sqlitepclraw.bundle_green/1.1.11",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/wp8/SQLitePCLRaw.bundle_green.targets",
         "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
@@ -408,10 +442,6 @@
     },
     "SQLitePCLRaw.core/1.1.11": {
       "sha512": "bWiOso10I1vDuc5rbzT69LQT0+oXfYnoqx8vKJ8zim/CJ4ytSd20QNTE/FE0dvWEgXGnvDp7gGJFu6PeWnhx9g==",
-=======
-    "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
->>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
       "type": "package",
       "path": "sqlitepclraw.core/1.1.11",
       "files": [
@@ -436,11 +466,109 @@
         "sqlitepclraw.core.nuspec"
       ]
     },
+    "Syncfusion.Licensing/16.4.0.47": {
+      "sha512": "2xXYev2e2hWDdwUQ1/zPDTvY9p76fcvh52cmTNNY7TF5FzeqHpD3KxTbZUBmWPO0xMXs39c/yGyzBYiaEEYLvg==",
+      "type": "package",
+      "path": "syncfusion.licensing/16.4.0.47",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/MVC3Assemblies/Syncfusion.Licensing.dll",
+        "lib/net40/MVC4Assemblies/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/MVC5Assemblies/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net46/_PublishedWebsites/Syncfusion.EJ.Web_2015/bin/Syncfusion.Licensing.dll",
+        "lib/net46/_PublishedWebsites/Syncfusion.EJ_2015/bin/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.16.4.0.47.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/16.4.0.47": {
+      "sha512": "m2cW13UBXsuKGnW34fftJa4qP6bZ8LcKIVbczpEct4Kkg2Q2MRZqNMM1r7F93o0nbVFakzafEL4HcFj42wLkWw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/16.4.0.47",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xbf",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xbf",
+        "lib/uap10.0/Syncfusion.Core.XForms.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.xml",
+        "syncfusion.xamarin.core.16.4.0.47.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfSchedule/16.4.0.47": {
+      "sha512": "Y93RwXacr6pFY0fIOX0yk8Fvnykwz1zBfBVmjf/08X3vylnwyJtpAroEFuskgeA/HqOu876+2ChsUAO+R125Yg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfschedule/16.4.0.47",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfSchedule.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfSchedule.iOS.dll",
+        "lib/netstandard1.0/Syncfusion.SfSchedule.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.SfSchedule.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfSchedule.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfSchedule.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Properties/Syncfusion.SfSchedule.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Syncfusion.SfSchedule.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfSchedule.XForms.xml",
+        "syncfusion.xamarin.sfschedule.16.4.0.47.nupkg.sha512",
+        "syncfusion.xamarin.sfschedule.nuspec"
+      ]
+    },
     "System.Private.ServiceModel/4.5.3": {
       "sha512": "DlM+Oit5vR/q200FalhmmNzoZRMe1xMG9RwMmeFtWS/ZuQK7A3qI7p8BtpUQvilnT24KOqZfabcCelW9s5jGzQ==",
       "type": "package",
       "path": "system.private.servicemodel/4.5.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -461,6 +589,7 @@
       "type": "package",
       "path": "system.reflection.dispatchproxy/4.5.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -507,10 +636,11 @@
       ]
     },
     "System.Security.Principal.Windows/4.5.0": {
-      "sha512": "WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
+      "sha512": "hs2zF4tOQ3V4iQttVnLrnR/i8AOrrAgu2Gmp4/jNaE/+5hiZWDj20FK/m/OW3Itdi9XDvqf55WzHkiWYtOSUNg==",
       "type": "package",
       "path": "system.security.principal.windows/4.5.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -553,6 +683,7 @@
       "type": "package",
       "path": "system.servicemodel.duplex/4.5.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -594,6 +725,7 @@
       "type": "package",
       "path": "system.servicemodel.http/4.5.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -641,6 +773,7 @@
       "type": "package",
       "path": "system.servicemodel.nettcp/4.5.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -685,6 +818,7 @@
       "type": "package",
       "path": "system.servicemodel.primitives/4.5.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -736,6 +870,7 @@
       "type": "package",
       "path": "system.servicemodel.security/4.5.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -780,6 +915,7 @@
       "type": "package",
       "path": "xamarin.forms/3.4.0.1009999",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/Xamarin.Forms.DefaultItems.props",
         "build/Xamarin.Forms.DefaultItems.targets",
@@ -926,6 +1062,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
+      "Syncfusion.Xamarin.SfSchedule >= 16.4.0.47",
       "System.ServiceModel.Duplex >= 4.5.3",
       "System.ServiceModel.Http >= 4.5.3",
       "System.ServiceModel.NetTcp >= 4.5.3",
@@ -935,39 +1072,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\root\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\Matej\\.nuget\\packages\\": {},
->>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
+    "C:\\Users\\Win10\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "projectUniqueName": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
       "projectName": "ZPISrokovnik",
-      "projectPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
-      "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-      "outputPath": "D:\\ZPIS-rokovnik\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
-      "projectName": "ZPISrokovnik",
-      "projectPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
-      "packagesPath": "C:\\Users\\Matej\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matej\\Desktop\\AIR-ZPIS\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
->>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
+      "projectPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik.csproj",
+      "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Win10\\Documents\\ZPISrokovnik\\ZPISrokovnik\\ZPISrokovnik\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\Matej\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 61a5f804360370f91ad829f75fcb1723725f13cd
+        "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -996,6 +1117,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "Syncfusion.Xamarin.SfSchedule": {
+            "target": "Package",
+            "version": "[16.4.0.47, )"
           },
           "System.ServiceModel.Duplex": {
             "target": "Package",
