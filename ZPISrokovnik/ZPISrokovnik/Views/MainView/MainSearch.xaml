@@ -9,7 +9,7 @@
             <Label Text="{Binding Caption}"
                 FontSize="20"
                 Margin="15,30,0,0" />
-            <Grid Margin="10,30,0,0">
+            <Grid Margin="10,30,10,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
@@ -18,18 +18,11 @@
                     <ColumnDefinition Width="30*" />
                     <ColumnDefinition Width="30*" />
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" FontSize="15" Text="Ime i prezime" FontAttributes="Bold"/>
-                <Label Grid.Column="1" Grid.Row="0" FontSize="15" Text="OIB" FontAttributes="Bold"/>
-                <Label Grid.Column="2" Grid.Row="0" FontSize="15" Text="Datum rođenja" FontAttributes="Bold"/>
+                <Label Grid.Column="0" Grid.Row="0" FontSize="15" Text="Ime" FontAttributes="Bold"/>
+                <Label Grid.Column="1" Grid.Row="0" FontSize="15" Text="Prezime" FontAttributes="Bold"/>
+                <Label Grid.Column="2" Grid.Row="0" FontSize="15" Text="OIB" FontAttributes="Bold"/>
             </Grid>
-            <ListView Margin="10,10,10,0" SelectedItem="{Binding ItemSelected}">
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Test1</x:String>
-                        <x:String>Test2</x:String>
-                        <x:String>Test3</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
+            <ListView x:Name="listOsobe" Margin="10,10,10,0" ItemsSource="{Binding Osobe, Mode=TwoWay}" SelectedItem="{Binding ItemSelected}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -42,9 +35,9 @@
                                     <ColumnDefinition Width="30*" />
                                     <ColumnDefinition Width="30*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Text="{Binding}"/>
-                                <Label Grid.Column="1" Text="{Binding}"/>
-                                <Label Grid.Column="2" Text="{Binding}"/>
+                                <Label Grid.Column="0" Text="{Binding Ime, Mode=TwoWay}"/>
+                                <Label Grid.Column="1" Text="{Binding Prezime, Mode=TwoWay}"/>
+                                <Label Grid.Column="2" Text="{Binding OIB, Mode=TwoWay}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

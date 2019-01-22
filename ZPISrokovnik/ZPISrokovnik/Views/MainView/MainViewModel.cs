@@ -205,9 +205,7 @@ namespace ZPISrokovnik.Views.MainView
         #region Methods
         private void Search()
         {
-            //if(Regex.IsMatch(SearchText, @"^\d+$"))
-            MessagingCenter.Send<MainViewModel, string>(this, "oibImePrezime", SearchText);
-            pageService.PushAsync(new MainSearch());
+            pageService.PushAsync(new MainSearch(SearchText));
         }
 
         private void GetDataByUserInstance()
