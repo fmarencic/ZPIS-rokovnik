@@ -13,15 +13,16 @@ namespace ZPISrokovnik.Views
 {
     public class UnesiNapomenuViewModel : BaseViewModel
     {
-        public ICommand UnesiNapomenuCommand => new Command(() => UnesiNapomenu());
+        #region Commands
+        public ICommand UnesiNapomenuCommand => new Command(UnesiNapomenu);
+        public ICommand ProvjeriPodatke => new Command(ProvjeraPopunjenosti);
+        #endregion
 
-        public ICommand ProvjeriPodatke => new Command(() => ProvjeraPopunjenosti());
-
+        #region Properties
         private DateTime danas = DateTime.Now;
         public DateTime Danas => danas;
 
         private bool provjera;
-
         public bool Provjera
         {
             get { return provjera; }
@@ -42,7 +43,9 @@ namespace ZPISrokovnik.Views
                 OnPropertyChanged(nameof(Napomena));
             }
         }
-
+        #endregion
+        
+        #region Constructor(s)
         public UnesiNapomenuViewModel()
         {
             this.Napomena = new Napomena();
@@ -53,10 +56,14 @@ namespace ZPISrokovnik.Views
             this.Napomena = napomena;
         }
 
+        #endregion
+
+        #region Methods
         private void ProvjeraPopunjenosti()
         {
             if (!string.IsNullOrEmpty(Napomena.Naziv) &&
-                !string.IsNullOrEmpty(Napomena.Opis)) {  
+                !string.IsNullOrEmpty(Napomena.Opis))
+            {
                 this.Provjera = true;
                 return;
             }
@@ -68,14 +75,10 @@ namespace ZPISrokovnik.Views
             {
                 this.Napomena.Vidljivo = false;
                 App.DatabaseController.SpremiNapomenu(this.Napomena);
-                //promjena
-                //KalendarViewModel viewModel = new KalendarViewModel();
+                App.Obavjesti();
                 Application.Current.MainPage.Navigation.PopAsync();
             }
-            
-
         }
-
-        
+        #endregion
     }
 }

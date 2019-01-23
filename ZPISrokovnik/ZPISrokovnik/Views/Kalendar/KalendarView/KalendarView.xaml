@@ -13,7 +13,7 @@
             <xForms:SfSchedule
                 ScheduleView="MonthView"
                 ShowAppointmentsInline="True"
-                DataSource="{Binding ListaNapomena}"
+                DataSource="{Binding ListaNapomena, Mode=TwoWay}"
                 MonthInlineAppointmentTapped="Napomena_OnMonthInlineAppointmentTapped">
                 <xForms:SfSchedule.AppointmentMapping>
                     <xForms:ScheduleAppointmentMapping
