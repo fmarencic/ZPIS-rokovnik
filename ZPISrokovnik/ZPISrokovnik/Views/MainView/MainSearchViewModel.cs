@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Windows.Input;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZpisRokovnikService.DataLayer;
@@ -15,7 +16,6 @@ namespace ZPISrokovnik.Views.MainView
         #region Constructor
         public MainSearchViewModel (IPageService page, string search)
 		{
-            SearchCommand = new Command(Search);
             this.pageService = page;
             ForwardedSearch = search;
             InspectAndShowData();
@@ -23,7 +23,6 @@ namespace ZPISrokovnik.Views.MainView
         #endregion
 
         #region Properties
-        private string itemSelected;
         private IPageService pageService;
 
         private string forwardedSearch;
@@ -36,7 +35,7 @@ namespace ZPISrokovnik.Views.MainView
                 OnPropertyChanged(nameof(ForwardedSearch));
             }
         }
-        private string searchText;
+        private string searchText = "";
         public string SearchText
         {
             get { return searchText; }
@@ -53,20 +52,20 @@ namespace ZPISrokovnik.Views.MainView
             get { return caption; }
             set
             {
-                caption = value;
-                OnPropertyChanged();
+                SetValue(ref caption, value);
+                OnPropertyChanged(nameof(Caption));
             }
         }
-        public string ItemSelected
+
+        private OsobaDTO itemSelected;
+        public OsobaDTO ItemSelected
         {
             get { return itemSelected; }
-            set {
-                if (itemSelected != value) {
-                    itemSelected = value;
-                    OnPropertyChanged();
-                    pageService.PushAsync(new MainDetails());
-                }
-                }
+            set
+            {
+                SetValue(ref itemSelected, value);
+                OnPropertyChanged(nameof(ItemSelected));
+            }
         }
 
         private ObservableCollection<OsobaDTO> osobe;
@@ -82,13 +81,18 @@ namespace ZPISrokovnik.Views.MainView
         #endregion
 
         #region Commands
-        public Command SearchCommand { get; private set; }
+        public ICommand SearchCommand => new Command(() => Search());
+        public ICommand PrikaziDetaljeCommand => new Command(() => PrikaziDetalje());
         #endregion
 
         #region Methods
         private void Search()
         {
             pageService.PushAsync(new MainSearch(SearchText));
+        }
+        private void PrikaziDetalje()
+        {
+            pageService.PushAsync(new MainDetails(ItemSelected));
         }
         private void InspectAndShowData()
         {

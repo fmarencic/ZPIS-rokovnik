@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZpisRokovnikService.DataLayer;
@@ -14,7 +15,6 @@ namespace ZPISrokovnik.Views.MainView
         public MainViewModel (IPageService page)
 		{
             this.pageService = page;
-            SearchCommand = new Command(Search);
             GetDataByUserInstance();
 		}
         #endregion
@@ -199,7 +199,7 @@ namespace ZPISrokovnik.Views.MainView
         #endregion
 
         #region Commands
-        public Command SearchCommand { get; private set; }
+        public ICommand SearchCommand => new Command(() => Search());
         #endregion
 
         #region Methods
