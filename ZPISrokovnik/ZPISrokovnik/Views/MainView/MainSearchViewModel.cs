@@ -65,6 +65,10 @@ namespace ZPISrokovnik.Views.MainView
             {
                 SetValue(ref itemSelected, value);
                 OnPropertyChanged(nameof(ItemSelected));
+                if (itemSelected == null)
+                    return;
+                PrikaziDetaljeCommand.Execute(itemSelected);
+                ItemSelected = null;
             }
         }
 

@@ -24,12 +24,11 @@
                 <Label Grid.Column="2" Grid.Row="0" FontSize="15" Text="OIB" FontAttributes="Bold"/>
             </Grid>
             <ListView x:Name="listOsobe" Margin="10,10,10,0" ItemsSource="{Binding Osobe, Mode=TwoWay}" SelectedItem="{Binding ItemSelected, Mode=TwoWay}">
-                <ListView.Behaviors>
+                <!--<ListView.Behaviors>
                     <behaviors:EventToCommandBehavior
-                        EventName="ItemSelected"
-                        Command="{Binding PrikaziDetaljeCommand}">
-                    </behaviors:EventToCommandBehavior>
-                </ListView.Behaviors>
+                        EventName="ItemTapped"
+                        Command="{Binding PrikaziDetaljeCommand}"/>
+                </ListView.Behaviors>-->
                 <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
