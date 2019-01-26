@@ -14,7 +14,7 @@ namespace ZPISrokovnik.iOS.Data
         {
             var sqliteFileName = "napomene.db3";
             string documentPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            var libaryPath = Path.Combine(documentPath, "..", "Libary");
+            var libaryPath = Path.Combine(documentPath, "..", "Library");
             var path = Path.Combine(libaryPath, sqliteFileName);
             var conn = new SQLite.SQLiteConnection(path);
 

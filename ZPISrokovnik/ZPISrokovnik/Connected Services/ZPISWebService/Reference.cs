@@ -519,6 +519,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private long RedniBrojField;
 
+        private System.Nullable<long> StatusPredmetaIdField;
+
         private long UpisnikIdField;
 
         [System.Runtime.Serialization.DataMemberAttribute()]
@@ -570,6 +572,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.RedniBrojField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> StatusPredmetaId
+        {
+            get
+            {
+                return this.StatusPredmetaIdField;
+            }
+            set
+            {
+                this.StatusPredmetaIdField = value;
             }
         }
 
@@ -712,6 +727,80 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
+
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfOSOBAFOTOGRAFIJEOsobaFotografijeDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.OsobaFotografijeDTO))]
+    public partial class BaseDTOOfOSOBAFOTOGRAFIJEOsobaFotografijeDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
+    {
+
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+    }
+
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "OsobaFotografijeDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    public partial class OsobaFotografijeDTO : ZpisRokovnikService.DataLayer.BaseDTOOfOSOBAFOTOGRAFIJEOsobaFotografijeDTOCAdBun5G
+    {
+
+        private string FotografijaField;
+
+        private long OsobaIdField;
+
+        private string TipField;
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fotografija
+        {
+            get
+            {
+                return this.FotografijaField;
+            }
+            set
+            {
+                this.FotografijaField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long OsobaId
+        {
+            get
+            {
+                return this.OsobaIdField;
+            }
+            set
+            {
+                this.OsobaIdField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tip
+        {
+            get
+            {
+                return this.TipField;
+            }
+            set
+            {
+                this.TipField = value;
+            }
+        }
+    }
 }
 
 
@@ -799,6 +888,22 @@ public interface IService1
     System.IAsyncResult BeginDohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token, System.AsyncCallback callback, object asyncState);
 
     ZpisRokovnikService.DataLayer.KalendarDTO[] EndDohvatiKalendarskeZapise(System.IAsyncResult result);
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiTijelo", ReplyAction = "http://tempuri.org/IService1/VratiTijeloResponse")]
+    ZpisRokovnikService.DataLayer.OsobaDTO VratiTijelo(long tijeloId, string token);
+
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiTijelo", ReplyAction = "http://tempuri.org/IService1/VratiTijeloResponse")]
+    System.IAsyncResult BeginVratiTijelo(long tijeloId, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.OsobaDTO EndVratiTijelo(System.IAsyncResult result);
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiFotografijuOsobe", ReplyAction = "http://tempuri.org/IService1/DohvatiFotografijuOsobeResponse")]
+    ZpisRokovnikService.DataLayer.OsobaFotografijeDTO DohvatiFotografijuOsobe(string OIB, string token);
+
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/DohvatiFotografijuOsobe", ReplyAction = "http://tempuri.org/IService1/DohvatiFotografijuOsobeResponse")]
+    System.IAsyncResult BeginDohvatiFotografijuOsobe(string OIB, string token, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.OsobaFotografijeDTO EndDohvatiFotografijuOsobe(System.IAsyncResult result);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1038,6 +1143,52 @@ public partial class DohvatiKalendarskeZapiseCompletedEventArgs : System.Compone
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class VratiTijeloCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public VratiTijeloCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class DohvatiFotografijuOsobeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public DohvatiFotografijuOsobeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaFotografijeDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaFotografijeDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class Service1Client : System.ServiceModel.ClientBase<IService1>, IService1
 {
 
@@ -1101,6 +1252,18 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
 
     private System.Threading.SendOrPostCallback onDohvatiKalendarskeZapiseCompletedDelegate;
 
+    private BeginOperationDelegate onBeginVratiTijeloDelegate;
+
+    private EndOperationDelegate onEndVratiTijeloDelegate;
+
+    private System.Threading.SendOrPostCallback onVratiTijeloCompletedDelegate;
+
+    private BeginOperationDelegate onBeginDohvatiFotografijuOsobeDelegate;
+
+    private EndOperationDelegate onEndDohvatiFotografijuOsobeDelegate;
+
+    private System.Threading.SendOrPostCallback onDohvatiFotografijuOsobeCompletedDelegate;
+
     public Service1Client()
     {
     }
@@ -1144,6 +1307,10 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
     public event System.EventHandler<DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs> DohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted;
 
     public event System.EventHandler<DohvatiKalendarskeZapiseCompletedEventArgs> DohvatiKalendarskeZapiseCompleted;
+
+    public event System.EventHandler<VratiTijeloCompletedEventArgs> VratiTijeloCompleted;
+
+    public event System.EventHandler<DohvatiFotografijuOsobeCompletedEventArgs> DohvatiFotografijuOsobeCompleted;
 
     public string[] TestMethod()
     {
@@ -1783,5 +1950,133 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     VrsteKalendara,
                     tijeloId,
                     token}, this.onEndDohvatiKalendarskeZapiseDelegate, this.onDohvatiKalendarskeZapiseCompletedDelegate, userState);
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaDTO VratiTijelo(long tijeloId, string token)
+    {
+        return base.Channel.VratiTijelo(tijeloId, token);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginVratiTijelo(long tijeloId, string token, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginVratiTijelo(tijeloId, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiTijelo(System.IAsyncResult result)
+    {
+        return base.Channel.EndVratiTijelo(result);
+    }
+
+    private System.IAsyncResult OnBeginVratiTijelo(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        long tijeloId = ((long)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginVratiTijelo(tijeloId, token, callback, asyncState);
+    }
+
+    private object[] OnEndVratiTijelo(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndVratiTijelo(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnVratiTijeloCompleted(object state)
+    {
+        if ((this.VratiTijeloCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.VratiTijeloCompleted(this, new VratiTijeloCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void VratiTijeloAsync(long tijeloId, string token)
+    {
+        this.VratiTijeloAsync(tijeloId, token, null);
+    }
+
+    public void VratiTijeloAsync(long tijeloId, string token, object userState)
+    {
+        if ((this.onBeginVratiTijeloDelegate == null))
+        {
+            this.onBeginVratiTijeloDelegate = new BeginOperationDelegate(this.OnBeginVratiTijelo);
+        }
+        if ((this.onEndVratiTijeloDelegate == null))
+        {
+            this.onEndVratiTijeloDelegate = new EndOperationDelegate(this.OnEndVratiTijelo);
+        }
+        if ((this.onVratiTijeloCompletedDelegate == null))
+        {
+            this.onVratiTijeloCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVratiTijeloCompleted);
+        }
+        base.InvokeAsync(this.onBeginVratiTijeloDelegate, new object[] {
+                    tijeloId,
+                    token}, this.onEndVratiTijeloDelegate, this.onVratiTijeloCompletedDelegate, userState);
+    }
+
+    public ZpisRokovnikService.DataLayer.OsobaFotografijeDTO DohvatiFotografijuOsobe(string OIB, string token)
+    {
+        return base.Channel.DohvatiFotografijuOsobe(OIB, token);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginDohvatiFotografijuOsobe(string OIB, string token, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginDohvatiFotografijuOsobe(OIB, token, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaFotografijeDTO EndDohvatiFotografijuOsobe(System.IAsyncResult result)
+    {
+        return base.Channel.EndDohvatiFotografijuOsobe(result);
+    }
+
+    private System.IAsyncResult OnBeginDohvatiFotografijuOsobe(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string OIB = ((string)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginDohvatiFotografijuOsobe(OIB, token, callback, asyncState);
+    }
+
+    private object[] OnEndDohvatiFotografijuOsobe(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaFotografijeDTO retVal = this.EndDohvatiFotografijuOsobe(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnDohvatiFotografijuOsobeCompleted(object state)
+    {
+        if ((this.DohvatiFotografijuOsobeCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.DohvatiFotografijuOsobeCompleted(this, new DohvatiFotografijuOsobeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void DohvatiFotografijuOsobeAsync(string OIB, string token)
+    {
+        this.DohvatiFotografijuOsobeAsync(OIB, token, null);
+    }
+
+    public void DohvatiFotografijuOsobeAsync(string OIB, string token, object userState)
+    {
+        if ((this.onBeginDohvatiFotografijuOsobeDelegate == null))
+        {
+            this.onBeginDohvatiFotografijuOsobeDelegate = new BeginOperationDelegate(this.OnBeginDohvatiFotografijuOsobe);
+        }
+        if ((this.onEndDohvatiFotografijuOsobeDelegate == null))
+        {
+            this.onEndDohvatiFotografijuOsobeDelegate = new EndOperationDelegate(this.OnEndDohvatiFotografijuOsobe);
+        }
+        if ((this.onDohvatiFotografijuOsobeCompletedDelegate == null))
+        {
+            this.onDohvatiFotografijuOsobeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDohvatiFotografijuOsobeCompleted);
+        }
+        base.InvokeAsync(this.onBeginDohvatiFotografijuOsobeDelegate, new object[] {
+                    OIB,
+                    token}, this.onEndDohvatiFotografijuOsobeDelegate, this.onDohvatiFotografijuOsobeCompletedDelegate, userState);
     }
 }
