@@ -4061,6 +4061,9 @@ namespace ZPISrokovnik.Droid
 			// aapt resource value: 0x7f030003
 			public const int launcher_foreground = 2130903043;
 			
+			// aapt resource value: 0x7f030004
+			public const int splashscreen = 2130903044;
+			
 			static Mipmap()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -5484,6 +5487,9 @@ namespace ZPISrokovnik.Droid
 			
 			// aapt resource value: 0x7f0c000a
 			public const int Widget_MediaRouter_MediaRouteButton = 2131492874;
+			
+			// aapt resource value: 0x7f0c0192
+			public const int splashscreen = 2131493266;
 			
 			static Style()
 			{
