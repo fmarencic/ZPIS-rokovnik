@@ -31,6 +31,12 @@ namespace ZPISdatabaseAzure.Model
         [ForeignKey("Upisnik")]
         public long UpisnikId { get; set; }
 
+        [Column("STATUSPREDMETAID")]
+        [ForeignKey("StatusPredmeta")]
+        public long? StatusPredmetaId { get; set; }
+
+
+        public virtual DomenaEF StatusPredmeta { get; set; }
         public virtual UpisnikEF Upisnik { get; set; }
 
         public virtual ICollection<SudionikEF> Sudionici { get; set; }

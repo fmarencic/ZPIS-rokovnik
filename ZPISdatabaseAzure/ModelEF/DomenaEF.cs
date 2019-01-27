@@ -32,6 +32,7 @@ namespace ZPISdatabaseAzure.Model
         public virtual ICollection<PismenoVrstaEF> Grupe { get; set; }
         public virtual ICollection<OsobaEF> VrsteOsoba { get; set; }
         public virtual ICollection<KalendarEF> VrsteKalendara{ get; set; }
+        public virtual ICollection<PredmetEF> StatusiPredmeta { get; set; }
 
     }
 }

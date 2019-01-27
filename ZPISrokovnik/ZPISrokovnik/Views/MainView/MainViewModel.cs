@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZpisRokovnikService.DataLayer;
 
 namespace ZPISrokovnik.Views.MainView
 {
-	public class MainViewModel : BaseViewModel
+    public class MainViewModel : BaseViewModel
 	{
         #region Constructor
         public MainViewModel (IPageService page)
@@ -210,28 +206,28 @@ namespace ZPISrokovnik.Views.MainView
             pageService.PushAsync(new MainSearch());
         }
 
-        private void GetDataByUserInstance()
+        private async void GetDataByUserInstance()
         {
-            BrojcanoStanjeDTO brojcanoStanje = App.client.VratiBrojcanoStanje(App.TijeloId, "");
+            BrojcanoStanjeDTO brojcanoStanje = null;//await App.client.VratiBrojcanoStanjeAsync(App.TijeloId, "");
             DTOToObject(brojcanoStanje);
         }
         private void DTOToObject(BrojcanoStanjeDTO obj)
         {
             Caption = obj.NazivTijela;
-            BrojIstraznihZatvorenikaMuski = obj.BrojIstraznihZatvorenikaMuski.HasValue ? obj.BrojIstraznihZatvorenikaMuski.Value : (long?) null;
-            BrojIstraznihZatvorenikaZenski = obj.BrojIstraznihZatvorenikaZenski.HasValue ? obj.BrojIstraznihZatvorenikaZenski.Value : (long?)null;
-            BrojKaznjenikaMuski = obj.BrojKaznjenikaMuski.HasValue ? obj.BrojKaznjenikaMuski.Value : (long?)null;
-            BrojKaznjenikaZenski = obj.BrojKaznjenikaZenski.HasValue ? obj.BrojKaznjenikaZenski.Value : (long?)null;
-            BrojZatvorenikaMuski = obj.BrojZatvorenikaMuski.HasValue ? obj.BrojZatvorenikaMuski.Value : (long?)null;
-            BrojZatvorenikaZenski = obj.BrojZatvorenikaZenski.HasValue ? obj.BrojZatvorenikaZenski.Value : (long?)null;
-            NaIzlaskuMuski = obj.NaIzlaskuMuski.HasValue ? obj.NaIzlaskuMuski.Value : (long?)null;
-            NaIzlaskuZenski = obj.NaIzlaskuZenski.HasValue ? obj.NaIzlaskuZenski.Value : (long?)null;
-            NaPrekidMuski = obj.NaPrekidMuski.HasValue ? obj.NaPrekidMuski.Value : (long?)null;
-            NaPrekidZenski = obj.NaPrekidZenski.HasValue ? obj.NaPrekidZenski.Value : (long?)null;
-            ProlazniMuski = obj.ProlazniMuski.HasValue ? obj.ProlazniMuski.Value : (long?)null;
-            ProlazniZenski = obj.ProlazniZenski.HasValue ? obj.ProlazniZenski.Value : (long?)null;
-            UBijeguMuski = obj.UBijeguMuski.HasValue ? obj.UBijeguMuski.Value : (long?)null;
-            UBijeguZenski = obj.UBijeguZenski.HasValue ? obj.UBijeguZenski.Value : (long?)null;
+            BrojIstraznihZatvorenikaMuski = obj.BrojIstraznihZatvorenikaMuski ?? null;
+            BrojIstraznihZatvorenikaZenski = obj.BrojIstraznihZatvorenikaZenski ?? null;
+            BrojKaznjenikaMuski = obj.BrojKaznjenikaMuski ?? null;
+            BrojKaznjenikaZenski = obj.BrojKaznjenikaZenski ?? null;
+            BrojZatvorenikaMuski = obj.BrojZatvorenikaMuski ?? null;
+            BrojZatvorenikaZenski = obj.BrojZatvorenikaZenski ?? null;
+            NaIzlaskuMuski = obj.NaIzlaskuMuski ?? null;
+            NaIzlaskuZenski = obj.NaIzlaskuZenski ?? null;
+            NaPrekidMuski = obj.NaPrekidMuski ?? null;
+            NaPrekidZenski = obj.NaPrekidZenski ?? null;
+            ProlazniMuski = obj.ProlazniMuski ?? null;
+            ProlazniZenski = obj.ProlazniZenski ?? null;
+            UBijeguMuski = obj.UBijeguMuski ?? null;
+            UBijeguZenski = obj.UBijeguZenski ?? null;
         }
         #endregion
     }

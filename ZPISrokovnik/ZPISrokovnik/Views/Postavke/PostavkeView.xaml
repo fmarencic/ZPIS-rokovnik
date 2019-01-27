@@ -9,37 +9,51 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-              
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-               
-            
-            <BoxView BackgroundColor="Green" HorizontalOptions="Center" VerticalOptions="End" HeightRequest="100" WidthRequest="100" TranslationX="70" TranslationY="100" ></BoxView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-           <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand" TranslationX="80" TranslationY="130" Padding="0,0,20,0">
-               <Label Text="Korisničko ime" FontSize="20"></Label>
-           </StackLayout>
-           <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand" TranslationX="70" TranslationY="150" >
-               <Label Text="Korisnička oznaka" FontSize="15"> </Label>
-           </StackLayout>
-           
+        <Grid Grid.Column="0"
+                  Grid.Row="0"
+                  Margin="20,20,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-            <StackLayout HorizontalOptions="Center" WidthRequest="200" VerticalOptions="EndAndExpand" TranslationY="180" TranslationX="5">
-                <Label Text="Obavijesti" Font="15"></Label>
-            </StackLayout>
-          
-            <StackLayout HorizontalOptions="End" WidthRequest="120" VerticalOptions="EndAndExpand" TranslationX="160" TranslationY="200">
-                <Switch Scale="0.5" IsToggled="True"></Switch>
-            </StackLayout>
+            <Label Text="Korisničko ime" FontSize="20"></Label>
+        </Grid>
 
-            <Button Text="Promjeni lozinku" HorizontalOptions="StartAndExpand" WidthRequest="200" VerticalOptions="Start" TranslationX="0" TranslationY="280" Clicked="OnClicked"></Button>
-            
-           <Button Text="Odjava" BorderColor="Red" HorizontalOptions="Center" WidthRequest="100" VerticalOptions="Center" TranslationX="190" TranslationY="350"></Button>
-            
-            </Grid>
+        <Grid Grid.Column="0"
+                  Grid.Row="1"
+                  Margin="20,20,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Korisnička oznaka" FontSize="15"></Label>
+        </Grid>
+
+        <Grid Grid.Column="0"
+                  Grid.Row="2"
+              Margin="20,20,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Obavijesti" Font="15"></Label>
+
+            <Switch Grid.Column="1" Scale="0.5" IsToggled="True"></Switch>
+
+        </Grid>
+
+            <Button Grid.Row="3" Text="Promjeni lozinku"  Clicked="OnClicked"></Button>
+                        
+        </Grid>
     
 </ContentPage>

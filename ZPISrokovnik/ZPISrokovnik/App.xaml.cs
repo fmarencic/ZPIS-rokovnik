@@ -1,8 +1,4 @@
-﻿using Android.Net;
-using System;
-using System.ServiceModel;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Utils.Data;

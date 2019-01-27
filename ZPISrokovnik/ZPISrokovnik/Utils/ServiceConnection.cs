@@ -18,10 +18,10 @@ namespace ZPISrokovnik.Utils
                 MaxReceivedMessageSize = 2147483647
             };
 
-            //TimeSpan timeout = new TimeSpan(0, 0, 30);
-            //binding.SendTimeout = timeout;
-            //binding.OpenTimeout = timeout;
-            //binding.ReceiveTimeout = timeout;
+            TimeSpan timeout = new TimeSpan(0, 0, 30);
+            binding.SendTimeout = timeout;
+            binding.OpenTimeout = timeout;
+            binding.ReceiveTimeout = timeout;
             return binding;
         }
     }

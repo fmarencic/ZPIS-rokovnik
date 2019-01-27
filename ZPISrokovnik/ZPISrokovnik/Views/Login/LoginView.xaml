@@ -37,10 +37,10 @@
                     <Entry.Behaviors>
                         <behaviors:EventToCommandBehavior
                             EventName="Unfocused"
-                            Command="{Binding DohvatiKorisnickeInstanceCommand}"/>
-                        <behaviors:EventToCommandBehavior
+                            Command="{Binding DohvatiInstanceAsync}"/>
+                        <!--<behaviors:EventToCommandBehavior
                             EventName="TextChanged"
-                            Command="{Binding ValidateUserNameCommand}"/>
+                            Command="{Binding ValidateUserNameCommand}"/>-->
                     </Entry.Behaviors>
                 </Entry>
             </Grid>

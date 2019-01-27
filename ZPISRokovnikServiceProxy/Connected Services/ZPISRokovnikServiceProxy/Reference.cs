@@ -11,18 +11,18 @@
 namespace ZpisRokovnikService.DataLayer
 {
     using System.Runtime.Serialization;
-
-
+    
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfKORISNIKKorisnikDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaseDTOOfKORISNIKKorisnikDTOCAdBun5G", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.KorisnikDTO))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.LoginDTO))]
     public partial class BaseDTOOfKORISNIKKorisnikDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
     {
-
+        
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
+        
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -35,19 +35,19 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "KorisnikDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="KorisnikDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class KorisnikDTO : ZpisRokovnikService.DataLayer.BaseDTOOfKORISNIKKorisnikDTOCAdBun5G
     {
-
+        
         private string KorisnickoImeField;
-
+        
         private string LozinkaField;
-
+        
         private string ZaposlenNaTijelimaField;
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string KorisnickoIme
         {
@@ -60,7 +60,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.KorisnickoImeField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Lozinka
         {
@@ -73,7 +73,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.LozinkaField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ZaposlenNaTijelima
         {
@@ -87,17 +87,17 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "LoginDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LoginDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class LoginDTO : ZpisRokovnikService.DataLayer.BaseDTOOfKORISNIKKorisnikDTOCAdBun5G
     {
-
+        
         private string TokenField;
-
+        
         private bool isAuthenticatedField;
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Token
         {
@@ -110,7 +110,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.TokenField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool isAuthenticated
         {
@@ -124,16 +124,16 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfOSOBAOsobaDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaseDTOOfOSOBAOsobaDTOCAdBun5G", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.OsobaDTO))]
     public partial class BaseDTOOfOSOBAOsobaDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
     {
-
+        
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
+        
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -146,25 +146,25 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "OsobaDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OsobaDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class OsobaDTO : ZpisRokovnikService.DataLayer.BaseDTOOfOSOBAOsobaDTOCAdBun5G
     {
-
+        
         private string AdresaField;
-
-        private System.DateTime DatumRodenjaField;
-
+        
         private string ImeField;
-
+        
+        private string NazivField;
+        
         private string OIBField;
-
+        
         private string PrezimeField;
-
+        
         private long VrstaOsobeIdField;
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Adresa
         {
@@ -177,20 +177,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.AdresaField = value;
             }
         }
-
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DatumRodenja
-        {
-            get
-            {
-                return this.DatumRodenjaField;
-            }
-            set
-            {
-                this.DatumRodenjaField = value;
-            }
-        }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Ime
         {
@@ -203,7 +190,20 @@ namespace ZpisRokovnikService.DataLayer
                 this.ImeField = value;
             }
         }
-
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Naziv
+        {
+            get
+            {
+                return this.NazivField;
+            }
+            set
+            {
+                this.NazivField = value;
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OIB
         {
@@ -216,7 +216,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.OIBField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Prezime
         {
@@ -229,7 +229,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.PrezimeField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long VrstaOsobeId
         {
@@ -243,47 +243,47 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BrojcanoStanjeDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BrojcanoStanjeDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class BrojcanoStanjeDTO : object, System.Runtime.Serialization.IExtensibleDataObject
     {
-
+        
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
+        
         private System.Nullable<long> BrojIstraznihZatvorenikaMuskiField;
-
+        
         private System.Nullable<long> BrojIstraznihZatvorenikaZenskiField;
-
+        
         private System.Nullable<long> BrojKaznjenikaMuskiField;
-
+        
         private System.Nullable<long> BrojKaznjenikaZenskiField;
-
+        
         private System.Nullable<long> BrojZatvorenikaMuskiField;
-
+        
         private System.Nullable<long> BrojZatvorenikaZenskiField;
-
+        
         private System.Nullable<long> NaIzlaskuMuskiField;
-
+        
         private System.Nullable<long> NaIzlaskuZenskiField;
-
+        
         private System.Nullable<long> NaPrekidMuskiField;
-
+        
         private System.Nullable<long> NaPrekidZenskiField;
-
+        
         private string NazivTijelaField;
-
+        
         private System.Nullable<long> ProlazniMuskiField;
-
+        
         private System.Nullable<long> ProlazniZenskiField;
-
+        
         private long TijeloIdField;
-
+        
         private System.Nullable<long> UBijeguMuskiField;
-
+        
         private System.Nullable<long> UBijeguZenskiField;
-
+        
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -295,7 +295,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.extensionDataField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> BrojIstraznihZatvorenikaMuski
         {
@@ -308,7 +308,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.BrojIstraznihZatvorenikaMuskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> BrojIstraznihZatvorenikaZenski
         {
@@ -321,7 +321,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.BrojIstraznihZatvorenikaZenskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> BrojKaznjenikaMuski
         {
@@ -334,7 +334,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.BrojKaznjenikaMuskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> BrojKaznjenikaZenski
         {
@@ -347,7 +347,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.BrojKaznjenikaZenskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> BrojZatvorenikaMuski
         {
@@ -360,7 +360,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.BrojZatvorenikaMuskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> BrojZatvorenikaZenski
         {
@@ -373,7 +373,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.BrojZatvorenikaZenskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> NaIzlaskuMuski
         {
@@ -386,7 +386,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.NaIzlaskuMuskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> NaIzlaskuZenski
         {
@@ -399,7 +399,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.NaIzlaskuZenskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> NaPrekidMuski
         {
@@ -412,7 +412,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.NaPrekidMuskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> NaPrekidZenski
         {
@@ -425,7 +425,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.NaPrekidZenskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string NazivTijela
         {
@@ -438,7 +438,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.NazivTijelaField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> ProlazniMuski
         {
@@ -451,7 +451,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.ProlazniMuskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> ProlazniZenski
         {
@@ -464,7 +464,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.ProlazniZenskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long TijeloId
         {
@@ -477,7 +477,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.TijeloIdField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> UBijeguMuski
         {
@@ -490,7 +490,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.UBijeguMuskiField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> UBijeguZenski
         {
@@ -504,23 +504,25 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "PredmetDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PredmetDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class PredmetDTO : ZpisRokovnikService.DataLayer.BaseDTOOfPREDMETPredmetDTOCAdBun5G
     {
-
+        
         private System.Nullable<System.DateTime> DatumOsnivanjaField;
-
+        
         private string NazivPredmetaField;
-
+        
         private string OznakaPredmetaField;
-
+        
         private long RedniBrojField;
-
+        
+        private System.Nullable<long> StatusPredmetaIdField;
+        
         private long UpisnikIdField;
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> DatumOsnivanja
         {
@@ -533,7 +535,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.DatumOsnivanjaField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string NazivPredmeta
         {
@@ -546,7 +548,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.NazivPredmetaField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OznakaPredmeta
         {
@@ -559,7 +561,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.OznakaPredmetaField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long RedniBroj
         {
@@ -572,7 +574,20 @@ namespace ZpisRokovnikService.DataLayer
                 this.RedniBrojField = value;
             }
         }
-
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> StatusPredmetaId
+        {
+            get
+            {
+                return this.StatusPredmetaIdField;
+            }
+            set
+            {
+                this.StatusPredmetaIdField = value;
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long UpisnikId
         {
@@ -586,16 +601,16 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfPREDMETPredmetDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaseDTOOfPREDMETPredmetDTOCAdBun5G", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.PredmetDTO))]
     public partial class BaseDTOOfPREDMETPredmetDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
     {
-
+        
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
+        
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -608,23 +623,23 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "KalendarDTO", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="KalendarDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     public partial class KalendarDTO : ZpisRokovnikService.DataLayer.BaseDTOOfKALENDARKalendarDTOCAdBun5G
     {
-
+        
         private long KorisnikIdField;
-
+        
         private System.Nullable<System.DateTime> KrajField;
-
+        
         private System.Nullable<System.DateTime> PocetakField;
-
+        
         private long PredmetIdField;
-
+        
         private System.Nullable<long> VrstaKalendaraIdField;
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long KorisnikId
         {
@@ -637,7 +652,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.KorisnikIdField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> Kraj
         {
@@ -650,7 +665,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.KrajField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> Pocetak
         {
@@ -663,7 +678,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.PocetakField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long PredmetId
         {
@@ -676,7 +691,7 @@ namespace ZpisRokovnikService.DataLayer
                 this.PredmetIdField = value;
             }
         }
-
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> VrstaKalendaraId
         {
@@ -690,16 +705,16 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
-
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name = "BaseDTOOfKALENDARKalendarDTOCAdBun5G", Namespace = "http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaseDTOOfKALENDARKalendarDTOCAdBun5G", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.KalendarDTO))]
     public partial class BaseDTOOfKALENDARKalendarDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
     {
-
+        
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
+        
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -712,93 +727,302 @@ namespace ZpisRokovnikService.DataLayer
             }
         }
     }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaseDTOOfOSOBAFOTOGRAFIJEOsobaFotografijeDTOCAdBun5G", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ZpisRokovnikService.DataLayer.OsobaFotografijeDTO))]
+    public partial class BaseDTOOfOSOBAFOTOGRAFIJEOsobaFotografijeDTOCAdBun5G : object, System.Runtime.Serialization.IExtensibleDataObject
+    {
+        
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OsobaFotografijeDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    public partial class OsobaFotografijeDTO : ZpisRokovnikService.DataLayer.BaseDTOOfOSOBAFOTOGRAFIJEOsobaFotografijeDTOCAdBun5G
+    {
+        
+        private string FotografijaField;
+        
+        private long OsobaIdField;
+        
+        private string TipField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fotografija
+        {
+            get
+            {
+                return this.FotografijaField;
+            }
+            set
+            {
+                this.FotografijaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long OsobaId
+        {
+            get
+            {
+                return this.OsobaIdField;
+            }
+            set
+            {
+                this.OsobaIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tip
+        {
+            get
+            {
+                return this.TipField;
+            }
+            set
+            {
+                this.TipField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PrikazMaticeDTO", Namespace="http://schemas.datacontract.org/2004/07/ZpisRokovnikService.DataLayer")]
+    public partial class PrikazMaticeDTO : object, System.Runtime.Serialization.IExtensibleDataObject
+    {
+        
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private string KorisnickaInstancaField;
+        
+        private string NazivOsobeField;
+        
+        private long OsobaIdField;
+        
+        private string OznakaPredmetaField;
+        
+        private string OznakaUpisnikaField;
+        
+        private string StatusPredmetaField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KorisnickaInstanca
+        {
+            get
+            {
+                return this.KorisnickaInstancaField;
+            }
+            set
+            {
+                this.KorisnickaInstancaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NazivOsobe
+        {
+            get
+            {
+                return this.NazivOsobeField;
+            }
+            set
+            {
+                this.NazivOsobeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long OsobaId
+        {
+            get
+            {
+                return this.OsobaIdField;
+            }
+            set
+            {
+                this.OsobaIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OznakaPredmeta
+        {
+            get
+            {
+                return this.OznakaPredmetaField;
+            }
+            set
+            {
+                this.OznakaPredmetaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OznakaUpisnika
+        {
+            get
+            {
+                return this.OznakaUpisnikaField;
+            }
+            set
+            {
+                this.OznakaUpisnikaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StatusPredmeta
+        {
+            get
+            {
+                return this.StatusPredmetaField;
+            }
+            set
+            {
+                this.StatusPredmetaField = value;
+            }
+        }
+    }
 }
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-[System.ServiceModel.ServiceContractAttribute(ConfigurationName = "IService1")]
+[System.ServiceModel.ServiceContractAttribute(ConfigurationName="IService1")]
 public interface IService1
 {
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/TestMethod", ReplyAction = "http://tempuri.org/IService1/TestMethodResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/TestMethod", ReplyAction="http://tempuri.org/IService1/TestMethodResponse")]
     string[] TestMethod();
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/TestMethod", ReplyAction = "http://tempuri.org/IService1/TestMethodResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/TestMethod", ReplyAction="http://tempuri.org/IService1/TestMethodResponse")]
     System.IAsyncResult BeginTestMethod(System.AsyncCallback callback, object asyncState);
-
+    
     string[] EndTestMethod(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/LoginUser", ReplyAction = "http://tempuri.org/IService1/LoginUserResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoginUser", ReplyAction="http://tempuri.org/IService1/LoginUserResponse")]
     ZpisRokovnikService.DataLayer.LoginDTO LoginUser(string Username, string Password);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/LoginUser", ReplyAction = "http://tempuri.org/IService1/LoginUserResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/LoginUser", ReplyAction="http://tempuri.org/IService1/LoginUserResponse")]
     System.IAsyncResult BeginLoginUser(string Username, string Password, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.LoginDTO EndLoginUser(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetKorisnikByUsername", ReplyAction = "http://tempuri.org/IService1/GetKorisnikByUsernameResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetKorisnikByUsername", ReplyAction="http://tempuri.org/IService1/GetKorisnikByUsernameResponse")]
     ZpisRokovnikService.DataLayer.KorisnikDTO GetKorisnikByUsername(string Username, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/GetKorisnikByUsername", ReplyAction = "http://tempuri.org/IService1/GetKorisnikByUsernameResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/GetKorisnikByUsername", ReplyAction="http://tempuri.org/IService1/GetKorisnikByUsernameResponse")]
     System.IAsyncResult BeginGetKorisnikByUsername(string Username, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.KorisnikDTO EndGetKorisnikByUsername(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiPrijavljenoTijelo", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenoTijeloResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/VratiPrijavljenoTijelo", ReplyAction="http://tempuri.org/IService1/VratiPrijavljenoTijeloResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiPrijavljenoTijelo", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenoTijeloResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/VratiPrijavljenoTijelo", ReplyAction="http://tempuri.org/IService1/VratiPrijavljenoTijeloResponse")]
     System.IAsyncResult BeginVratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenoTijelo(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiPrijavljenuOsobu", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenuOsobuResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/VratiPrijavljenuOsobu", ReplyAction="http://tempuri.org/IService1/VratiPrijavljenuOsobuResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenuOsobu(long id, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiPrijavljenuOsobu", ReplyAction = "http://tempuri.org/IService1/VratiPrijavljenuOsobuResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/VratiPrijavljenuOsobu", ReplyAction="http://tempuri.org/IService1/VratiPrijavljenuOsobuResponse")]
     System.IAsyncResult BeginVratiPrijavljenuOsobu(long id, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenuOsobu(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction = "http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction="http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
     ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO VratiBrojcanoStanje(long tijeloId, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction = "http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/VratiBrojcanoStanje", ReplyAction="http://tempuri.org/IService1/VratiBrojcanoStanjeResponse")]
     System.IAsyncResult BeginVratiBrojcanoStanje(long tijeloId, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO EndVratiBrojcanoStanje(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction="http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO[] PretraziPoImenuIPrezimenu(string Ime, string Prezime, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction = "http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/PretraziPoImenuIPrezimenu", ReplyAction="http://tempuri.org/IService1/PretraziPoImenuIPrezimenuResponse")]
     System.IAsyncResult BeginPretraziPoImenuIPrezimenu(string Ime, string Prezime, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.OsobaDTO[] EndPretraziPoImenuIPrezimenu(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/PretraziPoOIBu", ReplyAction = "http://tempuri.org/IService1/PretraziPoOIBuResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PretraziPoOIBu", ReplyAction="http://tempuri.org/IService1/PretraziPoOIBuResponse")]
     ZpisRokovnikService.DataLayer.OsobaDTO PretraziPoOIBu(string OIB, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/PretraziPoOIBu", ReplyAction = "http://tempuri.org/IService1/PretraziPoOIBuResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/PretraziPoOIBu", ReplyAction="http://tempuri.org/IService1/PretraziPoOIBuResponse")]
     System.IAsyncResult BeginPretraziPoOIBu(string OIB, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.OsobaDTO EndPretraziPoOIBu(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenik", ReplyAction = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenikResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenik", ReplyAction="http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenikResponse")]
     ZpisRokovnikService.DataLayer.PredmetDTO[] DohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenik", ReplyAction = "http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenikResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenik", ReplyAction="http://tempuri.org/IService1/DohvatiPredmeteNaKojojJeOsobaKaznjenikResponse")]
     System.IAsyncResult BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.PredmetDTO[] EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(System.IAsyncResult result);
-
-    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiKalendarskeZapise", ReplyAction = "http://tempuri.org/IService1/DohvatiKalendarskeZapiseResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DohvatiKalendarskeZapise", ReplyAction="http://tempuri.org/IService1/DohvatiKalendarskeZapiseResponse")]
     ZpisRokovnikService.DataLayer.KalendarDTO[] DohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token);
-
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/DohvatiKalendarskeZapise", ReplyAction = "http://tempuri.org/IService1/DohvatiKalendarskeZapiseResponse")]
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/DohvatiKalendarskeZapise", ReplyAction="http://tempuri.org/IService1/DohvatiKalendarskeZapiseResponse")]
     System.IAsyncResult BeginDohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token, System.AsyncCallback callback, object asyncState);
-
+    
     ZpisRokovnikService.DataLayer.KalendarDTO[] EndDohvatiKalendarskeZapise(System.IAsyncResult result);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/VratiTijelo", ReplyAction="http://tempuri.org/IService1/VratiTijeloResponse")]
+    ZpisRokovnikService.DataLayer.OsobaDTO VratiTijelo(long tijeloId, string token);
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/VratiTijelo", ReplyAction="http://tempuri.org/IService1/VratiTijeloResponse")]
+    System.IAsyncResult BeginVratiTijelo(long tijeloId, string token, System.AsyncCallback callback, object asyncState);
+    
+    ZpisRokovnikService.DataLayer.OsobaDTO EndVratiTijelo(System.IAsyncResult result);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DohvatiFotografijuOsobe", ReplyAction="http://tempuri.org/IService1/DohvatiFotografijuOsobeResponse")]
+    ZpisRokovnikService.DataLayer.OsobaFotografijeDTO DohvatiFotografijuOsobe(string OIB, string token);
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/DohvatiFotografijuOsobe", ReplyAction="http://tempuri.org/IService1/DohvatiFotografijuOsobeResponse")]
+    System.IAsyncResult BeginDohvatiFotografijuOsobe(string OIB, string token, System.AsyncCallback callback, object asyncState);
+    
+    ZpisRokovnikService.DataLayer.OsobaFotografijeDTO EndDohvatiFotografijuOsobe(System.IAsyncResult result);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DohvatiMaticu", ReplyAction="http://tempuri.org/IService1/DohvatiMaticuResponse")]
+    ZpisRokovnikService.DataLayer.PrikazMaticeDTO[] DohvatiMaticu(string token, string oib);
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService1/DohvatiMaticu", ReplyAction="http://tempuri.org/IService1/DohvatiMaticuResponse")]
+    System.IAsyncResult BeginDohvatiMaticu(string token, string oib, System.AsyncCallback callback, object asyncState);
+    
+    ZpisRokovnikService.DataLayer.PrikazMaticeDTO[] EndDohvatiMaticu(System.IAsyncResult result);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -810,15 +1034,15 @@ public interface IService1Channel : IService1, System.ServiceModel.IClientChanne
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class TestMethodCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public TestMethodCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public TestMethodCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public string[] Result
     {
         get
@@ -833,15 +1057,15 @@ public partial class TestMethodCompletedEventArgs : System.ComponentModel.AsyncC
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class LoginUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public LoginUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public LoginUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.LoginDTO Result
     {
         get
@@ -856,15 +1080,15 @@ public partial class LoginUserCompletedEventArgs : System.ComponentModel.AsyncCo
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class GetKorisnikByUsernameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public GetKorisnikByUsernameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public GetKorisnikByUsernameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.KorisnikDTO Result
     {
         get
@@ -879,15 +1103,15 @@ public partial class GetKorisnikByUsernameCompletedEventArgs : System.ComponentM
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class VratiPrijavljenoTijeloCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public VratiPrijavljenoTijeloCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public VratiPrijavljenoTijeloCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO Result
     {
         get
@@ -902,15 +1126,15 @@ public partial class VratiPrijavljenoTijeloCompletedEventArgs : System.Component
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class VratiPrijavljenuOsobuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public VratiPrijavljenuOsobuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public VratiPrijavljenuOsobuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO Result
     {
         get
@@ -925,15 +1149,15 @@ public partial class VratiPrijavljenuOsobuCompletedEventArgs : System.ComponentM
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class VratiBrojcanoStanjeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public VratiBrojcanoStanjeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public VratiBrojcanoStanjeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO Result
     {
         get
@@ -948,15 +1172,15 @@ public partial class VratiBrojcanoStanjeCompletedEventArgs : System.ComponentMod
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class PretraziPoImenuIPrezimenuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public PretraziPoImenuIPrezimenuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public PretraziPoImenuIPrezimenuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO[] Result
     {
         get
@@ -971,15 +1195,15 @@ public partial class PretraziPoImenuIPrezimenuCompletedEventArgs : System.Compon
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class PretraziPoOIBuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public PretraziPoOIBuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public PretraziPoOIBuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO Result
     {
         get
@@ -994,15 +1218,15 @@ public partial class PretraziPoOIBuCompletedEventArgs : System.ComponentModel.As
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.PredmetDTO[] Result
     {
         get
@@ -1017,15 +1241,15 @@ public partial class DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs : 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class DohvatiKalendarskeZapiseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
-
+    
     private object[] results;
-
-    public DohvatiKalendarskeZapiseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    
+    public DohvatiKalendarskeZapiseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
             base(exception, cancelled, userState)
     {
         this.results = results;
     }
-
+    
     public ZpisRokovnikService.DataLayer.KalendarDTO[] Result
     {
         get
@@ -1038,142 +1262,235 @@ public partial class DohvatiKalendarskeZapiseCompletedEventArgs : System.Compone
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class VratiTijeloCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+    
+    private object[] results;
+    
+    public VratiTijeloCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+    
+    public ZpisRokovnikService.DataLayer.OsobaDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class DohvatiFotografijuOsobeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+    
+    private object[] results;
+    
+    public DohvatiFotografijuOsobeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+    
+    public ZpisRokovnikService.DataLayer.OsobaFotografijeDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.OsobaFotografijeDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class DohvatiMaticuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+    
+    private object[] results;
+    
+    public DohvatiMaticuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+    
+    public ZpisRokovnikService.DataLayer.PrikazMaticeDTO[] Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.PrikazMaticeDTO[])(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class Service1Client : System.ServiceModel.ClientBase<IService1>, IService1
 {
-
+    
     private BeginOperationDelegate onBeginTestMethodDelegate;
-
+    
     private EndOperationDelegate onEndTestMethodDelegate;
-
+    
     private System.Threading.SendOrPostCallback onTestMethodCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginLoginUserDelegate;
-
+    
     private EndOperationDelegate onEndLoginUserDelegate;
-
+    
     private System.Threading.SendOrPostCallback onLoginUserCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginGetKorisnikByUsernameDelegate;
-
+    
     private EndOperationDelegate onEndGetKorisnikByUsernameDelegate;
-
+    
     private System.Threading.SendOrPostCallback onGetKorisnikByUsernameCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginVratiPrijavljenoTijeloDelegate;
-
+    
     private EndOperationDelegate onEndVratiPrijavljenoTijeloDelegate;
-
+    
     private System.Threading.SendOrPostCallback onVratiPrijavljenoTijeloCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginVratiPrijavljenuOsobuDelegate;
-
+    
     private EndOperationDelegate onEndVratiPrijavljenuOsobuDelegate;
-
+    
     private System.Threading.SendOrPostCallback onVratiPrijavljenuOsobuCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginVratiBrojcanoStanjeDelegate;
-
+    
     private EndOperationDelegate onEndVratiBrojcanoStanjeDelegate;
-
+    
     private System.Threading.SendOrPostCallback onVratiBrojcanoStanjeCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginPretraziPoImenuIPrezimenuDelegate;
-
+    
     private EndOperationDelegate onEndPretraziPoImenuIPrezimenuDelegate;
-
+    
     private System.Threading.SendOrPostCallback onPretraziPoImenuIPrezimenuCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginPretraziPoOIBuDelegate;
-
+    
     private EndOperationDelegate onEndPretraziPoOIBuDelegate;
-
+    
     private System.Threading.SendOrPostCallback onPretraziPoOIBuCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate;
-
+    
     private EndOperationDelegate onEndDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate;
-
+    
     private System.Threading.SendOrPostCallback onDohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedDelegate;
-
+    
     private BeginOperationDelegate onBeginDohvatiKalendarskeZapiseDelegate;
-
+    
     private EndOperationDelegate onEndDohvatiKalendarskeZapiseDelegate;
-
+    
     private System.Threading.SendOrPostCallback onDohvatiKalendarskeZapiseCompletedDelegate;
-
+    
+    private BeginOperationDelegate onBeginVratiTijeloDelegate;
+    
+    private EndOperationDelegate onEndVratiTijeloDelegate;
+    
+    private System.Threading.SendOrPostCallback onVratiTijeloCompletedDelegate;
+    
+    private BeginOperationDelegate onBeginDohvatiFotografijuOsobeDelegate;
+    
+    private EndOperationDelegate onEndDohvatiFotografijuOsobeDelegate;
+    
+    private System.Threading.SendOrPostCallback onDohvatiFotografijuOsobeCompletedDelegate;
+    
+    private BeginOperationDelegate onBeginDohvatiMaticuDelegate;
+    
+    private EndOperationDelegate onEndDohvatiMaticuDelegate;
+    
+    private System.Threading.SendOrPostCallback onDohvatiMaticuCompletedDelegate;
+    
     public Service1Client()
     {
     }
-
-    public Service1Client(string endpointConfigurationName) :
+    
+    public Service1Client(string endpointConfigurationName) : 
             base(endpointConfigurationName)
     {
     }
-
-    public Service1Client(string endpointConfigurationName, string remoteAddress) :
+    
+    public Service1Client(string endpointConfigurationName, string remoteAddress) : 
             base(endpointConfigurationName, remoteAddress)
     {
     }
-
-    public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+    
+    public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
             base(endpointConfigurationName, remoteAddress)
     {
     }
-
-    public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+    
+    public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
             base(binding, remoteAddress)
     {
     }
-
+    
     public event System.EventHandler<TestMethodCompletedEventArgs> TestMethodCompleted;
-
+    
     public event System.EventHandler<LoginUserCompletedEventArgs> LoginUserCompleted;
-
+    
     public event System.EventHandler<GetKorisnikByUsernameCompletedEventArgs> GetKorisnikByUsernameCompleted;
-
+    
     public event System.EventHandler<VratiPrijavljenoTijeloCompletedEventArgs> VratiPrijavljenoTijeloCompleted;
-
+    
     public event System.EventHandler<VratiPrijavljenuOsobuCompletedEventArgs> VratiPrijavljenuOsobuCompleted;
-
+    
     public event System.EventHandler<VratiBrojcanoStanjeCompletedEventArgs> VratiBrojcanoStanjeCompleted;
-
+    
     public event System.EventHandler<PretraziPoImenuIPrezimenuCompletedEventArgs> PretraziPoImenuIPrezimenuCompleted;
-
+    
     public event System.EventHandler<PretraziPoOIBuCompletedEventArgs> PretraziPoOIBuCompleted;
-
+    
     public event System.EventHandler<DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs> DohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted;
-
+    
     public event System.EventHandler<DohvatiKalendarskeZapiseCompletedEventArgs> DohvatiKalendarskeZapiseCompleted;
-
+    
+    public event System.EventHandler<VratiTijeloCompletedEventArgs> VratiTijeloCompleted;
+    
+    public event System.EventHandler<DohvatiFotografijuOsobeCompletedEventArgs> DohvatiFotografijuOsobeCompleted;
+    
+    public event System.EventHandler<DohvatiMaticuCompletedEventArgs> DohvatiMaticuCompleted;
+    
     public string[] TestMethod()
     {
         return base.Channel.TestMethod();
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginTestMethod(System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginTestMethod(callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public string[] EndTestMethod(System.IAsyncResult result)
     {
         return base.Channel.EndTestMethod(result);
     }
-
+    
     private System.IAsyncResult OnBeginTestMethod(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         return this.BeginTestMethod(callback, asyncState);
     }
-
+    
     private object[] OnEndTestMethod(System.IAsyncResult result)
     {
         string[] retVal = this.EndTestMethod(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnTestMethodCompleted(object state)
     {
         if ((this.TestMethodCompleted != null))
@@ -1182,12 +1499,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.TestMethodCompleted(this, new TestMethodCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void TestMethodAsync()
     {
         this.TestMethodAsync(null);
     }
-
+    
     public void TestMethodAsync(object userState)
     {
         if ((this.onBeginTestMethodDelegate == null))
@@ -1204,38 +1521,38 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         }
         base.InvokeAsync(this.onBeginTestMethodDelegate, null, this.onEndTestMethodDelegate, this.onTestMethodCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.LoginDTO LoginUser(string Username, string Password)
     {
         return base.Channel.LoginUser(Username, Password);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginLoginUser(string Username, string Password, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginLoginUser(Username, Password, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.LoginDTO EndLoginUser(System.IAsyncResult result)
     {
         return base.Channel.EndLoginUser(result);
     }
-
+    
     private System.IAsyncResult OnBeginLoginUser(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         string Username = ((string)(inValues[0]));
         string Password = ((string)(inValues[1]));
         return this.BeginLoginUser(Username, Password, callback, asyncState);
     }
-
+    
     private object[] OnEndLoginUser(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.LoginDTO retVal = this.EndLoginUser(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnLoginUserCompleted(object state)
     {
         if ((this.LoginUserCompleted != null))
@@ -1244,12 +1561,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.LoginUserCompleted(this, new LoginUserCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void LoginUserAsync(string Username, string Password)
     {
         this.LoginUserAsync(Username, Password, null);
     }
-
+    
     public void LoginUserAsync(string Username, string Password, object userState)
     {
         if ((this.onBeginLoginUserDelegate == null))
@@ -1268,38 +1585,38 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     Username,
                     Password}, this.onEndLoginUserDelegate, this.onLoginUserCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.KorisnikDTO GetKorisnikByUsername(string Username, string token)
     {
         return base.Channel.GetKorisnikByUsername(Username, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginGetKorisnikByUsername(string Username, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginGetKorisnikByUsername(Username, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.KorisnikDTO EndGetKorisnikByUsername(System.IAsyncResult result)
     {
         return base.Channel.EndGetKorisnikByUsername(result);
     }
-
+    
     private System.IAsyncResult OnBeginGetKorisnikByUsername(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         string Username = ((string)(inValues[0]));
         string token = ((string)(inValues[1]));
         return this.BeginGetKorisnikByUsername(Username, token, callback, asyncState);
     }
-
+    
     private object[] OnEndGetKorisnikByUsername(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.KorisnikDTO retVal = this.EndGetKorisnikByUsername(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnGetKorisnikByUsernameCompleted(object state)
     {
         if ((this.GetKorisnikByUsernameCompleted != null))
@@ -1308,12 +1625,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.GetKorisnikByUsernameCompleted(this, new GetKorisnikByUsernameCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void GetKorisnikByUsernameAsync(string Username, string token)
     {
         this.GetKorisnikByUsernameAsync(Username, token, null);
     }
-
+    
     public void GetKorisnikByUsernameAsync(string Username, string token, object userState)
     {
         if ((this.onBeginGetKorisnikByUsernameDelegate == null))
@@ -1332,38 +1649,38 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     Username,
                     token}, this.onEndGetKorisnikByUsernameDelegate, this.onGetKorisnikByUsernameCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token)
     {
         return base.Channel.VratiPrijavljenoTijelo(nazivPrijavljenogTijela, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginVratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginVratiPrijavljenoTijelo(nazivPrijavljenogTijela, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenoTijelo(System.IAsyncResult result)
     {
         return base.Channel.EndVratiPrijavljenoTijelo(result);
     }
-
+    
     private System.IAsyncResult OnBeginVratiPrijavljenoTijelo(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         string nazivPrijavljenogTijela = ((string)(inValues[0]));
         string token = ((string)(inValues[1]));
         return this.BeginVratiPrijavljenoTijelo(nazivPrijavljenogTijela, token, callback, asyncState);
     }
-
+    
     private object[] OnEndVratiPrijavljenoTijelo(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndVratiPrijavljenoTijelo(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnVratiPrijavljenoTijeloCompleted(object state)
     {
         if ((this.VratiPrijavljenoTijeloCompleted != null))
@@ -1372,12 +1689,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.VratiPrijavljenoTijeloCompleted(this, new VratiPrijavljenoTijeloCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void VratiPrijavljenoTijeloAsync(string nazivPrijavljenogTijela, string token)
     {
         this.VratiPrijavljenoTijeloAsync(nazivPrijavljenogTijela, token, null);
     }
-
+    
     public void VratiPrijavljenoTijeloAsync(string nazivPrijavljenogTijela, string token, object userState)
     {
         if ((this.onBeginVratiPrijavljenoTijeloDelegate == null))
@@ -1396,38 +1713,38 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     nazivPrijavljenogTijela,
                     token}, this.onEndVratiPrijavljenoTijeloDelegate, this.onVratiPrijavljenoTijeloCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO VratiPrijavljenuOsobu(long id, string token)
     {
         return base.Channel.VratiPrijavljenuOsobu(id, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginVratiPrijavljenuOsobu(long id, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginVratiPrijavljenuOsobu(id, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenuOsobu(System.IAsyncResult result)
     {
         return base.Channel.EndVratiPrijavljenuOsobu(result);
     }
-
+    
     private System.IAsyncResult OnBeginVratiPrijavljenuOsobu(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         long id = ((long)(inValues[0]));
         string token = ((string)(inValues[1]));
         return this.BeginVratiPrijavljenuOsobu(id, token, callback, asyncState);
     }
-
+    
     private object[] OnEndVratiPrijavljenuOsobu(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndVratiPrijavljenuOsobu(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnVratiPrijavljenuOsobuCompleted(object state)
     {
         if ((this.VratiPrijavljenuOsobuCompleted != null))
@@ -1436,12 +1753,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.VratiPrijavljenuOsobuCompleted(this, new VratiPrijavljenuOsobuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void VratiPrijavljenuOsobuAsync(long id, string token)
     {
         this.VratiPrijavljenuOsobuAsync(id, token, null);
     }
-
+    
     public void VratiPrijavljenuOsobuAsync(long id, string token, object userState)
     {
         if ((this.onBeginVratiPrijavljenuOsobuDelegate == null))
@@ -1460,38 +1777,38 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     id,
                     token}, this.onEndVratiPrijavljenuOsobuDelegate, this.onVratiPrijavljenuOsobuCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO VratiBrojcanoStanje(long tijeloId, string token)
     {
         return base.Channel.VratiBrojcanoStanje(tijeloId, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginVratiBrojcanoStanje(long tijeloId, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginVratiBrojcanoStanje(tijeloId, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO EndVratiBrojcanoStanje(System.IAsyncResult result)
     {
         return base.Channel.EndVratiBrojcanoStanje(result);
     }
-
+    
     private System.IAsyncResult OnBeginVratiBrojcanoStanje(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         long tijeloId = ((long)(inValues[0]));
         string token = ((string)(inValues[1]));
         return this.BeginVratiBrojcanoStanje(tijeloId, token, callback, asyncState);
     }
-
+    
     private object[] OnEndVratiBrojcanoStanje(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO retVal = this.EndVratiBrojcanoStanje(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnVratiBrojcanoStanjeCompleted(object state)
     {
         if ((this.VratiBrojcanoStanjeCompleted != null))
@@ -1500,12 +1817,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.VratiBrojcanoStanjeCompleted(this, new VratiBrojcanoStanjeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void VratiBrojcanoStanjeAsync(long tijeloId, string token)
     {
         this.VratiBrojcanoStanjeAsync(tijeloId, token, null);
     }
-
+    
     public void VratiBrojcanoStanjeAsync(long tijeloId, string token, object userState)
     {
         if ((this.onBeginVratiBrojcanoStanjeDelegate == null))
@@ -1524,24 +1841,24 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     tijeloId,
                     token}, this.onEndVratiBrojcanoStanjeDelegate, this.onVratiBrojcanoStanjeCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO[] PretraziPoImenuIPrezimenu(string Ime, string Prezime, string token)
     {
         return base.Channel.PretraziPoImenuIPrezimenu(Ime, Prezime, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginPretraziPoImenuIPrezimenu(string Ime, string Prezime, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginPretraziPoImenuIPrezimenu(Ime, Prezime, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.OsobaDTO[] EndPretraziPoImenuIPrezimenu(System.IAsyncResult result)
     {
         return base.Channel.EndPretraziPoImenuIPrezimenu(result);
     }
-
+    
     private System.IAsyncResult OnBeginPretraziPoImenuIPrezimenu(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         string Ime = ((string)(inValues[0]));
@@ -1549,14 +1866,14 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         string token = ((string)(inValues[2]));
         return this.BeginPretraziPoImenuIPrezimenu(Ime, Prezime, token, callback, asyncState);
     }
-
+    
     private object[] OnEndPretraziPoImenuIPrezimenu(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.OsobaDTO[] retVal = this.EndPretraziPoImenuIPrezimenu(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnPretraziPoImenuIPrezimenuCompleted(object state)
     {
         if ((this.PretraziPoImenuIPrezimenuCompleted != null))
@@ -1565,12 +1882,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.PretraziPoImenuIPrezimenuCompleted(this, new PretraziPoImenuIPrezimenuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void PretraziPoImenuIPrezimenuAsync(string Ime, string Prezime, string token)
     {
         this.PretraziPoImenuIPrezimenuAsync(Ime, Prezime, token, null);
     }
-
+    
     public void PretraziPoImenuIPrezimenuAsync(string Ime, string Prezime, string token, object userState)
     {
         if ((this.onBeginPretraziPoImenuIPrezimenuDelegate == null))
@@ -1590,38 +1907,38 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     Prezime,
                     token}, this.onEndPretraziPoImenuIPrezimenuDelegate, this.onPretraziPoImenuIPrezimenuCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.OsobaDTO PretraziPoOIBu(string OIB, string token)
     {
         return base.Channel.PretraziPoOIBu(OIB, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginPretraziPoOIBu(string OIB, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginPretraziPoOIBu(OIB, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.OsobaDTO EndPretraziPoOIBu(System.IAsyncResult result)
     {
         return base.Channel.EndPretraziPoOIBu(result);
     }
-
+    
     private System.IAsyncResult OnBeginPretraziPoOIBu(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         string OIB = ((string)(inValues[0]));
         string token = ((string)(inValues[1]));
         return this.BeginPretraziPoOIBu(OIB, token, callback, asyncState);
     }
-
+    
     private object[] OnEndPretraziPoOIBu(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndPretraziPoOIBu(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnPretraziPoOIBuCompleted(object state)
     {
         if ((this.PretraziPoOIBuCompleted != null))
@@ -1630,12 +1947,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.PretraziPoOIBuCompleted(this, new PretraziPoOIBuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void PretraziPoOIBuAsync(string OIB, string token)
     {
         this.PretraziPoOIBuAsync(OIB, token, null);
     }
-
+    
     public void PretraziPoOIBuAsync(string OIB, string token, object userState)
     {
         if ((this.onBeginPretraziPoOIBuDelegate == null))
@@ -1654,38 +1971,38 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     OIB,
                     token}, this.onEndPretraziPoOIBuDelegate, this.onPretraziPoOIBuCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.PredmetDTO[] DohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token)
     {
         return base.Channel.DohvatiPredmeteNaKojojJeOsobaKaznjenik(OsobaId, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(OsobaId, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.PredmetDTO[] EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(System.IAsyncResult result)
     {
         return base.Channel.EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(result);
     }
-
+    
     private System.IAsyncResult OnBeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         long OsobaId = ((long)(inValues[0]));
         string token = ((string)(inValues[1]));
         return this.BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(OsobaId, token, callback, asyncState);
     }
-
+    
     private object[] OnEndDohvatiPredmeteNaKojojJeOsobaKaznjenik(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.PredmetDTO[] retVal = this.EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnDohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted(object state)
     {
         if ((this.DohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted != null))
@@ -1694,12 +2011,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.DohvatiPredmeteNaKojojJeOsobaKaznjenikCompleted(this, new DohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(long OsobaId, string token)
     {
         this.DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(OsobaId, token, null);
     }
-
+    
     public void DohvatiPredmeteNaKojojJeOsobaKaznjenikAsync(long OsobaId, string token, object userState)
     {
         if ((this.onBeginDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate == null))
@@ -1718,24 +2035,24 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     OsobaId,
                     token}, this.onEndDohvatiPredmeteNaKojojJeOsobaKaznjenikDelegate, this.onDohvatiPredmeteNaKojojJeOsobaKaznjenikCompletedDelegate, userState);
     }
-
+    
     public ZpisRokovnikService.DataLayer.KalendarDTO[] DohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token)
     {
         return base.Channel.DohvatiKalendarskeZapise(VrsteKalendara, tijeloId, token);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public System.IAsyncResult BeginDohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token, System.AsyncCallback callback, object asyncState)
     {
         return base.Channel.BeginDohvatiKalendarskeZapise(VrsteKalendara, tijeloId, token, callback, asyncState);
     }
-
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     public ZpisRokovnikService.DataLayer.KalendarDTO[] EndDohvatiKalendarskeZapise(System.IAsyncResult result)
     {
         return base.Channel.EndDohvatiKalendarskeZapise(result);
     }
-
+    
     private System.IAsyncResult OnBeginDohvatiKalendarskeZapise(object[] inValues, System.AsyncCallback callback, object asyncState)
     {
         string[] VrsteKalendara = ((string[])(inValues[0]));
@@ -1743,14 +2060,14 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         string token = ((string)(inValues[2]));
         return this.BeginDohvatiKalendarskeZapise(VrsteKalendara, tijeloId, token, callback, asyncState);
     }
-
+    
     private object[] OnEndDohvatiKalendarskeZapise(System.IAsyncResult result)
     {
         ZpisRokovnikService.DataLayer.KalendarDTO[] retVal = this.EndDohvatiKalendarskeZapise(result);
         return new object[] {
                 retVal};
     }
-
+    
     private void OnDohvatiKalendarskeZapiseCompleted(object state)
     {
         if ((this.DohvatiKalendarskeZapiseCompleted != null))
@@ -1759,12 +2076,12 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
             this.DohvatiKalendarskeZapiseCompleted(this, new DohvatiKalendarskeZapiseCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
     }
-
+    
     public void DohvatiKalendarskeZapiseAsync(string[] VrsteKalendara, long tijeloId, string token)
     {
         this.DohvatiKalendarskeZapiseAsync(VrsteKalendara, tijeloId, token, null);
     }
-
+    
     public void DohvatiKalendarskeZapiseAsync(string[] VrsteKalendara, long tijeloId, string token, object userState)
     {
         if ((this.onBeginDohvatiKalendarskeZapiseDelegate == null))
@@ -1783,5 +2100,197 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
                     VrsteKalendara,
                     tijeloId,
                     token}, this.onEndDohvatiKalendarskeZapiseDelegate, this.onDohvatiKalendarskeZapiseCompletedDelegate, userState);
+    }
+    
+    public ZpisRokovnikService.DataLayer.OsobaDTO VratiTijelo(long tijeloId, string token)
+    {
+        return base.Channel.VratiTijelo(tijeloId, token);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginVratiTijelo(long tijeloId, string token, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginVratiTijelo(tijeloId, token, callback, asyncState);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiTijelo(System.IAsyncResult result)
+    {
+        return base.Channel.EndVratiTijelo(result);
+    }
+    
+    private System.IAsyncResult OnBeginVratiTijelo(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        long tijeloId = ((long)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginVratiTijelo(tijeloId, token, callback, asyncState);
+    }
+    
+    private object[] OnEndVratiTijelo(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaDTO retVal = this.EndVratiTijelo(result);
+        return new object[] {
+                retVal};
+    }
+    
+    private void OnVratiTijeloCompleted(object state)
+    {
+        if ((this.VratiTijeloCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.VratiTijeloCompleted(this, new VratiTijeloCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+    
+    public void VratiTijeloAsync(long tijeloId, string token)
+    {
+        this.VratiTijeloAsync(tijeloId, token, null);
+    }
+    
+    public void VratiTijeloAsync(long tijeloId, string token, object userState)
+    {
+        if ((this.onBeginVratiTijeloDelegate == null))
+        {
+            this.onBeginVratiTijeloDelegate = new BeginOperationDelegate(this.OnBeginVratiTijelo);
+        }
+        if ((this.onEndVratiTijeloDelegate == null))
+        {
+            this.onEndVratiTijeloDelegate = new EndOperationDelegate(this.OnEndVratiTijelo);
+        }
+        if ((this.onVratiTijeloCompletedDelegate == null))
+        {
+            this.onVratiTijeloCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVratiTijeloCompleted);
+        }
+        base.InvokeAsync(this.onBeginVratiTijeloDelegate, new object[] {
+                    tijeloId,
+                    token}, this.onEndVratiTijeloDelegate, this.onVratiTijeloCompletedDelegate, userState);
+    }
+    
+    public ZpisRokovnikService.DataLayer.OsobaFotografijeDTO DohvatiFotografijuOsobe(string OIB, string token)
+    {
+        return base.Channel.DohvatiFotografijuOsobe(OIB, token);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginDohvatiFotografijuOsobe(string OIB, string token, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginDohvatiFotografijuOsobe(OIB, token, callback, asyncState);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.OsobaFotografijeDTO EndDohvatiFotografijuOsobe(System.IAsyncResult result)
+    {
+        return base.Channel.EndDohvatiFotografijuOsobe(result);
+    }
+    
+    private System.IAsyncResult OnBeginDohvatiFotografijuOsobe(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string OIB = ((string)(inValues[0]));
+        string token = ((string)(inValues[1]));
+        return this.BeginDohvatiFotografijuOsobe(OIB, token, callback, asyncState);
+    }
+    
+    private object[] OnEndDohvatiFotografijuOsobe(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.OsobaFotografijeDTO retVal = this.EndDohvatiFotografijuOsobe(result);
+        return new object[] {
+                retVal};
+    }
+    
+    private void OnDohvatiFotografijuOsobeCompleted(object state)
+    {
+        if ((this.DohvatiFotografijuOsobeCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.DohvatiFotografijuOsobeCompleted(this, new DohvatiFotografijuOsobeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+    
+    public void DohvatiFotografijuOsobeAsync(string OIB, string token)
+    {
+        this.DohvatiFotografijuOsobeAsync(OIB, token, null);
+    }
+    
+    public void DohvatiFotografijuOsobeAsync(string OIB, string token, object userState)
+    {
+        if ((this.onBeginDohvatiFotografijuOsobeDelegate == null))
+        {
+            this.onBeginDohvatiFotografijuOsobeDelegate = new BeginOperationDelegate(this.OnBeginDohvatiFotografijuOsobe);
+        }
+        if ((this.onEndDohvatiFotografijuOsobeDelegate == null))
+        {
+            this.onEndDohvatiFotografijuOsobeDelegate = new EndOperationDelegate(this.OnEndDohvatiFotografijuOsobe);
+        }
+        if ((this.onDohvatiFotografijuOsobeCompletedDelegate == null))
+        {
+            this.onDohvatiFotografijuOsobeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDohvatiFotografijuOsobeCompleted);
+        }
+        base.InvokeAsync(this.onBeginDohvatiFotografijuOsobeDelegate, new object[] {
+                    OIB,
+                    token}, this.onEndDohvatiFotografijuOsobeDelegate, this.onDohvatiFotografijuOsobeCompletedDelegate, userState);
+    }
+    
+    public ZpisRokovnikService.DataLayer.PrikazMaticeDTO[] DohvatiMaticu(string token, string oib)
+    {
+        return base.Channel.DohvatiMaticu(token, oib);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginDohvatiMaticu(string token, string oib, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginDohvatiMaticu(token, oib, callback, asyncState);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.PrikazMaticeDTO[] EndDohvatiMaticu(System.IAsyncResult result)
+    {
+        return base.Channel.EndDohvatiMaticu(result);
+    }
+    
+    private System.IAsyncResult OnBeginDohvatiMaticu(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string token = ((string)(inValues[0]));
+        string oib = ((string)(inValues[1]));
+        return this.BeginDohvatiMaticu(token, oib, callback, asyncState);
+    }
+    
+    private object[] OnEndDohvatiMaticu(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.PrikazMaticeDTO[] retVal = this.EndDohvatiMaticu(result);
+        return new object[] {
+                retVal};
+    }
+    
+    private void OnDohvatiMaticuCompleted(object state)
+    {
+        if ((this.DohvatiMaticuCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.DohvatiMaticuCompleted(this, new DohvatiMaticuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+    
+    public void DohvatiMaticuAsync(string token, string oib)
+    {
+        this.DohvatiMaticuAsync(token, oib, null);
+    }
+    
+    public void DohvatiMaticuAsync(string token, string oib, object userState)
+    {
+        if ((this.onBeginDohvatiMaticuDelegate == null))
+        {
+            this.onBeginDohvatiMaticuDelegate = new BeginOperationDelegate(this.OnBeginDohvatiMaticu);
+        }
+        if ((this.onEndDohvatiMaticuDelegate == null))
+        {
+            this.onEndDohvatiMaticuDelegate = new EndOperationDelegate(this.OnEndDohvatiMaticu);
+        }
+        if ((this.onDohvatiMaticuCompletedDelegate == null))
+        {
+            this.onDohvatiMaticuCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDohvatiMaticuCompleted);
+        }
+        base.InvokeAsync(this.onBeginDohvatiMaticuDelegate, new object[] {
+                    token,
+                    oib}, this.onEndDohvatiMaticuDelegate, this.onDohvatiMaticuCompletedDelegate, userState);
     }
 }

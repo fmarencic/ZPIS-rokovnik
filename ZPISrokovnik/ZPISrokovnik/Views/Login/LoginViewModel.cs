@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
+using ZPISrokovnik.Utils.Interface;
 using ZPISrokovnik.ValidationRules;
 using ZpisRokovnikService.DataLayer;
 
@@ -23,6 +23,8 @@ namespace ZPISrokovnik.Views
             pageService = page;
 
             UneseniIspravniPodaci = false;
+
+            DohvatiInstanceAsync = new AsyncCommand(DohvatiKorisnickeInstance, Moze);
         }
 
         #endregion
@@ -136,10 +138,12 @@ namespace ZPISrokovnik.Views
 
         #region Commands
 
-        public ICommand DohvatiKorisnickeInstanceCommand => new Command(() => DohvatiKorisnickeInstance());
+        //public ICommand DohvatiKorisnickeInstanceCommand => new Command(() => DohvatiKorisnickeInstance());
         public ICommand LoginCommand => new Command(() => OnLogin());
         public ICommand ValidateUserNameCommand => new Command(() => ValidateUserName());
         public ICommand ValidatePasswordCommand => new Command(() => ValidatePassword());
+
+        public IAsyncCommand DohvatiInstanceAsync { get; private set; }
 
         #endregion
 
@@ -151,10 +155,15 @@ namespace ZPISrokovnik.Views
 
         #region Methods
 
-        private void DohvatiKorisnickeInstance()
+        private bool Moze()
         {
-            Osvjezi();
-            Dohvati();
+            return true;
+        }
+
+        private async Task DohvatiKorisnickeInstance()
+        {
+            //Osvjezi();
+            await Dohvati();
         }
 
         private void Osvjezi()
@@ -166,15 +175,33 @@ namespace ZPISrokovnik.Views
             }
         }
 
-        private void Dohvati()
+        private async Task Dohvati()
         {
             if (KorisnickoIme.Value != null)
             {
-                KorisnikDTO korisnik = App.client.GetKorisnikByUsername(KorisnickoIme.Value, "");
-                if (korisnik != null)
+
+                try
                 {
-                    Tijela = new ObservableCollection<KeyValuePair<long, string>>(VratiListuSudovaSaKorisnika(korisnik));
-                    PostojeKorisnickeInstance = true;
+                    //var korisnik = await App.client.GetKorisnikByUsernameAsync(KorisnickoIme.Value, "");
+
+
+                    var korisnik = await Task.Factory.FromAsync(
+                      App.client.BeginGetKorisnikByUsername,
+                      App.client.EndGetKorisnikByUsername,
+                      KorisnickoIme.Value,"",
+                      TaskCreationOptions.None);
+
+
+                    if (korisnik != null)
+                    {
+                        Tijela = new ObservableCollection<KeyValuePair<long, string>>(VratiListuSudovaSaKorisnika(korisnik));
+                        PostojeKorisnickeInstance = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
                 }
             }
         }
@@ -203,7 +230,7 @@ namespace ZPISrokovnik.Views
 
         private void OnLogin()
         {
-            var login = App.client.LoginUser(KorisnickoIme.Value, Lozinka.Value);
+            var login =  App.client.LoginUser(KorisnickoIme.Value, Lozinka.Value);
 
             if (!(string.IsNullOrEmpty(login.Token)))
             {          
@@ -211,11 +238,11 @@ namespace ZPISrokovnik.Views
                 {
                     App.Token = login.Token;
                     App.TijeloId = SelectedItem.Key;
-                    pageService.PushAfterLogin(new MainTabbedPage());
+                    //pageService.PushAfterLogin(new MainTabbedPage());
                 }
             }
-            else
-                pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
+            //else
+                //pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
         }
 
         private bool ValidateUserName()

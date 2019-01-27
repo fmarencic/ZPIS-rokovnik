@@ -6,11 +6,11 @@
   },
   "ExtendedData": {
     "Uri": "http://zpiscloudservice.cloudapp.net/Service1.svc",
-    "Namespace": "ZPISWebService",
+    "Namespace": "ZPISRokovnikServiceProxy",
     "SelectedAccessLevelForGeneratedClass": "Public",
     "GenerateMessageContract": false,
     "ReuseTypesinReferencedAssemblies": true,
-    "ReuseTypesinAllReferencedAssemblies": false,
+    "ReuseTypesinAllReferencedAssemblies": true,
     "CollectionTypeReference": {
       "Item1": "System.Array",
       "Item2": "System.Runtime.dll"
@@ -21,7 +21,7 @@
     },
     "CheckedReferencedAssemblies": [],
     "InstanceId": null,
-    "Name": "ZPISWebService",
+    "Name": "ZPISRokovnikServiceProxy",
     "Metadata": {}
   }
 }
