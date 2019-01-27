@@ -13,10 +13,10 @@ namespace ZPISrokovnik.Views.MainView
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainSearch : ContentPage
 	{
-		public MainSearch ()
+		public MainSearch (string search)
 		{
 			InitializeComponent ();
-            BindingContext = new MainSearchViewModel(new PageService());
+            BindingContext = new MainSearchViewModel(new PageService(), search);
 		}
 	}
 }
