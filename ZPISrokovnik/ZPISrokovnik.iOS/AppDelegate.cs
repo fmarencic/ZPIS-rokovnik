@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using UserNotifications;
 
 namespace ZPISrokovnik.iOS
 {
@@ -23,8 +24,24 @@ namespace ZPISrokovnik.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
 
+            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+            {
+                UNUserNotificationCenter.Current.RequestAuthorization(
+                    UNAuthorizationOptions.Alert | UNAuthorizationOptions.Badge | UNAuthorizationOptions.Sound,
+                    (approved, error) => { });
+                UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
+            }
+            else if(UIDevice.CurrentDevice.CheckSystemVersion(8,0))
+            {
+                var settings =
+                    UIUserNotificationSettings.GetSettingsForTypes(
+                        UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound,
+                        new NSSet());
+                UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
+            }
+
+            LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }
     }

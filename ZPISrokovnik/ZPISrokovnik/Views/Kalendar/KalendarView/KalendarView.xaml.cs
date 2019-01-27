@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Java.Util;
+using Plugin.LocalNotifications;
 using Syncfusion.SfSchedule.XForms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,13 +20,10 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 			InitializeComponent ();
             this.BindingContext = new KalendarViewModel(new PageService());
 		}
-
-
 	    private void Uredi_OnClicked(object sender, EventArgs e)
 	    {
 	        var viewModel = this.BindingContext as KalendarViewModel;
             viewModel?.UrediNapomenuCommand.Execute(null);
-            
 	    }
 
 	    private void Obrisi_OnClicked(object sender, EventArgs e)
@@ -33,18 +31,19 @@ namespace ZPISrokovnik.Views.Kalendar.KalendarView
 	        var viewModel = this.BindingContext as KalendarViewModel;
 	        viewModel?.ObrisiNapomenuCommand.Execute(null);
         }
-
 	    private void Napomena_OnMonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)
 	    {
 	        var napomena = (e.Appointment as Napomena);
             if (napomena != null)
             {
-                DisplayAlert(napomena.Naziv,
-                    napomena.Datum.Date.ToString("dd/MM/yyyy") + " - "
-                    + napomena.DatumDo.Date.ToString("dd/MM/yyyy")
-                    + '\n' + napomena.Opis, "Uredu");
+                var viewModel = this.BindingContext as KalendarViewModel;
+                viewModel?.PrikaziNapomenuCommand.Execute(napomena);
             }
         }
-
+	    protected override void OnAppearing()
+	    {
+	        var viewModel = this.BindingContext as KalendarViewModel;
+	        viewModel?.AzurirajCommand.Execute(null);
+        }
 	}
 }

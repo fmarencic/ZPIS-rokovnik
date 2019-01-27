@@ -58,7 +58,6 @@ namespace ZPISrokovnik.Utils.Data
             }
         }
 
-
         /// <summary>
         /// update i insert -- ova
         /// </summary>

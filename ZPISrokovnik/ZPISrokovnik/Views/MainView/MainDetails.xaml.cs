@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZPISrokovnik.Utils;
+using ZpisRokovnikService.DataLayer;
 
 namespace ZPISrokovnik.Views.MainView
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainDetails : ContentPage
 	{
-		public MainDetails ()
+		public MainDetails (OsobaDTO obj)
 		{
 			InitializeComponent ();
-            BindingContext = new MainDetailsViewModel(new PageService());
+            BindingContext = new MainDetailsViewModel(new PageService(), obj);
 		}
 	}
 }

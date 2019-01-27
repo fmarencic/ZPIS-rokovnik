@@ -5,106 +5,52 @@
              Title="Prijava"
              x:Class="ZPISrokovnik.Views.LoginView">
     <ContentPage.Content>
-        <Grid x:Name="GridLayoutRoot" Margin="20,20,20,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="200"/>
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-            <Label Grid.Column="0"
-                   Grid.Row="0"
-                   Text="Korisničko ime"
-                   HorizontalTextAlignment="End"
-                   VerticalTextAlignment="Center"/>
-
-            <Grid Grid.Column="1"
-                  Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <Entry Grid.Column="0"
-                       Text="{Binding KorisnickoIme.Value}">
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="20" VerticalOptions="Center">
+                <Image Source="login.png" HorizontalOptions="Center" Margin="0,0,0,20"/>
+                <Entry Placeholder="Korisničko ime" Text="{Binding KorisnickoIme.Value}">
                     <Entry.Behaviors>
                         <behaviors:EventToCommandBehavior
+<<<<<<< HEAD
                             EventName="Unfocused"
                             Command="{Binding DohvatiInstanceAsync}"/>
                         <!--<behaviors:EventToCommandBehavior
                             EventName="TextChanged"
                             Command="{Binding ValidateUserNameCommand}"/>-->
+=======
+                        EventName="Unfocused"
+                        Command="{Binding DohvatiKorisnickeInstanceCommand}"/>
+                        <behaviors:EventToCommandBehavior
+                        EventName="TextChanged"
+                        Command="{Binding ValidateUserNameCommand}"/>
+>>>>>>> 480b348bd8af586489df992ba9cbb5bd21792def
                     </Entry.Behaviors>
                 </Entry>
-            </Grid>
-
-            <Label Grid.Column="0"
-                   Grid.Row="1"
-                   Text="Lozinka"
-                   HorizontalTextAlignment="End"
-                   />
-
-            <Grid Grid.Column="1"
-                  Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <Entry Grid.Column="0"
-                   IsPassword="True"
-                   Text="{Binding Lozinka.Value}">
+                <Entry Placeholder="Lozinka" Text="{Binding Lozinka.Value}" IsPassword="true">
                     <Entry.Behaviors>
                         <behaviors:EventToCommandBehavior
-                            EventName="TextChanged"
-                            Command="{Binding ValidatePasswordCommand}"/>
+                        EventName="TextChanged"
+                        Command="{Binding ValidatePasswordCommand}"/>
                     </Entry.Behaviors>
-                    <Entry.Style>
-                        <OnPlatform x:TypeArguments="Style">
-                            <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
-                        </OnPlatform>
-                    </Entry.Style>
+                    <!--<Entry.Style>
+                    <OnPlatform x:TypeArguments="Style">
+                        <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
+                    </OnPlatform>
+                </Entry.Style>-->
                 </Entry>
-            </Grid>
-
-            <Label Grid.Column="0"
-                   Grid.Row="2"
-                   Text="Korisnička instanca"
-                   HorizontalTextAlignment="End"
-                   />
-
-            <Grid Grid.Column="1"
-                  Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
                 <Picker Title="Korisnička instanca"
-                        ItemsSource="{Binding Tijela, Mode=TwoWay}"
-                        ItemDisplayBinding="{Binding Path=Value}"
-                        SelectedItem="{Binding SelectedItem}"
-                        IsEnabled="{Binding PostojeKorisnickeInstance, Mode=TwoWay}"
-                    Grid.Column="0">
+                ItemsSource="{Binding Tijela, Mode=TwoWay}"
+                ItemDisplayBinding="{Binding Path=Value}"
+                SelectedItem="{Binding SelectedItem}"
+                IsEnabled="{Binding PostojeKorisnickeInstance, Mode=TwoWay}">
                 </Picker>
-            </Grid>
-
-            <Button Command="{Binding LoginCommand}"
-                    Text="Prijava"
-                    IsEnabled="{Binding UneseniIspravniPodaci}"
-                    Grid.Row="3"
-                    Grid.ColumnSpan="2"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-
-        </Grid>
-        
+                <Button Text="Prijava" 
+                    TextColor="White" 
+                    BackgroundColor="#2196F3" 
+                    Command="{Binding LoginCommand}" 
+                    IsEnabled="{Binding UneseniIspravniPodaci}">
+                </Button>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -8,25 +8,15 @@
             <Label Text="{Binding Caption}"
                 FontSize="25"
                 Margin="15,20,0,0" />
-            <ListView Margin="10,10,10,0">
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Ime i prezime</x:String>
-                        <x:String>Datum rođenja</x:String>
-                        <x:String>Adresa</x:String>
-                        <x:String>OIB</x:String>
-                        <x:String>Kazneno djelo</x:String>
-                        <x:String>Presuda</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
+            <ListView Margin="10,10,10,0" ItemsSource="{Binding OsobaInfo, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout BackgroundColor="White" Orientation="Vertical">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding}"
+                                    <Label Text="{Binding NaslovObiljezja, Mode=TwoWay}"
                                         TextColor="#9cb0d1" />
-                                    <Label Text="{Binding}"
+                                    <Label Text="{Binding VrijednostObiljezja, Mode=TwoWay}"
                                         HorizontalOptions="EndAndExpand"
                                         TextColor="#503026" />
                                 </StackLayout>
