@@ -17,7 +17,7 @@ namespace ZPISrokovnik.Views.MainView
 		{
             this.pageService = page;
             ForwardedObject = obj;
-            ShowData();
+            GetData();
 		}
         #endregion
 
@@ -58,15 +58,22 @@ namespace ZPISrokovnik.Views.MainView
         #endregion
 
         #region Methods
-        private void ShowData()
+        private void GetData()
+        {
+            PrikazMaticeDTO[] matica = App.client.DohvatiMaticu("", ForwardedObject.OIB);
+            ShowData(matica);
+        }
+        private void ShowData(PrikazMaticeDTO[] matica)
         {
             OsobaInfo = new ObservableCollection<Osoba>();
             OsobaInfo.Add(new Osoba { NaslovObiljezja="Ime i prezime", VrijednostObiljezja=String.Concat(ForwardedObject.Ime, " ", ForwardedObject.Prezime) });
-            OsobaInfo.Add(new Osoba { NaslovObiljezja = "Datum rođenja", VrijednostObiljezja = ForwardedObject.DatumRodenja.ToString("dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture) });
             OsobaInfo.Add(new Osoba { NaslovObiljezja = "Adresa", VrijednostObiljezja = ForwardedObject.Adresa });
             OsobaInfo.Add(new Osoba { NaslovObiljezja = "OIB", VrijednostObiljezja = ForwardedObject.OIB });
-            OsobaInfo.Add(new Osoba { NaslovObiljezja = "Kazneno djelo", VrijednostObiljezja = "" });
-            OsobaInfo.Add(new Osoba { NaslovObiljezja = "Presuda", VrijednostObiljezja = "" });
+            for(int i = 0; i < matica.Length; i++)
+            {
+                OsobaInfo.Add(new Osoba { NaslovObiljezja = "Kazneno djelo", VrijednostObiljezja = matica[i].OznakaPredmeta });
+                OsobaInfo.Add(new Osoba { NaslovObiljezja = "Presuda", VrijednostObiljezja = matica[i].StatusPredmeta });
+            }
         }
         #endregion
     }

@@ -46,7 +46,7 @@ namespace ZPISrokovnik.Views.MainView
             }
         }
 
-        private string caption = "Zatvor u Zagrebu";
+        private string caption = "";
         public string Caption
         {
             get { return caption; }
@@ -100,17 +100,27 @@ namespace ZPISrokovnik.Views.MainView
         }
         private void InspectAndShowData()
         {
+            OsobaDTO osobaNazivTijela = App.client.VratiTijelo(App.TijeloId, "");
+            Caption = osobaNazivTijela.Naziv;
             if (Regex.IsMatch(ForwardedSearch, @"^\d+$")) {
                 OsobaDTO osoba = App.client.PretraziPoOIBu(ForwardedSearch, "");
                 OsobaDTOToObject(osoba);
             }
             else
             {
-                string[] parsedName = ForwardedSearch.Split(' ');
-                string firstName = parsedName[0];
-                string lastName = parsedName[1];
-                OsobaDTO[] osoba = App.client.PretraziPoImenuIPrezimenu(firstName, lastName, "");
-                OsobaDTOToList(osoba);
+                if (ForwardedSearch.Contains(" "))
+                {
+                    string[] parsedName = ForwardedSearch.Split(' ');
+                    string firstName = parsedName[0];
+                    string lastName = parsedName[1];
+                    OsobaDTO[] osoba = App.client.PretraziPoImenuIPrezimenu(firstName, lastName, "");
+                    OsobaDTOToList(osoba);
+                }
+                else
+                {
+                    OsobaDTO[] osoba = App.client.PretraziPoImenuIPrezimenu(ForwardedSearch, ForwardedSearch, "");
+                    OsobaDTOToList(osoba);
+                }
             }
         }
         private void OsobaDTOToObject(OsobaDTO obj)
