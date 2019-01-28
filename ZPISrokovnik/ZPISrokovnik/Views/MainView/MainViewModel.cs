@@ -1,15 +1,13 @@
-<<<<<<< HEAD
-﻿using Xamarin.Forms;
-=======
+using Xamarin.Forms;
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
->>>>>>> 480b348bd8af586489df992ba9cbb5bd21792def
 using ZPISrokovnik.Utils;
 using ZpisRokovnikService.DataLayer;
+using System.Threading.Tasks;
 
 namespace ZPISrokovnik.Views.MainView
 {
@@ -214,7 +212,15 @@ namespace ZPISrokovnik.Views.MainView
 
         private async void GetDataByUserInstance()
         {
-            BrojcanoStanjeDTO brojcanoStanje = null;//await App.client.VratiBrojcanoStanjeAsync(App.TijeloId, "");
+            //BrojcanoStanjeDTO brojcanoStanje = null;//await App.client.VratiBrojcanoStanjeAsync(App.TijeloId, "");
+
+            var brojcanoStanje = await Task.Factory.FromAsync(
+                                  App.client.BeginVratiBrojcanoStanje,
+                                  App.client.EndVratiBrojcanoStanje,
+                                  App.TijeloId, "",
+                                  TaskCreationOptions.None);
+
+
             DTOToObject(brojcanoStanje);
         }
         private void DTOToObject(BrojcanoStanjeDTO obj)

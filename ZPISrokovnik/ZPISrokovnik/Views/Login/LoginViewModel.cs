@@ -162,7 +162,7 @@ namespace ZPISrokovnik.Views
 
         private async Task DohvatiKorisnickeInstance()
         {
-            //Osvjezi();
+            Osvjezi();
             await Dohvati();
         }
 
@@ -238,19 +238,13 @@ namespace ZPISrokovnik.Views
                 {
                     App.Token = login.Token;
                     App.TijeloId = SelectedItem.Key;
-
+                    App.KorisnickoIme = KorisnickoIme.Value;
+                    App.KorisnickaOznaka = selectedItem.Value;
                     pageService.PushAfterLogin(new MainTabbedPage());
                 }
             }
             else
                 pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
-
-                    App.KorisnickoIme = KorisnickoIme.Value;
-                    App.KorisnickaOznaka = selectedItem.Value;
-                    pageService.PushAfterLogin(new MainTabbedPage());
-                
-            
-
         }
 
        

@@ -4,7 +4,6 @@
             xmlns:main="clr-namespace:ZPISrokovnik.Views.MainView"
             xmlns:kalendarView="clr-namespace:ZPISrokovnik.Views.Kalendar.KalendarView;assembly=ZPISrokovnik"
             xmlns:settings="clr-namespace:ZPISrokovnik.Views.Postavke"
-            xmlns:postavke="clr-namespace:ZPISrokovnik.Views.Postavke;assembly=ZPISrokovnik"
             x:Class="ZPISrokovnik.Views.MainTabbedPage">
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
@@ -12,7 +11,6 @@
         <ContentPage Title="Notes" Icon="notes.png"/>
         <kalendarView:KalendarView Title="Calendar" Icon="calendar.png"/>
         <settings:PostavkeView Title="Settings" Icon="settings.png"/>
-        <postavke:PostavkeView Title="Settings" Icon="settings.png"/>
     </TabbedPage.Children>
     <!--Pages can be added as references or inline-->
     <!--<NavigationPage Title="Calendar" Icon="calendar.png">

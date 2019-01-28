@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-﻿using Xamarin.Forms;
-=======
+using Xamarin.Forms;
 ﻿using Android.Net;
 using System;
 using System.Collections.Generic;
@@ -9,7 +7,6 @@ using System.ServiceModel;
 using System.Threading.Tasks;
 using Plugin.LocalNotifications;
 using Xamarin.Forms;
->>>>>>> 480b348bd8af586489df992ba9cbb5bd21792def
 using Xamarin.Forms.Xaml;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Utils.Data;
