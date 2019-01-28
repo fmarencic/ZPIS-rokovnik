@@ -211,13 +211,16 @@ namespace ZPISrokovnik.Views
                 {
                     App.Token = login.Token;
                     App.TijeloId = SelectedItem.Key;
+                    App.KorisnickoIme = KorisnickoIme.Value;
+                    App.KorisnickaOznaka = selectedItem.Value;
                     pageService.PushAfterLogin(new MainTabbedPage());
                 }
             }
             else
-                pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
+                pageService.DisplayAlert("Prijava neuspješna", "Netocno korisnicko ime ili lozinka", "U redu", "Odustani");
         }
 
+       
         private bool ValidateUserName()
         {
             return korisnickoIme.Validate();

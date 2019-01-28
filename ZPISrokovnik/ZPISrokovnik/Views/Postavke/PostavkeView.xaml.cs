@@ -11,17 +11,10 @@ namespace ZPISrokovnik.Views.Postavke
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PostavkeView : ContentPage
     {
-        public string Korisnik { get; set; }
-        public string Lozinka{get; set; }
         public PostavkeView()
         {
             InitializeComponent();
+            this.BindingContext = new PostavkeViewModel();
         }
-
-        public async void OnClicked(object sender, EventArgs eventArgs)
-        {
-            await Navigation.PushAsync(new PromjenaLozinkeView());
-        }
-        
     }
 }

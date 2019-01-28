@@ -19,6 +19,8 @@ namespace ZPISrokovnik
     {
         public static string Token { get; set; }
         public static long TijeloId { get; set; }
+        public static string KorisnickoIme { get; internal set; }
+        public static string KorisnickaOznaka { get; internal set; }
 
         public static Service1Client client;
 
@@ -39,6 +41,10 @@ namespace ZPISrokovnik
         public static void Obavjesti()
         {
             ObservableCollection<Napomena> napomene = App.DatabaseController.DohvatiSveNapomene();
+            if (napomene == null)
+            {
+                return;
+            }
             for (int i = 0; i < napomene.Count; i++)
             {
                 CrossLocalNotifications.Current.Show(
