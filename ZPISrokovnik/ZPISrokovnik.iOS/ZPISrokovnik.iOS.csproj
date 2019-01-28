@@ -201,4 +201,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\login.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\testimage.png" />
+  </ItemGroup>
 </Project>
