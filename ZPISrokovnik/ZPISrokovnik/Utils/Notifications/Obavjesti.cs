@@ -21,5 +21,28 @@ namespace ZPISrokovnik.Utils.Notifications
                 napomena.Opis, napomena.Id,
                 napomena.Datum.Date);
         }
+
+        public static void UkljuciObavjesti()
+        {
+            var napomene = App.DatabaseController.DohvatiSveNapomene();
+            if(napomene == null) return;
+            foreach (var napomena in napomene)
+            {
+                CrossLocalNotifications.Current.Show(
+                    napomena.Datum.Date.ToString("dd.MM.yyyy.") + "  " + napomena.Naziv,
+                    napomena.Opis, napomena.Id,
+                    napomena.Datum.Date);
+            }
+        }
+
+        public static void IskljuciObavjesti()
+        {
+            var napomene = App.DatabaseController.DohvatiSveNapomene();
+            if(napomene == null) return;
+            foreach (var napomena in napomene)
+            {
+                CrossLocalNotifications.Current.Cancel(napomena.Id);
+            }
+        }
     }
 }

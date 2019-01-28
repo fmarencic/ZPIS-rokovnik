@@ -2,65 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZPISrokovnik.Views.Postavke.PostavkeView">
- 
-        <Grid x:Name="GridLayout1" Margin="20,20,20,20" RowSpacing="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <Grid Grid.Column="0"
-                  Grid.Row="0"
-                  Margin="20,20,20,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Text="Korisničko ime" FontSize="20"></Label>
-        </Grid>
-
-        <Grid Grid.Column="0"
-                  Grid.Row="1"
-                  Margin="20,20,20,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Text="Korisnička oznaka" FontSize="15"></Label>
-        </Grid>
-
-        <Grid Grid.Column="0"
-                  Grid.Row="2"
-              Margin="20,20,20,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Text="Obavijesti" Font="15"></Label>
-
-            <Switch Grid.Column="1" Scale="0.5" IsToggled="True"></Switch>
-
-        </Grid>
-
-            <Button Grid.Row="3" Text="Promjeni lozinku"></Button>
-                        
-        </Grid>
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <BoxView BackgroundColor="Green"
-                     HeightRequest="120" 
-                     WidthRequest="110"
-            />
+            <Image Source="login.png" HorizontalOptions="Center" Margin="0,0,0,20"/>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 <Label Text="{Binding KorisnickoIme}" 
                        FontSize="20"

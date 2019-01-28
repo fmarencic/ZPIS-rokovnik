@@ -6,6 +6,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using ZpisRokovnikService.DataLayer;
 using ZPISrokovnik.Utils;
+using ZPISrokovnik.Utils.Notifications;
 
 namespace ZPISrokovnik.Views.Postavke
 {
@@ -76,6 +77,14 @@ namespace ZPISrokovnik.Views.Postavke
         private async void PostaviObavjest()
         {
             Application.Current.Properties["DodajObavjest"] = this.IsToggled;
+            if (this.isToggled)
+            {
+                Obavjesti.UkljuciObavjesti();
+            }
+            else
+            {
+                Obavjesti.IskljuciObavjesti();
+            }
             await Application.Current.SavePropertiesAsync();
         }
     }
