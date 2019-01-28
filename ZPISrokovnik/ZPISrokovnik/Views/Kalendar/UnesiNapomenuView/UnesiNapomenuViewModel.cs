@@ -6,6 +6,7 @@ using Android.Hardware.Display;
 using Android.Views;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
+using ZPISrokovnik.Utils.Notifications;
 using ZPISrokovnik.Views.Kalendar;
 using ZPISrokovnik.Views.Kalendar.KalendarView;
 
@@ -75,7 +76,7 @@ namespace ZPISrokovnik.Views
             {
                 this.Napomena.Vidljivo = false;
                 App.DatabaseController.SpremiNapomenu(this.Napomena);
-                App.Obavjesti();
+                Obavjesti.DodajObavjest();
                 Application.Current.MainPage.Navigation.PopAsync();
             }
         }

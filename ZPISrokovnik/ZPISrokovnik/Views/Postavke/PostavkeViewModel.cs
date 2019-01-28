@@ -42,7 +42,7 @@ namespace ZPISrokovnik.Views.Postavke
         {
             DohvatiOsobu();
             DohvatiKorisnickuOznaku();
-            this.IsToggled = (bool)Application.Current.Properties.ContainsKey("Obavjesti");
+            this.IsToggled = (bool)Application.Current.Properties.ContainsKey("DodajObavjest");
         }
 
         private void DohvatiOsobu()
@@ -75,7 +75,7 @@ namespace ZPISrokovnik.Views.Postavke
         }
         private async void PostaviObavjest()
         {
-            Application.Current.Properties["Obavjesti"] = this.IsToggled;
+            Application.Current.Properties["DodajObavjest"] = this.IsToggled;
             await Application.Current.SavePropertiesAsync();
         }
     }

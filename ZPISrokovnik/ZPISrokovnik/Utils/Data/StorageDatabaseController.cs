@@ -26,7 +26,7 @@ namespace ZPISrokovnik.Utils.Data
         /// vraća prvi element
         /// </summary>
         /// <returns></returns>
-        public Napomena DohvatiNapomenu()
+        public Napomena DohvatiZadnjuNapomenu()
         {
             lock (locker)
             {
@@ -34,7 +34,7 @@ namespace ZPISrokovnik.Utils.Data
                 {
                     return null;
                 }
-                return this.Database.Table<Napomena>().First();
+                return this.Database.Table<Napomena>().Last();
             }
         }
 

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MediaPlayer;
+using Plugin.LocalNotifications;
 using Syncfusion.SfSchedule.XForms;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
@@ -55,6 +56,7 @@ namespace ZPISrokovnik.Views
             if (obrisi)
             {
                 App.DatabaseController.ObrisiNapomenu(SelectedItem.Id);
+                CrossLocalNotifications.Current.Cancel(SelectedItem.Id);
                 ListaNapomena.Remove(SelectedItem);
                 ListaNapomena = App.DatabaseController.DohvatiSveNapomene();
             }
