@@ -238,21 +238,19 @@ namespace ZPISrokovnik.Views
                 {
                     App.Token = login.Token;
                     App.TijeloId = SelectedItem.Key;
-<<<<<<< HEAD
-                    //pageService.PushAfterLogin(new MainTabbedPage());
-                }
-            }
-            //else
-                //pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
-=======
-                    App.KorisnickoIme = KorisnickoIme.Value;
-                    App.KorisnickaOznaka = selectedItem.Value;
+
                     pageService.PushAfterLogin(new MainTabbedPage());
                 }
             }
             else
-                pageService.DisplayAlert("Prijava neuspješna", "Netocno korisnicko ime ili lozinka", "U redu", "Odustani");
->>>>>>> f2d8036439d5ef79fddc84b432ed01e3a67e4bb0
+                pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
+
+                    App.KorisnickoIme = KorisnickoIme.Value;
+                    App.KorisnickaOznaka = selectedItem.Value;
+                    pageService.PushAfterLogin(new MainTabbedPage());
+                
+            
+
         }
 
        

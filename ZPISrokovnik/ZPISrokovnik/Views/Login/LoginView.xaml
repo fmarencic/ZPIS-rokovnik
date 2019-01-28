@@ -11,19 +11,11 @@
                 <Entry Placeholder="Korisničko ime" Text="{Binding KorisnickoIme.Value}">
                     <Entry.Behaviors>
                         <behaviors:EventToCommandBehavior
-<<<<<<< HEAD
                             EventName="Unfocused"
                             Command="{Binding DohvatiInstanceAsync}"/>
-                        <!--<behaviors:EventToCommandBehavior
-                            EventName="TextChanged"
-                            Command="{Binding ValidateUserNameCommand}"/>-->
-=======
-                        EventName="Unfocused"
-                        Command="{Binding DohvatiKorisnickeInstanceCommand}"/>
                         <behaviors:EventToCommandBehavior
                         EventName="TextChanged"
                         Command="{Binding ValidateUserNameCommand}"/>
->>>>>>> 480b348bd8af586489df992ba9cbb5bd21792def
                     </Entry.Behaviors>
                 </Entry>
                 <Entry Placeholder="Lozinka" Text="{Binding Lozinka.Value}" IsPassword="true">
