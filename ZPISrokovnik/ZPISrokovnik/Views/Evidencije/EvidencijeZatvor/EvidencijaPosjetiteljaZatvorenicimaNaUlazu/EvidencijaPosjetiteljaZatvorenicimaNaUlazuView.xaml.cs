@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ZPISrokovnik.Views.Postavke
+namespace ZPISrokovnik.Views.Evidencije
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PromjenaLozinkeView : ContentPage
+	public partial class EvidencijaPosjetiteljaZatvorenicimaNaUlazuView : ContentPage
 	{
-		public PromjenaLozinkeView ()
+		public EvidencijaPosjetiteljaZatvorenicimaNaUlazuView ()
 		{
 			InitializeComponent ();
 		}

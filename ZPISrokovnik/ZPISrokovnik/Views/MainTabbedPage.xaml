@@ -3,14 +3,22 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:main="clr-namespace:ZPISrokovnik.Views.MainView"
             xmlns:kalendarView="clr-namespace:ZPISrokovnik.Views.Kalendar.KalendarView;assembly=ZPISrokovnik"
+<<<<<<< HEAD
             xmlns:settings="clr-namespace:ZPISrokovnik.Views.Postavke"
+=======
+            xmlns:postavke="clr-namespace:ZPISrokovnik.Views.Postavke;assembly=ZPISrokovnik"
+>>>>>>> f2d8036439d5ef79fddc84b432ed01e3a67e4bb0
             x:Class="ZPISrokovnik.Views.MainTabbedPage">
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <main:MainView Title="Home" Icon="home.png"/>
         <ContentPage Title="Notes" Icon="notes.png"/>
         <kalendarView:KalendarView Title="Calendar" Icon="calendar.png"/>
+<<<<<<< HEAD
         <settings:PostavkeView Title="Settings" Icon="settings.png"/>
+=======
+        <postavke:PostavkeView Title="Settings" Icon="settings.png"/>
+>>>>>>> f2d8036439d5ef79fddc84b432ed01e3a67e4bb0
     </TabbedPage.Children>
     <!--Pages can be added as references or inline-->
     <!--<NavigationPage Title="Calendar" Icon="calendar.png">

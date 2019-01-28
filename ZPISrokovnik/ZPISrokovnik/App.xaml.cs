@@ -23,46 +23,18 @@ namespace ZPISrokovnik
     {
         public static string Token { get; set; }
         public static long TijeloId { get; set; }
+        public static string KorisnickoIme { get; internal set; }
+        public static string KorisnickaOznaka { get; internal set; }
 
         public static Service1Client client;
 
-        public static StorageDatabaseController DatabaseController;
+        public static StorageDatabaseController DatabaseController = new StorageDatabaseController();
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NjI0OThAMzEzNjJlMzQyZTMwbUR2VHdMRmdjZ0NtSkxNbUhDalp6cXpmL0VMMlNtczR1Z0hmNngzZFUvcz0=");
             InitializeComponent();
             client = new Service1Client(ServiceConnection.CreateBasicHttpBinding(), ServiceConnection.Endpoint);
-            NapomenaBaza();
-            Obavjesti();
             MainPage = new NavigationPage(new LoginView());
-        }
-
-        /// <summary>
-        /// Postavljanje obavjesti napomena
-        /// </summary>
-        public static void Obavjesti()
-        {
-            ObservableCollection<Napomena> napomene = App.DatabaseController.DohvatiSveNapomene();
-            for (int i = 0; i < napomene.Count; i++)
-            {
-                CrossLocalNotifications.Current.Show(
-                    napomene[i].Datum.Date.ToString("dd.MM.yyyy.") + "  " + napomene[i].Naziv,
-                    napomene[i].Opis, napomene[i].Id,
-                    napomene[i].Datum.Date);
-            }
-        }
-
-        /// <summary>
-        /// Inicijalizacija kontrolera lokalne baze
-        /// </summary>
-        /// <returns></returns>
-        public static StorageDatabaseController NapomenaBaza()
-        {
-            if (DatabaseController == null)
-            {
-                DatabaseController = new StorageDatabaseController();
-            }
-            return DatabaseController;
         }
         
         protected override void OnStart()

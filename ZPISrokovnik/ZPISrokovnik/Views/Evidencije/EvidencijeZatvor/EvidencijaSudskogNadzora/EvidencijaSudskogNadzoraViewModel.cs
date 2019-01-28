@@ -1,0 +1,132 @@
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+using Xamarin.Forms;
+using ZPISrokovnik.JSONModel;
+using ZPISrokovnik.Utils;
+using ZpisRokovnikService.DataLayer;
+
+namespace ZPISrokovnik.Views.Evidencije
+{
+    public class EvidencijaSudskogNadzoraViewModel : BaseViewModel
+    {
+        #region Constructor(s)
+
+        public EvidencijaSudskogNadzoraViewModel(IPageService page)
+        {
+  
+        }
+
+        #endregion
+
+        #region Properties
+
+        private OsobaDTO sud;
+        public OsobaDTO Sud
+        {
+            get
+            {
+                return sud;
+            }
+            set
+            {
+                SetValue(ref sud, value);
+                OnPropertyChanged(nameof(Sud));
+            }
+        }
+
+        private DateTime datum;
+        public DateTime Datum
+        {
+            get
+            {
+                return datum;
+            }
+            set
+            {
+                SetValue(ref datum, value);
+                OnPropertyChanged(nameof(Datum));
+            }
+        }
+
+        private TimeSpan od;
+        public TimeSpan Od
+        {
+            get
+            {
+                return od;
+            }
+            set
+            {
+                SetValue(ref od, value);
+                OnPropertyChanged(nameof(Od));
+            }
+        }
+
+        private TimeSpan _do;
+        public TimeSpan Do
+        {
+            get
+            {
+                return _do;
+            }
+            set
+            {
+                SetValue(ref _do, value);
+                OnPropertyChanged(nameof(Do));
+            }
+        }
+
+        private ObservableCollection<OsobaDTO> sudovi;
+        public ObservableCollection<OsobaDTO> Sudovi
+        {
+            get
+            {
+                return sudovi;
+            }
+            set
+            {
+                SetValue(ref sudovi, value);
+                OnPropertyChanged(nameof(Sudovi));
+            }
+        }
+
+        #endregion
+
+        #region PageService
+
+        private readonly IPageService pageService;
+
+        #endregion
+
+        #region Methods
+
+        private void UnesiEvidenciju()
+        {
+            EvidencijaSudskogNadzoraJSONModel obj = new EvidencijaSudskogNadzoraJSONModel();
+
+            try
+            {
+                obj.Sud = this.Sud;
+                obj.Datum = this.Datum;
+                obj.Od = this.Od;
+                obj.Do = this.Do;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand UnesiCommand => new Command(() => UnesiEvidenciju());
+
+
+        #endregion
+    }
+}

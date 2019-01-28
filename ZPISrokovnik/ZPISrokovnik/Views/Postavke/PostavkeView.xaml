@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZPISrokovnik.Views.Postavke.PostavkeView">
+<<<<<<< HEAD
  
         <Grid x:Name="GridLayout1" Margin="20,20,20,20" RowSpacing="0">
             <Grid.ColumnDefinitions>
@@ -56,4 +57,39 @@
                         
         </Grid>
     
+=======
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <BoxView BackgroundColor="Green"
+                     HeightRequest="120" 
+                     WidthRequest="110"
+            />
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="{Binding KorisnickoIme}" 
+                       FontSize="20"
+                       TextColor="Black"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="{Binding KorisnickaOznaka}" 
+                       FontSize="15"
+                       TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="0" 
+                         HorizontalOptions="CenterAndExpand" 
+                         VerticalOptions="CenterAndExpand">
+                <Label Text="Obavijesti" 
+                       Font="15"
+                       TextColor="Black"/>
+                <Switch Scale="1" 
+                        IsToggled="{Binding IsToggled}"
+                />
+            </StackLayout>
+            <Button Text="Odjava" 
+                    BorderColor="Red" 
+                    HorizontalOptions="Center"  
+                    VerticalOptions="Center"
+                    Command="{Binding OdjavaCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+>>>>>>> f2d8036439d5ef79fddc84b432ed01e3a67e4bb0
 </ContentPage>

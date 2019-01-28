@@ -31,7 +31,7 @@
 
   <ItemGroup>
     <Reference Include="Mono.Android">
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.LocalNotifications">
       <HintPath>C:\Users\root\.nuget\packages\xam.plugins.notifier\3.0.1\lib\MonoAndroid10\Plugin.LocalNotifications.dll</HintPath>
@@ -86,9 +86,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
     <EmbeddedResource Update="Views\Postavke\PostavkeView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Postavke\PromjenaLozinkeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

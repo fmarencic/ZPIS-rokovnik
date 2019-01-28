@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUlazuView">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Evidencija posjetitelja"
+                   FontAttributes="Bold"
+                   Margin="10,10,0,10"
+                   TextColor="Blue"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"/>
+            
+            <Label Text="Ime i prezime"
+                   Margin="10,10,0,10"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            
+            <Entry Grid.Row="1"
+                   Grid.Column="1"
+                   Margin="0,0,10,0"                   
+                   />
+            
+            <Label Text="Napomena"
+                   Margin="10,10,0,10"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+            
+            <Entry Grid.Row="2"
+                   Grid.Column="1"
+                   Margin="0,0,10,0"
+                   />
+            
+            <Label Text="Zatvorenik"
+                   Margin="10,10,0,10"
+                   Grid.Row="3"
+                   Grid.Column="0"/>
+            
+            <Picker Grid.Row="3"
+                   Grid.Column="1"
+                   Margin="0,0,10,0"/>
+            
+            <Label Text="Uloga"
+                   Grid.Row="4"
+                   Margin="10,10,0,10"
+                   Grid.Column="0"/>
+            
+            <Entry Grid.Row="4"
+                   Grid.Column="1"
+                   Margin="0,0,10,0" />
+
+            <Label Text="Datum i vrijeme dolaska"
+                   Grid.Row="5"
+                   Margin="10,10,0,10"
+                   Grid.Column="0"/>
+
+            <StackLayout Grid.Row="5"
+                         Grid.Column="1"
+                         Margin="0,0,10,0"
+                         Orientation="Horizontal">
+                <DatePicker />
+                <TimePicker/>
+            </StackLayout>
+
+            <Label Text="Datum odlaska"
+                   Grid.Row="6"
+                   Grid.Column="0"
+                   Margin="10,10,0,10"/>
+
+            <StackLayout Grid.Row="6"
+                         Grid.Column="1"
+                         Margin="0,0,10,0"
+                         Orientation="Horizontal">
+                <DatePicker />
+                <TimePicker/>
+            </StackLayout>
+
+            <Button Grid.Row="7"
+                         Grid.Column="1"
+                         Text="Unesi evidenciju"
+                         Margin="0,0,10,0"
+                         Command="{Binding UnesiCommand}"/>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
