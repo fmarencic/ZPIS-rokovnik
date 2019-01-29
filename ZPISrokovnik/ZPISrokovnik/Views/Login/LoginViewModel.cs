@@ -240,7 +240,7 @@ namespace ZPISrokovnik.Views
                     App.TijeloId = SelectedItem.Key;
                     App.KorisnickoIme = KorisnickoIme.Value;
                     App.KorisnickaOznaka = selectedItem.Value;
-                    pageService.PushAfterLogin(new MainTabbedPage());
+                    pageService.PushAfterLogin(new MainZatvorTabbedPage());
                 }
             }
             else

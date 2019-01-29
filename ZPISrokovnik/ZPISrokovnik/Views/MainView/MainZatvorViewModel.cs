@@ -1,20 +1,15 @@
 using Xamarin.Forms;
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Input;
-using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZpisRokovnikService.DataLayer;
 using System.Threading.Tasks;
 
 namespace ZPISrokovnik.Views.MainView
 {
-    public class MainViewModel : BaseViewModel
+    public class MainZatvorViewModel : BaseViewModel
 	{
         #region Constructor
-        public MainViewModel (IPageService page)
+        public MainZatvorViewModel (IPageService page)
 		{
             this.pageService = page;
             GetDataByUserInstance();

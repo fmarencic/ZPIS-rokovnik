@@ -11,12 +11,12 @@ using ZPISrokovnik.Utils;
 namespace ZPISrokovnik.Views.MainView
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainView : ContentPage
+	public partial class MainZatvorView : ContentPage
 	{
-		public MainView ()
+		public MainZatvorView ()
 		{
 			InitializeComponent ();
-            BindingContext = new MainViewModel(new PageService());
+            BindingContext = new MainZatvorViewModel(new PageService());
 		}
 	}
 }

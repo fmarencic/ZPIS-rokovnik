@@ -1,17 +1,8 @@
 using Xamarin.Forms;
-﻿using Android.Net;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ServiceModel;
-using System.Threading.Tasks;
-using Plugin.LocalNotifications;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Utils.Data;
 using ZPISrokovnik.Views;
-using ZPISrokovnik.Views.Kalendar;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ZPISrokovnik

@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZpisRokovnikService.DataLayer;
 
 namespace ZPISrokovnik.Views.MainView
 {
-	public class MainDetailsViewModel : BaseViewModel
+    public class MainDetailsViewModel : BaseViewModel
 	{
         #region Constructor
         public MainDetailsViewModel (IPageService page, OsobaDTO obj)
