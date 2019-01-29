@@ -10,7 +10,7 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaPosjetiteljaZ
 {
 	public class EvidencijaPosjetiteljaZatvorenikaNaUlazuListViewViewModel : BaseViewModel
 	{
-		public EvidencijaPosjetiteljaZatvorenikaNaUlazuListViewViewModel ()
+		public EvidencijaPosjetiteljaZatvorenikaNaUlazuListViewViewModel (IPageService page)
 		{
 
 		}

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaPosjetiteljaZatvorenicimaNaUlazu.EvidencijaPosjetiteljaZatvorenikaNaUlazuListView">
+             x:Class="ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaRasporedaZatvorenikaPoRadnimMjestima.EvidencijaRasporedaZatvorenikaPoRadnimMjestimaListView">
     <ContentPage.Content>
         <StackLayout Padding="4">
             <ListView HasUnevenRows="True"
@@ -25,25 +25,21 @@
                                             <RowDefinition Height="*"></RowDefinition>
                                             <RowDefinition Height="*"></RowDefinition>
                                             <RowDefinition Height="*"></RowDefinition>
-                                            <RowDefinition Height="*"></RowDefinition>
                                         </Grid.RowDefinitions>
                                         <!--PODACI-->
-                                        <Label Text="Datum dolaska" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
-                                        <Label Text="Datum odlaska" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
-                                        <Label Text="{Binding DatumDolaska, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="0"/>
-                                        <Label Text="{Binding DatumOdlaska, StringFormat='\{0}'}" Grid.Column="1"/>
+                                        <Label Text="Datum rad od" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                                        <Label Text="Datum rad do" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
+                                        <Label Text="{Binding DatumRadOd, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="0"/>
+                                        <Label Text="{Binding DatumRadDo, StringFormat='\{0}'}" Grid.Column="1"/>
 
                                         <Label Text="Ime i prezime: " FontAttributes="Bold" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
-                                        <Label Text="{Binding ImePrezime, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        <Label Text="{Binding Zatvorenik, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
 
-                                        <Label Text="Zatvorenik: " FontAttributes="Bold" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
-                                        <Label Text="{Binding Zatvorenik, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        <Label Text="Radno mjesto: " FontAttributes="Bold" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
+                                        <Label Text="{Binding RadnoMjesto, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
 
-                                        <Label Text="Uloga: " FontAttributes="Bold" TextColor="Black" Grid.Row="4" Grid.Column="0"/>
-                                        <Label Text="{Binding Uloga, StringFormat='\{0}'}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"/>
-
-                                        <Label Text="Napomena: " FontAttributes="Bold" TextColor="Black" Grid.Row="5" Grid.Column="0"/>
-                                        <Label Text="{Binding Napomena, StringFormat='\{0}'}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        <Label Text="Datum rasporeda: " FontAttributes="Bold" TextColor="Black" Grid.Row="4" Grid.Column="0"/>
+                                        <Label Text="{Binding DatumRasporeda, StringFormat='\{0}'}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"/>
                                         <!--PODACI-->
                                     </Grid>
                                 </StackLayout>

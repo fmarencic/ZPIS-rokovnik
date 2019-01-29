@@ -1,12 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ZPISrokovnik.Views.Evidencije.EvidencijaSudskogNadzora.EvidencijaSudskogNadzoraListView">
+             x:Class="ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaSudskogNadzora.EvidencijaSudskogNadzoraListView">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="4">
+            <ListView HasUnevenRows="True"
+                      ItemsSource="{Binding Nesto, Mode=TwoWay}">
+                <!--promjeni 'Nesto'-->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Black" HasShadow="True" Margin="1" Padding="4">
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="112"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <!--PODACI-->
+                                        <Label Text="Datum: " FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                                        <Label Text="{Binding Datum, StringFormat='\{0}'}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        
+                                        <Label Text="Od:" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
+                                        <Label Text="Do" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
+                                        <Label Text="{Binding VrijemeOd, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="0"/>
+                                        <Label Text="{Binding VrijemeDo, StringFormat='\{0}'}" Grid.Column="1"/>
+
+                                        <Label Text="Sud: " FontAttributes="Bold" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
+                                        <Label Text="{Binding Sud, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        <!--PODACI-->
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZPISrokovnik.Utils;
+using ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUlazu;
 
 namespace ZPISrokovnik.Views.Evidencije
 {
@@ -15,6 +17,7 @@ namespace ZPISrokovnik.Views.Evidencije
 		public EvidencijaPosjetiteljaZatvorenicimaNaUlazuView ()
 		{
 			InitializeComponent ();
-		}
+            this.BindingContext = new EvidencijaPosjetiteljaZatvorenikaNaUlazuViewModel(new PageService());
+        }
 	}
 }

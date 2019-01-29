@@ -59,7 +59,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\Evidencije\EvidencijeProbacija\EvidencijeProbacijaMainView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Evidencije\EvidencijeZatvor\EvidencijaPosjetiteljaZatvorenicimaNaUlazu\EvidencijaPosjetiteljaZatvorenikaNaUlazuListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Evidencije\EvidencijeZatvor\EvidencijaRasporedaZatvorenikaPoRadnimMjestima\EvidencijaRasporedaZatvorenikaPoRadnimMjestimaListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Evidencije\EvidencijeZatvor\EvidencijaSudskogNadzora\EvidencijaSudskogNadzoraListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Kalendar\KalendarView\KalendarView.xaml">
@@ -97,7 +106,6 @@
 
   <ItemGroup>
     <Folder Include="Connected Services\" />
-    <Folder Include="Views\Evidencije\EvidencijeProbacija\" />
   </ItemGroup>
 
   <ItemGroup>

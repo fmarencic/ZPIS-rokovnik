@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZPISrokovnik.Utils;
 
-namespace ZPISrokovnik.Views.Evidencije.EvidencijaSudskogNadzora
+namespace ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaSudskogNadzora
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class EvidencijaSudskogNadzoraListView : ContentPage
@@ -15,6 +16,7 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaSudskogNadzora
 		public EvidencijaSudskogNadzoraListView ()
 		{
 			InitializeComponent ();
+            this.BindingContext = new EvidencijaSudskogNadzoraListViewViewModel(new PageService());
 		}
 	}
 }
