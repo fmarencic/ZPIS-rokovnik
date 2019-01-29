@@ -87,5 +87,7 @@
 
   <ItemGroup>
     <Folder Include="Connected Services\" />
+    <Folder Include="Views\Evidencije\EvidencijeProbacija\ProbacijaDokument\" />
+    <Folder Include="Views\Evidencije\EvidencijeProbacija\ProbacijaUpisnik\" />
   </ItemGroup>
 </Project>
