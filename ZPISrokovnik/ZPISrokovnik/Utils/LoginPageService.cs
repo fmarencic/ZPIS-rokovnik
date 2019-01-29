@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using UserTypeInterface;
 using Xamarin.Forms;
 using ZPISrokovnik.Views;
 
@@ -17,6 +18,15 @@ namespace ZPISrokovnik.Utils
         {
             Application.Current.MainPage.Navigation.InsertPageBefore(page, loginView);
             await Application.Current.MainPage.Navigation.PopAsync();
+        }
+
+        public async Task PushAfterLogin(ITabbedPageView view)
+        {
+            if (typeof(MainTabbedPage) == view.GetType())
+            {
+                Application.Current.MainPage.Navigation.InsertPageBefore((MainTabbedPage)view, loginView);
+                await Application.Current.MainPage.Navigation.PopAsync();
+            }
         }
     }
 }

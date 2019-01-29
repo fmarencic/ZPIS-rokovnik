@@ -187,6 +187,10 @@
     <Compile Include="Migrations\201901261516427_26012019.Designer.cs">
       <DependentUpon>201901261516427_26012019.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901282248001_28012019.cs" />
+    <Compile Include="Migrations\201901282248001_28012019.Designer.cs">
+      <DependentUpon>201901282248001_28012019.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelEF\BaseModel.cs" />
     <Compile Include="ModelEF\BrojnoStanjeViewEF.cs" />
@@ -298,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901261516427_26012019.resx">
       <DependentUpon>201901261516427_26012019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901282248001_28012019.resx">
+      <DependentUpon>201901282248001_28012019.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -56,6 +56,12 @@ namespace ZPISdatabaseAzure
             .HasOptional(p => p.StatusPredmeta)
             .WithMany(p => p.StatusiPredmeta)
             .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<PredmetEF>()
+            .HasOptional(p => p.Tijelo)
+            .WithMany(p => p.Tijela)
+            .WillCascadeOnDelete(false);
+
         }
 
         #region DbSet

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using UserTypeInterface;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Utils.Interface;
@@ -240,7 +241,22 @@ namespace ZPISrokovnik.Views
                     App.TijeloId = SelectedItem.Key;
                     App.KorisnickoIme = KorisnickoIme.Value;
                     App.KorisnickaOznaka = selectedItem.Value;
+<<<<<<< HEAD
                     pageService.PushAfterLogin(new MainZatvorTabbedPage());
+=======
+                    /*
+                     if(tijelo = probacija)
+                        Interface View = new ProbacijaView();
+                     else
+                        (tijelo = zatvor)
+                        Interface View = new ZatvorView
+                     */
+
+                    ITabbedPageView View = new MainTabbedPage();
+
+
+                    pageService.PushAfterLogin(View);
+>>>>>>> fc93e03b889015886f42983f12231d01f8a337e7
                 }
             }
             else
