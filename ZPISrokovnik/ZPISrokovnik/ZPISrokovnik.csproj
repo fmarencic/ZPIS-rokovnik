@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\UserTypeInterface\UserTypeInterface.csproj" />
     <ProjectReference Include="..\..\ZPISRokovnikServiceProxy\ZPISRokovnikServiceProxy.csproj" />
   </ItemGroup>
 

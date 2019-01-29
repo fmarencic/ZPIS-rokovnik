@@ -22,9 +22,14 @@ namespace ZPISrokovnik.Utils
 
         public async Task PushAfterLogin(ITabbedPageView view)
         {
-            if (typeof(MainTabbedPage) == view.GetType())
+            if (typeof(MainZatvorTabbedPage) == view.GetType())
             {
-                Application.Current.MainPage.Navigation.InsertPageBefore((MainTabbedPage)view, loginView);
+                Application.Current.MainPage.Navigation.InsertPageBefore((MainZatvorTabbedPage)view, loginView);
+                await Application.Current.MainPage.Navigation.PopAsync();
+            }
+            if (typeof(MainProbacijaTabbedPage) == view.GetType())
+            {
+                Application.Current.MainPage.Navigation.InsertPageBefore((MainProbacijaTabbedPage)view, loginView);
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
         }

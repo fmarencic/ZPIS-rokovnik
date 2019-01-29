@@ -183,9 +183,6 @@ namespace ZPISrokovnik.Views
 
                 try
                 {
-                    //var korisnik = await App.client.GetKorisnikByUsernameAsync(KorisnickoIme.Value, "");
-
-
                     var korisnik = await Task.Factory.FromAsync(
                       App.client.BeginGetKorisnikByUsername,
                       App.client.EndGetKorisnikByUsername,
@@ -241,22 +238,20 @@ namespace ZPISrokovnik.Views
                     App.TijeloId = SelectedItem.Key;
                     App.KorisnickoIme = KorisnickoIme.Value;
                     App.KorisnickaOznaka = selectedItem.Value;
-<<<<<<< HEAD
-                    pageService.PushAfterLogin(new MainZatvorTabbedPage());
-=======
-                    /*
-                     if(tijelo = probacija)
-                        Interface View = new ProbacijaView();
-                     else
-                        (tijelo = zatvor)
-                        Interface View = new ZatvorView
-                     */
 
-                    ITabbedPageView View = new MainTabbedPage();
+                    ITabbedPageView View = null;
 
+                    var VrstaTijela = App.client.DohvatiVrstuTijela("", App.TijeloId);
 
+                    if (VrstaTijela.Oznaka.Equals("OV_ZAT"))
+                    {
+                        View = new MainZatvorTabbedPage();
+                    }
+                    if (VrstaTijela.Oznaka.Equals("OV_PRU") || VrstaTijela.Oznaka.Equals("MIN"))
+                    {
+                        View = new MainProbacijaTabbedPage();
+                    }
                     pageService.PushAfterLogin(View);
->>>>>>> fc93e03b889015886f42983f12231d01f8a337e7
                 }
             }
             else
