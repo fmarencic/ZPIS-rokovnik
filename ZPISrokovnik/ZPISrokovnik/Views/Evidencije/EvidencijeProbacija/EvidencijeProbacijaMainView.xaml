@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZPISrokovnik.Views.Evidencije.EvidencijeProbacija.EvidencijeProbacijaMainView">
+    <ContentPage.Content>
+        <StackLayout Padding="4">
+            <ListView HasUnevenRows="True"
+                      ItemsSource="{Binding Nesto, Mode=TwoWay}">
+                <!--promjeni 'Nesto'-->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Black" HasShadow="True" Margin="1" Padding="4">
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="112"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <!--PODACI-->
+                                        <Label Text="Ured: " FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                                        <Label Text="{Binding Ured, StringFormat='\{0}'}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                                        <Label Text="Oznaka Predmeta: " FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
+                                        <Label Text="{Binding OznakaPredmeta, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                                        <Label Text="Naziv predmeta: " FontAttributes="Bold" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
+                                        <Label Text="{Binding NazivPredmeta, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                                        <Label Text="Datum osnivanja: " FontAttributes="Bold" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
+                                        <Label Text="{Binding DatumOsnivanja, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                                        <Label Text="Tip predmeta: " FontAttributes="Bold" TextColor="Black" Grid.Row="4" Grid.Column="0"/>
+                                        <Label Text="{Binding TipPredmeta, StringFormat='\{0}'}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                                        <Label Text="Status predmeta: " FontAttributes="Bold" TextColor="Black" Grid.Row="5" Grid.Column="0"/>
+                                        <Label Text="{Binding StatusPredmeta, StringFormat='\{0}'}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        <!--PODACI-->
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
