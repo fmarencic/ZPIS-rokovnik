@@ -137,7 +137,7 @@ namespace ZPISrokovnik.Views.Evidencije
             Evidencija = App.client.DohvatiEvidenciju("", "E_RM");
             if (Evidencija.DigitalniDokument != null)
             {
-                List<EvidencijaRasporedaZatvorenikaJSONModel> evidencija = (List<EvidencijaRasporedaZatvorenikaJSONModel>)Newtonsoft.Json.JsonConvert.DeserializeObject(Evidencija.DigitalniDokument);
+                List<EvidencijaRasporedaZatvorenikaJSONModel> evidencija = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EvidencijaRasporedaZatvorenikaJSONModel>>(Evidencija.DigitalniDokument);
                 EvidencijeRasporeda = evidencija;
             }
         }
@@ -176,7 +176,7 @@ namespace ZPISrokovnik.Views.Evidencije
             {
                 foreach (var item in radnaMjesta)
                 {
-                    DomenaDTO rm = App.client.DohvatiDomenu("", item.Id);
+                    DomenaDTO rm = item as DomenaDTO;
                     RadnaMjesta.Add(rm);
                 }
             }

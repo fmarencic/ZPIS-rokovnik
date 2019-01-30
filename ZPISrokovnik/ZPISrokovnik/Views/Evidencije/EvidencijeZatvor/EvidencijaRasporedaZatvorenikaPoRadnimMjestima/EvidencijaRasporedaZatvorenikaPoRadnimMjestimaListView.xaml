@@ -4,8 +4,10 @@
              x:Class="ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaRasporedaZatvorenikaPoRadnimMjestima.EvidencijaRasporedaZatvorenikaPoRadnimMjestimaListView">
     <ContentPage.Content>
         <StackLayout Padding="4">
+            <Button Text="Novi zapis"
+                    Command="{Binding NoviZapisCommand}"/>
             <ListView HasUnevenRows="True"
-                      ItemsSource="{Binding Nesto, Mode=TwoWay}">
+                      ItemsSource="{Binding EvidencijeRasporeda, Mode=TwoWay}">
                 <!--promjeni 'Nesto'-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -30,13 +32,13 @@
                                         <Label Text="Datum rad od" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
                                         <Label Text="Datum rad do" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
                                         <Label Text="{Binding DatumRadOd, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="0"/>
-                                        <Label Text="{Binding DatumRadDo, StringFormat='\{0}'}" Grid.Column="1"/>
+                                        <Label Text="{Binding DatumRadDo, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="1"/>
 
                                         <Label Text="Ime i prezime: " FontAttributes="Bold" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
                                         <Label Text="{Binding Zatvorenik, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
 
                                         <Label Text="Radno mjesto: " FontAttributes="Bold" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
-                                        <Label Text="{Binding RadnoMjesto, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        <Label Text="{Binding RadnoMjesto.Naziv, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
 
                                         <Label Text="Datum rasporeda: " FontAttributes="Bold" TextColor="Black" Grid.Row="4" Grid.Column="0"/>
                                         <Label Text="{Binding DatumRasporeda, StringFormat='\{0}'}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"/>

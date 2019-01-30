@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="4">
             <ListView HasUnevenRows="True"
-                      ItemsSource="{Binding Nesto, Mode=TwoWay}">
+                      ItemsSource="{Binding UpisniciProbacija, Mode=TwoWay}">
                 <!--promjeni 'Nesto'-->
                 <ListView.ItemTemplate>
                     <DataTemplate>

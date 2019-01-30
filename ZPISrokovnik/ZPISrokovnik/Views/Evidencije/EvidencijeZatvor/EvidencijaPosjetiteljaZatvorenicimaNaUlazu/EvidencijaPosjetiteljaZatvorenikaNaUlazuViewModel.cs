@@ -145,20 +145,6 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
             }
         }
 
-        private ObservableCollection<OsobaDTO> zatvorenici;
-        public ObservableCollection<OsobaDTO> Zatvorenici
-        {
-            get
-            {
-                return zatvorenici;
-            }
-            set
-            {
-                SetValue(ref zatvorenici, value);
-                OnPropertyChanged(nameof(Zatvorenici));
-            }
-        }
-
         #endregion
 
         #region PageService
@@ -174,7 +160,7 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
             Evidencija = App.client.DohvatiEvidenciju("", "E_PZU");
             if (Evidencija.DigitalniDokument != null)
             {
-                List<EvidencijaPosjetiteljaJSONModel> evidencija = (List<EvidencijaPosjetiteljaJSONModel>)Newtonsoft.Json.JsonConvert.DeserializeObject(Evidencija.DigitalniDokument);
+                List<EvidencijaPosjetiteljaJSONModel> evidencija = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EvidencijaPosjetiteljaJSONModel>>(Evidencija.DigitalniDokument);
                 EvidencijePosjetitelja = evidencija;
             }
         }

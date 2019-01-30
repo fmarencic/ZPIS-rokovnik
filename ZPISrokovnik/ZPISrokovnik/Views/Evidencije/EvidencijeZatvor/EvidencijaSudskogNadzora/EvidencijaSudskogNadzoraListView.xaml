@@ -4,8 +4,10 @@
              x:Class="ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaSudskogNadzora.EvidencijaSudskogNadzoraListView">
     <ContentPage.Content>
         <StackLayout Padding="4">
+            <Button Text="Novi zapis"
+                    Command="{Binding NoviZapisCommand}"/>
             <ListView HasUnevenRows="True"
-                      ItemsSource="{Binding Nesto, Mode=TwoWay}">
+                      ItemsSource="{Binding EvidencijeSudskogNadzora, Mode=TwoWay}">
                 <!--promjeni 'Nesto'-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -31,11 +33,11 @@
                                         
                                         <Label Text="Od:" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
                                         <Label Text="Do" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
-                                        <Label Text="{Binding VrijemeOd, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="0"/>
-                                        <Label Text="{Binding VrijemeDo, StringFormat='\{0}'}" Grid.Column="1"/>
+                                        <Label Text="{Binding Od, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="0"/>
+                                        <Label Text="{Binding Do, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="1"/>
 
                                         <Label Text="Sud: " FontAttributes="Bold" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
-                                        <Label Text="{Binding Sud, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                        <Label Text="{Binding Sud.Naziv, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
                                         <!--PODACI-->
                                     </Grid>
                                 </StackLayout>

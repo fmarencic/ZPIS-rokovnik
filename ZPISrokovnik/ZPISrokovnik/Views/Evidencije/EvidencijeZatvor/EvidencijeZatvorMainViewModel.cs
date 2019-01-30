@@ -6,6 +6,9 @@ using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Views.Evidencije.EvidencijaRasporedaZatvorenikaPoRadnimMjestima;
 using ZPISrokovnik.Views.Evidencije.EvidencijaSudskogNadzora;
+using ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaPosjetiteljaZatvorenicimaNaUlazu;
+using ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaRasporedaZatvorenikaPoRadnimMjestima;
+using ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaSudskogNadzora;
 
 namespace ZPISrokovnik.Views.Evidencije
 {
@@ -39,17 +42,17 @@ namespace ZPISrokovnik.Views.Evidencije
 
         private void OtvoriEvidencijuPosjetitelja()
         {
-            pageService.PushAsync(new EvidencijaPosjetiteljaZatvorenicimaNaUlazuView());
+            pageService.PushAsync(new EvidencijaPosjetiteljaZatvorenikaNaUlazuListView());
         }
 
         private void OtvoriEvidencijuRasporedaZatvorenikaPoRadnimMjestima()
         {
-            pageService.PushAsync(new EvidencijaRasporedaZatvorenikaPoRadnimMjestimaView());
+            pageService.PushAsync(new EvidencijaRasporedaZatvorenikaPoRadnimMjestimaListView());
         }
 
         private void OtvorEvidencijuSudskogNadzora()
         {
-            pageService.PushAsync(new EvidencijaSudskogNadzoraView());
+            pageService.PushAsync(new EvidencijaSudskogNadzoraListView());
         }
 
         #endregion

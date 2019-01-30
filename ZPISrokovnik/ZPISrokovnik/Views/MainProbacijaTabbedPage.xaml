@@ -5,11 +5,12 @@
             xmlns:kalendarView="clr-namespace:ZPISrokovnik.Views.Kalendar.KalendarView;assembly=ZPISrokovnik"
             xmlns:settings="clr-namespace:ZPISrokovnik.Views.Postavke"
             xmlns:evidencije="clr-namespace:ZPISrokovnik.Views.Evidencije"
+            xmlns:evidencijeprobacija="clr-namespace:ZPISrokovnik.Views.Evidencije.EvidencijeProbacija"
             x:Class="ZPISrokovnik.Views.MainProbacijaTabbedPage">
   <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <main:MainProbacijaView Title="Home" Icon="home.png"/>
-        <evidencije:EvidencijeZatvorMainView Title="Notes" Icon="notes.png"/>
+        <evidencijeprobacija:EvidencijeProbacijaMainView Title="Notes" Icon="notes.png"/>
         <kalendarView:KalendarView Title="Calendar" Icon="calendar.png"/>
         <settings:PostavkeView Title="Settings" Icon="settings.png"/>
     </TabbedPage.Children>

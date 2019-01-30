@@ -4,8 +4,10 @@
              x:Class="ZPISrokovnik.Views.Evidencije.EvidencijeZatvor.EvidencijaPosjetiteljaZatvorenicimaNaUlazu.EvidencijaPosjetiteljaZatvorenikaNaUlazuListView">
     <ContentPage.Content>
         <StackLayout Padding="4">
+            <Button Text="Novi zapis"
+                    Command="{Binding NoviZapisCommand}"/>
             <ListView HasUnevenRows="True"
-                      ItemsSource="{Binding Nesto, Mode=TwoWay}">
+                      ItemsSource="{Binding EvidencijePosjetitelja, Mode=TwoWay}">
                 <!--promjeni 'Nesto'-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -31,7 +33,7 @@
                                         <Label Text="Datum dolaska" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
                                         <Label Text="Datum odlaska" FontAttributes="Bold" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
                                         <Label Text="{Binding DatumDolaska, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="0"/>
-                                        <Label Text="{Binding DatumOdlaska, StringFormat='\{0}'}" Grid.Column="1"/>
+                                        <Label Text="{Binding DatumOdlaska, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="1"/>
 
                                         <Label Text="Ime i prezime: " FontAttributes="Bold" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
                                         <Label Text="{Binding ImePrezime, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>

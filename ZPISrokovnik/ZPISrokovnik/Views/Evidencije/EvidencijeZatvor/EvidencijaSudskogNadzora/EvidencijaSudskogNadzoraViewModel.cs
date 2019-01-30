@@ -160,7 +160,7 @@ namespace ZPISrokovnik.Views.Evidencije
             {
                 foreach (var item in sudovi)
                 {
-                    OsobaDTO o = App.client.DohvatiOsobu("", item.Id);
+                    OsobaDTO o = item as OsobaDTO;
                     Sudovi.Add(o);
                 }
             }
