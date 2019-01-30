@@ -5,7 +5,8 @@
             xmlns:kalendarView="clr-namespace:ZPISrokovnik.Views.Kalendar.KalendarView;assembly=ZPISrokovnik"
             xmlns:settings="clr-namespace:ZPISrokovnik.Views.Postavke"
             xmlns:evidencije="clr-namespace:ZPISrokovnik.Views.Evidencije"
-            x:Class="ZPISrokovnik.Views.MainZatvorTabbedPage">
+            x:Class="ZPISrokovnik.Views.MainZatvorTabbedPage"
+            Title="ZPIS rokovnik">
     <TabbedPage.Children>
         <main:MainZatvorView Title="Home" Icon="home.png"/>
         <evidencije:EvidencijeZatvorMainView Title="Notes" Icon="notes.png"/>

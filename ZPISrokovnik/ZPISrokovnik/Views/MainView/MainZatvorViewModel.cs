@@ -207,7 +207,6 @@ namespace ZPISrokovnik.Views.MainView
 
         private async void GetDataByUserInstance()
         {
-            //BrojcanoStanjeDTO brojcanoStanje = null;//await App.client.VratiBrojcanoStanjeAsync(App.TijeloId, "");
 
             var brojcanoStanje = await Task.Factory.FromAsync(
                                   App.client.BeginVratiBrojcanoStanje,

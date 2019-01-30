@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
@@ -98,12 +99,22 @@ namespace ZPISrokovnik.Views.MainView
         {
             pageService.PushAsync(new MainDetails(ItemSelected));
         }
-        private void InspectAndShowData()
+        private async Task InspectAndShowData()
         {
-            OsobaDTO osobaNazivTijela = App.client.VratiTijelo(App.TijeloId, "");
+            //OsobaDTO osobaNazivTijela = App.client.VratiTijelo(App.TijeloId, "");
+            OsobaDTO osobaNazivTijela = await Task.Factory.FromAsync(
+                                  App.client.BeginVratiTijelo,
+                                  App.client.EndVratiTijelo,
+                                  App.TijeloId, "",
+                                  TaskCreationOptions.None);
             Caption = osobaNazivTijela.Naziv;
             if (Regex.IsMatch(ForwardedSearch, @"^\d+$")) {
-                OsobaDTO osoba = App.client.PretraziPoOIBu(ForwardedSearch, "");
+                //OsobaDTO osoba = App.client.PretraziPoOIBu(ForwardedSearch, "");
+                OsobaDTO osoba = await Task.Factory.FromAsync(
+                                  App.client.BeginPretraziPoOIBu,
+                                  App.client.EndPretraziPoOIBu,
+                                  ForwardedSearch, "",
+                                  TaskCreationOptions.None);
                 OsobaDTOToObject(osoba);
             }
             else
@@ -113,12 +124,22 @@ namespace ZPISrokovnik.Views.MainView
                     string[] parsedName = ForwardedSearch.Split(' ');
                     string firstName = parsedName[0];
                     string lastName = parsedName[1];
-                    OsobaDTO[] osoba = App.client.PretraziPoImenuIPrezimenu(firstName, lastName, "");
+                    //OsobaDTO[] osoba = App.client.PretraziPoImenuIPrezimenu(firstName, lastName, "");
+                    OsobaDTO[] osoba = await Task.Factory.FromAsync(
+                                  App.client.BeginPretraziPoImenuIPrezimenu,
+                                  App.client.EndPretraziPoImenuIPrezimenu,
+                                  firstName, lastName, "",
+                                  TaskCreationOptions.None);
                     OsobaDTOToList(osoba);
                 }
                 else
                 {
-                    OsobaDTO[] osoba = App.client.PretraziPoImenuIPrezimenu(ForwardedSearch, ForwardedSearch, "");
+                    //OsobaDTO[] osoba = App.client.PretraziPoImenuIPrezimenu(ForwardedSearch, ForwardedSearch, "");
+                    OsobaDTO[] osoba = await Task.Factory.FromAsync(
+                                  App.client.BeginPretraziPoImenuIPrezimenu,
+                                  App.client.EndPretraziPoImenuIPrezimenu,
+                                  ForwardedSearch, ForwardedSearch, "",
+                                  TaskCreationOptions.None);
                     OsobaDTOToList(osoba);
                 }
             }

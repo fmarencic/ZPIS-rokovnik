@@ -132,9 +132,14 @@ namespace ZPISrokovnik.Views.Evidencije
 
         #region Methods
 
-        private void DohvatiPodatkeUEvidencijama()
+        private async Task DohvatiPodatkeUEvidencijama()
         {
-            Evidencija = App.client.DohvatiEvidenciju("", "E_RM");
+            //Evidencija = App.client.DohvatiEvidenciju("", "E_RM");
+            Evidencija = await Task.Factory.FromAsync(
+                                  App.client.BeginDohvatiEvidenciju,
+                                  App.client.EndDohvatiEvidenciju,
+                                  "", "E_RM",
+                                  TaskCreationOptions.None);
             if (Evidencija.DigitalniDokument != null)
             {
                 List<EvidencijaRasporedaZatvorenikaJSONModel> evidencija = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EvidencijaRasporedaZatvorenikaJSONModel>>(Evidencija.DigitalniDokument);

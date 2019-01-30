@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using ZPISrokovnik.JSONModel;
@@ -155,9 +156,14 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
 
         #region Methods
 
-        private void DohvatiPodatkeUEvidencijama()
+        private async Task DohvatiPodatkeUEvidencijama()
         {
-            Evidencija = App.client.DohvatiEvidenciju("", "E_PZU");
+            //Evidencija = App.client.DohvatiEvidenciju("", "E_PZU");
+            Evidencija = await Task.Factory.FromAsync(
+                                  App.client.BeginDohvatiEvidenciju,
+                                  App.client.EndDohvatiEvidenciju,
+                                  "", "E_PZU",
+                                  TaskCreationOptions.None);
             if (Evidencija.DigitalniDokument != null)
             {
                 List<EvidencijaPosjetiteljaJSONModel> evidencija = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EvidencijaPosjetiteljaJSONModel>>(Evidencija.DigitalniDokument);
@@ -166,7 +172,7 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
         }
 
 
-        private void UnesiEvidenciju()
+        private async Task UnesiEvidenciju()
         {
             EvidencijaPosjetiteljaJSONModel obj = new EvidencijaPosjetiteljaJSONModel();
 
@@ -184,7 +190,12 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
 
                 Evidencija.DigitalniDokument = jsonObj;
 
-                App.client.UnesiEvidenciju("", Evidencija);
+                //App.client.UnesiEvidenciju("", Evidencija);
+                await Task.Factory.FromAsync(
+                    App.client.BeginUnesiEvidenciju,
+                    App.client.EndUnesiEvidenciju,
+                    "", Evidencija,
+                    TaskCreationOptions.None);
             }
             catch (Exception ex)
             {

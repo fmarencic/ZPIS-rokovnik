@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.ServiceModel;
+using ZpisRokovnikService.DataLayer;
+
 namespace ZpisRokovnikService.DataLayer
 {
     using System.Runtime.Serialization;
@@ -2088,6 +2092,453 @@ public partial class DohvatiEvidencijuCompletedEventArgs : System.ComponentModel
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class Service1Client : System.ServiceModel.ClientBase<IService1>, IService1
 {
+
+    protected override IService1 CreateChannel()
+    {
+        return new Service1ClientChannel(this);
+    }
+
+    private class Service1ClientChannel : ChannelBase<IService1>, IService1
+    {
+        public Service1ClientChannel(System.ServiceModel.ClientBase<IService1> client) : base(client)
+        {
+
+        }
+
+        public System.IAsyncResult BeginDohvatiDomenu(string token, long Id, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = Id;
+            return (IAsyncResult)base.BeginInvoke("DohvatiDomenu", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiEvidenciju(string token, string oznakaEvidencije, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = oznakaEvidencije;
+            return (IAsyncResult)base.BeginInvoke("DohvatiEvidenciju", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiFotografijuOsobe(string OIB, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = OIB;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("DohvatiFotografijuOsobe", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[3];
+            _args[0] = VrsteKalendara;
+            _args[1] = tijeloId;
+            _args[2] = token;
+            return (IAsyncResult)base.BeginInvoke("DohvatiKalendarskeZapise", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiMaticu(string token, string oib, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = oib;
+            return (IAsyncResult)base.BeginInvoke("DohvatiMaticu", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiOsobu(string token, long Id, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = Id;
+            return (IAsyncResult)base.BeginInvoke("DohvatiOsobu", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = OsobaId;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("DohvatiPredmeteNaKojojJeOsobaKaznjenik", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiProbacijskeUpisnike(string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[1];
+            _args[0] = token;
+            return (IAsyncResult)base.BeginInvoke("DohvatiProbacijskeUpisnike", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiRadnaMjesta(string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[1];
+            _args[0] = token;
+            return (IAsyncResult)base.BeginInvoke("DohvatiRadnaMjesta", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiVrstuTijela(string token, long tijeloId, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = tijeloId;
+            return (IAsyncResult)base.BeginInvoke("DohvatiVrstuTijela", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginDohvatiZatvorenike(string token, long tijeloId, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = tijeloId;
+            return (IAsyncResult)base.BeginInvoke("DohvatiZatvorenike", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginGetKorisnikByUsername(string Username, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = Username;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("GetKorisnikByUsername", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginLoginUser(string Username, string Password, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = Username;
+            _args[1] = Password;
+            return (IAsyncResult)base.BeginInvoke("LoginUser", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginPretraziPoImenuIPrezimenu(string Ime, string Prezime, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[3];
+            _args[0] = Ime;
+            _args[1] = Prezime;
+            _args[2] = token;
+            return (IAsyncResult)base.BeginInvoke("PretraziPoImenuIPrezimenu", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginPretraziPoOIBu(string OIB, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = OIB;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("PretraziPoOIBu", _args, callback, asyncState);
+
+        }
+
+        public IAsyncResult BeginTestMethod(AsyncCallback callback, object asyncState)
+        {
+            throw new NotImplementedException();
+        }
+
+        public System.IAsyncResult BeginUnesiEvidenciju(string token, ZpisRokovnikService.DataLayer.DokumentDTO doc, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = doc;
+            return (IAsyncResult)base.BeginInvoke("UnesiEvidenciju", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginVratiBrojcanoStanje(long tijeloId, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = tijeloId;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("VratiBrojcanoStanje", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginVratiEvidenciju(string token, string oznaka, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = token;
+            _args[1] = oznaka;
+            return (IAsyncResult)base.BeginInvoke("VratiEvidenciju", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginVratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = nazivPrijavljenogTijela;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("VratiPrijavljenoTijelo", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginVratiPrijavljenuOsobu(long id, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = id;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("VratiPrijavljenuOsobu", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginVratiSudove(string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[1];
+            _args[0] = token;
+            return (IAsyncResult)base.BeginInvoke("VratiSudove", _args, callback, asyncState);
+        }
+
+        public System.IAsyncResult BeginVratiTijelo(long tijeloId, string token, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[2];
+            _args[0] = tijeloId;
+            _args[1] = token;
+            return (IAsyncResult)base.BeginInvoke("VratiTijelo", _args, callback, asyncState);
+        }
+
+        public DomenaDTO DohvatiDomenu(string token, long Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DokumentDTO DohvatiEvidenciju(string token, string oznakaEvidencije)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OsobaFotografijeDTO DohvatiFotografijuOsobe(string OIB, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public KalendarDTO[] DohvatiKalendarskeZapise(string[] VrsteKalendara, long tijeloId, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PrikazMaticeDTO[] DohvatiMaticu(string token, string oib)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OsobaDTO DohvatiOsobu(string token, long Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PredmetDTO[] DohvatiPredmeteNaKojojJeOsobaKaznjenik(long OsobaId, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ProbacijaUpisnikDTO[] DohvatiProbacijskeUpisnike(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DomenaDTO[] DohvatiRadnaMjesta(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DomenaDTO DohvatiVrstuTijela(string token, long tijeloId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public SudionikDTO[] DohvatiZatvorenike(string token, long tijeloId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ZpisRokovnikService.DataLayer.DomenaDTO EndDohvatiDomenu(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.DomenaDTO)base.EndInvoke("DohvatiDomenu", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.DokumentDTO EndDohvatiEvidenciju(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.DokumentDTO)base.EndInvoke("DohvatiEvidenciju", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaFotografijeDTO EndDohvatiFotografijuOsobe(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaFotografijeDTO)base.EndInvoke("DohvatiFotografijuOsobe", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.KalendarDTO[] EndDohvatiKalendarskeZapise(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.KalendarDTO[])base.EndInvoke("DohvatiKalendarskeZapise", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.PrikazMaticeDTO[] EndDohvatiMaticu(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.PrikazMaticeDTO[])base.EndInvoke("DohvatiMaticu", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaDTO EndDohvatiOsobu(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaDTO)base.EndInvoke("DohvatiOsobu", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.PredmetDTO[] EndDohvatiPredmeteNaKojojJeOsobaKaznjenik(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.PredmetDTO[])base.EndInvoke("DohvatiPredmeteNaKojojJeOsobaKaznjenik", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.ProbacijaUpisnikDTO[] EndDohvatiProbacijskeUpisnike(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.ProbacijaUpisnikDTO[])base.EndInvoke("DohvatiProbacijskeUpisnike", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.DomenaDTO[] EndDohvatiRadnaMjesta(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.DomenaDTO[])base.EndInvoke("DohvatiRadnaMjesta", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.DomenaDTO EndDohvatiVrstuTijela(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.DomenaDTO)base.EndInvoke("DohvatiVrstuTijela", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.SudionikDTO[] EndDohvatiZatvorenike(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.SudionikDTO[])base.EndInvoke("DohvatiZatvorenike", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.KorisnikDTO EndGetKorisnikByUsername(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.KorisnikDTO)base.EndInvoke("GetKorisnikByUsername", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.LoginDTO EndLoginUser(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.LoginDTO)base.EndInvoke("LoginUser", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaDTO[] EndPretraziPoImenuIPrezimenu(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaDTO[])base.EndInvoke("PretraziPoImenuIPrezimenu", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaDTO EndPretraziPoOIBu(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaDTO)base.EndInvoke("PretraziPoOIBu", _args, result);
+        }
+
+        public string[] EndTestMethod(IAsyncResult result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EndUnesiEvidenciju(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            base.EndInvoke("UnesiEvidenciju", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO EndVratiBrojcanoStanje(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.BrojcanoStanjeDTO)base.EndInvoke("VratiBrojcanoStanje", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.DokumentDTO EndVratiEvidenciju(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.DokumentDTO)base.EndInvoke("VratiEvidenciju", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenoTijelo(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaDTO)base.EndInvoke("VratiPrijavljenoTijelo", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiPrijavljenuOsobu(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaDTO)base.EndInvoke("VratiPrijavljenuOsobu", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaDTO[] EndVratiSudove(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaDTO[])base.EndInvoke("VratiSudove", _args, result);
+        }
+
+        public ZpisRokovnikService.DataLayer.OsobaDTO EndVratiTijelo(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            return (ZpisRokovnikService.DataLayer.OsobaDTO)base.EndInvoke("VratiTijelo", _args, result);
+        }
+
+        public KorisnikDTO GetKorisnikByUsername(string Username, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public LoginDTO LoginUser(string Username, string Password)
+        {
+            throw new NotImplementedException();
+            //return base.Channel.LoginUser(Username, Password);
+        }
+
+        public OsobaDTO[] PretraziPoImenuIPrezimenu(string Ime, string Prezime, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OsobaDTO PretraziPoOIBu(string OIB, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string[] TestMethod()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UnesiEvidenciju(string token, DokumentDTO doc)
+        {
+            throw new NotImplementedException();
+        }
+
+        public BrojcanoStanjeDTO VratiBrojcanoStanje(long tijeloId, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DokumentDTO VratiEvidenciju(string token, string oznaka)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OsobaDTO VratiPrijavljenoTijelo(string nazivPrijavljenogTijela, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OsobaDTO VratiPrijavljenuOsobu(long id, string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OsobaDTO[] VratiSudove(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OsobaDTO VratiTijelo(long tijeloId, string token)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     private BeginOperationDelegate onBeginTestMethodDelegate;
 

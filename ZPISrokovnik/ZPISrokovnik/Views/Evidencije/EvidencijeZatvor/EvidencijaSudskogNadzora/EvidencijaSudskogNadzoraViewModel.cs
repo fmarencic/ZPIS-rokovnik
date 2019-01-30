@@ -117,9 +117,14 @@ namespace ZPISrokovnik.Views.Evidencije
 
         #region Methods
 
-        private void DohvatiPodatkeUEvidencijama()
+        private async Task DohvatiPodatkeUEvidencijama()
         {
-            Evidencija = App.client.DohvatiEvidenciju("", "E_SN");
+            //Evidencija = App.client.DohvatiEvidenciju("", "E_SN");
+            Evidencija = await Task.Factory.FromAsync(
+                                  App.client.BeginDohvatiEvidenciju,
+                                  App.client.EndDohvatiEvidenciju,
+                                  "", "E_SN",
+                                  TaskCreationOptions.None);
             if (Evidencija.DigitalniDokument != null)
             {
                 List<EvidencijaSudskogNadzoraJSONModel> evidencija = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EvidencijaSudskogNadzoraJSONModel>>(Evidencija.DigitalniDokument);
@@ -127,7 +132,7 @@ namespace ZPISrokovnik.Views.Evidencije
             }
         }
 
-        private void UnesiEvidenciju()
+        private async Task UnesiEvidenciju()
         {
             EvidencijaSudskogNadzoraJSONModel obj = new EvidencijaSudskogNadzoraJSONModel();
 
@@ -146,7 +151,12 @@ namespace ZPISrokovnik.Views.Evidencije
             string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(EvidencijeSudskogNadzora);
 
             Evidencija.DigitalniDokument = jsonObj;
-            App.client.UnesiEvidenciju("", Evidencija);
+            //App.client.UnesiEvidenciju("", Evidencija);
+            await Task.Factory.FromAsync(
+                App.client.BeginUnesiEvidenciju,
+                App.client.EndUnesiEvidenciju,
+                "", Evidencija,
+                TaskCreationOptions.None);
         }
 
         private async void DohvatiSudove()

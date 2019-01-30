@@ -6,7 +6,8 @@
             xmlns:settings="clr-namespace:ZPISrokovnik.Views.Postavke"
             xmlns:evidencije="clr-namespace:ZPISrokovnik.Views.Evidencije"
             xmlns:evidencijeprobacija="clr-namespace:ZPISrokovnik.Views.Evidencije.EvidencijeProbacija"
-            x:Class="ZPISrokovnik.Views.MainProbacijaTabbedPage">
+            x:Class="ZPISrokovnik.Views.MainProbacijaTabbedPage"
+            Title="ZPIS rokovnik">
   <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <main:MainProbacijaView Title="Home" Icon="home.png"/>

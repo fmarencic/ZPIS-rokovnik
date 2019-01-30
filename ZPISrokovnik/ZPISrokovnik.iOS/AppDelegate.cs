@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.SfSchedule.XForms.iOS;
 using UIKit;
 using UserNotifications;
 
@@ -41,6 +42,8 @@ namespace ZPISrokovnik.iOS
                 UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
             }
 
+
+            SfScheduleRenderer.Init();
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }

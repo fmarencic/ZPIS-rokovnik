@@ -226,9 +226,13 @@ namespace ZPISrokovnik.Views
             }
         }
 
-        private void OnLogin()
+        private async Task OnLogin()
         {
-            var login =  App.client.LoginUser(KorisnickoIme.Value, Lozinka.Value);
+            var login = await Task.Factory.FromAsync(
+                      App.client.BeginLoginUser,
+                      App.client.EndLoginUser,
+                      KorisnickoIme.Value, Lozinka.Value,
+                      TaskCreationOptions.None);
 
             if (!(string.IsNullOrEmpty(login.Token)))
             {          
@@ -241,7 +245,11 @@ namespace ZPISrokovnik.Views
 
                     ITabbedPageView View = null;
 
-                    var VrstaTijela = App.client.DohvatiVrstuTijela("", App.TijeloId);
+                    var VrstaTijela = await Task.Factory.FromAsync(
+                      App.client.BeginDohvatiVrstuTijela,
+                      App.client.EndDohvatiVrstuTijela,
+                      "", App.TijeloId,
+                      TaskCreationOptions.None);
 
                     if (VrstaTijela.Oznaka.Equals("OV_ZAT"))
                     {
@@ -251,11 +259,11 @@ namespace ZPISrokovnik.Views
                     {
                         View = new MainProbacijaTabbedPage();
                     }
-                    pageService.PushAfterLogin(View);
+                    await pageService.PushAfterLogin(View);
                 }
             }
             else
-                pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
+                await pageService.DisplayAlert("Prijava neuspješna", "Netočno korisničko ime ili lozinka", "U redu", "Odustani");
         }
 
        

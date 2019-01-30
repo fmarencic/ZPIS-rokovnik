@@ -70,10 +70,15 @@ namespace ZPISrokovnik.Views.MainView
 
         #region Methods
 
-	    private void ShowPicture()
+	    private async Task ShowPicture()
 	    {
 	        this.UserImage = null;
-	        var fotografija = App.client.DohvatiFotografijuOsobe(this.ForwardedObject.OIB, "");
+	        //var fotografija = App.client.DohvatiFotografijuOsobe(this.ForwardedObject.OIB, "");
+            var fotografija = await Task.Factory.FromAsync(
+                                  App.client.BeginDohvatiFotografijuOsobe,
+                                  App.client.EndDohvatiFotografijuOsobe,
+                                  ForwardedObject.OIB, "",
+                                  TaskCreationOptions.None);
             if (fotografija == null)
 	        {
 	            this.UserImage = ImageSource.FromFile("testimage.png");
@@ -82,9 +87,14 @@ namespace ZPISrokovnik.Views.MainView
 	        this.UserImage = ImageSource.FromStream(() => new MemoryStream(fotografija.Fotografija));
 
 	    }
-        private void GetData()
+        private async Task GetData()
         {
-            PrikazMaticeDTO[] matica = App.client.DohvatiMaticu("", ForwardedObject.OIB);
+            //PrikazMaticeDTO[] matica = App.client.DohvatiMaticu("", ForwardedObject.OIB);
+            PrikazMaticeDTO[] matica = await Task.Factory.FromAsync(
+                                  App.client.BeginDohvatiMaticu,
+                                  App.client.EndDohvatiMaticu,
+                                  "", ForwardedObject.OIB,
+                                  TaskCreationOptions.None);
             this.OsobaInfo = new ObservableCollection<Osoba>();
             ShowData(matica);
             ShowPicture();
