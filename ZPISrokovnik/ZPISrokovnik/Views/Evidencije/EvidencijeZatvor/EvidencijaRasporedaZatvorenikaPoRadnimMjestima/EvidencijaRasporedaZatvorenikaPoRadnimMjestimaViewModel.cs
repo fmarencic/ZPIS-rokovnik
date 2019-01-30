@@ -147,7 +147,7 @@ namespace ZPISrokovnik.Views.Evidencije
             }
         }
 
-        private void UnesiEvidenciju()
+        private async Task UnesiEvidenciju()
         {
             EvidencijaRasporedaZatvorenikaJSONModel obj = new EvidencijaRasporedaZatvorenikaJSONModel();
 
@@ -168,6 +168,12 @@ namespace ZPISrokovnik.Views.Evidencije
 
             Evidencija.DigitalniDokument = jsonObj;
             App.client.UnesiEvidenciju("", Evidencija);
+            await Task.Factory.FromAsync(
+                App.client.BeginUnesiEvidenciju,
+                App.client.EndUnesiEvidenciju,
+                "", Evidencija,
+                TaskCreationOptions.None);
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
 
         private async void DohvatiRadnaMjesta()

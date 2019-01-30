@@ -157,6 +157,7 @@ namespace ZPISrokovnik.Views.Evidencije
                 App.client.EndUnesiEvidenciju,
                 "", Evidencija,
                 TaskCreationOptions.None);
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
 
         private async void DohvatiSudove()

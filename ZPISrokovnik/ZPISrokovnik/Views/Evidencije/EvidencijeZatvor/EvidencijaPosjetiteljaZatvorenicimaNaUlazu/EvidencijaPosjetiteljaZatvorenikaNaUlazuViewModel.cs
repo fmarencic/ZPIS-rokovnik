@@ -196,6 +196,7 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
                     App.client.EndUnesiEvidenciju,
                     "", Evidencija,
                     TaskCreationOptions.None);
+                await Application.Current.MainPage.Navigation.PopAsync();
             }
             catch (Exception ex)
             {
