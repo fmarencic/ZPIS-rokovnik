@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -16,14 +17,26 @@ namespace ZPISrokovnik.Views.Evidencije
         public EvidencijaRasporedaZatvorenikaPoRadnimMjestimaViewModel(IPageService page)
         {
             RadnaMjesta = new ObservableCollection<DomenaDTO>();
+            EvidencijeRasporeda = new List<EvidencijaRasporedaZatvorenikaJSONModel>();
+            Evidencija = new DokumentDTO();
 
             pageService = page;
+
+            DohvatiPodatkeUEvidencijama();
             DohvatiRadnaMjesta();
+
+            DatumRadDo = DateTime.Now;
+            DatumRadOd = DateTime.Now;
+            DatumRasporeda = DateTime.Now;
         }
 
         #endregion
 
         #region Properties
+
+        public List<EvidencijaRasporedaZatvorenikaJSONModel> EvidencijeRasporeda { get; set; }
+
+        public DokumentDTO Evidencija { get; set; }
 
         private string zatvorenik;
         public string Zatvorenik
@@ -119,6 +132,16 @@ namespace ZPISrokovnik.Views.Evidencije
 
         #region Methods
 
+        private void DohvatiPodatkeUEvidencijama()
+        {
+            Evidencija = App.client.DohvatiEvidenciju("", "E_RM");
+            if (Evidencija.DigitalniDokument != null)
+            {
+                List<EvidencijaRasporedaZatvorenikaJSONModel> evidencija = (List<EvidencijaRasporedaZatvorenikaJSONModel>)Newtonsoft.Json.JsonConvert.DeserializeObject(Evidencija.DigitalniDokument);
+                EvidencijeRasporeda = evidencija;
+            }
+        }
+
         private void UnesiEvidenciju()
         {
             EvidencijaRasporedaZatvorenikaJSONModel obj = new EvidencijaRasporedaZatvorenikaJSONModel();
@@ -135,8 +158,11 @@ namespace ZPISrokovnik.Views.Evidencije
             {
                 throw ex;
             }
+            EvidencijeRasporeda.Add(obj);
+            string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(EvidencijeRasporeda);
 
-            string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            Evidencija.DigitalniDokument = jsonObj;
+            App.client.UnesiEvidenciju("", Evidencija);
         }
 
         private async void DohvatiRadnaMjesta()

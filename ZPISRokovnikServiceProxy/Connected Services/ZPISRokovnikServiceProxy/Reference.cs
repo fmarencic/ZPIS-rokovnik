@@ -23,6 +23,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -32,6 +34,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -134,6 +149,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -143,6 +160,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -611,6 +641,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -620,6 +652,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -715,6 +760,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -724,6 +771,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -737,6 +797,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -746,6 +808,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -919,7 +994,7 @@ namespace ZpisRokovnikService.DataLayer
     public partial class DomenaDTO : ZpisRokovnikService.DataLayer.BaseDTOOfDOMENADomenaDTOCAdBun5G
     {
 
-        private long IdField;
+        private long Id1Field;
 
         private string NazivField;
 
@@ -929,16 +1004,16 @@ namespace ZpisRokovnikService.DataLayer
 
         private string VrstaDomeneField;
 
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long Id
+        [System.Runtime.Serialization.DataMemberAttribute(Name = "Id")]
+        public long Id1
         {
             get
             {
-                return this.IdField;
+                return this.Id1Field;
             }
             set
             {
-                this.IdField = value;
+                this.Id1Field = value;
             }
         }
 
@@ -1004,6 +1079,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -1013,6 +1090,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -1078,6 +1168,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -1087,6 +1179,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -1100,6 +1205,8 @@ namespace ZpisRokovnikService.DataLayer
 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
+        private long IdField;
+
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
@@ -1109,6 +1216,19 @@ namespace ZpisRokovnikService.DataLayer
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
             }
         }
     }
@@ -1435,6 +1555,22 @@ public interface IService1
     System.IAsyncResult BeginDohvatiVrstuTijela(string token, long tijeloId, System.AsyncCallback callback, object asyncState);
 
     ZpisRokovnikService.DataLayer.DomenaDTO EndDohvatiVrstuTijela(System.IAsyncResult result);
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/UnesiEvidenciju", ReplyAction = "http://tempuri.org/IService1/UnesiEvidencijuResponse")]
+    void UnesiEvidenciju(string token, ZpisRokovnikService.DataLayer.DokumentDTO doc);
+
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/UnesiEvidenciju", ReplyAction = "http://tempuri.org/IService1/UnesiEvidencijuResponse")]
+    System.IAsyncResult BeginUnesiEvidenciju(string token, ZpisRokovnikService.DataLayer.DokumentDTO doc, System.AsyncCallback callback, object asyncState);
+
+    void EndUnesiEvidenciju(System.IAsyncResult result);
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/DohvatiEvidenciju", ReplyAction = "http://tempuri.org/IService1/DohvatiEvidencijuResponse")]
+    ZpisRokovnikService.DataLayer.DokumentDTO DohvatiEvidenciju(string token, string oznakaEvidencije);
+
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IService1/DohvatiEvidenciju", ReplyAction = "http://tempuri.org/IService1/DohvatiEvidencijuResponse")]
+    System.IAsyncResult BeginDohvatiEvidenciju(string token, string oznakaEvidencije, System.AsyncCallback callback, object asyncState);
+
+    ZpisRokovnikService.DataLayer.DokumentDTO EndDohvatiEvidenciju(System.IAsyncResult result);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1927,6 +2063,29 @@ public partial class DohvatiVrstuTijelaCompletedEventArgs : System.ComponentMode
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class DohvatiEvidencijuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public DohvatiEvidencijuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public ZpisRokovnikService.DataLayer.DokumentDTO Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((ZpisRokovnikService.DataLayer.DokumentDTO)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class Service1Client : System.ServiceModel.ClientBase<IService1>, IService1
 {
 
@@ -2056,6 +2215,18 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
 
     private System.Threading.SendOrPostCallback onDohvatiVrstuTijelaCompletedDelegate;
 
+    private BeginOperationDelegate onBeginUnesiEvidencijuDelegate;
+
+    private EndOperationDelegate onEndUnesiEvidencijuDelegate;
+
+    private System.Threading.SendOrPostCallback onUnesiEvidencijuCompletedDelegate;
+
+    private BeginOperationDelegate onBeginDohvatiEvidencijuDelegate;
+
+    private EndOperationDelegate onEndDohvatiEvidencijuDelegate;
+
+    private System.Threading.SendOrPostCallback onDohvatiEvidencijuCompletedDelegate;
+
     public Service1Client()
     {
     }
@@ -2121,6 +2292,10 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
     public event System.EventHandler<DohvatiProbacijskeUpisnikeCompletedEventArgs> DohvatiProbacijskeUpisnikeCompleted;
 
     public event System.EventHandler<DohvatiVrstuTijelaCompletedEventArgs> DohvatiVrstuTijelaCompleted;
+
+    public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> UnesiEvidencijuCompleted;
+
+    public event System.EventHandler<DohvatiEvidencijuCompletedEventArgs> DohvatiEvidencijuCompleted;
 
     public string[] TestMethod()
     {
@@ -3458,5 +3633,132 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         base.InvokeAsync(this.onBeginDohvatiVrstuTijelaDelegate, new object[] {
                     token,
                     tijeloId}, this.onEndDohvatiVrstuTijelaDelegate, this.onDohvatiVrstuTijelaCompletedDelegate, userState);
+    }
+
+    public void UnesiEvidenciju(string token, ZpisRokovnikService.DataLayer.DokumentDTO doc)
+    {
+        base.Channel.UnesiEvidenciju(token, doc);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginUnesiEvidenciju(string token, ZpisRokovnikService.DataLayer.DokumentDTO doc, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginUnesiEvidenciju(token, doc, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public void EndUnesiEvidenciju(System.IAsyncResult result)
+    {
+        base.Channel.EndUnesiEvidenciju(result);
+    }
+
+    private System.IAsyncResult OnBeginUnesiEvidenciju(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string token = ((string)(inValues[0]));
+        ZpisRokovnikService.DataLayer.DokumentDTO doc = ((ZpisRokovnikService.DataLayer.DokumentDTO)(inValues[1]));
+        return this.BeginUnesiEvidenciju(token, doc, callback, asyncState);
+    }
+
+    private object[] OnEndUnesiEvidenciju(System.IAsyncResult result)
+    {
+        this.EndUnesiEvidenciju(result);
+        return null;
+    }
+
+    private void OnUnesiEvidencijuCompleted(object state)
+    {
+        if ((this.UnesiEvidencijuCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.UnesiEvidencijuCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void UnesiEvidencijuAsync(string token, ZpisRokovnikService.DataLayer.DokumentDTO doc)
+    {
+        this.UnesiEvidencijuAsync(token, doc, null);
+    }
+
+    public void UnesiEvidencijuAsync(string token, ZpisRokovnikService.DataLayer.DokumentDTO doc, object userState)
+    {
+        if ((this.onBeginUnesiEvidencijuDelegate == null))
+        {
+            this.onBeginUnesiEvidencijuDelegate = new BeginOperationDelegate(this.OnBeginUnesiEvidenciju);
+        }
+        if ((this.onEndUnesiEvidencijuDelegate == null))
+        {
+            this.onEndUnesiEvidencijuDelegate = new EndOperationDelegate(this.OnEndUnesiEvidenciju);
+        }
+        if ((this.onUnesiEvidencijuCompletedDelegate == null))
+        {
+            this.onUnesiEvidencijuCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnUnesiEvidencijuCompleted);
+        }
+        base.InvokeAsync(this.onBeginUnesiEvidencijuDelegate, new object[] {
+                    token,
+                    doc}, this.onEndUnesiEvidencijuDelegate, this.onUnesiEvidencijuCompletedDelegate, userState);
+    }
+
+    public ZpisRokovnikService.DataLayer.DokumentDTO DohvatiEvidenciju(string token, string oznakaEvidencije)
+    {
+        return base.Channel.DohvatiEvidenciju(token, oznakaEvidencije);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginDohvatiEvidenciju(string token, string oznakaEvidencije, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginDohvatiEvidenciju(token, oznakaEvidencije, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public ZpisRokovnikService.DataLayer.DokumentDTO EndDohvatiEvidenciju(System.IAsyncResult result)
+    {
+        return base.Channel.EndDohvatiEvidenciju(result);
+    }
+
+    private System.IAsyncResult OnBeginDohvatiEvidenciju(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string token = ((string)(inValues[0]));
+        string oznakaEvidencije = ((string)(inValues[1]));
+        return this.BeginDohvatiEvidenciju(token, oznakaEvidencije, callback, asyncState);
+    }
+
+    private object[] OnEndDohvatiEvidenciju(System.IAsyncResult result)
+    {
+        ZpisRokovnikService.DataLayer.DokumentDTO retVal = this.EndDohvatiEvidenciju(result);
+        return new object[] {
+                retVal};
+    }
+
+    private void OnDohvatiEvidencijuCompleted(object state)
+    {
+        if ((this.DohvatiEvidencijuCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.DohvatiEvidencijuCompleted(this, new DohvatiEvidencijuCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+
+    public void DohvatiEvidencijuAsync(string token, string oznakaEvidencije)
+    {
+        this.DohvatiEvidencijuAsync(token, oznakaEvidencije, null);
+    }
+
+    public void DohvatiEvidencijuAsync(string token, string oznakaEvidencije, object userState)
+    {
+        if ((this.onBeginDohvatiEvidencijuDelegate == null))
+        {
+            this.onBeginDohvatiEvidencijuDelegate = new BeginOperationDelegate(this.OnBeginDohvatiEvidenciju);
+        }
+        if ((this.onEndDohvatiEvidencijuDelegate == null))
+        {
+            this.onEndDohvatiEvidencijuDelegate = new EndOperationDelegate(this.OnEndDohvatiEvidenciju);
+        }
+        if ((this.onDohvatiEvidencijuCompletedDelegate == null))
+        {
+            this.onDohvatiEvidencijuCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDohvatiEvidencijuCompleted);
+        }
+        base.InvokeAsync(this.onBeginDohvatiEvidencijuDelegate, new object[] {
+                    token,
+                    oznakaEvidencije}, this.onEndDohvatiEvidencijuDelegate, this.onDohvatiEvidencijuCompletedDelegate, userState);
     }
 }

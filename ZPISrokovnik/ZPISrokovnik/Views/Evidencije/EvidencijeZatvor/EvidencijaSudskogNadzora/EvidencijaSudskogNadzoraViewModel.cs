@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using ZPISrokovnik.JSONModel;
@@ -14,12 +16,26 @@ namespace ZPISrokovnik.Views.Evidencije
 
         public EvidencijaSudskogNadzoraViewModel(IPageService page)
         {
-  
+            EvidencijeSudskogNadzora = new List<EvidencijaSudskogNadzoraJSONModel>();
+            Evidencija = new DokumentDTO();
+
+            Sudovi = new ObservableCollection<OsobaDTO>();
+
+            pageService = page;
+
+            DohvatiPodatkeUEvidencijama();
+            DohvatiSudove();
+
+            Datum = DateTime.Now;
+
         }
 
         #endregion
 
         #region Properties
+
+        public List<EvidencijaSudskogNadzoraJSONModel> EvidencijeSudskogNadzora { get; set; }
+        public DokumentDTO Evidencija { get; set; }
 
         private OsobaDTO sud;
         public OsobaDTO Sud
@@ -101,6 +117,16 @@ namespace ZPISrokovnik.Views.Evidencije
 
         #region Methods
 
+        private void DohvatiPodatkeUEvidencijama()
+        {
+            Evidencija = App.client.DohvatiEvidenciju("", "E_SN");
+            if (Evidencija.DigitalniDokument != null)
+            {
+                List<EvidencijaSudskogNadzoraJSONModel> evidencija = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EvidencijaSudskogNadzoraJSONModel>>(Evidencija.DigitalniDokument);
+                EvidencijeSudskogNadzora = evidencija;
+            }
+        }
+
         private void UnesiEvidenciju()
         {
             EvidencijaSudskogNadzoraJSONModel obj = new EvidencijaSudskogNadzoraJSONModel();
@@ -116,8 +142,28 @@ namespace ZPISrokovnik.Views.Evidencije
             {
                 throw ex;
             }
+            EvidencijeSudskogNadzora.Add(obj);
+            string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(EvidencijeSudskogNadzora);
 
-            string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            Evidencija.DigitalniDokument = jsonObj;
+            App.client.UnesiEvidenciju("", Evidencija);
+        }
+
+        private async void DohvatiSudove()
+        {
+            var sudovi = await Task.Factory.FromAsync(
+                App.client.BeginVratiSudove,
+                App.client.EndVratiSudove,
+                "", TaskCreationOptions.None);
+
+            if (sudovi != null)
+            {
+                foreach (var item in sudovi)
+                {
+                    OsobaDTO o = App.client.DohvatiOsobu("", item.Id);
+                    Sudovi.Add(o);
+                }
+            }
         }
 
         #endregion

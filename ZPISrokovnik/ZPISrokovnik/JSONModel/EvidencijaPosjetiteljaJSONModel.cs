@@ -10,9 +10,9 @@ namespace ZPISrokovnik.JSONModel
         public string ImePrezime { get; set; }
         public string Napomena { get; set; }
         public string Uloga { get; set; }
-        public DateTime DatumDolaska { get; set; }
-        public DateTime DatumOdlaska { get; set; }
-        public OsobaDTO Zatvorenik { get; set; }
+        public string Zatvorenik { get; set; }
+        public DateTime? DatumDolaska { get; set; }
+        public DateTime? DatumOdlaska { get; set; }
 
 
     }
