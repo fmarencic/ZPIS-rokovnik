@@ -34,7 +34,7 @@
             
             <DatePicker Grid.Row="1"
                         Grid.Column="1"
-                        Date="{Binding DatumRasporeda}"
+                        Date="{Binding DatumRasporeda, Mode=TwoWay}"
                         Margin="0,0,10,0"/>
             
             <Label Text="Ime i prezime zatvorenika"
@@ -54,7 +54,7 @@
             
             <DatePicker Grid.Row="3"
                         Grid.Column="1"
-                        Date="{Binding DatumRadOd}"
+                        Date="{Binding DatumRadOd, Mode=TwoWay}"
                         Margin="0,0,10,0"
                         />
             
@@ -65,7 +65,7 @@
             
             <DatePicker Grid.Row="4"
                         Grid.Column="1"
-                        Date="{Binding DatumRadDo}"
+                        Date="{Binding DatumRadDo, Mode=TwoWay}"
                         Margin="0,0,10,0"/>
             
             <Label Text="Radno mjesto"
@@ -76,6 +76,7 @@
             <Picker Grid.Row="5"
                     ItemsSource="{Binding RadnaMjesta, Mode=TwoWay}"
                     ItemDisplayBinding="{Binding Path=Naziv}"
+                    SelectedItem="{Binding RadnoMjesto}"
                     Margin="0,0,10,0"
                     Grid.Column="1"/>
 

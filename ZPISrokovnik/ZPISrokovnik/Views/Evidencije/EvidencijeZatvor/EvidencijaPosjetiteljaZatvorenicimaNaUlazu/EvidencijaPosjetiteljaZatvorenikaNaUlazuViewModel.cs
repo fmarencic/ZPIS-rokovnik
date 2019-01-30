@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -15,12 +16,22 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
         public EvidencijaPosjetiteljaZatvorenikaNaUlazuViewModel(IPageService page)
         {
             pageService = page;
-            DohvatiZatvorenike();
+            EvidencijePosjetitelja = new List<EvidencijaPosjetiteljaJSONModel>();
+            Evidencija = new DokumentDTO();
+
+            DatumDolaska = DateTime.Now;
+            DatumOdlaska = DateTime.Now;
+
+            DohvatiPodatkeUEvidencijama();
         }
 
         #endregion
 
         #region Properties
+
+        public List<EvidencijaPosjetiteljaJSONModel> EvidencijePosjetitelja { get; set; }
+
+        public DokumentDTO Evidencija { get; set; }
 
         private string imePrezime;
         public string ImePrezime
@@ -50,8 +61,8 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
             }
         }
 
-        private OsobaDTO zatvorenik;
-        public OsobaDTO Zatvorenik
+        private string zatvorenik;
+        public string Zatvorenik
         {
             get
             {
@@ -78,8 +89,8 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
             }
         }
 
-        private DateTime datumDolaska;
-        public DateTime DatumDolaska
+        private DateTime? datumDolaska;
+        public DateTime? DatumDolaska
         {
             get
             {
@@ -106,8 +117,8 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
             }
         }
 
-        private DateTime datumOdlaska;
-        public DateTime DatumOdlaska
+        private DateTime? datumOdlaska;
+        public DateTime? DatumOdlaska
         {
             get
             {
@@ -158,6 +169,17 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
 
         #region Methods
 
+        private void DohvatiPodatkeUEvidencijama()
+        {
+            Evidencija = App.client.DohvatiEvidenciju("", "E_PZU");
+            if (Evidencija.DigitalniDokument != null)
+            {
+                List<EvidencijaPosjetiteljaJSONModel> evidencija = (List<EvidencijaPosjetiteljaJSONModel>)Newtonsoft.Json.JsonConvert.DeserializeObject(Evidencija.DigitalniDokument);
+                EvidencijePosjetitelja = evidencija;
+            }
+        }
+
+
         private void UnesiEvidenciju()
         {
             EvidencijaPosjetiteljaJSONModel obj = new EvidencijaPosjetiteljaJSONModel();
@@ -167,29 +189,21 @@ namespace ZPISrokovnik.Views.Evidencije.EvidencijaPosjetiteljaZatvorenicimaNaUla
                 obj.ImePrezime = this.ImePrezime;
                 obj.Napomena = this.Napomena;
                 obj.Uloga = this.Uloga;
-                obj.DatumDolaska = this.DatumDolaska.Add(VrijemeDolaska);
-                obj.DatumOdlaska = this.DatumOdlaska.Add(VrijemeOdlaska);
+                obj.Zatvorenik = this.Zatvorenik;
+                obj.DatumDolaska = this.DatumDolaska.Value.Add(VrijemeDolaska);
+                obj.DatumOdlaska = this.DatumOdlaska.Value.Add(VrijemeOdlaska);
+
+                EvidencijePosjetitelja.Add(obj);
+                string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(EvidencijePosjetitelja);
+
+                Evidencija.DigitalniDokument = jsonObj;
+
+                App.client.UnesiEvidenciju("", Evidencija);
             }
             catch (Exception ex)
             {
 
                 throw ex;
-            }
-
-            string jsonObj = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
-        }
-
-        private void DohvatiZatvorenike()
-        {
-            var zatvorenici = App.client.DohvatiZatvorenike("", App.TijeloId);
-
-            if (zatvorenici != null)
-            {
-                foreach (var item in zatvorenici)
-                {
-                    OsobaDTO o = App.client.DohvatiOsobu("", item.OsobaId);
-                    Zatvorenici.Add(o);
-                }
             }
         }
 

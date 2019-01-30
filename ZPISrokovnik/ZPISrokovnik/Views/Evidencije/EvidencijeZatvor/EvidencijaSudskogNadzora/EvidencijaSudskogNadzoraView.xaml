@@ -11,6 +11,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -32,6 +33,7 @@
             
             <DatePicker Grid.Row="1"
                         Grid.Column="1"
+                        Date="{Binding Datum, Mode=TwoWay}"
                         Margin="0,0,10,0"/>
             
             <Label Text="Od"
@@ -41,6 +43,7 @@
             
             <TimePicker Grid.Row="2"
                         Grid.Column="1"
+                        Time="{Binding Od}"
                         Margin="0,0,10,0"/>
             
             <Label Text="Do"
@@ -50,6 +53,7 @@
 
             <TimePicker Grid.Row="3"
                    Grid.Column="1"
+                   Time="{Binding Do}"
                    Margin="0,0,10,0"/>
 
             <Label Text="Odaberi sud"
@@ -59,7 +63,17 @@
             
             <Picker Grid.Row="4"
                     Margin="0,0,10,0"
+                    ItemsSource="{Binding Sudovi, Mode=TwoWay}"
+                    ItemDisplayBinding="{Binding Path=Naziv}"
+                    SelectedItem="{Binding Sud}"
                     Grid.Column="1"/>
+
+            <Button Grid.Row="5"
+                         Grid.Column="1"
+                         Text="Unesi evidenciju"
+                         Margin="0,0,10,0"
+                         Command="{Binding UnesiCommand}"/>
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
