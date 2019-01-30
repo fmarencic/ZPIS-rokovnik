@@ -1,5 +1,4 @@
-﻿using Org.Xml.Sax;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ZPISrokovnik.Utils.Interface;
@@ -15,16 +14,14 @@ namespace ZPISrokovnik.Utils
         private bool _isExecuting;
         private readonly Func<Task> _execute;
         private readonly Func<bool> _canExecute;
-        private readonly IErrorHandler _errorHandler;
 
         public AsyncCommand(
             Func<Task> execute,
-            Func<bool> canExecute = null,
-            IErrorHandler errorHandler = null)
+            Func<bool> canExecute = null
+            )
         {
             _execute = execute;
             _canExecute = canExecute;
-            _errorHandler = errorHandler;
         }
 
         public bool CanExecute()
@@ -63,7 +60,7 @@ namespace ZPISrokovnik.Utils
 
         void ICommand.Execute(object parameter)
         {
-            ExecuteAsync().FireAndForgetSafeAsync(_errorHandler);
+            ExecuteAsync().FireAndForgetSafeAsync();
         }
 
         #endregion

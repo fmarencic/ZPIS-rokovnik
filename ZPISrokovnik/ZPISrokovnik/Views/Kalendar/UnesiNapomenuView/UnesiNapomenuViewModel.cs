@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
-using Android.Hardware.Display;
-using Android.Views;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Utils.Notifications;
 using ZPISrokovnik.Views.Kalendar;
-using ZPISrokovnik.Views.Kalendar.KalendarView;
 
 namespace ZPISrokovnik.Views
 {

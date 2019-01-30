@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using MediaPlayer;
 using Plugin.LocalNotifications;
-using Syncfusion.SfSchedule.XForms;
 using Xamarin.Forms;
 using ZPISrokovnik.Utils;
 using ZPISrokovnik.Views.Kalendar;
-using ZPISrokovnik.Views.Kalendar.KalendarView;
 
 namespace ZPISrokovnik.Views
 {
