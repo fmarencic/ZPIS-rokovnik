@@ -831,14 +831,14 @@ namespace ZpisRokovnikService.DataLayer
     public partial class OsobaFotografijeDTO : ZpisRokovnikService.DataLayer.BaseDTOOfOSOBAFOTOGRAFIJEOsobaFotografijeDTOCAdBun5G
     {
 
-        private string FotografijaField;
+        private byte[] FotografijaField;
 
         private long OsobaIdField;
 
         private string TipField;
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Fotografija
+        public byte[] Fotografija
         {
             get
             {

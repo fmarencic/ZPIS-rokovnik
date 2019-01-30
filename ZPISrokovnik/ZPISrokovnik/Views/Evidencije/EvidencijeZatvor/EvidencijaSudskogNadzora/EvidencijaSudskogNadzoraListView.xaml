@@ -32,9 +32,9 @@
                                         <Label Text="{Binding Datum, StringFormat='\{0}'}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
                                         
                                         <Label Text="Od:" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
-                                        <Label Text="Do" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
+                                        <Label Text="Do:" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
                                         <Label Text="{Binding Od, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="0"/>
-                                        <Label Text="{Binding Do, StringFormat='\{0}'}" Grid.Row="1" Grid.Column="1"/>
+                                        <Label Text="{Binding Do, StringFormat='\{0}'}" Grid.Row="2" Grid.Column="1"/>
 
                                         <Label Text="Sud: " FontAttributes="Bold" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
                                         <Label Text="{Binding Sud.Naziv, StringFormat='\{0}'}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>

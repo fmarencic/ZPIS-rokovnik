@@ -4,7 +4,8 @@
              x:Class="ZPISrokovnik.Views.MainView.MainDetails">
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="testimage.png" HorizontalOptions="Center" Margin="0,20,0,0"/>
+            <Image Source="{Binding UserImage, Mode=TwoWay}" HorizontalOptions="Center" Margin="0,20,0,0" 
+                   HeightRequest="200" WidthRequest="200"/>
             <Label Text="{Binding Caption}"
                 FontSize="25"
                 Margin="15,20,0,0" />
